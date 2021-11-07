@@ -4,23 +4,21 @@ import re
 from lxml import etree
 
 paths = [
-        'untouched_TEI-master/fiction_and_essays',
-        'untouched_TEI-master/letters_and_diaries/letters/letters_with_norm_person',
-        'untouched_TEI-master/letters_and_diaries/letters/letters_with_NOTnorm_person',
-        'untouched_TEI-master/letters_and_diaries/diaries',
-    ]
-
+    'untouched_TEI-master/fiction_and_essays',
+    'untouched_TEI-master/letters_and_diaries/letters/letters_with_norm_person',
+    'untouched_TEI-master/letters_and_diaries/letters/letters_with_NOTnorm_person',
+    'untouched_TEI-master/letters_and_diaries/diaries',
+]
 
 patterns = {
-        '<span class="number">num</span>': re.compile(r'<span\s*?class="npnumber">\s*?(\d*?)\s*?</span>'),
-        '<span class="opnumber">num</span>': re.compile(r'<span\s*?class="opnumber">\s*?(\d*?)\s*?</span>'),
-        '<hi rend="opnumber">num</hi>': re.compile(r'<hi\s*?rend="opnumber">\s*?(\d*?)\s*?</hi>'),  # for old pages
-        '<hi style="opnumber">num</hi>': re.compile(r'<hi\s*?style="opnumber">\s*?(\d*?)\s*?</hi>'),  # for old pages
-        '<hi style="opnumber something">num</hi>': re.compile(r'<hi\s*?style="opnumber.*?">\s*?(\d*?)\s*?</hi>'),  # for old pages
-        '<hi style="npnumber something">num</hi>': re.compile(r'<hi\s*?style="npnumber.*?">\s*?(\d*?)\s*?</hi>'),  # for old pages
-        '<pb n="num"/>': re.compile(r'<pb\s*n="(\d*?)"\s*/>')
-    }
-
+    '<span class="number">num</span>': re.compile(r'<span\s*?class="npnumber">\s*?(\d*?)\s*?</span>'),
+    '<span class="opnumber">num</span>': re.compile(r'<span\s*?class="opnumber">\s*?(\d*?)\s*?</span>'),
+    '<hi rend="opnumber">num</hi>': re.compile(r'<hi\s*?rend="opnumber">\s*?(\d*?)\s*?</hi>'),
+    '<hi style="opnumber">num</hi>': re.compile(r'<hi\s*?style="opnumber">\s*?(\d*?)\s*?</hi>'),
+    '<hi style="opnumber something">num</hi>': re.compile(r'<hi\s*?style="opnumber.*?">\s*?(\d*?)\s*?</hi>'),
+    '<hi style="npnumber something">num</hi>': re.compile(r'<hi\s*?style="npnumber.*?">\s*?(\d*?)\s*?</hi>'),
+    '<pb n="num"/>': re.compile(r'<pb\s*n="(\d*?)"\s*/>')
+}
 
 xmls_with_critical_errors = [
     '[«Вторая половина» «Юности»] 2.xml',
@@ -158,47 +156,149 @@ def read_xml(xml, mode='r'):
 
 
 def get_pages_using_re(xml):
+    """redundant"""
     file = read_xml(xml, 'r')
     pages = []
     for tag, pattern in patterns.items():
         ps = [p for p in re.findall(pattern, file)]
         if ps:
             pages.extend(ps)
-    return pages
+    return pages, {}
 
 
 def get_pages_using_lxml(xml):
     file = read_xml(xml, 'rb')
     root = etree.fromstring(file)
-    tags = root.xpath(   # 7407
-        '//ns:pb[@n]'
-        '| //ns:span[contains(@class, "npnumber")]' # 7407
-        '| //ns:span[contains(@class, "opnumber")]' # 7405
-        '| //ns:hi[contains(@rend, "opnumber")]' # 7407
-        '| //ns:hi[contains(@rend, "npnumber")]' 
-        '| //ns:hi[contains(@style, "opnumber")]' # 7188
+    text_tag = root.xpath('//ns:text', namespaces={'ns': f'{xmlns_namespace}'})
+    # print(xml)
+    if text_tag:
+        text_tag = text_tag[0]
+    else:
+        # print('no_text', xml)
+        return [], {}
+    inside_text_tag = [child for child in text_tag.iterdescendants()]
+    tags = root.xpath(
+        f'//ns:pb[@n]'
+        '| //ns:span[contains(@class, "npnumber")]'
+        '| //ns:span[contains(@class, "opnumber")]'
+        '| //ns:hi[contains(@rend, "opnumber")]'
+        '| //ns:hi[contains(@rend, "npnumber")]'
+        '| //ns:hi[contains(@style, "opnumber")]'
         '| //ns:hi[contains(@style, "npnumber")]',
         namespaces={'ns': f'{xmlns_namespace}'}
     )
+    tags = [
+        tag for tag in tags
+        if (not tag.getparent().tag == f'{{{xmlns_namespace}}}note'
+            and tag in inside_text_tag)
+    ]  # Не считать страницы в комментариях,
+    # если они дублируются в основном тексте в теге note
+    if not tags:
+        return [], {}
+    tag_types = {
+        'pb': '//ns:pb[@n]',
+        'span_class_op': '//ns:span[contains(@class, "opnumber")]',
+        'span_class_np': '//ns:span[contains(@class, "npnumber")]',
+        'hi_rend_op': '//ns:hi[contains(@rend, "opnumber")]',
+        'hi_rend_np': '//ns:hi[contains(@rend, "npnumber")]',
+        'hi_style_op': '//ns:hi[contains(@style, "opnumber")]',
+        'hi_style_np': '//ns:hi[contains(@style, "npnumber")]',
+    }
     pages = []
-    # if tags:
-    #     return [1]
+    # types_counter = 0
+    types = set()
+    data = {}
+    for tag_type in tag_types:
+        found = root.xpath(
+            tag_types[tag_type], namespaces={'ns': f'{xmlns_namespace}'}
+        )
+        if found:
+            # print(tag_type)
+            # types_counter += 1
+            types.add(tag_type)
+    data.update({'tag_types': types})
+    # print(types_counter, xml)
+
+    tag_pairs = {
+        ('hi_style_op', 'hi_style_np'): 'style',
+        ('hi_rend_op', 'hi_rend_np'): 'rend',
+        ('span_class_op', 'span_class_np'): 'class'
+    }
+
     for tag in tags:
         page = tag.attrib.get('n') if 'n' in tag.attrib else ''
         if page:
-            pages.append(page)
+            pages.append(page.strip())
             continue
         page = tag.text.strip()
         pages.append(page)
-    return pages
-    pass
 
-# patterns = {
-#         '<span class="number">num</span>': re.compile(r'<span\s*?class="npnumber">\s*?(\d*?)\s*?</span>'),
-#         '<span class="opnumber">num</span>': re.compile(r'<span\s*?class="opnumber">\s*?(\d*?)\s*?</span>'),
-#         '<hi rend="opnumber">num</hi>': re.compile(r'<hi\s*?rend="opnumber">\s*?(\d*?)\s*?</hi>'),  # for old pages
-#         '<hi style="opnumber">num</hi>': re.compile(r'<hi\s*?style="opnumber">\s*?(\d*?)\s*?</hi>'),  # for old pages
-#         '<hi style="opnumber something">num</hi>': re.compile(r'<hi\s*?style="opnumber.*?">\s*?(\d*?)\s*?</hi>'),  # for old pages
-#         '<hi style="npnumber something">num</hi>': re.compile(r'<hi\s*?style="npnumber.*?">\s*?(\d*?)\s*?</hi>'),  # for old pages
-#         '<pb n="num"/>': re.compile(r'<pb\s*n="(\d*?)"\s*/>')
-#     }
+    # if types == {'hi_style_np'}:
+    #     if pages[0].isnumeric():
+    #         page = int(pages[0])
+    #         pages.insert(0, str(page - 1))
+    #         return pages, data
+    # if types == {'hi_style_op'}:
+    #     if pages[-1].isnumeric():
+    #         page = int(pages[-1])
+    #         pages.append(str(page + 1))
+    for tag_pair, attr in tag_pairs.items():
+        if types == {tag_pair[1]}:
+            if pages[0].isnumeric():
+                page = int(pages[0])
+                pages.insert(0, str(page - 1))
+                return pages, data
+        if types == {tag_pair[0]}:
+            if pages[-1].isnumeric():
+                page = int(pages[-1])
+                pages.append(str(page + 1))
+        if types == set(tag_pair):
+            pages = []
+            for i in range(len(tags)):
+                if tags[i].attrib.get(attr) == 'opnumber':
+                    page = tags[i].text.strip()
+                    pages.append(page)
+        if tag_pair[1] in types:
+            if tags[-1].attrib.get(attr) == 'npnumber':
+                p = tags[-1].getparent()
+                page = tags[-1].text.strip()
+                text_items = [k for k in p.itertext()]
+                if (any(text_items)
+                        and not text_items[-1] == page
+                        and text_items[-1].strip()
+                ):
+                    pages.append(page)
+    # if types == {'hi_style_op', 'hi_style_np'}:
+    #     pages = []
+    #     for i in range(len(tags)):
+    #         if tags[i].attrib.get('style') == 'opnumber':
+    #             page = tags[i].text.strip()
+    #             pages.append(page)
+    # elif types == {'hi_rend_op', 'hi_rend_np'}:
+    #     pages = []
+    #     for i in range(len(tags)):
+    #         if tags[i].attrib.get('rend') == 'opnumber':
+    #             page = tags[i].text.strip()
+    #             pages.append(page)
+    # if 'hi_style_np' in types:
+    #     if tags[-1].attrib.get('style') == 'npnumber':
+    #         p = tags[-1].getparent()
+    #         page = tags[-1].text.strip()
+    #         text_items = [k for k in p.itertext()]
+    #         if (any(text_items)
+    #                 and not text_items[-1] == page
+    #                 and text_items[-1].strip()
+    #         ):
+    #             pages.append(page)
+    # if 'hi_rend_np' in types:
+    #     if tags[-1].attrib.get('rend') == 'npnumber':
+    #         p = tags[-1].getparent()
+    #         page = tags[-1].text.strip()
+    #         text_items = [k for k in p.itertext()]
+    #         if (any(text_items)
+    #                 and not text_items[-1] == page
+    #                 and text_items[-1].strip()
+    #         ):
+    #             pages.append(page)
+    return pages, data
+

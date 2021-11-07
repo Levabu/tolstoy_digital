@@ -11,8 +11,6 @@ def main() -> None:
     # pattern = re.compile('<span\s*?class="npnumber">(\d*?)</span>')
     # pattern = re.compile('npnumber">(\d*?)</span>')
 
-
-
     all_counter = 0
     empty_pages = 0
     ok_counter = 0
@@ -29,11 +27,15 @@ def main() -> None:
             status = 'consistent'
             # xml = ut.read_xml(os.path.join(path, file), 'r')
             # pages = re.findall(pattern, xml.read())
-            # pages = ut.get_pages_using_re(os.path.join(path, file))
-            if file in ut.xmls_with_critical_errors:
-                pages = ut.get_pages_using_re(os.path.join(path, file))
-                # continue
-            pages = ut.get_pages_using_lxml(os.path.join(path, file))
+            pages, data = ut.get_pages_using_re(os.path.join(path, file))
+            # if file in ut.xmls_with_critical_errors:
+            #     pages, data = ut.get_pages_using_re(os.path.join(path, file))
+            #     # continue
+            # else:
+            try:
+                pages, data = ut.get_pages_using_lxml(os.path.join(path, file))
+            except Exception as e:
+                pages, data = [], {'error': e}
             # print(file)
             # print(pages)
             if pages:
@@ -51,11 +53,19 @@ def main() -> None:
                     gaps = ut.extract_gaps_from_fragments(fragments)
                     status = 'inconsistent'
                     # inconsistent_to_csv.append((volume, file, fragments, gaps))
-
-                    print(file)
-                    print(fragments)
-                    print(pages)
-                    print(should_be)
+                    # if 'hi_style_op' not in data and 'hi_style_np' not in data and 'pb' not in data:
+                    tag_types = data.get('tag_types')
+                    if (tag_types is not None and not any(
+                            [i in tag_types for i in (
+                                    'hi_style_op', 'hi_style_np', 'pb'
+                            )
+                             ]
+                    )):
+                        print(file)
+                        print(data)
+                        print(fragments)
+                        print(pages)
+                        print(should_be)
                     # print(gaps)
 
                     # pprint(pages)
