@@ -88,7 +88,7 @@ if __name__ == '__main__':
 
 if __name__ == 'not__main__':
     def whatever():
-        xml_as_bytes = read_xml('test_file.xml', 'rb')
+        xml_as_bytes = read_xml('../test_file.xml', 'rb')
         root = etree.fromstring(xml_as_bytes)
         tree = etree.ElementTree(root)
 

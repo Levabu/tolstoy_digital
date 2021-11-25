@@ -1,13 +1,20 @@
 import csv
+import os
 import re
 
 from lxml import etree
 
+old_paths = [
+    '../../work/tolstoy_digital/TEI-master/fiction_and_essays',
+    '../../work/tolstoy_digital/TEI-master/letters_and_diaries/letters/letters_with_norm_person',
+    '../../work/tolstoy_digital/TEI-master/letters_and_diaries/letters/letters_with_NOTnorm_person',
+    '../../work/tolstoy_digital/TEI-master/letters_and_diaries/diaries',
+]
+
 paths = [
-    'untouched_TEI-master/fiction_and_essays',
-    'untouched_TEI-master/letters_and_diaries/letters/letters_with_norm_person',
-    'untouched_TEI-master/letters_and_diaries/letters/letters_with_NOTnorm_person',
-    'untouched_TEI-master/letters_and_diaries/diaries',
+    '../../work/tolstoy_digital/untouched_TEI-master/fiction_and_essays_new',
+    '../../work/tolstoy_digital/untouched_TEI-master/letters_and_diaries_new/diaries',
+    '../../work/tolstoy_digital/untouched_TEI-master/letters_and_diaries_new/letters',
 ]
 
 patterns = {
@@ -19,6 +26,9 @@ patterns = {
     '<hi style="npnumber something">num</hi>': re.compile(r'<hi\s*?style="npnumber.*?">\s*?(\d*?)\s*?</hi>'),
     '<pb n="num"/>': re.compile(r'<pb\s*n="(\d*?)"\s*/>')
 }
+
+pattern = (r'(<(span|hi)\s*?(class|style|rend)=\"(n|o)pnumber\">'
+           r'\s*?(\d*?)\s*?</(span|hi)>)|(<pb\s*n=\"(\d*?)\"\s*/>)')
 
 xmls_with_critical_errors = [
     '[«Вторая половина» «Юности»] 2.xml',
@@ -32,6 +42,23 @@ xmls_with_critical_errors = [
 ]
 
 xmlns_namespace = 'http://www.tei-c.org/ns/1.0'
+
+
+real_tags = {
+    'pb': '<pb n="1"></pb>',
+    'span_class_op': '<span class="opnumber">1</span>',
+    'span_class_np': '<span class="npnumber">1</span>',
+    'hi_rend_op': '<hi rend="opnumber">1</hi>',
+    'hi_rend_np': '<hi rend="npnumber">1</hi>',
+    'hi_style_op': '<hi style="opnumber">1</hi>',
+    'hi_style_np': '<hi style="npnumber">1</hi>',
+}
+
+
+def change_to_project_directory():
+    abspath = os.path.abspath(__file__)
+    dir_name = os.path.dirname(os.path.dirname(abspath))
+    os.chdir(dir_name)
 
 
 def should_be_pages(pages: list) -> list[str]:
@@ -145,6 +172,8 @@ def extract_volume_number(file_name: str) -> str:
     volume = file_name[-2:].strip()
     if 'volume' in file_name:
         volume = file_name.split('_')[1]
+    if file_name.count('_') == 1 and all([i.isnumeric for i in file_name.split('_')]):
+        volume = file_name[:2]
     if not volume.isnumeric():
         return ''
     return volume
@@ -155,14 +184,27 @@ def read_xml(xml, mode='r'):
         return file.read()
 
 
-def get_pages_using_re(xml):
-    """redundant"""
+def get_pages_using_re_0(xml):
+    """redundant. or not?"""
     file = read_xml(xml, 'r')
     pages = []
     for tag, pattern in patterns.items():
         ps = [p for p in re.findall(pattern, file)]
         if ps:
             pages.extend(ps)
+    return pages, {}
+
+
+def get_pages_using_re(xml):
+    """redundant. or not?"""
+    file = read_xml(xml, 'r')
+    result = re.findall(pattern, file)
+    pages = []
+    for match in result:
+        if not match[0]:
+            pages.append(match[7])
+        else:
+            pages.append(match[4])
     return pages, {}
 
 
@@ -224,24 +266,22 @@ def get_pages_using_lxml(xml):
         ('hi_rend_op', 'hi_rend_np'): 'rend',
         ('span_class_op', 'span_class_np'): 'class'
     }
-
+    # print(tags)
     for tag in tags:
         page = tag.attrib.get('n') if 'n' in tag.attrib else ''
         if page:
             pages.append(page.strip())
             continue
+        elif 'pb' in types and len(types) > 1:
+            continue
         page = tag.text.strip()
         pages.append(page)
+    if 'pb' in types:
+        if pages[0].isnumeric():
+            page = int(pages[0])
+            pages.insert(0, str(page - 1))
+            return pages, data
 
-    # if types == {'hi_style_np'}:
-    #     if pages[0].isnumeric():
-    #         page = int(pages[0])
-    #         pages.insert(0, str(page - 1))
-    #         return pages, data
-    # if types == {'hi_style_op'}:
-    #     if pages[-1].isnumeric():
-    #         page = int(pages[-1])
-    #         pages.append(str(page + 1))
     for tag_pair, attr in tag_pairs.items():
         if types == {tag_pair[1]}:
             if pages[0].isnumeric():
@@ -268,37 +308,5 @@ def get_pages_using_lxml(xml):
                         and text_items[-1].strip()
                 ):
                     pages.append(page)
-    # if types == {'hi_style_op', 'hi_style_np'}:
-    #     pages = []
-    #     for i in range(len(tags)):
-    #         if tags[i].attrib.get('style') == 'opnumber':
-    #             page = tags[i].text.strip()
-    #             pages.append(page)
-    # elif types == {'hi_rend_op', 'hi_rend_np'}:
-    #     pages = []
-    #     for i in range(len(tags)):
-    #         if tags[i].attrib.get('rend') == 'opnumber':
-    #             page = tags[i].text.strip()
-    #             pages.append(page)
-    # if 'hi_style_np' in types:
-    #     if tags[-1].attrib.get('style') == 'npnumber':
-    #         p = tags[-1].getparent()
-    #         page = tags[-1].text.strip()
-    #         text_items = [k for k in p.itertext()]
-    #         if (any(text_items)
-    #                 and not text_items[-1] == page
-    #                 and text_items[-1].strip()
-    #         ):
-    #             pages.append(page)
-    # if 'hi_rend_np' in types:
-    #     if tags[-1].attrib.get('rend') == 'npnumber':
-    #         p = tags[-1].getparent()
-    #         page = tags[-1].text.strip()
-    #         text_items = [k for k in p.itertext()]
-    #         if (any(text_items)
-    #                 and not text_items[-1] == page
-    #                 and text_items[-1].strip()
-    #         ):
-    #             pages.append(page)
     return pages, data
 
