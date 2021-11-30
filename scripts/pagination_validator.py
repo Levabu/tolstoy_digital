@@ -83,7 +83,7 @@ def main() -> None:
 
     # print(used_tags)
 
-    ut.write_to_csv(inconsistent_to_csv, 'test_inconsistent_pages')
+    # ut.write_to_csv(inconsistent_to_csv, 'test_inconsistent_pages')
     # ut.write_to_csv(empty_to_csv, 'new_empty_pages')
     # ut.write_to_csv(all_to_csv, 'new_all_files')
     # ut.write_to_csv(ok_to_csv, 'new_consistent_pages')
