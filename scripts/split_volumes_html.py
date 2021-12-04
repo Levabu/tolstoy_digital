@@ -24,7 +24,8 @@ def split_fiction(filename):
 
     divs = root.xpath('//ns:div', namespaces={'ns': sp_ut.XHTML_NAMESPACE})
     divs_with_titles = filter(
-        lambda x: len(x.attrib['id']) == 10 if 'id' in x.attrib else False, divs
+        lambda x: len(x.attrib['id']) == 10 if 'id' in x.attrib else False,
+        divs
     )  # like "h000013026"
     texts = []
     div_with_comments_id = sp_ut.get_div_id_where_comments_start(divs)
@@ -37,11 +38,12 @@ def split_fiction(filename):
         texts.append((title, id, text_divs))
         # print(title, id)
     # pprint(texts)
+    notes = sp_ut.get_notes_from_html(divs)
     for i in range(len(texts)):
         tei_data.update(
             {
                 'title': texts[i][0],
-                'text': sp_ut.convert_text_divs_to_xml(*texts[i])
+                'text': sp_ut.convert_text_divs_to_xml(*texts[i], notes)
             }
         )
         to_file = sp_ut.fill_tei_structure(tei_data, 'tei_with_short_header.xml')
@@ -75,9 +77,14 @@ def search_in_xmls():
             # author_tag1 = root.xpath('//ns:titleStmt/ns:author', namespaces={'ns': f'{ut.xmlns_namespace}'})[0]
             # author_tag2 = root.xpath('//ns:analytic/ns:author', namespaces={'ns': f'{ut.xmlns_namespace}'})[0]
             comments = root.xpath('//ns:comments', namespaces={'ns': f'{ut.xmlns_namespace}'})
+            edit_corr = root.xpath('//ns:choice', namespaces={'ns': f'{ut.xmlns_namespace}'})
 
             if comments:
-                print(filename)
+                # print(filename)
+                pass
+            for i in edit_corr:
+                if 'original_editorial_correction' in i.attrib:
+                    print(etree.tostring(i, encoding='unicode'))
             # print(title_tag.text.strip(' \n'))
             # print(author_tag1.text.strip(' \n'), end=' | ')
             # print(author_tag2.text.strip(' \n'))
