@@ -2,6 +2,7 @@ import re
 import uuid
 
 from lxml import etree
+from prereform2modern import Processor
 
 import utils as ut
 
@@ -10,6 +11,8 @@ XHTML_NAMESPACE = 'http://www.w3.org/1999/xhtml'
 
 def regex_add_uuid_for_paragraphs(matchobj):
     group = matchobj.group(1)
+    already_has_id_pattern = r'\s*?id="\w+"'
+    group = re.sub(already_has_id_pattern, '', group)
     return r'<p rend{group} id="{id}">'.format(group=group, id=uuid.uuid4())
 
 
@@ -20,6 +23,10 @@ HTML_TO_XML_PATTERNS = [
         r'<div type\1 xml:id'
     ),
     (
+        re.compile(r'<div\s+class(.*?)>'),
+        r'<div rend\1>'
+    ),
+    (
         re.compile(r'<p class(.*?)>'),
         regex_add_uuid_for_paragraphs
     ),
@@ -28,15 +35,44 @@ HTML_TO_XML_PATTERNS = [
         r'<hi rend="italic">\1</hi>'
     ),
     (
-        re.compile(
-            r'<span\s+?class="opdelimiter">(.*?)</span>'
-            r'<span\s+?class="opnumber">.*?</span>(.*?)'
-            r'<span class="npnumber">(\d+?)</span>(.*?)'
-            r'<a.*?/><span\s+?class="npdelimiter">(.*?)</span>'
-        ),
-        r'\1<pb n="\3"/>\4\5'
+        # re.compile(r'<span\s+?class=".*?opdelimiter">(.*?)</span>'),
+        re.compile(r'<span\s+?class="\w*?\s*opdelimiter">(.*?)</span>'),
+        r'\1'
+    ),
+    (
+        re.compile(r'<span\s+?class="opnumber">.*?</span>'),
+        r''
+    ),
+    (
+        re.compile(r'<span\s+?class="npnumber">(.*?)</span>(\s*)(<a.*?/a?>)?'),
+        r'<pb n="\1"/>\2'
+    ),
+    (
+        # re.compile(r'<span\s+?class=".*?npdelimiter">(.*?)</span>'),
+        re.compile(r'<span\s+?class="\w*?\s?npdelimiter">(.*?)</span>'),
+        r'\1'
+    ),
+    (
+        re.compile(r'<sup>(.*?)</sup>'),
+        r'<hi rend="sup">\1</hi>'
+    ),
+    (
+        re.compile(r'<sub>(.*?)</sub>'),
+        r'<hi rend="sub">\1</hi>'
+    ),
+    (
+        # '<h1 class="center"><strong>НЕОПУБЛИКОВАННОЕ, НЕОТДЕЛАННОЕ И НЕОКОНЧЕННОЕ</strong></h1>'
+        re.compile(r'<h\d\s+?class(.*?)>(.*?)</h\d>'),
+        r'<head rend\1>\2</head>'
+    ),
+    (
+        re.compile(r'<strong>(.*?)</strong>'),
+        r'<hi rend="strong">\1</hi>'
+    ),
+    (
+        re.compile(r'<span\s+class(.*?)>(.*?)</span>'),
+        r'<hi rend\1>\2</hi>'
     )
-
 ]
 
 
@@ -69,7 +105,17 @@ def get_notes_from_html(divs):
     return divs_with_notes
 
 
-def replace_ref_to_notes_with_notes(text, notes):
+def markup_choices_for_prereform_spelling(text):
+    text_res, changes, s_json = Processor.process_text(
+        text=text,
+        show=True,
+        delimiters=['<choice><reg>', '</reg><orig>', '</orig></choice>'],
+        check_brackets=False
+    )
+    return text_res
+
+
+def replace_refs_to_notes_with_notes(text, notes):
     pattern_ref = re.compile(r'<a.*?id="backn(\d+)"\s+type="note">.*?</a>')
     pattern_note_contents = re.compile(r'<p(.*?)>(.*?)</p>')
     note_numbers = re.findall(pattern_ref, text)
@@ -102,31 +148,79 @@ def replace_ref_to_notes_with_notes(text, notes):
 
 def replace_html_markup_with_xml(text: str) -> str:
     for pattern, substitute in HTML_TO_XML_PATTERNS:
-        text = re.sub(pattern, substitute, text)
+        # text = re.sub(pattern, substitute, text)
+        text = pattern.sub(substitute, text)
+        # print(substitute)
+        # print(text)
     return text
 
 
-def correction_tag(string_soup):
+def markup_choices_for_editorial_corrections(text):
     # функция принимает в себя строку. И возвращает строку, с теггами choice, corr и sic. Например строка
     # "Я уставился в р[ек]у Нев[у] и бегу в р[ек]у" станет
     # Я уставился в <choice original_editorial_correction='р[ек]у'><sic>ру</sic><corr>реку</corr></choice> <choice original_editorial_correction='Нев[у]'><sic>Нев</sic><corr>Неву</corr></choice> и бегу в <choice original_editorial_correction='р[ек]у'><sic>ру</sic><corr>реку</corr></choice>
     # Я предполагал использование ее на строке, преобразованной из HTML
-    choice_pattern = "\s*([А-Яа-я]*?(\[(.*?)\])[А-Яа-я]*)\s*"
-
-    choice_result = re.findall(choice_pattern, string_soup)
+    # choice_pattern = "\s*([А-Яа-я]*?(\[(.*?)\])[А-Яа-я]*)\s*"
+    choice_pattern = re.compile(
+        # r'(<head.*?>)?(\s*([А-Яа-я]*?(\[(.*?)])[А-Яа-я]*)\s*)(</head>)?'
+        # r'(<head.*?>)?(\s*(\w*?(\[(.*?)])\w*)\s*)(</head>)?'
+        # r'(<head.*?>[*, ]*)?(\s*(\w*?(\[(.*?)])\w*)\s*)(</head>)?'
+        # r'(?<!correction=")(<head.*?>[*, ]*)?(\s*(\w*?(\[(.*?)])\w*)\s*)(</head>)?'
+        r'(<head.*?>[*, ]*)?(\s*(\w*?(\[(.*?)])\w*)\s*)(?!\">)(</head>)?'
+    )
+    illegible_pattern = re.compile(
+        r'(\[\d+.*?не\s*разобр.*?])|'  # [2 неразобр.]
+        r'(\w+\[\w+\?])|'  # вл[иянием?]
+        r'(\[\?])'  # [?]
+    )
+    crossed_out_pattern = re.compile(
+        r'(<.*?>)?(з|З)ач(е|ё)ркнуто:(<.*?>)?'
+    )
+    # inside_head_pattern = re.compile(
+    #     r'<head.*?\[ПОМЕТКИ ПРИ ПЕРЕЧИТЫВАНИИ «ВЫБРАННЫХ <lb/>МЕСТ ИЗ ПЕРЕПИСКИ С ДРУЗЬЯМИ».]</head>'
+    # )
+    # p1 = re.compile(r'\[(\d+.*?не\s*разобр.*?)|(\?)]')
+    choice_result = re.findall(choice_pattern, text)
 
     for i in choice_result:
-        sub_1 = re.sub(r"\[|\]", r"", i[0])
-        sub_2 = re.sub(r"\[", r"\\[", i[0])
-        sub_3 = re.sub(r"\]", r"\\]", sub_2)
-        sub_4 = re.sub('\[' + i[2] + "\]", r"", i[0])
-        replacement = "<choice" + " original_editorial_correction=" + "\'" + i[0] + "\'" + ">" + "<sic>" + sub_4 + "</sic>" + "<corr>" + sub_1 + "</corr>" + "</choice>"
-        reg_for_repl = "(?<!\=\')" + sub_3
-        string_soup = re.sub(reg_for_repl,replacement, string_soup)
-    return string_soup
+        # print(i)
+        # print(i[2])
+        if i[0]:  # if inside head
+            continue
+        if illegible_pattern.search(i[2]) is not None:
+            continue
+        if crossed_out_pattern.search(i[2]) is not None:
+            continue
+        # print(i[0])
+        sub_1 = re.sub(r'\[|]', r'', i[2])
+        # print(sub_1)
+        sub_2 = re.sub(r'\[', r'\\[', i[2])
+        # print(sub_2)
+        sub_3 = re.sub(r']', r'\\]', sub_2)
+        # print(sub_3)
+        # sub_4 = re.sub('\[' + i[2] + "]", r"", i[2])
+        sub_4 = re.sub('\[.*?]', '', i[2])
+        # print(sub_4)
+        # print('i[2]', i[2])
+        choice_attribute = re.search('<.*?>(.*?)<.*?>', i[2])  # [<hi>хвастовство</hi>]
+        if choice_attribute is None:
+            choice_attribute = i[2]
+        else:
+            choice_attribute = choice_attribute.group(1)
+        replacement = (f'<choice original_editorial_correction="{choice_attribute}">'
+                       f'<sic>{sub_4}</sic><corr>{sub_1}</corr></choice>')
+        # print(replacement)
+        # reg_for_repl = "(?<!\=\')" + sub_3
+        reg_for_repl = f'(?<!="){sub_3}(?!">)'
+        # print(reg_for_repl)
+        # print(re.search(reg_for_repl, text).group())
+        # print(i)
+        # text = re.sub(reg_for_repl, replacement, text)
+        text = re.sub(reg_for_repl, replacement, text)
+    return text
 
 
-def convert_text_divs_to_xml(title, id, text_divs, notes):
+def convert_text_divs_to_xml_text(title, id, text_divs, notes):
     divs = [etree.tostring(
         t,
         pretty_print=False,
@@ -135,12 +229,14 @@ def convert_text_divs_to_xml(title, id, text_divs, notes):
     text = ''.join(divs)
     # with open('parse_volume/note_sample.xml', 'w') as file:
     #     file.write(text)
-    text = replace_ref_to_notes_with_notes(text, notes)
+    text = replace_refs_to_notes_with_notes(text, notes)
     text = replace_html_markup_with_xml(text)
+    # text = markup_choices_for_prereform_spelling(text)
+    text = markup_choices_for_editorial_corrections(text)
     return text
 
 
-def fill_tei_structure(tei_data, tei_structure_file) -> str:
+def fill_tei_template(tei_data, tei_structure_file) -> str:
     tei_data.update(
         {
             'author': 'Толстой Л.Н.',  # for now
@@ -152,3 +248,9 @@ def fill_tei_structure(tei_data, tei_structure_file) -> str:
     )
     tei = ut.read_xml(tei_structure_file).format(**tei_data)
     return tei
+
+
+def indent_xml_string(xml_bytes_string):
+    root = etree.fromstring(xml_bytes_string)
+    etree.indent(root)
+    return etree.tostring(root, encoding='unicode')

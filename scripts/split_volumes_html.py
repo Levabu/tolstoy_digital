@@ -30,28 +30,51 @@ def split_fiction(filename):
     texts = []
     div_with_comments_id = sp_ut.get_div_id_where_comments_start(divs)
     for div in divs_with_titles:
-        title = div[0].text.strip(' \n')
-        id = div.attrib['id']
-        if id.startswith(div_with_comments_id):
+        # title = div[0].text.strip(' \n')
+        title = ''.join([t for t in div[0].itertext()]).rstrip('.')
+        div_id = div.attrib['id']
+        if div_id.startswith(div_with_comments_id):
             break
-        text_divs = [d for d in divs if 'id' in d.attrib and d.attrib['id'].startswith(id)]
-        texts.append((title, id, text_divs))
+        print(title)
+        text_divs = [d for d in divs if 'id' in d.attrib and d.attrib['id'].startswith(div_id)]
+        texts.append((title, div_id, text_divs))
         # print(title, id)
     # pprint(texts)
     notes = sp_ut.get_notes_from_html(divs)
-    for i in range(len(texts)):
+    for i in tqdm(range(len(texts))):
         tei_data.update(
             {
                 'title': texts[i][0],
-                'text': sp_ut.convert_text_divs_to_xml(*texts[i], notes)
+                'text': sp_ut.convert_text_divs_to_xml_text(*texts[i], notes)
             }
         )
-        to_file = sp_ut.fill_tei_structure(tei_data, 'tei_with_short_header.xml')
-        with open(f'parse_volume/result/test_result_{i}.xml', 'w') as file:
+        to_file = sp_ut.fill_tei_template(tei_data, 'tei_with_short_header.xml')
+        # root = etree.fromstring(to_file.encode('utf-8'))
+        # print(root)
+        # etree.ElementTree(root)
+        # to_file = etree.tostring(etree.indent(root))
+        # with open(f'parse_volume/result/test_result_{i}.xml', 'w') as file:
+        # with open(f'parse_volume/result/{tei_data["volume"]}/{tei_data["title"]}.xml', 'w') as file:
+        with open(f'parse_volume/result/{tei_data["title"]} {tei_data["volume"]}.xml', 'w') as file:
             file.write(to_file)
+
             # file.write(''.join(
             #     [etree.tostring(t, pretty_print=True, encoding='unicode') for t in texts[i][2]])
             # )
+            pass
+        xml = ut.read_xml(
+            f'parse_volume/result/{tei_data["title"]} {tei_data["volume"]}.xml',
+            'rb'
+        )
+        print(tei_data["title"])
+        # root = etree.fromstring(xml)
+        # etree.indent(root)
+        # to_file = etree.tostring(root, encoding='unicode')
+
+        to_file = sp_ut.indent_xml_string(xml)
+        with open(f'parse_volume/result/{tei_data["title"]} {tei_data["volume"]}.xml', 'w') as file:
+            file.write(to_file)
+
         tei_data = {'volume': volume_number}
     for i in texts[0][2]:
         # print([t for t in i.itertext()])
@@ -62,6 +85,7 @@ def split_fiction(filename):
 
 def search_in_xmls():
     all_filenames = []
+    rends = []
     for path in ut.paths:
         for filename in os.listdir(path):
             all_filenames.append(os.path.join(path, filename))
@@ -78,23 +102,40 @@ def search_in_xmls():
             # author_tag2 = root.xpath('//ns:analytic/ns:author', namespaces={'ns': f'{ut.xmlns_namespace}'})[0]
             comments = root.xpath('//ns:comments', namespaces={'ns': f'{ut.xmlns_namespace}'})
             edit_corr = root.xpath('//ns:choice', namespaces={'ns': f'{ut.xmlns_namespace}'})
+            divs = root.xpath('//ns:span', namespaces={'ns': f'{ut.xmlns_namespace}'})
 
             if comments:
                 # print(filename)
                 pass
             for i in edit_corr:
                 if 'original_editorial_correction' in i.attrib:
-                    print(etree.tostring(i, encoding='unicode'))
+                    # print(etree.tostring(i, encoding='unicode'))
+                    pass
             # print(title_tag.text.strip(' \n'))
             # print(author_tag1.text.strip(' \n'), end=' | ')
             # print(author_tag2.text.strip(' \n'))
+
+            # for i in root.iterchildren():
+            for i in divs:
+                # print(i.attrib)
+                if 'rend' in i.attrib:
+                    rends.append(i)
+
+
         except Exception as e:
             # print(filename, e)
             pass
+    rends = set(rends)
+    [print(i.attrib) for i in rends]
+    # pprint(rends)
 
 
 if __name__ == '__main__':
     ut.change_to_project_directory()
     # search_in_xmls()
     volume_file = 'parse_volume/htmls/Полное собрание сочинений. Том 38.html'
+    # volume_file = 'parse_volume/htmls/Полное собрание сочинений. Том 42.html'
+    # volume_file = 'parse_volume/htmls/Полное собрание сочинений. Том 43.html'
+    # volume_file = 'parse_volume/htmls/Полное собрание сочинений. Том 44.html'
+    # volume_file = 'parse_volume/htmls/Полное собрание сочинений. Том 45.html'
     split_fiction(volume_file)
