@@ -35,7 +35,6 @@ HTML_TO_XML_PATTERNS = [
         r'<hi rend="italic">\1</hi>'
     ),
     (
-        # re.compile(r'<span\s+?class=".*?opdelimiter">(.*?)</span>'),
         re.compile(r'<span\s+?class="\w*?\s*opdelimiter">(.*?)</span>'),
         r'\1'
     ),
@@ -48,7 +47,6 @@ HTML_TO_XML_PATTERNS = [
         r'<pb n="\1"/>\2'
     ),
     (
-        # re.compile(r'<span\s+?class=".*?npdelimiter">(.*?)</span>'),
         re.compile(r'<span\s+?class="\w*?\s?npdelimiter">(.*?)</span>'),
         r'\1'
     ),
@@ -61,7 +59,6 @@ HTML_TO_XML_PATTERNS = [
         r'<hi rend="sub">\1</hi>'
     ),
     (
-        # '<h1 class="center"><strong>НЕОПУБЛИКОВАННОЕ, НЕОТДЕЛАННОЕ И НЕОКОНЧЕННОЕ</strong></h1>'
         re.compile(r'<h\d\s+?class(.*?)>(.*?)</h\d>'),
         r'<head rend\1>\2</head>'
     ),
@@ -106,13 +103,31 @@ def get_notes_from_html(divs):
 
 
 def markup_choices_for_prereform_spelling(text):
-    text_res, changes, s_json = Processor.process_text(
-        text=text,
-        show=True,
-        delimiters=['<choice><reg>', '</reg><orig>', '</orig></choice>'],
-        check_brackets=False
-    )
-    return text_res
+    split_pattern = re.compile(r'(<choice.*?>.*?</choice>)')
+    tokens = split_pattern.split(text)
+    print(tokens)
+    for i, token in enumerate(tokens):
+        if split_pattern.search(token) is not None:
+            corr_pattern = r'<choice(.*?)<corr>(.*?)</corr></choice>'
+            matchobj = re.search(corr_pattern, token)
+            to_corr = matchobj.group(2)
+            text_res, changes, s_json = Processor.process_text(
+                text=to_corr,
+                show=True,
+                delimiters=['<choice><reg>', '</reg><orig>', '</orig></choice>'],
+                check_brackets=False
+            )
+            tokens[i] = f'<choice{matchobj.group(1)}<corr>{text_res}</corr></choice>'
+        else:
+            text_res, changes, s_json = Processor.process_text(
+                text=token,
+                show=True,
+                delimiters=['<choice><reg>', '</reg><orig>', '</orig></choice>'],
+                check_brackets=False
+            )
+            tokens[i] = text_res
+            print(tokens)
+    return ''.join(tokens)
 
 
 def replace_refs_to_notes_with_notes(text, notes):
@@ -148,27 +163,15 @@ def replace_refs_to_notes_with_notes(text, notes):
 
 def replace_html_markup_with_xml(text: str) -> str:
     for pattern, substitute in HTML_TO_XML_PATTERNS:
-        # text = re.sub(pattern, substitute, text)
         text = pattern.sub(substitute, text)
-        # print(substitute)
-        # print(text)
     return text
 
 
 def markup_choices_for_editorial_corrections(text):
-    # функция принимает в себя строку. И возвращает строку, с теггами choice, corr и sic. Например строка
-    # "Я уставился в р[ек]у Нев[у] и бегу в р[ек]у" станет
-    # Я уставился в <choice original_editorial_correction='р[ек]у'><sic>ру</sic><corr>реку</corr></choice> <choice original_editorial_correction='Нев[у]'><sic>Нев</sic><corr>Неву</corr></choice> и бегу в <choice original_editorial_correction='р[ек]у'><sic>ру</sic><corr>реку</corr></choice>
-    # Я предполагал использование ее на строке, преобразованной из HTML
-    # choice_pattern = "\s*([А-Яа-я]*?(\[(.*?)\])[А-Яа-я]*)\s*"
     choice_pattern = re.compile(
-        # r'(<head.*?>)?(\s*([А-Яа-я]*?(\[(.*?)])[А-Яа-я]*)\s*)(</head>)?'
-        # r'(<head.*?>)?(\s*(\w*?(\[(.*?)])\w*)\s*)(</head>)?'
-        # r'(<head.*?>[*, ]*)?(\s*(\w*?(\[(.*?)])\w*)\s*)(</head>)?'
-        # r'(?<!correction=")(<head.*?>[*, ]*)?(\s*(\w*?(\[(.*?)])\w*)\s*)(</head>)?'
         r'(<head.*?>[*, ]*)?(\s*(\w*?(\[(.*?)])\w*)\s*)(?!\">)(</head>)?'
     )
-    illegible_pattern = re.compile(
+    illegible_pattern = re.compile(  # решить, что с этим делать
         r'(\[\d+.*?не\s*разобр.*?])|'  # [2 неразобр.]
         r'(\w+\[\w+\?])|'  # вл[иянием?]
         r'(\[\?])'  # [?]
@@ -176,32 +179,19 @@ def markup_choices_for_editorial_corrections(text):
     crossed_out_pattern = re.compile(
         r'(<.*?>)?(з|З)ач(е|ё)ркнуто:(<.*?>)?'
     )
-    # inside_head_pattern = re.compile(
-    #     r'<head.*?\[ПОМЕТКИ ПРИ ПЕРЕЧИТЫВАНИИ «ВЫБРАННЫХ <lb/>МЕСТ ИЗ ПЕРЕПИСКИ С ДРУЗЬЯМИ».]</head>'
-    # )
-    # p1 = re.compile(r'\[(\d+.*?не\s*разобр.*?)|(\?)]')
     choice_result = re.findall(choice_pattern, text)
 
     for i in choice_result:
-        # print(i)
-        # print(i[2])
-        if i[0]:  # if inside head
+        if (
+                i[0] or
+                illegible_pattern.search(i[2]) is not None or
+                crossed_out_pattern.search(i[2]) is not None
+        ):  # if inside head
             continue
-        if illegible_pattern.search(i[2]) is not None:
-            continue
-        if crossed_out_pattern.search(i[2]) is not None:
-            continue
-        # print(i[0])
         sub_1 = re.sub(r'\[|]', r'', i[2])
-        # print(sub_1)
         sub_2 = re.sub(r'\[', r'\\[', i[2])
-        # print(sub_2)
         sub_3 = re.sub(r']', r'\\]', sub_2)
-        # print(sub_3)
-        # sub_4 = re.sub('\[' + i[2] + "]", r"", i[2])
         sub_4 = re.sub('\[.*?]', '', i[2])
-        # print(sub_4)
-        # print('i[2]', i[2])
         choice_attribute = re.search('<.*?>(.*?)<.*?>', i[2])  # [<hi>хвастовство</hi>]
         if choice_attribute is None:
             choice_attribute = i[2]
@@ -209,13 +199,7 @@ def markup_choices_for_editorial_corrections(text):
             choice_attribute = choice_attribute.group(1)
         replacement = (f'<choice original_editorial_correction="{choice_attribute}">'
                        f'<sic>{sub_4}</sic><corr>{sub_1}</corr></choice>')
-        # print(replacement)
-        # reg_for_repl = "(?<!\=\')" + sub_3
         reg_for_repl = f'(?<!="){sub_3}(?!">)'
-        # print(reg_for_repl)
-        # print(re.search(reg_for_repl, text).group())
-        # print(i)
-        # text = re.sub(reg_for_repl, replacement, text)
         text = re.sub(reg_for_repl, replacement, text)
     return text
 
@@ -227,12 +211,10 @@ def convert_text_divs_to_xml_text(title, id, text_divs, notes):
         encoding='unicode'
     ) for t in text_divs]
     text = ''.join(divs)
-    # with open('parse_volume/note_sample.xml', 'w') as file:
-    #     file.write(text)
     text = replace_refs_to_notes_with_notes(text, notes)
     text = replace_html_markup_with_xml(text)
-    # text = markup_choices_for_prereform_spelling(text)
     text = markup_choices_for_editorial_corrections(text)
+    text = markup_choices_for_prereform_spelling(text)
     return text
 
 

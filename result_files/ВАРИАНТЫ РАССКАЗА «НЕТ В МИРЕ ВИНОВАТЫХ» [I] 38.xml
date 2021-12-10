@@ -1,0 +1,1763 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>
+     ВАРИАНТЫ РАССКАЗА «НЕТ В МИРЕ ВИНОВАТЫХ» [I]
+    </title>
+        <author>
+     Толстой Л.Н.
+    </author>
+        <respStmt>
+          <resp>
+      подготовка TEI/XML
+     </resp>
+          <name>
+      Мария Картышева, Евгений Можаев, Даниил Скоринкин, Елена Сидорова, Вероника Файнберг, Кирилл Милинцевич
+     </name>
+        </respStmt>
+        <respStmt>
+          <name>
+      Анастасия Бонч-Осмоловская, Фёкла Толстая, Борис Орехов
+     </name>
+          <resp>
+      Идея, постановка задач, руководство
+     </resp>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <idno>
+    </idno>
+        <publisher>
+          <orgName>
+      Школа лингвистики НИУ ВШЭ
+     </orgName>
+        </publisher>
+        <availability>
+          <p>
+      Тексты и метатекстовая разметка доступны для свободного использования и распространения по лицензии Creative Commons Attribution Share-Alike (cc by-sa)
+     </p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <biblStruct>
+          <analytic>
+            <author>
+       Толстой Л.Н.
+      </author>
+            <title level="a">
+       ВАРИАНТЫ РАССКАЗА «НЕТ В МИРЕ ВИНОВАТЫХ» [I]
+      </title>
+          </analytic>
+          <monogr>
+            <title level="m">
+       Полное собрание сочинений. Том 38
+      </title>
+            <imprint>
+              <pubPlace>
+        Москва
+       </pubPlace>
+              <publisher>
+        Государственное издательство "Художественная литература"
+       </publisher>
+              <date when="fill date later"/>
+            </imprint>
+          </monogr>
+          <series>
+            <title level="s">
+       Л.Н. Толстой. Полное собрание сочинений
+      </title>
+            <biblScope unit="vol">
+       38
+      </biblScope>
+          </series>
+        </biblStruct>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <classDecl>
+        <xi:include href="taxonomy.xml"/>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <creation>
+        <date notAfter="fill date_not_after later" notBefore="fill date_not_before later">
+     fill date later
+    </date>
+        <rs/>
+      </creation>
+      <textClass>
+   </textClass>
+      <preparedness>
+   </preparedness>
+      <settingDesc>
+        <time>
+     XIX
+    </time>
+      </settingDesc>
+    </profileDesc>
+    <xenoData>
+      <cyclusName/>
+      <p>
+    Проект
+    <title>
+     Толстой.Digital
+    </title>
+    разрабатывается сотрудниками и студентами
+    <orgName>
+     Высшей школы экономики
+    </orgName>
+    в сотрудничестве с
+    <orgName>
+     Государственным музеем Л.Н. Толстого
+    </orgName>
+    . Источник текстов –
+    <bibl>
+     90-томное собрание сочинений Л.Н.Толстого
+    </bibl>
+    . Разметка основана на стандарте
+    <ref target="http://www.tei-c.org">
+     TEI (Text Encoding Initiative)
+    </ref>
+    .
+   </p>
+      <versionNumber/>
+      <isFinished/>
+      <isEdited/>
+      <fullBibliographicDescription/>
+    </xenoData>
+  </teiHeader>
+  <text>
+    <div type="section" xml:id="h000013002">
+      <head rend="center">ВАРИАНТЫ РАССКАЗА <lb/>«НЕТ В МИРЕ ВИНОВАТЫХ» <choice original_editorial_correction="[I]">
+          <sic/>
+          <corr>I</corr>
+        </choice>
+      </head>
+    </div>
+    <div type="section" xml:id="h000013002001">
+      <head rend="left">* № 1.</head>
+      <p rend="left" id="6d8eb750-5137-46d4-a971-782b8e2f77ec">
+        <choice>
+          <reg>В</reg>
+          <orig>Въ</orig>
+        </choice>
+        <choice>
+          <reg>середине</reg>
+          <orig>серединѣ</orig>
+        </choice>
+        <choice>
+          <reg>занятий</reg>
+          <orig>занятiй</orig>
+        </choice>
+        <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice>
+        <choice>
+          <reg>Секретарем</reg>
+          <orig>Секретаремъ</orig>
+        </choice>
+        <choice>
+          <reg>вошел</reg>
+          <orig>вошелъ</orig>
+        </choice> &lt;......и <choice>
+          <reg>принес</reg>
+          <orig>принесъ</orig>
+        </choice> карточку.</p>
+      <p rend="left" id="1438f388-56eb-4505-b6e1-5f28284d6ef5">— <choice>
+          <reg>Приехал</reg>
+          <orig>Прiѣхалъ</orig>
+        </choice>
+        <choice>
+          <reg>Господин</reg>
+          <orig>Господинъ</orig>
+        </choice> и <choice>
+          <reg>желает</reg>
+          <orig>желаетъ</orig>
+        </choice>
+        <choice>
+          <reg>видеть</reg>
+          <orig>видѣть</orig>
+        </choice> ваше Превосходительство.</p>
+      <p rend="left" id="dbd5ff74-4f32-46ec-982c-497c95f7ae61">Ив. Фед. <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice> досадой <choice>
+          <reg>взял</reg>
+          <orig>взялъ</orig>
+        </choice> карточку.</p>
+      <p rend="left" id="34376d2c-914c-4bf6-a339-5e3b6a0f9e35">— Кто такой?</p>
+      <p rend="left" id="0665c379-313d-40ae-a6bd-7bc306d2d285">— Не могу знать.</p>
+      <p rend="left" id="4579cb25-1552-4a63-b8a4-c2ffa8da6561">Ив. Фед. <choice>
+          <reg>взглянул</reg>
+          <orig>взглянулъ</orig>
+        </choice> на карточку, <choice>
+          <reg>прочел</reg>
+          <orig>прочелъ</orig>
+        </choice> и <choice>
+          <reg>вдруг</reg>
+          <orig>вдругъ</orig>
+        </choice> всегда доброе хорошее лицо его <choice>
+          <reg>рассияло</reg>
+          <orig>разсiяло</orig>
+        </choice> &lt;особенной радостью&gt;. <choice>
+          <reg>Он</reg>
+          <orig>Онъ</orig>
+        </choice>
+        <choice>
+          <reg>вскочил</reg>
+          <orig>вскочилъ</orig>
+        </choice> несмотря на свою начинающуюся 50 <choice>
+          <reg>летнюю</reg>
+          <orig>лѣтнюю</orig>
+        </choice> толщину и <choice>
+          <reg>пошел</reg>
+          <orig>пошелъ</orig>
+        </choice>
+        <choice>
+          <reg>своим</reg>
+          <orig>своимъ</orig>
+        </choice>
+        <choice>
+          <reg>крепким</reg>
+          <orig>крѣпкимъ</orig>
+        </choice>
+        <choice>
+          <reg>решительным</reg>
+          <orig>рѣшительнымъ</orig>
+        </choice>
+        <choice>
+          <reg>шагом</reg>
+          <orig>шагомъ</orig>
+        </choice>
+        <note n="n12">
+          <div type="section" xml:id="n12">
+            <head>
+              <ref target="#backn12">
+                12
+              </ref>
+            </head>
+            <p rend="left" id="0d4e75ce-868f-4bb7-80ec-d4267f0eaf26">
+              <hi rend="italic">Зачеркнуто:</hi> в канцелярию.
+            </p>
+          </div>
+        </note>
+        <choice>
+          <reg>к</reg>
+          <orig>къ</orig>
+        </choice> двери.</p>
+      <p rend="left" id="61bcfff8-6aa0-4152-94fa-aa1d7ded1d76">На <choice>
+          <reg>карточке</reg>
+          <orig>карточкѣ</orig>
+        </choice> было напечатано: <choice>
+          <reg>Виктор</reg>
+          <orig>Викторъ</orig>
+        </choice>
+        <choice>
+          <reg>Адуевский</reg>
+          <orig>Адуевскiй</orig>
+        </choice>.</p>
+      <p rend="left" id="4f2b5193-68f3-4811-ad8a-42a78dc7457e">Ив. Фед. еще <choice>
+          <reg>раз</reg>
+          <orig>разъ</orig>
+        </choice>
+        <choice>
+          <reg>посмотрел</reg>
+          <orig>посмотрѣлъ</orig>
+        </choice> на карточку и <choice>
+          <reg>мотнул</reg>
+          <orig>мотнулъ</orig>
+        </choice> головой.</p>
+      <p rend="left" id="a311da0f-5c0c-4a44-aab2-974b8e1f75db">— <choice>
+          <reg>Вот</reg>
+          <orig>Вотъ</orig>
+        </choice>
+        <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice>! <choice>
+          <reg>сказал</reg>
+          <orig>сказалъ</orig>
+        </choice>
+        <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice>
+        <choice>
+          <reg>себе</reg>
+          <orig>себѣ</orig>
+        </choice>, <choice>
+          <reg>уж</reg>
+          <orig>ужъ</orig>
+        </choice> не князь <choice>
+          <reg>Адуевский</reg>
+          <orig>Адуевскiй</orig>
+        </choice>, а просто В... А...&gt;</p>
+    </div>
+    <div type="section" xml:id="h000013002002">
+      <head rend="left">* № 2.</head>
+      <p rend="left" id="60cfae3a-3e30-411e-8b57-a0cf8743b5a4">И <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice> ней <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice>
+        <choice>
+          <reg>увидал</reg>
+          <orig>увидалъ</orig>
+        </choice> еще больше неправды и <choice>
+          <reg>нелепости</reg>
+          <orig>нелѣпости</orig>
+        </choice>. И <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice> прямо и <choice>
+          <reg>выражал</reg>
+          <orig>выражалъ</orig>
+        </choice> это <choice>
+          <reg>несогласие</reg>
+          <orig>несогласiе</orig>
+        </choice>
+        <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice> принятыми <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice> деревенской жизни и <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice> его <choice>
+          <reg>семье</reg>
+          <orig>семьѣ</orig>
+        </choice> обычаями и не <choice>
+          <reg>исполнял</reg>
+          <orig>исполнялъ</orig>
+        </choice>
+        <choice>
+          <reg>их</reg>
+          <orig>ихъ</orig>
+        </choice>: не <choice>
+          <reg>ходил</reg>
+          <orig>ходилъ</orig>
+        </choice>
+        <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice> церковь, не <choice>
+          <reg>говел</reg>
+          <orig>говѣлъ</orig>
+        </choice>, не <choice>
+          <reg>соблюдал</reg>
+          <orig>соблюдалъ</orig>
+        </choice>
+        <choice>
+          <reg>постов</reg>
+          <orig>постовъ</orig>
+        </choice>, не крестился садясь за <choice>
+          <reg>стол</reg>
+          <orig>столъ</orig>
+        </choice> и выходя, не молился <choice>
+          <reg>утром</reg>
+          <orig>утромъ</orig>
+        </choice> и <choice>
+          <reg>вечером</reg>
+          <orig>вечеромъ</orig>
+        </choice>. <choice>
+          <reg>Отец</reg>
+          <orig>Отецъ</orig>
+        </choice>
+        <choice>
+          <reg>ругал</reg>
+          <orig>ругалъ</orig>
+        </choice> его и даже <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>пьяном</reg>
+          <orig>пьяномъ</orig>
+        </choice>
+        <choice>
+          <reg>виде</reg>
+          <orig>видѣ</orig>
+        </choice>
+        <choice>
+          <reg>побил</reg>
+          <orig>побилъ</orig>
+        </choice> его. <choice>
+          <reg>Егор</reg>
+          <orig>Егоръ</orig>
+        </choice> сдержался, но ему стало трудно жить и <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice> отправился <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice> Москву.</p>
+    </div>
+    <div type="section" xml:id="h000013002003">
+      <head rend="left">* № 3.</head>
+      <p rend="left" id="5f65538f-d6e4-48d1-80a4-7bf6d3f537b8">— Мих. Вас., милый М. В., выговорила она <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice> первый <choice>
+          <reg>раз</reg>
+          <orig>разъ</orig>
+        </choice> cлово: милый, но и говорить не нужно было этого слова, глаза, <choice>
+          <reg>взгляд</reg>
+          <orig>взглядъ</orig>
+        </choice>
+        <choice>
+          <reg>её</reg>
+          <orig>ея</orig>
+        </choice> восторженно любовный, <choice>
+          <reg>её</reg>
+          <orig>ея</orig>
+        </choice> подавшееся <choice>
+          <reg>вперед</reg>
+          <orig>впередъ</orig>
+        </choice> все <choice>
+          <reg>тело</reg>
+          <orig>тѣло</orig>
+        </choice> говорили гораздо больше, <choice>
+          <reg>чем</reg>
+          <orig>чѣмъ</orig>
+        </choice> это слово.</p>
+      <p rend="left pages" id="f7ab35c6-ad0d-49f8-826d-62dd1958c15f">
+        <pb n="200"/>
+      </p>
+    </div>
+    <div type="section" xml:id="h000013002004">
+      <head rend="left">* № 4.</head>
+      <p rend="left" id="ad31df6f-0efe-409e-b51c-b6e5519b9a72">Началось <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice>
+        <choice>
+          <reg>призывом</reg>
+          <orig>призывомъ</orig>
+        </choice>
+        <choice>
+          <reg>запасных</reg>
+          <orig>запасныхъ</orig>
+        </choice>. Были <choice>
+          <reg>такие</reg>
+          <orig>такiе</orig>
+        </choice> которые очевидно любовались сами на себя <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice> на &lt;<choice>
+          <reg>солдат</reg>
+          <orig>солдатъ</orig>
+        </choice>&gt; <choice>
+          <reg>знающих</reg>
+          <orig>знающихъ</orig>
+        </choice>
+        <choice>
+          <reg>все</reg>
+          <orig>всѣ</orig>
+        </choice>
+        <choice>
+          <reg>условия</reg>
+          <orig>условiя</orig>
+        </choice> и <choice>
+          <reg>приемы</reg>
+          <orig>прiемы</orig>
+        </choice> военной службы и вытягивали руки по <choice>
+          <reg>швам</reg>
+          <orig>швамъ</orig>
+        </choice>
+        <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>своих</reg>
+          <orig>своихъ</orig>
+        </choice>
+        <choice>
+          <reg>поддевках</reg>
+          <orig>поддевкахъ</orig>
+        </choice> и выкрикивали: слушаю ваше Превосходительство, ради стараться ваше <choice>
+          <reg>благородие</reg>
+          <orig>благородiе</orig>
+        </choice> и т. п. Были и &lt;явно&gt; не <choice>
+          <reg>скрывающие</reg>
+          <orig>скрывающiе</orig>
+        </choice> своего <choice>
+          <reg>огорчения</reg>
+          <orig>огорченiя</orig>
+        </choice>, <choice>
+          <reg>просившие</reg>
+          <orig>просившiе</orig>
+        </choice> отпуска или отсрочки <choice>
+          <reg>без</reg>
+          <orig>безъ</orig>
+        </choice> &lt;<choice>
+          <reg>всяких</reg>
+          <orig>всякихъ</orig>
+        </choice>&gt; <choice>
+          <reg>достаточных</reg>
+          <orig>достаточныхъ</orig>
+        </choice>
+        <choice>
+          <reg>оснований</reg>
+          <orig>основанiй</orig>
+        </choice>.</p>
+    </div>
+    <div type="section" xml:id="h000013002005">
+      <head rend="left">* № 5.</head>
+      <p rend="left" id="4a56ee2c-1333-4baf-b279-10e3f2842223">Хотя <choice>
+          <reg>Порхунов</reg>
+          <orig>Порхуновъ</orig>
+        </choice> и <choice>
+          <reg>сделал</reg>
+          <orig>сдѣлалъ</orig>
+        </choice>
+        <choice>
+          <reg>вид</reg>
+          <orig>видъ</orig>
+        </choice>, что <choice>
+          <reg>этот</reg>
+          <orig>этотъ</orig>
+        </choice> случай не <choice>
+          <reg>нарушил</reg>
+          <orig>нарушилъ</orig>
+        </choice> его <choice>
+          <reg>спокойствие</reg>
+          <orig>спокойствiе</orig>
+        </choice>, <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice> во все время своего <choice>
+          <reg>пребывания</reg>
+          <orig>пребыванiя</orig>
+        </choice>
+        <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>присутствии</reg>
+          <orig>присутствiи</orig>
+        </choice> и <choice>
+          <reg>занятия</reg>
+          <orig>занятiя</orig>
+        </choice>
+        <choice>
+          <reg>делами</reg>
+          <orig>дѣлами</orig>
+        </choice>
+        <choice>
+          <reg>беспрестанно</reg>
+          <orig>безпрестанно</orig>
+        </choice>
+        <choice>
+          <reg>вспоминал</reg>
+          <orig>вспоминалъ</orig>
+        </choice> лицо этого <choice>
+          <reg>человека</reg>
+          <orig>человѣка</orig>
+        </choice> Кузьмина Егора и его <choice>
+          <reg>дрожащие</reg>
+          <orig>дрожащiе</orig>
+        </choice> мускулы лба и щеки.</p>
+    </div>
+    <div type="section" xml:id="h000013002006">
+      <head rend="left">* № 6.</head>
+      <p rend="left" id="b7995f2a-7729-4223-956a-e95c00e72a73">
+        <choice>
+          <reg>Егор</reg>
+          <orig>Егоръ</orig>
+        </choice>
+        <choice>
+          <reg>Кузьмин</reg>
+          <orig>Кузьминъ</orig>
+        </choice> на 21 году <choice>
+          <reg>был</reg>
+          <orig>былъ</orig>
+        </choice>
+        <choice>
+          <reg>взят</reg>
+          <orig>взятъ</orig>
+        </choice>
+        <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice> солдаты, <choice>
+          <reg>отслужил</reg>
+          <orig>отслужилъ</orig>
+        </choice> свои три года <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>артиллерии</reg>
+          <orig>артиллерiи</orig>
+        </choice> и вернулся домой <choice>
+          <reg>к</reg>
+          <orig>къ</orig>
+        </choice> отцу крестьянину <choice>
+          <reg>среднего</reg>
+          <orig>средняго</orig>
+        </choice> достатка. <choice>
+          <reg>Как</reg>
+          <orig>Какъ</orig>
+        </choice> только <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice> вернулся <choice original_editorial_correction="[женился]">
+          <sic/>
+          <corr>женился</corr>
+        </choice> на <choice>
+          <reg>девушке</reg>
+          <orig>дѣвушкѣ</orig>
+        </choice>
+        <choice>
+          <reg>соседней</reg>
+          <orig>сосѣдней</orig>
+        </choice> деревушки.</p>
+    </div>
+    <div type="section" xml:id="h000013002007">
+      <head rend="left">* № 7.</head>
+      <p rend="left" id="bd5023da-bbee-416b-8cbb-8ff1fb6b26a9">И <choice>
+          <reg>вот</reg>
+          <orig>вотъ</orig>
+        </choice> возвратясь <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice> деревню <choice>
+          <reg>к</reg>
+          <orig>къ</orig>
+        </choice> той <choice>
+          <reg>среде</reg>
+          <orig>средѣ</orig>
+        </choice>, <choice>
+          <reg>где</reg>
+          <orig>гдѣ</orig>
+        </choice> все было основано на <choice>
+          <reg>верованиях</reg>
+          <orig>вѣрованiяхъ</orig>
+        </choice> и <choice>
+          <reg>преданиях</reg>
+          <orig>преданiяхъ</orig>
+        </choice>, его тяготила эта среда.</p>
+      <p rend="left" id="be43da66-175e-4f3c-816c-745fda848629">Еще и <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>батарее</reg>
+          <orig>батареѣ</orig>
+        </choice>
+        <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice>
+        <choice>
+          <reg>встретился</reg>
+          <orig>встрѣтился</orig>
+        </choice>
+        <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice>
+        <choice original_editorial_correction="револ[юціонерами]">
+          <sic>револ</sic>
+          <corr>
+            <choice>
+              <reg>революционерами</reg>
+              <orig>революцiонерами</orig>
+            </choice>
+          </corr>
+        </choice> социалистами. <choice>
+          <reg>Таков</reg>
+          <orig>Таковъ</orig>
+        </choice>
+        <choice>
+          <reg>был</reg>
+          <orig>былъ</orig>
+        </choice> батарейный писарь <choice>
+          <reg>московский</reg>
+          <orig>московскiй</orig>
+        </choice>
+        <choice>
+          <reg>мещанин</reg>
+          <orig>мѣщанинъ</orig>
+        </choice>. Но во время службы <choice original_editorial_correction="соц[іалъ]">
+          <sic>соц</sic>
+          <corr>
+            <choice>
+              <reg>социал</reg>
+              <orig>соцiалъ</orig>
+            </choice>
+          </corr>
+        </choice>
+        <choice original_editorial_correction="демокр[атія]">
+          <sic>демокр</sic>
+          <corr>
+            <choice>
+              <reg>демократия</reg>
+              <orig>демократiя</orig>
+            </choice>
+          </corr>
+        </choice> не увлекла его. Увлекся <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice>
+        <choice>
+          <reg>революционными</reg>
+          <orig>революцiонными</orig>
+        </choice> идеями <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>деревне</reg>
+          <orig>деревнѣ</orig>
+        </choice>, <choice>
+          <reg>где</reg>
+          <orig>гдѣ</orig>
+        </choice> сошелся <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice>
+        <choice>
+          <reg>приезжавшими</reg>
+          <orig>прiѣзжавшими</orig>
+        </choice> на <choice>
+          <reg>праздник</reg>
+          <orig>праздникъ</orig>
+        </choice>
+        <choice>
+          <reg>из</reg>
+          <orig>изъ</orig>
+        </choice> Москвы ребятами.</p>
+    </div>
+    <div type="section" xml:id="h000013002008">
+      <head rend="left">* № 8.</head>
+      <p rend="left" id="e53cd483-0eca-4dd2-97ce-d6dabd2a5760">Главное же <choice>
+          <reg>подействовали</reg>
+          <orig>подѣйствовали</orig>
+        </choice> на него эти книги <choice>
+          <reg>тем</reg>
+          <orig>тѣмъ</orig>
+        </choice>, что они говорили про то самое, что <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice> теперь не только <choice>
+          <reg>видел</reg>
+          <orig>видѣлъ</orig>
+        </choice> и <choice>
+          <reg>понимал</reg>
+          <orig>понималъ</orig>
+        </choice>, но боками своими <choice>
+          <reg>чувствовал</reg>
+          <orig>чувствовалъ</orig>
+        </choice>. И земельный и <choice>
+          <reg>капиталистический</reg>
+          <orig>капиталистическiй</orig>
+        </choice>
+        <choice>
+          <reg>вопрос</reg>
+          <orig>вопросъ</orig>
+        </choice> не только теоретически, но прямо жизненно мучали его и не находили другого <choice>
+          <reg>решения</reg>
+          <orig>рѣшенiя</orig>
+        </choice>
+        <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice>
+        <choice>
+          <reg>революционное</reg>
+          <orig>революцiонное</orig>
+        </choice>.</p>
+    </div>
+    <div type="section" xml:id="h000013002009">
+      <head rend="left">* № 9.</head>
+      <p rend="left" id="b41c4790-04e5-4336-b41d-0ef91c0a8b4d">— Мих. Вас. не <choice>
+          <reg>ездите</reg>
+          <orig>ѣздите</orig>
+        </choice>, я прошу <choice>
+          <reg>вас</reg>
+          <orig>васъ</orig>
+        </choice>, сказала она. Милый Мих. В. не <choice>
+          <reg>ездите</reg>
+          <orig>ѣздите</orig>
+        </choice> туда &lt;<choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>этот</reg>
+          <orig>этотъ</orig>
+        </choice> ужасный <choice>
+          <reg>город</reg>
+          <orig>городъ</orig>
+        </choice>&gt;. Я не для себя, я для <choice>
+          <reg>вас</reg>
+          <orig>васъ</orig>
+        </choice> говорю это. <choice>
+          <reg>Ведь</reg>
+          <orig>Вѣдь</orig>
+        </choice> я знаю, знаю, что вы &lt;<choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice> этой ужасной <choice>
+          <reg>революцией</reg>
+          <orig>революцiей</orig>
+        </choice>,&gt; <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice> своей готовностью отдать свою жизнь для <choice>
+          <reg>других</reg>
+          <orig>другихъ</orig>
+        </choice> погубите себя, не <choice>
+          <reg>Ездите</reg>
+          <orig>Ѣздите</orig>
+        </choice>.</p>
+      <p rend="left" id="394cfba6-3f85-47ea-907d-97aff5ea6962">— Да <choice>
+          <reg>разве</reg>
+          <orig>развѣ</orig>
+        </choice> отдать свою жизнь за <choice>
+          <reg>других</reg>
+          <orig>другихъ</orig>
+        </choice> значить погу...</p>
+      <p rend="left" id="8821b9e9-eda7-4e91-9831-f38698bd3df8">— Знаю, знаю, но <choice>
+          <reg>мне</reg>
+          <orig>мнѣ</orig>
+        </choice> страшно, <choice>
+          <reg>мне</reg>
+          <orig>мнѣ</orig>
+        </choice> больно думать о <choice>
+          <reg>вас</reg>
+          <orig>васъ</orig>
+        </choice>, что вы погибнете. И <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice>!</p>
+      <p rend="left" id="a267dde5-b668-43b3-ab32-bf776c93d813">
+        <pb n="201"/>
+        <choice>
+          <reg>Так</reg>
+          <orig>Такъ</orig>
+        </choice> говорила 45<choice>
+          <reg>-летняя</reg>
+          <orig>-лѣтняя</orig>
+        </choice> жена Предводителя, мать 7<choice>
+          <reg>-х</reg>
+          <orig>-хъ</orig>
+        </choice>
+        <choice>
+          <reg>детей</reg>
+          <orig>дѣтей</orig>
+        </choice>, <choice>
+          <reg>из</reg>
+          <orig>изъ</orig>
+        </choice>
+        <choice>
+          <reg>которых</reg>
+          <orig>которыхъ</orig>
+        </choice> старшей <choice>
+          <reg>девочке</reg>
+          <orig>дѣвочкѣ</orig>
+        </choice> было 16 <choice>
+          <reg>лет</reg>
+          <orig>лѣтъ</orig>
+        </choice>, говорила это 25<choice>
+          <reg>-летнему</reg>
+          <orig>-лѣтнему</orig>
+        </choice> бывшему студенту, &lt;незаконному&gt; сыну <choice>
+          <reg>мещанки</reg>
+          <orig>мѣщанки</orig>
+        </choice> &lt;торговки <choice>
+          <reg>уездного</reg>
+          <orig>уѣзднаго</orig>
+        </choice> города&gt; и <choice>
+          <reg>неизвестного</reg>
+          <orig>неизвѣстнаго</orig>
+        </choice> отца. Мих. Вас. <choice>
+          <reg>Чежов</reg>
+          <orig>Чежовъ</orig>
+        </choice>
+        <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>доме</reg>
+          <orig>домѣ</orig>
+        </choice> Предводителя <choice original_editorial_correction="[былъ]">
+          <sic/>
+          <corr>
+            <choice>
+              <reg>был</reg>
+              <orig>былъ</orig>
+            </choice>
+          </corr>
+        </choice>
+        <choice>
+          <reg>учителем</reg>
+          <orig>учителемъ</orig>
+        </choice>
+        <choice>
+          <reg>детей</reg>
+          <orig>дѣтей</orig>
+        </choice>.</p>
+    </div>
+    <div type="section" xml:id="h000013002010">
+      <head rend="left">* № 10.</head>
+      <p rend="left" id="66760db9-aa40-4c38-9b4c-411c0db0e602">Она аристократка, только <choice>
+          <reg>терпевшая</reg>
+          <orig>терпѣвшая</orig>
+        </choice> его, также <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice> и <choice>
+          <reg>дурак</reg>
+          <orig>дуракъ</orig>
+        </choice>
+        <choice>
+          <reg>её</reg>
+          <orig>ея</orig>
+        </choice>
+        <choice>
+          <reg>муж</reg>
+          <orig>мужъ</orig>
+        </choice> — <choice>
+          <reg>так</reg>
+          <orig>такъ</orig>
+        </choice>
+        <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice>
+        <choice>
+          <reg>думал</reg>
+          <orig>думалъ</orig>
+        </choice> — уже не снисходить, а <choice>
+          <reg>любит</reg>
+          <orig>любитъ</orig>
+        </choice>, <choice>
+          <reg>любит</reg>
+          <orig>любитъ</orig>
+        </choice> его, покорена <choice>
+          <reg>им</reg>
+          <orig>имъ</orig>
+        </choice>, <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice>
+        <choice>
+          <reg>бывают</reg>
+          <orig>бываютъ</orig>
+        </choice> покорены <choice>
+          <reg>все</reg>
+          <orig>всѣ</orig>
+        </choice>, кого <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice>
+        <choice>
+          <reg>хочет</reg>
+          <orig>хочетъ</orig>
+        </choice> покорить.</p>
+    </div>
+    <div type="section" xml:id="h000013002011">
+      <head rend="left">* № 11.</head>
+      <p rend="left" id="bed48385-b47b-45fb-b0aa-7f41d64f0b29">
+        <choice>
+          <reg>Он</reg>
+          <orig>Онъ</orig>
+        </choice> еще больше приблизился <choice>
+          <reg>к</reg>
+          <orig>къ</orig>
+        </choice> ней. Она встала. Они были одни. <choice>
+          <reg>Был</reg>
+          <orig>Былъ</orig>
+        </choice>
+        <choice>
+          <reg>вечер</reg>
+          <orig>вечеръ</orig>
+        </choice>. Влад. Ив. <choice>
+          <reg>муж</reg>
+          <orig>мужъ</orig>
+        </choice>
+        <choice>
+          <reg>был</reg>
+          <orig>былъ</orig>
+        </choice>
+        <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>городе</reg>
+          <orig>городѣ</orig>
+        </choice>, <choice>
+          <reg>дети</reg>
+          <orig>дѣти</orig>
+        </choice> спали, прислуга была отпущена.</p>
+    </div>
+    <div type="section" xml:id="h000013002012">
+      <head rend="left">* № 12.</head>
+      <p rend="left" id="40aab9c5-f0d3-4960-9a72-eeaf256ee614">&lt;<choice>
+          <reg>Этот</reg>
+          <orig>Этотъ</orig>
+        </choice> первый <choice>
+          <reg>опыт</reg>
+          <orig>опытъ</orig>
+        </choice>
+        <choice>
+          <reg>так</reg>
+          <orig>такъ</orig>
+        </choice>
+        <choice>
+          <reg>оттолкнул</reg>
+          <orig>оттолкнулъ</orig>
+        </choice> Неустроева <choice>
+          <reg>от</reg>
+          <orig>отъ</orig>
+        </choice>
+        <choice>
+          <reg>революционной</reg>
+          <orig>революцiонной</orig>
+        </choice>
+        <choice>
+          <reg>деятельности</reg>
+          <orig>дѣятельности</orig>
+        </choice> и <choice>
+          <reg>так</reg>
+          <orig>такъ</orig>
+        </choice> ему <choice>
+          <reg>захотелось</reg>
+          <orig>захотѣлось</orig>
+        </choice>&gt;</p>
+    </div>
+    <div type="section" xml:id="h000013002013">
+      <head rend="left">* № 13.</head>
+      <p rend="left" id="8fb2009d-af86-4203-81d1-72c3dacaa6f6">о <choice>
+          <reg>победе</reg>
+          <orig>побѣдѣ</orig>
+        </choice>
+        <choice>
+          <reg>над</reg>
+          <orig>надъ</orig>
+        </choice>
+        <choice>
+          <reg>этим</reg>
+          <orig>этимъ</orig>
+        </choice>
+        <choice>
+          <reg>гордым</reg>
+          <orig>гордымъ</orig>
+        </choice>, <choice>
+          <reg>сильным</reg>
+          <orig>сильнымъ</orig>
+        </choice>, <choice>
+          <reg>совсем</reg>
+          <orig>совсѣмъ</orig>
+        </choice>
+        <choice>
+          <reg>особенным</reg>
+          <orig>особеннымъ</orig>
+        </choice>
+        <choice>
+          <reg>от</reg>
+          <orig>отъ</orig>
+        </choice>
+        <choice>
+          <reg>всех</reg>
+          <orig>всѣхъ</orig>
+        </choice> людей, <choice>
+          <reg>каких</reg>
+          <orig>какихъ</orig>
+        </choice> она знала, <choice>
+          <reg>человеком</reg>
+          <orig>человѣкомъ</orig>
+        </choice>.</p>
+      <p rend="center" id="e7297704-3208-4ff7-8e00-5c0dbcf0938e">2.</p>
+      <p rend="left" id="97ef1f58-0a59-42c2-96ab-f4f335c345f3">
+        <choice>
+          <reg>Он</reg>
+          <orig>Онъ</orig>
+        </choice> тоже не <choice>
+          <reg>спал</reg>
+          <orig>спалъ</orig>
+        </choice> и <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice>
+        <choice>
+          <reg>смешаннымп</reg>
+          <orig>смѣшаннымп</orig>
+        </choice> чувствами гордости, <choice>
+          <reg>удовлетворенного</reg>
+          <orig>удовлетвореннаго</orig>
+        </choice>
+        <choice>
+          <reg>самолюбия</reg>
+          <orig>самолюбiя</orig>
+        </choice>, благодарности <choice>
+          <reg>к</reg>
+          <orig>къ</orig>
+        </choice> ней и <choice>
+          <reg>вместе</reg>
+          <orig>вмѣстѣ</orig>
+        </choice>
+        <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice>
+        <choice>
+          <reg>тем</reg>
+          <orig>тѣмъ</orig>
+        </choice> упорства <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>исполнении</reg>
+          <orig>исполненiи</orig>
+        </choice>
+        <choice>
+          <reg>решенного</reg>
+          <orig>рѣшеннаго</orig>
+        </choice> и того, что <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice>
+        <choice>
+          <reg>считал</reg>
+          <orig>считалъ</orig>
+        </choice>
+        <choice>
+          <reg>единственным</reg>
+          <orig>единственнымъ</orig>
+        </choice> и <choice>
+          <reg>святым</reg>
+          <orig>святымъ</orig>
+        </choice>
+        <choice>
+          <reg>делом</reg>
+          <orig>дѣломъ</orig>
+        </choice> своей жизни <choice>
+          <reg>вышел</reg>
+          <orig>вышелъ</orig>
+        </choice>
+        <choice>
+          <reg>из</reg>
+          <orig>изъ</orig>
+        </choice> дома и <choice>
+          <reg>шел</reg>
+          <orig>шелъ</orig>
+        </choice> на деревню <choice>
+          <reg>к</reg>
+          <orig>къ</orig>
+        </choice> своему <choice>
+          <reg>приятелю</reg>
+          <orig>прiятелю</orig>
+        </choice> сельскому учителю Петру Федоровичу Соловьеву <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice>
+        <choice>
+          <reg>тем</reg>
+          <orig>тѣмъ</orig>
+        </choice> чтобы <choice>
+          <reg>через</reg>
+          <orig>черезъ</orig>
+        </choice> него сообщить <choice>
+          <reg>своим</reg>
+          <orig>своимъ</orig>
+        </choice>
+        <choice>
+          <reg>сотоварищам</reg>
+          <orig>сотоварищамъ</orig>
+        </choice>
+        <choice>
+          <reg>социалистам</reg>
+          <orig>соцiалистамъ</orig>
+        </choice>
+        <choice>
+          <reg>революционерам</reg>
+          <orig>революцiонерамъ</orig>
+        </choice>, <choice>
+          <reg>требовавшим</reg>
+          <orig>требовавшимъ</orig>
+        </choice> его <choice>
+          <reg>приезда</reg>
+          <orig>прiѣзда</orig>
+        </choice>
+        <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice> столицу, что <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice>
+        <choice>
+          <reg>согласен</reg>
+          <orig>согласенъ</orig>
+        </choice>
+        <choice>
+          <reg>ехать</reg>
+          <orig>ѣхать</orig>
+        </choice> и только <choice>
+          <reg>заедет</reg>
+          <orig>заѣдетъ</orig>
+        </choice>
+        <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice> Рязань <choice>
+          <reg>к</reg>
+          <orig>къ</orig>
+        </choice> своей <choice>
+          <reg>старухе</reg>
+          <orig>старухѣ</orig>
+        </choice> матери и <choice>
+          <reg>к</reg>
+          <orig>къ</orig>
+        </choice> 12 марта <choice>
+          <reg>будет</reg>
+          <orig>будетъ</orig>
+        </choice>
+        <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>Москве</reg>
+          <orig>Москвѣ</orig>
+        </choice>. Товарищи его <choice original_editorial_correction="с[оціалисты]">
+          <sic>с</sic>
+          <corr>
+            <choice>
+              <reg>социалисты</reg>
+              <orig>соцiалисты</orig>
+            </choice>
+          </corr>
+        </choice>
+        <choice original_editorial_correction="р[еволюціонеры]">
+          <sic>р</sic>
+          <corr>
+            <choice>
+              <reg>революционеры</reg>
+              <orig>революцiонеры</orig>
+            </choice>
+          </corr>
+        </choice> переписывались <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice>
+        <choice>
+          <reg>ним</reg>
+          <orig>нимъ</orig>
+        </choice>
+        <choice>
+          <reg>через</reg>
+          <orig>черезъ</orig>
+        </choice> Соловьева, боясь <choice>
+          <reg>прямых</reg>
+          <orig>прямыхъ</orig>
+        </choice>
+        <choice>
+          <reg>сношений</reg>
+          <orig>сношенiй</orig>
+        </choice>
+        <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice>
+        <choice>
+          <reg>лицом</reg>
+          <orig>лицомъ</orig>
+        </choice>, <choice>
+          <reg>живущим</reg>
+          <orig>живущимъ</orig>
+        </choice>
+        <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>доме</reg>
+          <orig>домѣ</orig>
+        </choice> предводителя, <choice>
+          <reg>Соловьев</reg>
+          <orig>Соловьевъ</orig>
+        </choice> же <choice>
+          <reg>был</reg>
+          <orig>былъ</orig>
+        </choice>, <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice> выражались о <choice>
+          <reg>нем</reg>
+          <orig>немъ</orig>
+        </choice>, душа <choice>
+          <reg>человек</reg>
+          <orig>человѣкъ</orig>
+        </choice>, который все <choice>
+          <reg>сделает</reg>
+          <orig>сдѣлаетъ</orig>
+        </choice> и <choice>
+          <reg>наверное</reg>
+          <orig>навѣрное</orig>
+        </choice> никого не <choice>
+          <reg>выдаст</reg>
+          <orig>выдастъ</orig>
+        </choice>. <choice>
+          <reg>Дело</reg>
+          <orig>Дѣло</orig>
+        </choice> же, для <choice>
+          <reg>которого</reg>
+          <orig>котораго</orig>
+        </choice> вызывался <choice>
+          <reg>Неустроев</reg>
+          <orig>Неустроевъ</orig>
+        </choice>, состояло <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice> устранении одного <choice>
+          <reg>из</reg>
+          <orig>изъ</orig>
+        </choice>
+        <choice>
+          <reg>главных</reg>
+          <orig>главныхъ</orig>
+        </choice>
+        <choice>
+          <reg>врагов</reg>
+          <orig>враговъ</orig>
+        </choice> народа Генерала NN.</p>
+    </div>
+    <div type="section" xml:id="h000013002014">
+      <head rend="left">* № 14.</head>
+      <p rend="left" id="3bda5ad0-0d7f-403f-9027-bbc7b774e804">
+        <choice>
+          <reg>Так</reg>
+          <orig>Такъ</orig>
+        </choice> какже, напишешь <choice>
+          <reg>им</reg>
+          <orig>имъ</orig>
+        </choice>, <choice>
+          <reg>вот</reg>
+          <orig>вотъ</orig>
+        </choice>
+        <choice>
+          <reg>адрес</reg>
+          <orig>адресъ</orig>
+        </choice>.</p>
+      <p rend="left" id="0a675a0c-8296-4e34-82c1-f1b39a29b8ff">— <choice>
+          <reg>Известно</reg>
+          <orig>Извѣстно</orig>
+        </choice> напишу. А всетаки скажу, что напрасно.</p>
+      <p rend="left pages" id="12eac470-4298-40a6-9744-b969a4438d1b">
+        <pb n="202"/>
+      </p>
+      <p rend="center" id="8984f286-b381-46ba-ac71-7982900c492f">3.</p>
+      <p rend="left" id="76a2284d-57d3-43c2-9b5c-168ea7ec0e28">
+        <choice>
+          <reg>Окончив</reg>
+          <orig>Окончивъ</orig>
+        </choice> свое <choice>
+          <reg>дело</reg>
+          <orig>дѣло</orig>
+        </choice>
+        <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice>
+        <choice>
+          <reg>Соловьевым</reg>
+          <orig>Соловьевымъ</orig>
+        </choice>, <choice>
+          <reg>Неустроев</reg>
+          <orig>Неустроевъ</orig>
+        </choice>
+        <choice>
+          <reg>пошел</reg>
+          <orig>пошелъ</orig>
+        </choice> домой на <choice>
+          <reg>барский</reg>
+          <orig>барскiй</orig>
+        </choice>
+        <choice>
+          <reg>двор</reg>
+          <orig>дворъ</orig>
+        </choice>. Уже начинало <choice>
+          <reg>светать</reg>
+          <orig>свѣтать</orig>
+        </choice> &lt;когда <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice>
+        <choice>
+          <reg>лег</reg>
+          <orig>легъ</orig>
+        </choice>
+        <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice> постель&gt; и <choice>
+          <reg>валил</reg>
+          <orig>валилъ</orig>
+        </choice> крупный <choice>
+          <reg>снег</reg>
+          <orig>снѣгъ</orig>
+        </choice>. Все было покрыто <choice>
+          <reg>белой</reg>
+          <orig>бѣлой</orig>
+        </choice> пеленой. <choice>
+          <reg>Он</reg>
+          <orig>Онъ</orig>
+        </choice>
+        <choice>
+          <reg>лег</reg>
+          <orig>легъ</orig>
+        </choice>
+        <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice> постель <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice> 5<choice>
+          <reg>-м</reg>
+          <orig>-мъ</orig>
+        </choice> часу и <choice>
+          <reg>тотчас</reg>
+          <orig>тотчасъ</orig>
+        </choice>
+        <choice>
+          <reg>заснул</reg>
+          <orig>заснулъ</orig>
+        </choice>. <choice>
+          <reg>Соловьев</reg>
+          <orig>Соловьевъ</orig>
+        </choice> между <choice>
+          <reg>тем</reg>
+          <orig>тѣмъ</orig>
+        </choice>
+        <choice>
+          <reg>cвернул</reg>
+          <orig>cвернулъ</orig>
+        </choice> и <choice>
+          <reg>закурил</reg>
+          <orig>закурилъ</orig>
+        </choice> папироску, <choice>
+          <reg>написал</reg>
+          <orig>написалъ</orig>
+        </choice> письмо, <choice>
+          <reg>записал</reg>
+          <orig>записалъ</orig>
+        </choice>
+        <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice> свой <choice>
+          <reg>дневник</reg>
+          <orig>дневникъ</orig>
+        </choice>
+        <choice>
+          <reg>пришедшия</reg>
+          <orig>пришедшiя</orig>
+        </choice> ему <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>разговоре</reg>
+          <orig>разговорѣ</orig>
+        </choice>
+        <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice>
+        <choice>
+          <reg>Неустроевым</reg>
+          <orig>Неустроевымъ</orig>
+        </choice> мысли и <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice> всегда &lt;<choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice>
+        <choice>
+          <reg>самого</reg>
+          <orig>самаго</orig>
+        </choice>
+        <choice>
+          <reg>детства</reg>
+          <orig>дѣтства</orig>
+        </choice>&gt;</p>
+    </div>
+    <div type="section" xml:id="h000013002015">
+      <head rend="left">* № 15.</head>
+      <p rend="left" id="b5198f33-4499-4fe9-a335-56243be271ab">Много было для него <choice>
+          <reg>интересного</reg>
+          <orig>интереснаго</orig>
+        </choice>
+        <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice> эту <choice>
+          <reg>поездку</reg>
+          <orig>поѣздку</orig>
+        </choice>
+        <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>город</reg>
+          <orig>городъ</orig>
+        </choice> и даже много <choice>
+          <reg>приятного</reg>
+          <orig>прiятнаго</orig>
+        </choice> и <choice>
+          <reg>значительного</reg>
+          <orig>значительнаго</orig>
+        </choice>. А именно его <choice>
+          <reg>свидание</reg>
+          <orig>свиданiе</orig>
+        </choice>
+        <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice>
+        <choice>
+          <reg>старым</reg>
+          <orig>старымъ</orig>
+        </choice>
+        <choice>
+          <reg>товарищем</reg>
+          <orig>товарищемъ</orig>
+        </choice> по <choice>
+          <reg>лейб-гусарскому</reg>
+          <orig>лейбъ-гусарскому</orig>
+        </choice> полку <choice>
+          <reg>князем</reg>
+          <orig>княземъ</orig>
+        </choice>
+        <choice>
+          <reg>Одуевским</reg>
+          <orig>Одуевскимъ</orig>
+        </choice> и <choice>
+          <reg>дело</reg>
+          <orig>дѣло</orig>
+        </choice> крестьянина, отказавшагося <choice>
+          <reg>от</reg>
+          <orig>отъ</orig>
+        </choice> военной службы. Но <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice> ни интересно и <choice>
+          <reg>приятно</reg>
+          <orig>прiятно</orig>
+        </choice> могло быть что либо <choice>
+          <reg>вне</reg>
+          <orig>внѣ</orig>
+        </choice> дома</p>
+    </div>
+    <div type="section" xml:id="h000013002016">
+      <head rend="left">* № 16.</head>
+      <p rend="left" id="a21ceb2c-96d5-4302-a1e4-77593d8208ab">Уже не жена — (<choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice> уже <choice>
+          <reg>более</reg>
+          <orig>болѣе</orig>
+        </choice> года <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice>
+        <choice>
+          <reg>вместе</reg>
+          <orig>вмѣстѣ</orig>
+        </choice>
+        <choice>
+          <reg>решил</reg>
+          <orig>рѣшилъ</orig>
+        </choice>
+        <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice> ней перестать быть <choice>
+          <reg>её</reg>
+          <orig>ея</orig>
+        </choice>
+        <choice>
+          <reg>мужем</reg>
+          <orig>мужемъ</orig>
+        </choice>), а <choice>
+          <reg>друг</reg>
+          <orig>другъ</orig>
+        </choice>
+      </p>
+    </div>
+    <div type="section" xml:id="h000013002017">
+      <head rend="left">* № 17.</head>
+      <p rend="left" id="7ca8b482-5f65-45b0-a273-4a480a7a16b3">про свиданье <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice>
+        <choice>
+          <reg>Адуевским</reg>
+          <orig>Адуевскимъ</orig>
+        </choice>, который нарочно <choice>
+          <reg>приезжал</reg>
+          <orig>прiѣзжалъ</orig>
+        </choice>, чтобы повидаться <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice>
+        <choice>
+          <reg>ним</reg>
+          <orig>нимъ</orig>
+        </choice>.</p>
+      <p rend="left" id="daea8440-23a1-4990-8ced-a59793bf4ed6">— Что же, <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice>
+        <choice>
+          <reg>к</reg>
+          <orig>къ</orig>
+        </choice>
+        <choice>
+          <reg>нам</reg>
+          <orig>намъ</orig>
+        </choice> не <choice>
+          <reg>заедет</reg>
+          <orig>заѣдетъ</orig>
+        </choice>?</p>
+      <p rend="left" id="6d1817cb-315a-4b41-8356-dadaae35c0af">— <choice>
+          <reg>Нет</reg>
+          <orig>Нѣтъ</orig>
+        </choice>. Да ты и не узнаешь его. Это <choice>
+          <reg>совсем</reg>
+          <orig>совсѣмъ</orig>
+        </choice> другой <choice>
+          <reg>человек</reg>
+          <orig>человѣкъ</orig>
+        </choice>. Ничего <choice>
+          <reg>похожего</reg>
+          <orig>похожаго</orig>
+        </choice> не осталось на <choice>
+          <reg>прежнего</reg>
+          <orig>прежняго</orig>
+        </choice> Митю <choice>
+          <reg>Адуевского</reg>
+          <orig>Адуевскаго</orig>
+        </choice>. Весь <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>религиозном</reg>
+          <orig>религiозномъ</orig>
+        </choice>
+        <choice>
+          <reg>мире</reg>
+          <orig>мiрѣ</orig>
+        </choice>, <choice>
+          <reg>евангелие</reg>
+          <orig>евангелiе</orig>
+        </choice>, <choice>
+          <reg>христианство</reg>
+          <orig>христiанство</orig>
+        </choice>... et tout le tremblement
+        <note n="n13">
+          <div type="section" xml:id="n13">
+            <head>
+              <ref target="#backn13">
+                13
+              </ref>
+            </head>
+            <p rend="left" id="bc889d7d-0ab0-4d97-98ae-31f1837b0b38">
+              <choice original_editorial_correction="[и весь этот треск]">
+                <sic/>
+                <corr>и весь этот треск</corr>
+              </choice>
+            </p>
+          </div>
+        </note>
+        , но очень, очень <choice>
+          <reg>мил</reg>
+          <orig>милъ</orig>
+        </choice> и <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice> всегда во <choice>
+          <reg>всем</reg>
+          <orig>всемъ</orig>
+        </choice>
+        <choice>
+          <reg>искренен</reg>
+          <orig>искрененъ</orig>
+        </choice>, весь <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>том</reg>
+          <orig>томъ</orig>
+        </choice>, <choice>
+          <reg>чем</reg>
+          <orig>чѣмъ</orig>
+        </choice>
+        <choice>
+          <reg>живет</reg>
+          <orig>живетъ</orig>
+        </choice>.</p>
+    </div>
+    <div type="section" xml:id="h000013002018">
+      <head rend="left">* № 18.</head>
+      <p rend="left" id="570833d6-1ddd-4a30-a008-4a35f70ba92d">Для людей нравственно, <choice>
+          <reg>религиозно</reg>
+          <orig>религiозно</orig>
+        </choice>
+        <choice>
+          <reg>чутких</reg>
+          <orig>чуткихъ</orig>
+        </choice> не только сглаживаются и <choice>
+          <reg>раскаянием</reg>
+          <orig>раскаянiемъ</orig>
+        </choice>, и <choice>
+          <reg>духовным</reg>
+          <orig>духовнымъ</orig>
+        </choice>
+        <choice>
+          <reg>просветлением</reg>
+          <orig>просвѣтлѣнiемъ</orig>
+        </choice>, но <choice>
+          <reg>движат</reg>
+          <orig>движатъ</orig>
+        </choice>
+        <choice>
+          <reg>вперед</reg>
+          <orig>впередъ</orig>
+        </choice>
+        <choice original_editorial_correction="[къ]">
+          <sic/>
+          <corr>
+            <choice>
+              <reg>к</reg>
+              <orig>къ</orig>
+            </choice>
+          </corr>
+        </choice> нравственному <choice>
+          <reg>совершенствованию</reg>
+          <orig>совершенствованiю</orig>
+        </choice>
+      </p>
+    </div>
+  </text>
+</TEI>

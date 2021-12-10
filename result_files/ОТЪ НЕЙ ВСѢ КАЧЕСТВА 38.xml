@@ -1,0 +1,4418 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>
+     ОТЪ НЕЙ ВСѢ КАЧЕСТВА
+    </title>
+        <author>
+     Толстой Л.Н.
+    </author>
+        <respStmt>
+          <resp>
+      подготовка TEI/XML
+     </resp>
+          <name>
+      Мария Картышева, Евгений Можаев, Даниил Скоринкин, Елена Сидорова, Вероника Файнберг, Кирилл Милинцевич
+     </name>
+        </respStmt>
+        <respStmt>
+          <name>
+      Анастасия Бонч-Осмоловская, Фёкла Толстая, Борис Орехов
+     </name>
+          <resp>
+      Идея, постановка задач, руководство
+     </resp>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <idno>
+    </idno>
+        <publisher>
+          <orgName>
+      Школа лингвистики НИУ ВШЭ
+     </orgName>
+        </publisher>
+        <availability>
+          <p>
+      Тексты и метатекстовая разметка доступны для свободного использования и распространения по лицензии Creative Commons Attribution Share-Alike (cc by-sa)
+     </p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <biblStruct>
+          <analytic>
+            <author>
+       Толстой Л.Н.
+      </author>
+            <title level="a">
+       ОТЪ НЕЙ ВСѢ КАЧЕСТВА
+      </title>
+          </analytic>
+          <monogr>
+            <title level="m">
+       Полное собрание сочинений. Том 38
+      </title>
+            <imprint>
+              <pubPlace>
+        Москва
+       </pubPlace>
+              <publisher>
+        Государственное издательство "Художественная литература"
+       </publisher>
+              <date when="fill date later"/>
+            </imprint>
+          </monogr>
+          <series>
+            <title level="s">
+       Л.Н. Толстой. Полное собрание сочинений
+      </title>
+            <biblScope unit="vol">
+       38
+      </biblScope>
+          </series>
+        </biblStruct>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <classDecl>
+        <xi:include href="taxonomy.xml"/>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <creation>
+        <date notAfter="fill date_not_after later" notBefore="fill date_not_before later">
+     fill date later
+    </date>
+        <rs/>
+      </creation>
+      <textClass>
+   </textClass>
+      <preparedness>
+   </preparedness>
+      <settingDesc>
+        <time>
+     XIX
+    </time>
+      </settingDesc>
+    </profileDesc>
+    <xenoData>
+      <cyclusName/>
+      <p>
+    Проект
+    <title>
+     Толстой.Digital
+    </title>
+    разрабатывается сотрудниками и студентами
+    <orgName>
+     Высшей школы экономики
+    </orgName>
+    в сотрудничестве с
+    <orgName>
+     Государственным музеем Л.Н. Толстого
+    </orgName>
+    . Источник текстов –
+    <bibl>
+     90-томное собрание сочинений Л.Н.Толстого
+    </bibl>
+    . Разметка основана на стандарте
+    <ref target="http://www.tei-c.org">
+     TEI (Text Encoding Initiative)
+    </ref>
+    .
+   </p>
+      <versionNumber/>
+      <isFinished/>
+      <isEdited/>
+      <fullBibliographicDescription/>
+    </xenoData>
+  </teiHeader>
+  <text>
+    <div type="section" xml:id="h000013006">
+      <head rend="center">
+        <choice>
+          <reg>ОТ</reg>
+          <orig>ОТЪ</orig>
+        </choice> НЕЙ <choice>
+          <reg>ВСЕ</reg>
+          <orig>ВСѢ</orig>
+        </choice> КАЧЕСТВА.</head>
+      <div>
+        <p rend="center" id="4a236786-4b09-46ae-9aba-cdfd793c66b2">
+          <choice>
+            <reg>ДЕЙСТВУЮЩІЯ</reg>
+            <orig>ДѢЙСТВУЮЩІЯ</orig>
+          </choice> ЛИЦА:</p>
+        <p rend="left" id="c3174110-7d28-4767-a3a8-6c7a7b22de17">
+          <hi rend="Razradka">Старуха Акулина</hi>, 70 <choice>
+            <reg>лет</reg>
+            <orig>лѣтъ</orig>
+          </choice>, еще бодрая, степенная, старого <choice>
+            <reg>завета</reg>
+            <orig>завѣта</orig>
+          </choice>.</p>
+        <p rend="left" id="31ae7378-815d-486a-96df-f06a95308134">
+          <hi rend="Razradka">Михайла</hi>, <choice>
+            <reg>её</reg>
+            <orig>ея</orig>
+          </choice>
+          <choice>
+            <reg>сын</reg>
+            <orig>сынъ</orig>
+          </choice>, 35 <choice>
+            <reg>лет</reg>
+            <orig>лѣтъ</orig>
+          </choice>, страстный, самолюбивый, тщеславный, сильный.</p>
+        <p rend="left" id="9dfcf8cf-bf72-43b1-b887-42e977e385bc">
+          <hi rend="Razradka">Марфа</hi>, <choice>
+            <reg>её</reg>
+            <orig>ея</orig>
+          </choice> сноха, 32 <choice original_editorial_correction="[лѣть]">
+            <sic/>
+            <corr>
+              <choice>
+                <reg>леть</reg>
+                <orig>лѣть</orig>
+              </choice>
+            </corr>
+          </choice>, ворчливая, <choice>
+            <reg>говорит</reg>
+            <orig>говоритъ</orig>
+          </choice> много и быстро. Парашка, 10 <choice>
+            <reg>лет</reg>
+            <orig>лѣтъ</orig>
+          </choice>, дочь Марфы и Михайлы.</p>
+        <p rend="left" id="99595c5d-a042-4945-ac23-4d7eb6c982b0">
+          <hi rend="Razradka">
+            <choice>
+              <reg>Десятский</reg>
+              <orig>Десятскiй</orig>
+            </choice>
+            <choice>
+              <reg>Тарас</reg>
+              <orig>Тарасъ</orig>
+            </choice>
+          </hi>, 50 <choice>
+            <reg>лет</reg>
+            <orig>лѣтъ</orig>
+          </choice>, степенный, <choice>
+            <reg>говорит</reg>
+            <orig>говоритъ</orig>
+          </choice> медленно, <choice>
+            <reg>важничает</reg>
+            <orig>важничаетъ</orig>
+          </choice>.</p>
+        <p rend="left" id="0973156d-7c95-4117-957e-bb7080752521">
+          <hi rend="Razradka">
+            <choice>
+              <reg>Прохожий</reg>
+              <orig>Прохожiй</orig>
+            </choice>
+          </hi>, 40 <choice>
+            <reg>лет</reg>
+            <orig>лѣтъ</orig>
+          </choice>, вертлявый, худой, говорить значительно. <choice>
+            <reg>В</reg>
+            <orig>Въ</orig>
+          </choice>
+          <choice>
+            <reg>пьяном</reg>
+            <orig>пьяномъ</orig>
+          </choice>
+          <choice>
+            <reg>виде</reg>
+            <orig>видѣ</orig>
+          </choice> особенно <choice>
+            <reg>развязен</reg>
+            <orig>развязенъ</orig>
+          </choice>.</p>
+        <p rend="left" id="e364d915-1717-462b-8a55-7f48fc3be094">
+          <hi rend="Razradka">
+            <choice>
+              <reg>Игнат</reg>
+              <orig>Игнатъ</orig>
+            </choice>
+          </hi>, 40 <choice>
+            <reg>лет</reg>
+            <orig>лѣтъ</orig>
+          </choice>, балагурь, веселый, глупый.</p>
+        <p rend="left" id="f96a410a-b4f2-4f8a-8d75-bb2f3d7bb99a">
+          <hi rend="Razradka">
+            <choice>
+              <reg>Сосед</reg>
+              <orig>Сосѣдъ</orig>
+            </choice>
+          </hi>, 40 <choice original_editorial_correction="[лѣтъ]">
+            <sic/>
+            <corr>
+              <choice>
+                <reg>лет</reg>
+                <orig>лѣтъ</orig>
+              </choice>
+            </corr>
+          </choice>, суетливый.</p>
+      </div>
+    </div>
+    <div type="section" xml:id="h000013006002">
+      <head rend="center">1-ое ДЪЙСТВІЕ</head>
+      <p rend="center petit top-1em" id="ff85a1fd-60ad-403a-a608-877f386cd2a5">Осень. Изба <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice>
+        <choice>
+          <reg>чуланом</reg>
+          <orig>чуланомъ</orig>
+        </choice>.</p>
+      <p rend="center" id="4e65dc50-6203-469b-83ec-a21d64c2e58d">
+        <lb/>
+      </p>
+      <p rend="center" id="d7718926-bb7f-47a4-b046-54d4fad1b285">ЯВЛЕНІЕ 1.</p>
+      <p rend="center" id="a6822ce2-a03e-4452-a3b0-ecb2a6c746ac">
+        <hi rend="Razradka">Старуха Акулина</hi>, <hi rend="italic">
+          <choice>
+            <reg>прядет</reg>
+            <orig>прядетъ</orig>
+          </choice>; хозяйка</hi>
+        <hi rend="Razradka">Марфа</hi>, <hi rend="italic">
+          <choice>
+            <reg>мњсит</reg>
+            <orig>мњситъ</orig>
+          </choice>
+          <choice>
+            <reg>хлебы</reg>
+            <orig>хлѣбы</orig>
+          </choice>. Дњвочка</hi>
+        <hi rend="Razradka">Парашка</hi>, <hi rend="italic">
+          <choice>
+            <reg>качает</reg>
+            <orig>качаетъ</orig>
+          </choice> люльку.</hi>
+      </p>
+      <p rend="left" id="9ce2e3f0-55ac-4153-93a3-aafb6f19cc72">
+        <hi rend="Razradka">Марфа</hi>. <choice>
+          <reg>Ох</reg>
+          <orig>Охъ</orig>
+        </choice>, недоброе <choice>
+          <reg>чует</reg>
+          <orig>чуетъ</orig>
+        </choice> мое сердце. Чего стоять-то? Не хуже <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice> намедни <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice> дровами <choice>
+          <reg>Ездил</reg>
+          <orig>Ѣздилъ</orig>
+        </choice>. <choice>
+          <reg>Без</reg>
+          <orig>Безъ</orig>
+        </choice>
+        <choice>
+          <reg>малого</reg>
+          <orig>малаго</orig>
+        </choice> половину <choice>
+          <reg>пропил</reg>
+          <orig>пропилъ</orig>
+        </choice>. А все я виновата.</p>
+      <p rend="left" id="3614fff4-e97a-4365-ac6e-70463790d7a2">
+        <hi rend="Razradka">Акулина</hi>. Что плохое загадывать. Рано еще. Тоже не <choice>
+          <reg>ближний</reg>
+          <orig>ближнiй</orig>
+        </choice>
+        <choice>
+          <reg>свет</reg>
+          <orig>свѣтъ</orig>
+        </choice>. Пока что...</p>
+      <p rend="left" id="3824e857-6202-416e-a0c0-f147d20d06b7">
+        <hi rend="Razradka">Марфа</hi>. <choice>
+          <reg>Где</reg>
+          <orig>Гдѣ</orig>
+        </choice> рано. <choice>
+          <reg>Акимыч</reg>
+          <orig>Акимычъ</orig>
+        </choice> вернулся же. А еще позже нашего <choice>
+          <reg>поехал</reg>
+          <orig>поѣхалъ</orig>
+        </choice>, а нашего все <choice>
+          <reg>нет</reg>
+          <orig>нѣтъ</orig>
+        </choice>. Мыкаешься, мыкаешься, а только и радости.</p>
+      <p rend="left" id="687a01b7-9ddd-402f-a379-e3549f819e0c">
+        <hi rend="Razradka">Акулина</hi>. <choice>
+          <reg>Акимыч</reg>
+          <orig>Акимычъ</orig>
+        </choice> на <choice>
+          <reg>место</reg>
+          <orig>мѣсто</orig>
+        </choice>
+        <choice>
+          <reg>ставил</reg>
+          <orig>ставилъ</orig>
+        </choice>, а <choice>
+          <reg>наш</reg>
+          <orig>нашъ</orig>
+        </choice> на <choice>
+          <reg>базаре</reg>
+          <orig>базарѣ</orig>
+        </choice>.</p>
+      <p rend="left" id="6af6f397-a522-4c6a-9a42-024f2a0858f7">
+        <hi rend="Razradka">Марфа</hi>. Не думалось бы, кабы <choice>
+          <reg>один</reg>
+          <orig>одинъ</orig>
+        </choice>. А то <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice>
+        <choice>
+          <reg>Игнатом</reg>
+          <orig>Игнатомъ</orig>
+        </choice>
+        <choice>
+          <reg>поехал</reg>
+          <orig>поѣхалъ</orig>
+        </choice>. А <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice>
+        <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice>
+        <choice>
+          <reg>толстомордым</reg>
+          <orig>толстомордымъ</orig>
+        </choice>
+        <choice>
+          <reg>кобелом</reg>
+          <orig>кобеломъ</orig>
+        </choice>
+        <choice>
+          <reg>этим</reg>
+          <orig>этимъ</orig>
+        </choice>, прости Господи, сойдется, добра не бывать. Не миновать напьются. День деньской бьешься, бьешься. Все на <choice>
+          <reg>тебе</reg>
+          <orig>тебѣ</orig>
+        </choice>. Добро бы приждать чего было. А то только и радости, что тренись <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice> утра до ночи.</p>
+      <p rend="center" id="5b3d2928-a370-46c0-81f3-ab12c1689c3f">
+        <lb/>
+      </p>
+      <p rend="center" id="51fd3e37-c185-4a7c-a56e-e228b0752527">
+        <pb n="217"/>
+        <choice>
+          <reg>ЯВЛЕНИЕ</reg>
+          <orig>ЯВЛЕНIЕ</orig>
+        </choice> 2.</p>
+      <p rend="center" id="c31d49c3-c360-4a72-927c-643861a43043">
+        <hi rend="italic">Отворяется дверь. <choice>
+            <reg>Входит</reg>
+            <orig>Входитъ</orig>
+          </choice>
+          <choice>
+            <reg>десятский</reg>
+            <orig>десятскiй</orig>
+          </choice>
+        </hi>
+        <hi rend="Razradka">
+          <choice>
+            <reg>Тарас</reg>
+            <orig>Тарасъ</orig>
+          </choice>
+        </hi>
+        <hi rend="italic">и оборванный</hi>
+        <hi rend="Razradka">
+          <choice>
+            <reg>прохожий</reg>
+            <orig>прохожiй</orig>
+          </choice>
+        </hi>.</p>
+      <p rend="left" id="01225676-9f0e-4d80-96e4-593acf7c307e">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Тарас</reg>
+            <orig>Тарасъ</orig>
+          </choice>
+        </hi>. Здорово живете. <choice>
+          <reg>Вот</reg>
+          <orig>Вотъ</orig>
+        </choice>
+        <choice>
+          <reg>вам</reg>
+          <orig>вамъ</orig>
+        </choice> постояльца <choice>
+          <reg>привел</reg>
+          <orig>привелъ</orig>
+        </choice>.</p>
+      <p rend="left" id="f4b0c0bb-272c-481f-92bc-8248c58a5f6e">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi> (<hi rend="italic">кланяется).</hi>
+        <choice>
+          <reg>Хозяевам</reg>
+          <orig>Хозяевамъ</orig>
+        </choice> мое <choice>
+          <reg>почтение</reg>
+          <orig>почтенiе</orig>
+        </choice>.</p>
+      <p rend="left" id="eb646f56-3743-479a-be76-4e903a47f866">
+        <hi rend="Razradka">Марфа</hi>. Что больно часто <choice>
+          <reg>к</reg>
+          <orig>къ</orig>
+        </choice>
+        <choice>
+          <reg>нам</reg>
+          <orig>намъ</orig>
+        </choice> ставить. У <choice>
+          <reg>нас</reg>
+          <orig>насъ</orig>
+        </choice>
+        <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <hi rend="italic"> </hi>середу <choice>
+          <reg>ночевал</reg>
+          <orig>ночевалъ</orig>
+        </choice>. Все <choice>
+          <reg>к</reg>
+          <orig>къ</orig>
+        </choice>
+        <choice>
+          <reg>нам</reg>
+          <orig>намъ</orig>
+        </choice> да <choice>
+          <reg>к</reg>
+          <orig>къ</orig>
+        </choice>
+        <choice>
+          <reg>нам</reg>
+          <orig>намъ</orig>
+        </choice>. <choice>
+          <reg>К</reg>
+          <orig>Къ</orig>
+        </choice>
+        <choice>
+          <reg>Степанде</reg>
+          <orig>Степандѣ</orig>
+        </choice> бы <choice>
+          <reg>ставил</reg>
+          <orig>ставилъ</orig>
+        </choice>. У <choice>
+          <reg>них</reg>
+          <orig>нихъ</orig>
+        </choice> и <choice>
+          <reg>ребят</reg>
+          <orig>ребятъ</orig>
+        </choice>
+        <choice>
+          <reg>нет</reg>
+          <orig>нѣтъ</orig>
+        </choice>. А я <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice> своими не разберусь. А ты все <choice>
+          <reg>к</reg>
+          <orig>къ</orig>
+        </choice>
+        <choice>
+          <reg>нам</reg>
+          <orig>намъ</orig>
+        </choice> да <choice>
+          <reg>к</reg>
+          <orig>къ</orig>
+        </choice>
+        <choice>
+          <reg>нам</reg>
+          <orig>намъ</orig>
+        </choice>.</p>
+      <p rend="left" id="f529d3fe-60af-4590-aa5e-690d1cf919e1">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Тарас</reg>
+            <orig>Тарасъ</orig>
+          </choice>
+        </hi>. По череду <choice>
+          <reg>ставим</reg>
+          <orig>ставимъ</orig>
+        </choice>.</p>
+      <p rend="left" id="4ac26d89-a096-4e79-8fba-c510b935d112">
+        <hi rend="Razradka">Марфа</hi>. Ты говоришь — по череду. У меня ребята. Да и хозяина <choice>
+          <reg>нет</reg>
+          <orig>нѣтъ</orig>
+        </choice>.</p>
+      <p rend="left" id="bce1adbd-a674-47f5-9ae5-e3a73a908312">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Тарас</reg>
+            <orig>Тарасъ</orig>
+          </choice>
+        </hi>. <choice>
+          <reg>Переночует</reg>
+          <orig>Переночуетъ</orig>
+        </choice>. <choice>
+          <reg>Места</reg>
+          <orig>Мѣста</orig>
+        </choice> не <choice>
+          <reg>пролежит</reg>
+          <orig>пролежитъ</orig>
+        </choice>.</p>
+      <p rend="left" id="5a47e876-1562-4a95-a360-911f517f43dc">
+        <hi rend="Razradka">Акулина</hi> (<hi rend="italic">
+          <choice>
+            <reg>к</reg>
+            <orig>къ</orig>
+          </choice> прохожему).</hi> Проходи, садись, <choice>
+          <reg>гостем</reg>
+          <orig>гостемъ</orig>
+        </choice> будешь.</p>
+      <p rend="left" id="e35d7e8f-550f-4b70-9fe8-35ed06b292be">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>. Приношу благодарность. Покушать бы, если бы можно.</p>
+      <p rend="left" id="b1d191ad-6c61-436b-bc2d-a88c42b3cc95">
+        <hi rend="Razradka">Марфа</hi>. Ничего не видамши <choice>
+          <reg>сейчас</reg>
+          <orig>сейчасъ</orig>
+        </choice> и покушать. Что <choice>
+          <reg>ж</reg>
+          <orig>жъ</orig>
+        </choice>
+        <choice>
+          <reg>разве</reg>
+          <orig>развѣ</orig>
+        </choice> по <choice>
+          <reg>деревне</reg>
+          <orig>деревнѣ</orig>
+        </choice> не <choice>
+          <reg>прошел</reg>
+          <orig>прошелъ</orig>
+        </choice>?</p>
+      <p rend="left" id="620a7ec7-5d1d-455a-8faa-780445f5db1b">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi> (<hi rend="italic">
+          <choice>
+            <reg>вздыхает</reg>
+            <orig>вздыхаетъ</orig>
+          </choice>). </hi>По <choice>
+          <reg>званию</reg>
+          <orig>званiю</orig>
+        </choice> своему не <choice>
+          <reg>привычен</reg>
+          <orig>привыченъ</orig>
+        </choice> я. А <choice>
+          <reg>так</reg>
+          <orig>такъ</orig>
+        </choice>
+        <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice>
+        <choice>
+          <reg>продухтов</reg>
+          <orig>продухтовъ</orig>
+        </choice>
+        <choice>
+          <reg>своих</reg>
+          <orig>своихъ</orig>
+        </choice> не <choice>
+          <reg>имеем</reg>
+          <orig>имѣемъ</orig>
+        </choice>...</p>
+      <p rend="left" id="796fa75f-1faf-445d-9a19-1da54a7d8fc1">
+        <hi rend="Razradka">Акулина</hi> (<hi rend="italic">
+          <choice>
+            <reg>встает</reg>
+            <orig>встаетъ</orig>
+          </choice>, <choice>
+            <reg>достает</reg>
+            <orig>достаетъ</orig>
+          </choice>
+          <choice>
+            <reg>хлеб</reg>
+            <orig>хлѣбъ</orig>
+          </choice>, <choice>
+            <reg>отрезает</reg>
+            <orig>отрѣзаетъ</orig>
+          </choice> и <choice>
+            <reg>подает</reg>
+            <orig>подаетъ</orig>
+          </choice> прохожему).</hi>
+      </p>
+      <p rend="left" id="564d485a-c418-4d08-b519-a459ca946c8d">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>
+        <hi rend="italic">(<choice>
+            <reg>берет</reg>
+            <orig>беретъ</orig>
+          </choice>
+          <choice>
+            <reg>хлњб</reg>
+            <orig>хлњбъ</orig>
+          </choice>).</hi> Мерси. <hi rend="italic">(Сидить на конникњ и жадно <choice>
+            <reg>њст</reg>
+            <orig>њстъ</orig>
+          </choice>.)</hi>
+      </p>
+      <p rend="left" id="0bf58b6f-c4af-48a7-934d-9194638b1116">
+        <choice>
+          <reg>Тарас</reg>
+          <orig>Тарасъ</orig>
+        </choice>. Михайла-то <choice>
+          <reg>где</reg>
+          <orig>гдѣ</orig>
+        </choice> же?</p>
+      <p rend="left" id="1bbf4dfe-9379-4031-8ba0-9dcc7d81ad85">
+        <hi rend="Razradka">Марфа</hi>. Да <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice> городу. <choice>
+          <reg>Сено</reg>
+          <orig>Сѣно</orig>
+        </choice>
+        <choice>
+          <reg>повез</reg>
+          <orig>повезъ</orig>
+        </choice>. Пора бы вернуться, а все <choice>
+          <reg>нет</reg>
+          <orig>нѣтъ</orig>
+        </choice>. <choice>
+          <reg>Вот</reg>
+          <orig>Вотъ</orig>
+        </choice> и думается, <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice> бы чего не случилось.</p>
+      <p rend="left" id="fdca301b-de96-4a3c-a809-0edf9473300d">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Тарас</reg>
+            <orig>Тарасъ</orig>
+          </choice>
+        </hi>. Чего же случится?</p>
+      <p rend="left" id="ad55ab8b-9172-4d3c-adca-5acb5d4192b3">
+        <hi rend="Razradka">Марфа</hi>. <choice>
+          <reg>Как</reg>
+          <orig>Какъ</orig>
+        </choice> чего? <choice>
+          <reg>Хорошего</reg>
+          <orig>Хорошаго</orig>
+        </choice> не увидишь, а худого только и жди. А то <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice>
+        <choice>
+          <reg>из</reg>
+          <orig>изъ</orig>
+        </choice> дома <choice>
+          <reg>уехал</reg>
+          <orig>уѣхалъ</orig>
+        </choice>, ему и горюшка мало. <choice>
+          <reg>Вот</reg>
+          <orig>Вотъ</orig>
+        </choice> и теперь того и жду, что пьяный вернется.</p>
+      <p rend="left" id="df32babf-3ccb-4003-85a0-e6da5eacd754">
+        <hi rend="Razradka">Акулина</hi> (<hi rend="italic">садится за прялку, <choice>
+            <reg>к</reg>
+            <orig>къ</orig>
+          </choice> Тарасу и указывая на Марфу).</hi>
+        <choice>
+          <reg>Нет</reg>
+          <orig>Нѣтъ</orig>
+        </choice> того, <choice>
+          <reg>чтоб</reg>
+          <orig>чтобъ</orig>
+        </choice> помолчать. Я и то говорю. У нашей сестры обо <choice>
+          <reg>всем</reg>
+          <orig>всемъ</orig>
+        </choice> докука.</p>
+      <p rend="left" id="3956959d-b173-4a89-b482-6065518b8838">
+        <hi rend="Razradka">Марфа</hi>. Кабы <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice>
+        <choice>
+          <reg>один</reg>
+          <orig>одинъ</orig>
+        </choice>, не думалось бы. А то <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice>
+        <choice>
+          <reg>Игнатом</reg>
+          <orig>Игнатомъ</orig>
+        </choice>. <choice>
+          <reg>поехали</reg>
+          <orig>поѣхали</orig>
+        </choice>.</p>
+      <p rend="left" id="6ece2d1a-78ee-472c-9c68-4bb8e69553db">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Тарас</reg>
+            <orig>Тарасъ</orig>
+          </choice>
+        </hi>
+        <hi rend="italic"> (усмњхается).</hi> Ну <choice>
+          <reg>Игнат</reg>
+          <orig>Игнатъ</orig>
+        </choice>
+        <choice>
+          <reg>Иваныч</reg>
+          <orig>Иванычъ</orig>
+        </choice> точно что <choice>
+          <reg>насчет</reg>
+          <orig>насчетъ</orig>
+        </choice> выпивки дюже <choice>
+          <reg>охотлив</reg>
+          <orig>охотливъ</orig>
+        </choice>.</p>
+      <p rend="left" id="e6b7bb3c-408a-4573-b659-20d9a8dd5d8e">
+        <hi rend="Razradka">Акулина</hi>. Что <choice>
+          <reg>ж</reg>
+          <orig>жъ</orig>
+        </choice> не <choice>
+          <reg>видал</reg>
+          <orig>видалъ</orig>
+        </choice>
+        <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice> Игната? <choice>
+          <reg>Игнат</reg>
+          <orig>Игнатъ</orig>
+        </choice>
+        <choice>
+          <reg>сам</reg>
+          <orig>самъ</orig>
+        </choice> по <choice>
+          <reg>себе</reg>
+          <orig>себѣ</orig>
+        </choice>, а <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice>
+        <choice>
+          <reg>сам</reg>
+          <orig>самъ</orig>
+        </choice> но <choice>
+          <reg>себе</reg>
+          <orig>себѣ</orig>
+        </choice>.</p>
+      <p rend="left" id="f596df2d-1723-42e1-861b-b443d918aaf4">
+        <hi rend="Razradka">Марфа</hi>. <choice>
+          <reg>Тебе</reg>
+          <orig>Тебѣ</orig>
+        </choice>, матушка, хорошо говорить. A <choice>
+          <reg>ведь</reg>
+          <orig>вѣдь</orig>
+        </choice> его гульба-то <choice>
+          <reg>вот</reg>
+          <orig>вотъ</orig>
+        </choice>
+        <choice>
+          <reg>где</reg>
+          <orig>гдѣ</orig>
+        </choice> (<hi rend="italic">
+          <choice>
+            <reg>показывает</reg>
+            <orig>показываетъ</orig>
+          </choice> на шею).</hi> Пока <choice>
+          <reg>тверез</reg>
+          <orig>тверезъ</orig>
+        </choice>, <choice>
+          <reg>грешить</reg>
+          <orig>грѣшить</orig>
+        </choice> не стану, а пьяный сама знаешь — <choice>
+          <reg>каков</reg>
+          <orig>каковъ</orig>
+        </choice>. Слова не скажи. Все не <choice>
+          <reg>так</reg>
+          <orig>такъ</orig>
+        </choice>.</p>
+      <p rend="left" id="20243999-6563-40de-ac71-fc621a91525e">
+        <pb n="218"/>
+        <choice>
+          <reg>Тарас</reg>
+          <orig>Тарасъ</orig>
+        </choice>. Да <choice>
+          <reg>ведь</reg>
+          <orig>вѣдь</orig>
+        </choice> и ваша сестра тоже. <choice>
+          <reg>Человек</reg>
+          <orig>Человѣкъ</orig>
+        </choice>
+        <choice>
+          <reg>выпил</reg>
+          <orig>выпилъ</orig>
+        </choice>. Ну что <choice>
+          <reg>ж</reg>
+          <orig>жъ</orig>
+        </choice>, дай покуражится, выспится, опять все <choice>
+          <reg>чередом</reg>
+          <orig>чередомъ</orig>
+        </choice>
+        <choice>
+          <reg>пойдет</reg>
+          <orig>пойдетъ</orig>
+        </choice>. А ваша сестра <choice>
+          <reg>тут-то</reg>
+          <orig>тутъ-то</orig>
+        </choice> и <choice>
+          <reg>перечит</reg>
+          <orig>перечитъ</orig>
+        </choice>.</p>
+      <p rend="left" id="1b7d71fa-e72a-4a11-881b-297467daa7db">
+        <hi rend="Razradka">Марфа</hi>. Что хошь <choice>
+          <reg>делай</reg>
+          <orig>дѣлай</orig>
+        </choice>. Если пьяный, все не по <choice>
+          <reg>нем</reg>
+          <orig>немъ</orig>
+        </choice>.</p>
+      <p rend="left" id="216d4c61-293b-409d-b575-199684934285">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Тарас</reg>
+            <orig>Тарасъ</orig>
+          </choice>
+        </hi>. Да <choice>
+          <reg>ведь</reg>
+          <orig>вѣдь</orig>
+        </choice> все надо понимать. Нашему брату тоже нельзя другой <choice>
+          <reg>раз</reg>
+          <orig>разъ</orig>
+        </choice> не выпить. Ваше <choice>
+          <reg>дело</reg>
+          <orig>дѣло</orig>
+        </choice> бабье домашнее, а нашему брату нельзя али по <choice>
+          <reg>делу</reg>
+          <orig>дѣлу</orig>
+        </choice> али <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>компании</reg>
+          <orig>компанiи</orig>
+        </choice>. Ну и <choice>
+          <reg>выпьет</reg>
+          <orig>выпьетъ</orig>
+        </choice>, авось <choice>
+          <reg>беды</reg>
+          <orig>бѣды</orig>
+        </choice>
+        <choice>
+          <reg>нет</reg>
+          <orig>нѣтъ</orig>
+        </choice>.</p>
+      <p rend="left" id="dce2f83c-2512-4df4-840d-b2b2deccf942">
+        <hi rend="Razradka">Марфа</hi>. Да <choice>
+          <reg>тебе</reg>
+          <orig>тебѣ</orig>
+        </choice> хорошо говорить, а нашей <choice>
+          <reg>сестре</reg>
+          <orig>сестрѣ</orig>
+        </choice> трудно. <choice>
+          <reg>Ох</reg>
+          <orig>Охъ</orig>
+        </choice> трудно. Кабы вашего брата хоть на <choice>
+          <reg>недельку</reg>
+          <orig>недѣльку</orig>
+        </choice> бы <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice> нашу должность впрячь. Вы бы не то заговорили. И <choice>
+          <reg>меси</reg>
+          <orig>мѣси</orig>
+        </choice>, и пеки, <choice original_editorial_correction="[и]">
+          <sic/>
+          <corr>и</corr>
+        </choice> вари, и пряди, и тки, и скотина, и <choice>
+          <reg>все</reg>
+          <orig>всѣ</orig>
+        </choice>
+        <choice>
+          <reg>дела</reg>
+          <orig>дѣла</orig>
+        </choice>, и <choice>
+          <reg>этих</reg>
+          <orig>этихъ</orig>
+        </choice>
+        <choice>
+          <reg>голопузых</reg>
+          <orig>голопузыхъ</orig>
+        </choice> обмыть, <choice>
+          <reg>одеть</reg>
+          <orig>одѣть</orig>
+        </choice>, накормить, все на нашей <choice>
+          <reg>сестре</reg>
+          <orig>сестрѣ</orig>
+        </choice>, а чуть что не по <choice>
+          <reg>нем</reg>
+          <orig>немъ</orig>
+        </choice>, <choice>
+          <reg>сейчас</reg>
+          <orig>сейчасъ</orig>
+        </choice>. Особенно выпивши. <choice>
+          <reg>Ох</reg>
+          <orig>Охъ</orig>
+        </choice> житье наше бабье...</p>
+      <p rend="left" id="1b2488a0-a85c-4c53-9cc3-074c5db9f7e3">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi> (<hi rend="italic">прожевывая). </hi>Это правильно. <choice>
+          <reg>От</reg>
+          <orig>Отъ</orig>
+        </choice> ней <choice>
+          <reg>все</reg>
+          <orig>всѣ</orig>
+        </choice> качества, <choice>
+          <reg>значит</reg>
+          <orig>значитъ</orig>
+        </choice>, <choice>
+          <reg>все</reg>
+          <orig>всѣ</orig>
+        </choice> катастрофы жизни <choice>
+          <reg>от</reg>
+          <orig>отъ</orig>
+        </choice>
+        <choice>
+          <reg>алкогольных</reg>
+          <orig>алкогольныхъ</orig>
+        </choice>
+        <choice>
+          <reg>напитков</reg>
+          <orig>напитковъ</orig>
+        </choice>.</p>
+      <p rend="left" id="e8860cb0-ed27-4b25-acf1-282ec2dcf2b3">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Тарас</reg>
+            <orig>Тарасъ</orig>
+          </choice>
+        </hi>. Видно она-то и тебя <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice> пофей сбила.</p>
+      <p rend="left" id="45198d81-eb6b-4966-8786-f27c28111d36">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>. Она не она, а тоже и <choice>
+          <reg>от</reg>
+          <orig>отъ</orig>
+        </choice> ней <choice>
+          <reg>пострадал</reg>
+          <orig>пострадалъ</orig>
+        </choice> — кальера жизни моей могла бы <choice>
+          <reg>совсем</reg>
+          <orig>совсѣмъ</orig>
+        </choice> иная быть, кабы не она.</p>
+      <p rend="left" id="c8da0d6d-5147-48a8-8fcd-b5333b10b800">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Тарас</reg>
+            <orig>Тарасъ</orig>
+          </choice>
+        </hi>. А на мой <choice>
+          <reg>разум</reg>
+          <orig>разумъ</orig>
+        </choice>, если пить ее <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice>
+        <choice>
+          <reg>умом</reg>
+          <orig>умомъ</orig>
+        </choice>, вреда <choice>
+          <reg>от</reg>
+          <orig>отъ</orig>
+        </choice> ней <choice>
+          <reg>нет</reg>
+          <orig>нѣтъ</orig>
+        </choice> никакого.</p>
+      <p rend="left" id="f3c19e25-4caf-4420-881e-55b5c8446d09">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>. Ая <choice>
+          <reg>так</reg>
+          <orig>такъ</orig>
+        </choice> скажу, что <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice> ней такая сила <choice>
+          <reg>енерции</reg>
+          <orig>енерцiи</orig>
+        </choice>
+        <choice>
+          <reg>имеется</reg>
+          <orig>имѣется</orig>
+        </choice>, что она можеть <choice>
+          <reg>вполне</reg>
+          <orig>вполнѣ</orig>
+        </choice> испортить <choice>
+          <reg>человека</reg>
+          <orig>человѣка</orig>
+        </choice>.</p>
+      <p rend="left" id="3ebf92cb-bdb2-4cd3-8257-7df0aa97b5b4">
+        <hi rend="Razradka">Марфа</hi>. Я и говорю: ты хлопочи, старайся, и одна <choice>
+          <reg>тебе</reg>
+          <orig>тебѣ</orig>
+        </choice>
+        <choice>
+          <reg>утеха</reg>
+          <orig>утѣха</orig>
+        </choice>, что <choice>
+          <reg>изругает</reg>
+          <orig>изругаетъ</orig>
+        </choice> да <choice>
+          <reg>изобьет</reg>
+          <orig>изобьетъ</orig>
+        </choice>, <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice> собаку.</p>
+      <p rend="left" id="3639e5de-fd68-4580-afb2-98448d3e7bf2">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>. Мало того. Есть <choice>
+          <reg>такие</reg>
+          <orig>такiе</orig>
+        </choice> люди, субъекты, значить, что вовсе <choice>
+          <reg>от</reg>
+          <orig>отъ</orig>
+        </choice> ней <choice>
+          <reg>рассудка</reg>
+          <orig>разсудка</orig>
+        </choice> лишаются и поступки <choice>
+          <reg>совсем</reg>
+          <orig>совсѣмъ</orig>
+        </choice>
+        <choice>
+          <reg>несоответствующие</reg>
+          <orig>несоотвѣтствующiе</orig>
+        </choice>
+        <choice>
+          <reg>производят</reg>
+          <orig>производятъ</orig>
+        </choice>. Пока не <choice>
+          <reg>пьет</reg>
+          <orig>пьетъ</orig>
+        </choice>, что хошь давай ему, ничего чужого не <choice>
+          <reg>возьмет</reg>
+          <orig>возьметъ</orig>
+        </choice>, а <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice>
+        <choice>
+          <reg>выпил</reg>
+          <orig>выпилъ</orig>
+        </choice>, что ни попади <choice>
+          <reg>под</reg>
+          <orig>подъ</orig>
+        </choice> руку, <choice>
+          <reg>тащит</reg>
+          <orig>тащитъ</orig>
+        </choice>. И били сколько, и <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>тюрьме</reg>
+          <orig>тюрьмѣ</orig>
+        </choice>
+        <choice>
+          <reg>сидел</reg>
+          <orig>сидѣлъ</orig>
+        </choice>. Пока не пью, все честно, благородно, а <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice> выпью, <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice> «<choice>
+          <reg>выпьет</reg>
+          <orig>выпьетъ</orig>
+        </choice>, <choice>
+          <reg>значит</reg>
+          <orig>значитъ</orig>
+        </choice>, <choice>
+          <reg>субъект</reg>
+          <orig>субъектъ</orig>
+        </choice>
+        <choice>
+          <reg>этот</reg>
+          <orig>этотъ</orig>
+        </choice>, <choice>
+          <reg>сейчас</reg>
+          <orig>сейчасъ</orig>
+        </choice> и <choice>
+          <reg>тащит</reg>
+          <orig>тащитъ</orig>
+        </choice> что попало.</p>
+      <p rend="left" id="f8ec7aa6-07bb-452c-aa1c-3a927a83d87e">
+        <hi rend="Razradka">Акулина</hi>. А я думаю все <choice>
+          <reg>от</reg>
+          <orig>отъ</orig>
+        </choice>
+        <choice>
+          <reg>себе</reg>
+          <orig>себѣ</orig>
+        </choice>.</p>
+      <p rend="left" id="0f64aac2-cf39-433f-a0f5-6f6ce01e5be8">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>. <choice>
+          <reg>В</reg>
+          <orig>Въ</orig>
+        </choice>
+        <choice>
+          <reg>себе-то</reg>
+          <orig>себѣ-то</orig>
+        </choice>
+        <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>себе</reg>
+          <orig>себѣ</orig>
+        </choice>, пока <choice>
+          <reg>здоров</reg>
+          <orig>здоровъ</orig>
+        </choice>, а это <choice>
+          <reg>болезнь</reg>
+          <orig>болѣзнь</orig>
+        </choice> такая.</p>
+      <p rend="left" id="eb23094c-f70b-413a-9045-6df28133c84b">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Тарас</reg>
+            <orig>Тарасъ</orig>
+          </choice>
+        </hi>. Ну <choice>
+          <reg>уж</reg>
+          <orig>ужъ</orig>
+        </choice> и <choice>
+          <reg>болезнь</reg>
+          <orig>болѣзнь</orig>
+        </choice> пробрать бы его <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice> должно, и <choice>
+          <reg>болесть</reg>
+          <orig>болѣсть</orig>
+        </choice> эта живо прошла бы. Прощавайте пока что. (<hi rend="italic">
+          <choice>
+            <reg>Уходит</reg>
+            <orig>Уходитъ</orig>
+          </choice>.)</hi>
+      </p>
+      <p rend="left" id="e5843afb-7a81-4e42-8e68-bfbca092e5a1">
+        <hi rend="italic">(Марфа <choice>
+            <reg>обтирает</reg>
+            <orig>обтираетъ</orig>
+          </choice> руки и <choice>
+            <reg>хочет</reg>
+            <orig>хочетъ</orig>
+          </choice> уходить).</hi>
+      </p>
+      <p rend="left" id="da2786ea-ad90-4234-a8dc-9b21dbbd91e6">
+        <hi rend="Razradka">Акулина</hi> (<hi rend="italic">
+          <choice>
+            <reg>смотрит</reg>
+            <orig>смотритъ</orig>
+          </choice> на <choice>
+            <reg>прохожего</reg>
+            <orig>прохожаго</orig>
+          </choice>, <choice>
+            <reg>видит</reg>
+            <orig>видитъ</orig>
+          </choice>, что <choice>
+            <reg>он</reg>
+            <orig>онъ</orig>
+          </choice>
+          <choice>
+            <reg>съел</reg>
+            <orig>съѣлъ</orig>
+          </choice>
+          <choice>
+            <reg>хлебь</reg>
+            <orig>хлѣбь</orig>
+          </choice>).</hi> Марфа, а Марфа. <choice>
+          <reg>Отрежь</reg>
+          <orig>Отрѣжь</orig>
+        </choice> ему еще.</p>
+      <p rend="left" id="f3535d12-548a-408a-8b4a-b120729be9cc">
+        <hi rend="Razradka">Марфа</hi>. Ну его. Пойти <choice>
+          <reg>самовар</reg>
+          <orig>самоваръ</orig>
+        </choice>
+        <choice>
+          <reg>поглядеть</reg>
+          <orig>поглядѣть</orig>
+        </choice>. <hi rend="italic">(<choice>
+            <reg>Уходит</reg>
+            <orig>Уходитъ</orig>
+          </choice>.)</hi>
+      </p>
+      <p rend="left" id="2179426c-5e6c-4f37-93db-1a4a564336a0">(<hi rend="italic">Акулина <choice>
+            <reg>встает</reg>
+            <orig>встаетъ</orig>
+          </choice>, <choice>
+            <reg>идет</reg>
+            <orig>идетъ</orig>
+          </choice> кь столу, <choice>
+            <reg>вынимает</reg>
+            <orig>вынимаетъ</orig>
+          </choice>
+          <choice>
+            <reg>хлеб</reg>
+            <orig>хлѣбъ</orig>
+          </choice>, <choice>
+            <reg>отрезает</reg>
+            <orig>отрѣзаетъ</orig>
+          </choice> ломоть и <choice>
+            <reg>дает</reg>
+            <orig>даетъ</orig>
+          </choice> прохожему.)</hi>
+      </p>
+      <p rend="left" id="bbb144d4-52ef-48c9-b80c-07fbdbff0113">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>. Мерси. Очень <choice>
+          <reg>уж</reg>
+          <orig>ужъ</orig>
+        </choice>
+        <choice>
+          <reg>аппетит</reg>
+          <orig>аппетитъ</orig>
+        </choice>
+        <choice>
+          <reg>мог</reg>
+          <orig>могъ</orig>
+        </choice>
+        <choice>
+          <reg>возыметь</reg>
+          <orig>возымѣть</orig>
+        </choice>.</p>
+      <p rend="left" id="057d9f4a-2aaf-48ee-92b5-ea5b873e80f6">
+        <hi rend="Razradka">Акулина</hi>. <choice>
+          <reg>Из</reg>
+          <orig>Изъ</orig>
+        </choice>
+        <choice>
+          <reg>мастеровых</reg>
+          <orig>мастеровыхъ</orig>
+        </choice> будешь?</p>
+      <p rend="left" id="10bcb9a9-02b4-4534-9d99-33366c8a606a">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>. Я-то? <choice>
+          <reg>Машинистом</reg>
+          <orig>Машинистомъ</orig>
+        </choice>
+        <choice>
+          <reg>был</reg>
+          <orig>былъ</orig>
+        </choice>.</p>
+      <p rend="left" id="7945a1da-4b6e-485b-8326-f5f95621c380">
+        <pb n="219"/> Акулина. Что <choice>
+          <reg>ж</reg>
+          <orig>жъ</orig>
+        </choice> много <choice>
+          <reg>получал</reg>
+          <orig>получалъ</orig>
+        </choice>?</p>
+      <p rend="left" id="1b421b3d-e96d-4f7b-ba0c-924e5ccc6132">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>. И 50, и 70 <choice>
+          <reg>получал</reg>
+          <orig>получалъ</orig>
+        </choice>.</p>
+      <p rend="left" id="2fb3879d-cc3a-4668-a980-555e79b879fb">
+        <hi rend="Razradka">Акулина</hi>. Легкое ли <choice>
+          <reg>дело</reg>
+          <orig>дѣло</orig>
+        </choice>. <choice>
+          <reg>Так</reg>
+          <orig>Такъ</orig>
+        </choice>
+        <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice> же <choice>
+          <reg>так</reg>
+          <orig>такъ</orig>
+        </choice> сбился.</p>
+      <p rend="left" id="41ea8564-4058-4cc0-85b5-5cec9376e69a">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>. Сбился? Не я <choice>
+          <reg>один</reg>
+          <orig>одинъ</orig>
+        </choice>. Сбился, потому что времена нынче <choice>
+          <reg>такие</reg>
+          <orig>такiя</orig>
+        </choice>, что честному <choice>
+          <reg>человеку</reg>
+          <orig>человѣку</orig>
+        </choice> прожить нельзя.</p>
+      <p rend="left" id="3f9445de-7c38-4794-b13b-4b076b4a27e8">
+        <hi rend="Razradka">Марфа</hi>
+        <hi rend="italic">(<choice>
+            <reg>вносит</reg>
+            <orig>вноситъ</orig>
+          </choice>
+          <choice>
+            <reg>самовар</reg>
+            <orig>самоваръ</orig>
+          </choice>).</hi> О господи. Все <choice>
+          <reg>нет</reg>
+          <orig>нѣтъ</orig>
+        </choice>. Не миновать пьяный <choice>
+          <reg>приедет</reg>
+          <orig>прiѣдетъ</orig>
+        </choice>. <choice>
+          <reg>Чует</reg>
+          <orig>Чуетъ</orig>
+        </choice> мое сердце.</p>
+      <p rend="left" id="6afec74b-e670-46e4-a679-a88067721faf">
+        <hi rend="Razradka">Акулина</hi>. И впрямь не <choice>
+          <reg>закутил</reg>
+          <orig>закутилъ</orig>
+        </choice> ли?</p>
+      <p rend="left" id="f7b12ad4-b277-45d6-8652-888d5940d37c">
+        <hi rend="Razradka">Марфа</hi>. То-то и оно-то. Одна бьешься, бьешься, и <choice>
+          <reg>меси</reg>
+          <orig>мѣси</orig>
+        </choice>, и пеки, и вари, и пряди, и тки, и скотина, все на <choice>
+          <reg>мне</reg>
+          <orig>мнѣ</orig>
+        </choice>. <hi rend="italic">(<choice>
+            <reg>В</reg>
+            <orig>Въ</orig>
+          </choice>
+          <choice>
+            <reg>люлъке</reg>
+            <orig>люлъкѣ</orig>
+          </choice>
+          <choice>
+            <reg>кричит</reg>
+            <orig>кричитъ</orig>
+          </choice>.)</hi> Парашка, качай <choice>
+          <reg>малого-то</reg>
+          <orig>малаго-то</orig>
+        </choice>. <choice>
+          <reg>Ох</reg>
+          <orig>Охъ</orig>
+        </choice> житье наше бабье. А напьется, все нехорошо. Скажи не по <choice>
+          <reg>нем</reg>
+          <orig>немъ</orig>
+        </choice> слово...</p>
+      <p rend="left" id="776b6b10-e608-4254-8e6d-0c4d32dc0bf2">
+        <hi rend="Razradka">Акулина</hi>
+        <hi rend="italic">(<choice>
+            <reg>заваривает</reg>
+            <orig>завариваетъ</orig>
+          </choice> чай).</hi> И чай <choice>
+          <reg>последний</reg>
+          <orig>послѣднiй</orig>
+        </choice>. Наказывала привезти?</p>
+      <p rend="left" id="0f2c7ba2-13ee-4be7-a095-392f09babcd8">
+        <hi rend="Razradka">Марфа</hi>. <choice>
+          <reg>Как</reg>
+          <orig>Какъ</orig>
+        </choice> же. <choice>
+          <reg>Хотел</reg>
+          <orig>Хотѣлъ</orig>
+        </choice> привезть. <choice>
+          <reg>Привезет</reg>
+          <orig>Привезетъ</orig>
+        </choice>
+        <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice>? <choice>
+          <reg>Разве</reg>
+          <orig>Развѣ</orig>
+        </choice>
+        <choice>
+          <reg>станет</reg>
+          <orig>станетъ</orig>
+        </choice>
+        <choice>
+          <reg>об</reg>
+          <orig>объ</orig>
+        </choice>
+        <choice>
+          <reg>доме</reg>
+          <orig>домѣ</orig>
+        </choice> думать? <hi rend="italic">(<choice>
+            <reg>Ставит</reg>
+            <orig>Ставитъ</orig>
+          </choice> на столь <choice>
+            <reg>самовар</reg>
+            <orig>самоваръ</orig>
+          </choice>.)</hi>
+      </p>
+      <p rend="left" id="697e88b4-c6dc-4957-be02-3033b87d7496">
+        <hi rend="italic">(<choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+          <choice>
+            <reg>отходит</reg>
+            <orig>отходитъ</orig>
+          </choice>
+          <choice>
+            <reg>от</reg>
+            <orig>отъ</orig>
+          </choice> стола.)</hi>
+      </p>
+      <p rend="left" id="c49b3f12-4264-4077-a448-ef5452405609">
+        <hi rend="Razradka">Акулина</hi>. А ты что <choice>
+          <reg>ж</reg>
+          <orig>жъ</orig>
+        </choice>
+        <choice>
+          <reg>от</reg>
+          <orig>отъ</orig>
+        </choice> стола <choice>
+          <reg>ушел</reg>
+          <orig>ушелъ</orig>
+        </choice>? Чай пить <choice>
+          <reg>будем</reg>
+          <orig>будемъ</orig>
+        </choice>.</p>
+      <p rend="left" id="4db5bd78-b684-4399-8487-d6269577ec46">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>. Приношу благодарность за <choice>
+          <reg>гостеприимное</reg>
+          <orig>гостепрiимное</orig>
+        </choice>
+        <choice>
+          <reg>радушие</reg>
+          <orig>радушiе</orig>
+        </choice>. <hi rend="italic">(<choice>
+            <reg>Бросает</reg>
+            <orig>Бросаетъ</orig>
+          </choice> цигарку и <choice>
+            <reg>подходит</reg>
+            <orig>подходитъ</orig>
+          </choice>
+          <choice>
+            <reg>к</reg>
+            <orig>къ</orig>
+          </choice> столу.)</hi>
+      </p>
+      <p rend="left" id="be169e4d-e906-485a-8568-cf007f033a70">
+        <hi rend="Razradka">Марфа</hi>. <choice>
+          <reg>Сам-то</reg>
+          <orig>Самъ-то</orig>
+        </choice>
+        <choice>
+          <reg>из</reg>
+          <orig>изъ</orig>
+        </choice>
+        <choice>
+          <reg>каких</reg>
+          <orig>какихъ</orig>
+        </choice> будешь, <choice>
+          <reg>из</reg>
+          <orig>изъ</orig>
+        </choice>
+        <choice>
+          <reg>крестьян</reg>
+          <orig>крестьянъ</orig>
+        </choice> али еще <choice>
+          <reg>из</reg>
+          <orig>изъ</orig>
+        </choice>
+        <choice>
+          <reg>каких</reg>
+          <orig>какихъ</orig>
+        </choice>?</p>
+      <p rend="left" id="09b57260-8f62-4d90-ac0d-d6063b31a0ed">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>. Я, мать, ни <choice>
+          <reg>из</reg>
+          <orig>изъ</orig>
+        </choice>
+        <choice>
+          <reg>крестьян</reg>
+          <orig>крестьянъ</orig>
+        </choice>, ни <choice>
+          <reg>из</reg>
+          <orig>изъ</orig>
+        </choice>
+        <choice>
+          <reg>дворян</reg>
+          <orig>дворянъ</orig>
+        </choice>. <choice>
+          <reg>Обоюдоострого</reg>
+          <orig>Обоюдоостраго</orig>
+        </choice>
+        <choice>
+          <reg>сословия</reg>
+          <orig>сословiя</orig>
+        </choice>.</p>
+      <p rend="left" id="331c068c-8e50-4e32-a75c-330cc1744382">
+        <hi rend="Razradka">Марфа</hi>. Это <choice>
+          <reg>к</reg>
+          <orig>къ</orig>
+        </choice> чему же? <hi rend="italic">(<choice>
+            <reg>Подает</reg>
+            <orig>Подаетъ</orig>
+          </choice> ему чашку.)</hi>
+      </p>
+      <p rend="left" id="261f959e-a3ce-41f8-9adf-d30f874b6d16">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>. Мерси. А <choice>
+          <reg>к</reg>
+          <orig>къ</orig>
+        </choice> тому, что <choice>
+          <reg>мне</reg>
+          <orig>мнѣ</orig>
+        </choice>
+        <choice>
+          <reg>отцом</reg>
+          <orig>отцомъ</orig>
+        </choice>
+        <choice>
+          <reg>польский</reg>
+          <orig>польскiй</orig>
+        </choice>
+        <choice>
+          <reg>граф</reg>
+          <orig>графъ</orig>
+        </choice>
+        <choice>
+          <reg>был</reg>
+          <orig>былъ</orig>
+        </choice>, a <choice>
+          <reg>кроме</reg>
+          <orig>кромѣ</orig>
+        </choice> его еще <choice>
+          <reg>многие</reg>
+          <orig>многiе</orig>
+        </choice> были, и матерей тоже <choice>
+          <reg>две</reg>
+          <orig>двѣ</orig>
+        </choice> было. Вообще <choice>
+          <reg>биография</reg>
+          <orig>бiографiя</orig>
+        </choice> моя затруднительная.</p>
+      <p rend="left" id="a8de3655-b87f-4a8d-9e3a-38a3a40314e7">
+        <hi rend="Razradka">Марфа</hi>. Пейте еще. Что <choice>
+          <reg>ж</reg>
+          <orig>жъ</orig>
+        </choice>
+        <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice> ученьи <choice>
+          <reg>был</reg>
+          <orig>былъ</orig>
+        </choice>?</p>
+      <p rend="left" id="beac37ee-0f0f-45ac-b0b3-25e29403f381">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>. Ученье мое тоже необстоятельное было. <choice>
+          <reg>В</reg>
+          <orig>Въ</orig>
+        </choice> кузню отдала меня не мать, a <choice>
+          <reg>восприемница</reg>
+          <orig>воспрiемница</orig>
+        </choice>. <choice>
+          <reg>Кузнец</reg>
+          <orig>Кузнецъ</orig>
+        </choice>, <choice>
+          <reg>значит</reg>
+          <orig>значитъ</orig>
+        </choice>, <choice>
+          <reg>первым</reg>
+          <orig>первымъ</orig>
+        </choice>
+        <choice>
+          <reg>моим</reg>
+          <orig>моимъ</orig>
+        </choice>
+        <choice>
+          <reg>пердагогом</reg>
+          <orig>пердагогомъ</orig>
+        </choice>
+        <choice>
+          <reg>был</reg>
+          <orig>былъ</orig>
+        </choice>. И <choice>
+          <reg>пердагогия</reg>
+          <orig>пердагогiя</orig>
+        </choice> его <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>том</reg>
+          <orig>томъ</orig>
+        </choice> заключалась, что <choice>
+          <reg>бил</reg>
+          <orig>билъ</orig>
+        </choice> меня <choice>
+          <reg>этот</reg>
+          <orig>этотъ</orig>
+        </choice> самый <choice>
+          <reg>кузнец</reg>
+          <orig>кузнецъ</orig>
+        </choice>
+        <choice>
+          <reg>так</reg>
+          <orig>такъ</orig>
+        </choice>, что не столько по <choice>
+          <reg>наковальне</reg>
+          <orig>наковальнѣ</orig>
+        </choice>
+        <choice>
+          <reg>бил</reg>
+          <orig>билъ</orig>
+        </choice>, сколько по несчастной <choice>
+          <reg>голове</reg>
+          <orig>головѣ</orig>
+        </choice> моей. Однако, сколько ни <choice>
+          <reg>бил</reg>
+          <orig>билъ</orig>
+        </choice>, не <choice>
+          <reg>мог</reg>
+          <orig>могъ</orig>
+        </choice> лишить меня <choice>
+          <reg>талантов</reg>
+          <orig>талантовъ</orig>
+        </choice>. <choice>
+          <reg>Попал</reg>
+          <orig>Попалъ</orig>
+        </choice>
+        <choice>
+          <reg>потом</reg>
+          <orig>потомъ</orig>
+        </choice>
+        <choice>
+          <reg>к</reg>
+          <orig>къ</orig>
+        </choice> слесарю. И <choice>
+          <reg>тут</reg>
+          <orig>тутъ</orig>
+        </choice>
+        <choice>
+          <reg>оценен</reg>
+          <orig>оцѣненъ</orig>
+        </choice> я <choice>
+          <reg>был</reg>
+          <orig>былъ</orig>
+        </choice> и <choice>
+          <reg>дошел</reg>
+          <orig>дошелъ</orig>
+        </choice> до <choice>
+          <reg>дела</reg>
+          <orig>дѣла</orig>
+        </choice>, <choice>
+          <reg>первым</reg>
+          <orig>первымъ</orig>
+        </choice>
+        <choice>
+          <reg>мастером</reg>
+          <orig>мастеромъ</orig>
+        </choice>
+        <choice>
+          <reg>стал</reg>
+          <orig>сталъ</orig>
+        </choice>. Знакомства <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice> образованными людьми <choice>
+          <reg>имел</reg>
+          <orig>имѣлъ</orig>
+        </choice>, во <choice>
+          <reg>фракции</reg>
+          <orig>фракцiи</orig>
+        </choice> находился. Умственную словесность <choice>
+          <reg>мог</reg>
+          <orig>могъ</orig>
+        </choice> усвоить. И жизнь могла быть возвышенная, <choice>
+          <reg>так</reg>
+          <orig>такъ</orig>
+        </choice>
+        <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice>
+        <choice>
+          <reg>владел</reg>
+          <orig>владѣлъ</orig>
+        </choice> талантами аграмадными.</p>
+      <p rend="left" id="56ae906c-83eb-4f66-9224-c83453c338b5">
+        <hi rend="Razradka">Акулина</hi>. <choice>
+          <reg>Известное</reg>
+          <orig>Извѣстное</orig>
+        </choice>
+        <choice>
+          <reg>дело</reg>
+          <orig>дѣло</orig>
+        </choice>.</p>
+      <p rend="left" id="58471d81-d2f5-40d2-a2e6-80e83c6368b5">
+        <hi rend="Razradka">
+          <choice>
+            <reg>ИИрохожий</reg>
+            <orig>IIрохожiй</orig>
+          </choice>
+        </hi>. А <choice>
+          <reg>тут</reg>
+          <orig>тутъ</orig>
+        </choice> завируха вышла, <choice>
+          <reg>деспотический</reg>
+          <orig>деспотическiй</orig>
+        </choice>
+        <choice>
+          <reg>гнет</reg>
+          <orig>гнетъ</orig>
+        </choice> народной жизни, и <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice> тюрьму <choice>
+          <reg>попал</reg>
+          <orig>попалъ</orig>
+        </choice>, <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>заключение</reg>
+          <orig>заключенiе</orig>
+        </choice> свободы, значить!</p>
+      <p rend="left" id="b1096a4a-8da1-44bc-b296-bbf56652ea2f">
+        <hi rend="Razradka">Maрфа</hi>. За что же?</p>
+      <p rend="left" id="dde811d5-bb5e-426c-8e29-55dc3dcd5c7e">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>. За права.</p>
+      <p rend="left" id="8615e4ff-faed-4e8c-aa92-87b6d61ea2ef">
+        <hi rend="Razradka">Марфа</hi>. За <choice>
+          <reg>какие</reg>
+          <orig>какiя</orig>
+        </choice> же это права?</p>
+      <p rend="left" id="d11c7fda-dc93-414a-b973-d311c9212498">
+        <pb n="220"/>
+        <note n="n28">
+          <div type="section" xml:id="n28">
+            <head>
+              <ref target="#backn28">
+                28
+              </ref>
+            </head>
+            <p rend="left" id="6bcf81eb-5a82-492a-a372-0a38417898ef">
+              <hi rend="italic">В подлиннике:</hi>
+              <choice>
+                <reg>верно</reg>
+                <orig>вѣрно</orig>
+              </choice>.
+            </p>
+          </div>
+        </note>
+         праздновать, a <choice>
+          <reg>трудящийся</reg>
+          <orig>трудящiйся</orig>
+        </choice>
+        <choice>
+          <reg>пролетарий</reg>
+          <orig>пролетарiй</orig>
+        </choice>
+        <choice>
+          <reg>мог</reg>
+          <orig>могъ</orig>
+        </choice> получать <choice>
+          <reg>вознаграждение</reg>
+          <orig>вознагражденiе</orig>
+        </choice> труда.</p>
+      <p rend="left" id="90240744-1908-43f0-ae18-bf5a11ae7e68">
+        <hi rend="Razradka">Акулина</hi>. И <choice>
+          <reg>насчет</reg>
+          <orig>насчетъ</orig>
+        </choice> земли, <choice>
+          <reg>значит</reg>
+          <orig>значитъ</orig>
+        </choice>?</p>
+      <p rend="left" id="a0db9f78-67fe-46d0-91c4-e051b67bfb0b">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>. А то <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice> же. Тоже и <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>аграмарном</reg>
+          <orig>аграмарномъ</orig>
+        </choice>
+        <choice>
+          <reg>вопросе</reg>
+          <orig>вопросѣ</orig>
+        </choice>.</p>
+      <p rend="left" id="bedbd649-aab8-4186-b48f-261906bf6fe7">
+        <hi rend="Razradka">Акулина</hi>. <choice>
+          <reg>Дал</reg>
+          <orig>Далъ</orig>
+        </choice> бы Господь Царица небесная. <choice>
+          <reg>Уж</reg>
+          <orig>Ужъ</orig>
+        </choice> больно <choice>
+          <reg>теснота</reg>
+          <orig>тѣснота</orig>
+        </choice>
+        <choice>
+          <reg>одолела</reg>
+          <orig>одолѣла</orig>
+        </choice>. Ну, а <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice> же теперь?</p>
+      <p rend="left" id="c0272a30-ce15-4872-9ee2-cd4ac056b5e0">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>. Теперь <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice>? теперь я до Москвы. Приду <choice>
+          <reg>к</reg>
+          <orig>къ</orig>
+        </choice> эксплотатору. Что <choice>
+          <reg>ж</reg>
+          <orig>жъ</orig>
+        </choice>
+        <choice>
+          <reg>делать</reg>
+          <orig>дѣлать</orig>
+        </choice>, покорюсь, скажу: <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice> какую хоть работу, только возьми.</p>
+      <p rend="left" id="0e08f97b-80a7-4497-9ace-aa10f97f980f">
+        <hi rend="Razradka">Акулина</hi>. Что <choice>
+          <reg>ж</reg>
+          <orig>жъ</orig>
+        </choice> пейте еще.</p>
+      <p rend="left" id="0acec1a5-9072-4c5d-afc3-5c4c81e969d4">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>. Благодарю — мерси, <choice>
+          <reg>значит</reg>
+          <orig>значитъ</orig>
+        </choice>.</p>
+      <p rend="left" id="d28726ea-e0d0-48a7-944f-4b10c0217d2f">
+        <hi rend="italic">(<choice>
+            <reg>Слышен</reg>
+            <orig>Слышенъ</orig>
+          </choice>
+          <choice>
+            <reg>в</reg>
+            <orig>въ</orig>
+          </choice>
+          <choice>
+            <reg>сенях</reg>
+            <orig>сѣняхъ</orig>
+          </choice>
+          <choice>
+            <reg>шум</reg>
+            <orig>шумъ</orig>
+          </choice> и <choice>
+            <reg>говор</reg>
+            <orig>говоръ</orig>
+          </choice>.)</hi>
+      </p>
+      <p rend="left" id="dbaa9773-fe91-4a04-842b-97a49d1b07ac">
+        <hi rend="Razradka">Акулина</hi>. <choice>
+          <reg>Вот</reg>
+          <orig>Вотъ</orig>
+        </choice> и Михайла, <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice>
+        <choice>
+          <reg>раз</reg>
+          <orig>разъ</orig>
+        </choice>
+        <choice>
+          <reg>к</reg>
+          <orig>къ</orig>
+        </choice> чаю.</p>
+      <p rend="left" id="9a097977-9298-4edb-b51c-debe8fc4d81c">
+        <hi rend="Razradka">Марфа</hi>
+        <hi rend="italic">(<choice>
+            <reg>встает</reg>
+            <orig>встаетъ</orig>
+          </choice>). </hi>
+        <choice>
+          <reg>Ох</reg>
+          <orig>Охъ</orig>
+        </choice>, горе мое. <choice>
+          <reg>С</reg>
+          <orig>Съ</orig>
+        </choice>
+        <choice>
+          <reg>Игнатом</reg>
+          <orig>Игнатомъ</orig>
+        </choice>. <choice>
+          <reg>Пьян</reg>
+          <orig>Пьянъ</orig>
+        </choice>, <choice>
+          <reg>значит</reg>
+          <orig>значитъ</orig>
+        </choice>.</p>
+      <p rend="left" id="25f3ca77-adfe-4258-8ce2-aadd086499f3">(<hi rend="italic">Вваливается Михайла и <choice>
+            <reg>Игнат</reg>
+            <orig>Игнатъ</orig>
+          </choice>, оба пьяные.)</hi>
+      </p>
+      <p rend="left" id="af4a3a5a-ca6b-4da4-98ad-4c5bacfcea1a">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Игнат</reg>
+            <orig>Игнатъ</orig>
+          </choice>
+        </hi>. Здорово живете? (<hi rend="italic">Молится на <choice>
+            <reg>образ</reg>
+            <orig>образъ</orig>
+          </choice>.)</hi> А <choice>
+          <reg>вот</reg>
+          <orig>вотъ</orig>
+        </choice> мы, ядрена палка, <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice>
+        <choice>
+          <reg>раз</reg>
+          <orig>разъ</orig>
+        </choice>
+        <choice>
+          <reg>к</reg>
+          <orig>къ</orig>
+        </choice> самовару <choice>
+          <reg>поспели</reg>
+          <orig>поспѣли</orig>
+        </choice>. Мы <choice>
+          <reg>к</reg>
+          <orig>къ</orig>
+        </choice>
+        <choice>
+          <reg>обедни</reg>
+          <orig>обѣдни</orig>
+        </choice>, <choice>
+          <reg>ан</reg>
+          <orig>анъ</orig>
+        </choice>
+        <choice>
+          <reg>отпели</reg>
+          <orig>отпѣли</orig>
+        </choice>, мы <choice>
+          <reg>к</reg>
+          <orig>къ</orig>
+        </choice>
+        <choice>
+          <reg>обеду</reg>
+          <orig>обѣду</orig>
+        </choice>, <choice>
+          <reg>ан</reg>
+          <orig>анъ</orig>
+        </choice>
+        <choice>
+          <reg>отъели</reg>
+          <orig>отъѣли</orig>
+        </choice>, мы <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>кабак</reg>
+          <orig>кабакъ</orig>
+        </choice>, <choice>
+          <reg>ан</reg>
+          <orig>анъ</orig>
+        </choice> только <choice>
+          <reg>так</reg>
+          <orig>такъ</orig>
+        </choice>. Ха, ха, ха. Вы <choice>
+          <reg>нам</reg>
+          <orig>намъ</orig>
+        </choice> чайку, а мы <choice>
+          <reg>вам</reg>
+          <orig>вамъ</orig>
+        </choice> винца. <choice>
+          <reg>Так</reg>
+          <orig>Такъ</orig>
+        </choice> что ль? <hi rend="italic">(<choice>
+            <reg>Хохочет</reg>
+            <orig>Хохочетъ</orig>
+          </choice>.)</hi>
+      </p>
+      <p rend="left" id="262965b0-5ac6-4431-a7b8-26b76aebb6b2">
+        <hi rend="Razradka">Михайла</hi>. <choice>
+          <reg>Этот</reg>
+          <orig>Этотъ</orig>
+        </choice> щеголь-то <choice>
+          <reg>отколе</reg>
+          <orig>отколѣ</orig>
+        </choice>? (<hi rend="italic">
+          <choice>
+            <reg>Вынимает</reg>
+            <orig>Вынимаетъ</orig>
+          </choice>
+          <choice>
+            <reg>из-за</reg>
+            <orig>изъ-за</orig>
+          </choice> пазухи бутылку, <choice>
+            <reg>ставит</reg>
+            <orig>ставитъ</orig>
+          </choice> на <choice>
+            <reg>стол</reg>
+            <orig>столъ</orig>
+          </choice>.)</hi> Давай чашки.</p>
+      <p rend="left" id="f0085181-acf6-4de4-bd9b-48e9dcb4953b">
+        <hi rend="Razradka">Акулина</hi>. Что <choice>
+          <reg>ж</reg>
+          <orig>жъ</orig>
+        </choice> хорошо <choice>
+          <reg>съездил</reg>
+          <orig>съѣздилъ</orig>
+        </choice>?</p>
+      <p rend="left" id="5504463e-7cb0-45d2-850a-7e44f132f379">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Игнат</reg>
+            <orig>Игнатъ</orig>
+          </choice>
+        </hi>. <choice>
+          <reg>Уж</reg>
+          <orig>Ужъ</orig>
+        </choice> чего, ядрена палка, лучше, и попили, и погуляли, и домой привезли.</p>
+      <p rend="left" id="2c881779-7062-4691-bcf0-ed3591ce1b8a">
+        <hi rend="Razradka">Михайла</hi> (<hi rend="italic">
+          <choice>
+            <reg>наливает</reg>
+            <orig>наливаетъ</orig>
+          </choice> чашки и <choice>
+            <reg>подвигает</reg>
+            <orig>подвигаетъ</orig>
+          </choice> матери, а <choice>
+            <reg>потом</reg>
+            <orig>потомъ</orig>
+          </choice> и прохожему).</hi> Пей и ты.</p>
+      <p rend="left" id="9694e1eb-b259-4b4d-8d00-e3f4037ed5ec">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>
+        <hi rend="italic">(<choice>
+            <reg>берет</reg>
+            <orig>беретъ</orig>
+          </choice> чашку).</hi> Приношу чувствительную благодарность. Будьте здоровы. (<hi rend="italic">
+          <choice>
+            <reg>Выпивает</reg>
+            <orig>Выпиваетъ</orig>
+          </choice>.)</hi>
+      </p>
+      <p rend="left" id="3744dee1-25f5-4373-bca4-1297842623ce">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Игнат</reg>
+            <orig>Игнатъ</orig>
+          </choice>
+        </hi>. Молодчина, <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice>
+        <choice>
+          <reg>хлобыснул</reg>
+          <orig>хлобыснулъ</orig>
+        </choice>, должно ученый, едрена палка. <choice>
+          <reg>С</reg>
+          <orig>Съ</orig>
+        </choice> голодухи то, я чай, по <choice>
+          <reg>жилкам</reg>
+          <orig>жилкамъ</orig>
+        </choice> пошла. <hi rend="italic">(<choice>
+            <reg>Наливает</reg>
+            <orig>Наливаетъ</orig>
+          </choice> еще.)</hi>
+      </p>
+      <p rend="left" id="cfbd2e8a-44d6-4d04-907f-8772c585493e">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi> (<hi rend="italic">
+          <choice>
+            <reg>пьет</reg>
+            <orig>пьетъ</orig>
+          </choice>, <choice>
+            <reg>к</reg>
+            <orig>къ</orig>
+          </choice>
+          <choice>
+            <reg>Михайле</reg>
+            <orig>Михайлѣ</orig>
+          </choice> и Игнату).</hi> Желаю <choice>
+          <reg>успеха</reg>
+          <orig>успѣха</orig>
+        </choice> во <choice>
+          <reg>всех</reg>
+          <orig>всѣхъ</orig>
+        </choice>
+        <choice>
+          <reg>предприятиях</reg>
+          <orig>предпрiятiяхъ</orig>
+        </choice>.</p>
+      <p rend="left" id="442b3734-c5de-4856-bf32-7edf3d897aec">
+        <hi rend="Razradka">Акулина</hi> (<hi rend="italic">
+          <choice>
+            <reg>Михайле</reg>
+            <orig>Михайлѣ</orig>
+          </choice>).</hi> Что <choice>
+          <reg>ж</reg>
+          <orig>жъ</orig>
+        </choice> за дорого <choice>
+          <reg>продал</reg>
+          <orig>продалъ</orig>
+        </choice>?</p>
+      <p rend="left" id="2ef09729-6514-47ab-afac-2089301c259a">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Игнат</reg>
+            <orig>Игнатъ</orig>
+          </choice>
+        </hi>. Дорого ли недорого. <choice>
+          <reg>Все</reg>
+          <orig>Всѣ</orig>
+        </choice> пропили, едрена палка. Правда, Михайла?</p>
+      <p rend="left" id="d3c436ec-ad5f-488c-8ef5-f32b5c79e74f">
+        <hi rend="Razradka">Михайла</hi>. А то <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice> же. Что <choice>
+          <reg>ж</reg>
+          <orig>жъ</orig>
+        </choice> на <choice>
+          <reg>них</reg>
+          <orig>нихъ</orig>
+        </choice>
+        <choice>
+          <reg>смотреть</reg>
+          <orig>смотрѣть</orig>
+        </choice>. <choice>
+          <reg>В</reg>
+          <orig>Въ</orig>
+        </choice> кои-то <choice>
+          <reg>веки</reg>
+          <orig>вѣки</orig>
+        </choice> и погулять можно.</p>
+      <p rend="left" id="96870693-eb53-4487-8468-b73cd0b6309a">
+        <hi rend="Razradka">Марфа</hi>. Что куражишься-то. Хорошего мало. Дома <choice>
+          <reg>есть</reg>
+          <orig>ѣсть</orig>
+        </choice> нечего, а ты <choice>
+          <reg>вон</reg>
+          <orig>вонъ</orig>
+        </choice> что...</p>
+      <p rend="left" id="f7e14a55-c4ed-463d-9c98-bc3ebd6a6b02">
+        <hi rend="Razradka">Михайла</hi>. Марфа! <hi rend="italic">(угрожающе.)</hi>
+      </p>
+      <p rend="left" id="6663fd16-16e9-4964-834f-b775969ebf86">
+        <pb n="221"/>
+        <hi rend="Razradka">Марфа</hi>. Что Марфа? Знаю, что Марфа. <choice>
+          <reg>Ах</reg>
+          <orig>Ахъ</orig>
+        </choice> не <choice>
+          <reg>смотрели</reg>
+          <orig>смотрѣли</orig>
+        </choice> бы мои глаза, <choice>
+          <reg>бессовестный</reg>
+          <orig>безсовѣстный</orig>
+        </choice>.</p>
+      <p rend="left" id="386cc602-e6d4-4b66-8edf-ff90f46d541b">
+        <hi rend="Razradka">Михайла</hi>. Марфа, смотри!</p>
+      <p rend="left" id="fa530d42-4d2f-4c3d-84e3-c5e86f0e1a18">
+        <hi rend="Razradka">Марфа</hi>. Нечего <choice>
+          <reg>смотреть</reg>
+          <orig>смотрѣть</orig>
+        </choice>, и <choice>
+          <reg>смотреть</reg>
+          <orig>смотрѣть</orig>
+        </choice> не хочу.</p>
+      <p rend="left" id="0d898385-fdf3-485a-99dd-275240096534">
+        <hi rend="Razradka">Михайла</hi>. Разливай вино, подноси <choice>
+          <reg>гостям</reg>
+          <orig>гостямъ</orig>
+        </choice>.</p>
+      <p rend="left" id="85485016-75cc-44f8-8bd6-33d2a725e62b">
+        <hi rend="Razradka">Марфа</hi>. Тьфу, <choice>
+          <reg>пес</reg>
+          <orig>песъ</orig>
+        </choice> лупоглазый, и говорить <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice> тобой не хочу.</p>
+      <p rend="left" id="62294fd5-500a-490a-a8eb-0ce36d8ad1eb">
+        <hi rend="Razradka">Михайла</hi>. Не хочешь? <choice>
+          <reg>Ах</reg>
+          <orig>Ахъ</orig>
+        </choice> ты шкура собачья. Ты что сказала?</p>
+      <p rend="left" id="64c3d1a1-4380-4575-84d3-1b4a355936da">
+        <hi rend="Razradka">Maрфа</hi>
+        <hi rend="italic">(<choice>
+            <reg>качает</reg>
+            <orig>качаетъ</orig>
+          </choice> люльку. Дњти <choice>
+            <reg>испуганные</reg>
+            <orig>испуганныя</orig>
+          </choice>, <choice>
+            <reg>подходят</reg>
+            <orig>подходятъ</orig>
+          </choice>
+          <choice>
+            <reg>к</reg>
+            <orig>къ</orig>
+          </choice> ней).</hi> Что сказала? Сказала не хочу и говорить <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice> тобой, <choice>
+          <reg>вот</reg>
+          <orig>вотъ</orig>
+        </choice> и все.</p>
+      <p rend="left" id="ebcb8049-6c6f-431c-9e34-61ae917283eb">
+        <hi rend="Razradka">Михайла</hi>. Аль забыла? (<hi rend="italic">
+          <choice>
+            <reg>Вскакивает</reg>
+            <orig>Вскакиваетъ</orig>
+          </choice>
+          <choice>
+            <reg>из-за</reg>
+            <orig>изъ-за</orig>
+          </choice> стола и <choice>
+            <reg>бьет</reg>
+            <orig>бьетъ</orig>
+          </choice> ее по головњ, <choice>
+            <reg>сбивает</reg>
+            <orig>сбиваетъ</orig>
+          </choice>
+          <choice>
+            <reg>платок</reg>
+            <orig>платокъ</orig>
+          </choice>.)</hi>
+        <choice>
+          <reg>Раз</reg>
+          <orig>Разъ</orig>
+        </choice>.</p>
+      <p rend="left" id="bc788d0e-ce42-462b-847c-ce956c8b293d">
+        <hi rend="Razradka">Марфа</hi>. О о о о! <hi rend="italic">(<choice>
+            <reg>Бњжит</reg>
+            <orig>Бњжитъ</orig>
+          </choice>
+          <choice>
+            <reg>в</reg>
+            <orig>въ</orig>
+          </choice>
+          <choice>
+            <reg>слезах</reg>
+            <orig>слезахъ</orig>
+          </choice>
+          <choice>
+            <reg>к</reg>
+            <orig>къ</orig>
+          </choice> двери.)</hi>
+      </p>
+      <p rend="left" id="09336af6-36e2-4e66-b175-5b18f3457186">
+        <hi rend="Razradka">Михайла</hi>. Не уйдешь, стерва ты этакая...(<hi rend="italic">Бросается за ней.)</hi>
+      </p>
+      <p rend="left" id="06125bd9-e498-4167-b281-9c1bc8e71ee2">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>
+        <hi rend="italic">(<choice>
+            <reg>вскакивает</reg>
+            <orig>вскакиваетъ</orig>
+          </choice>
+          <choice>
+            <reg>от</reg>
+            <orig>отъ</orig>
+          </choice> стола и <choice>
+            <reg>хватает</reg>
+            <orig>хватаетъ</orig>
+          </choice> Михайлу за руку).</hi> Не <choice>
+          <reg>имеешь</reg>
+          <orig>имѣешь</orig>
+        </choice> никакого <choice>
+          <reg>полного</reg>
+          <orig>полнаго</orig>
+        </choice> права.</p>
+      <p rend="left" id="252e750b-6c81-4600-9d65-52a2897d04f4">
+        <hi rend="Razradka">Михайла</hi> (<hi rend="italic">останавливается, <choice>
+            <reg>с</reg>
+            <orig>съ</orig>
+          </choice>
+          <choice>
+            <reg>удивлением</reg>
+            <orig>удивленiемъ</orig>
+          </choice>
+          <choice>
+            <reg>смотрит</reg>
+            <orig>смотритъ</orig>
+          </choice> на <choice>
+            <reg>прохожего</reg>
+            <orig>прохожаго</orig>
+          </choice>).</hi> Али давно не <choice>
+          <reg>бит</reg>
+          <orig>битъ</orig>
+        </choice>?</p>
+      <p rend="left" id="12e5eef4-716e-4b29-a5cb-c70f504161f5">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>. Не <choice>
+          <reg>имеешь</reg>
+          <orig>имѣешь</orig>
+        </choice>
+        <choice>
+          <reg>полного</reg>
+          <orig>полнаго</orig>
+        </choice> права <choice>
+          <reg>женский</reg>
+          <orig>женскiй</orig>
+        </choice>
+        <choice>
+          <reg>пол</reg>
+          <orig>полъ</orig>
+        </choice> подвергать <choice>
+          <reg>оскорблениям</reg>
+          <orig>оскорбленiямъ</orig>
+        </choice>.</p>
+      <p rend="left" id="11bc5266-24f5-481a-930b-440ee625a6ca">
+        <hi rend="Razradka">Михайла</hi>. <choice>
+          <reg>Ах</reg>
+          <orig>Ахъ</orig>
+        </choice> ты <choice>
+          <reg>сукин</reg>
+          <orig>сукiнъ</orig>
+        </choice>
+        <choice>
+          <reg>сын</reg>
+          <orig>сынъ</orig>
+        </choice>. А это <choice>
+          <reg>видал</reg>
+          <orig>видалъ</orig>
+        </choice>? (<hi rend="italic">
+          <choice>
+            <reg>Показывает</reg>
+            <orig>Показываетъ</orig>
+          </choice>
+          <choice>
+            <reg>кулак</reg>
+            <orig>кулакъ</orig>
+          </choice>.)</hi>
+      </p>
+      <p rend="left" id="e425fb30-7028-4a02-b495-75eff0fa9f58">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>. Не дозволю <choice>
+          <reg>над</reg>
+          <orig>надъ</orig>
+        </choice>
+        <choice>
+          <reg>женским</reg>
+          <orig>женскимъ</orig>
+        </choice>
+        <choice>
+          <reg>полом</reg>
+          <orig>поломъ</orig>
+        </choice>
+        <choice>
+          <reg>эксплытацию</reg>
+          <orig>эксплытацiю</orig>
+        </choice> производить.</p>
+      <p rend="left" id="95843bca-4dda-4098-91a8-e458991aca78">
+        <hi rend="Razradka">Михайла</hi>. Я <choice>
+          <reg>тебе</reg>
+          <orig>тебѣ</orig>
+        </choice> такую <choice>
+          <reg>остолбацию</reg>
+          <orig>остолбацiю</orig>
+        </choice>
+        <choice>
+          <reg>задам</reg>
+          <orig>задамъ</orig>
+        </choice>, что кверху тормашками...</p>
+      <p rend="left" id="e57bd90a-3cdb-4caa-8272-3afd47d0cad5">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>. На бей. Что <choice>
+          <reg>ж</reg>
+          <orig>жъ</orig>
+        </choice> не бьешь? Бей. (<hi rend="italic">
+          <choice>
+            <reg>Выставляет</reg>
+            <orig>Выставляетъ</orig>
+          </choice> лицо.)</hi>
+      </p>
+      <p rend="left" id="1bc4ee6d-443f-47bf-8c4e-ea2f7546f634">
+        <hi rend="Razradka">Михайла</hi> (<hi rend="italic">
+          <choice>
+            <reg>пожимает</reg>
+            <orig>пожимаетъ</orig>
+          </choice> плечами и <choice>
+            <reg>разводит</reg>
+            <orig>разводитъ</orig>
+          </choice> руками).</hi> Ну, а <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice> я двину?</p>
+      <p rend="left" id="9e57faba-b68d-4079-adc4-79211be5e04b">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>. Я говорю бей.</p>
+      <p rend="left" id="37685494-a579-4bdb-8e76-ab41bea507ca">
+        <hi rend="Razradka">Михайла</hi>. Ну и <choice>
+          <reg>чудак</reg>
+          <orig>чудакъ</orig>
+        </choice> же, посмотрю на тебя. (<hi rend="italic">
+          <choice>
+            <reg>Опускает</reg>
+            <orig>Опускаетъ</orig>
+          </choice> руки и <choice>
+            <reg>качает</reg>
+            <orig>качаетъ</orig>
+          </choice> головой.)</hi>
+      </p>
+      <p rend="left" id="02e151fb-9de5-4d73-a6c6-eb90de21f3b9">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Игнат</reg>
+            <orig>Игнатъ</orig>
+          </choice>
+        </hi> (<hi rend="italic">
+          <choice>
+            <reg>к</reg>
+            <orig>къ</orig>
+          </choice> прохожему).</hi>
+        <choice>
+          <reg>Зараз</reg>
+          <orig>Заразъ</orig>
+        </choice> видно, что дюже до <choice>
+          <reg>баб</reg>
+          <orig>бабъ</orig>
+        </choice>
+        <choice>
+          <reg>охоч</reg>
+          <orig>охочъ</orig>
+        </choice>, едрена палка.</p>
+      <p rend="left" id="eeaea471-8c68-4fb2-bb93-19f3fa7b7a23">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>. Я за права стою.</p>
+      <p rend="left" id="262c1325-d477-4c88-9792-af48d2e6f484">
+        <hi rend="Razradka">Михайла</hi> (<hi rend="italic">
+          <choice>
+            <reg>к</reg>
+            <orig>къ</orig>
+          </choice>
+          <choice>
+            <reg>Марфе</reg>
+            <orig>Марфѣ</orig>
+          </choice>, <choice>
+            <reg>идет</reg>
+            <orig>идетъ</orig>
+          </choice>
+          <choice>
+            <reg>к</reg>
+            <orig>къ</orig>
+          </choice> столу, тяжело дыша).</hi> Ну, Марфа, здоровую <choice>
+          <reg>свечу</reg>
+          <orig>свѣчу</orig>
+        </choice> за него поставь. Кабы не <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice>, <choice>
+          <reg>избил</reg>
+          <orig>избилъ</orig>
+        </choice> бы тебя <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice> дребезги.</p>
+      <p rend="left" id="5d52d38e-dcce-4ab0-97c6-d63e23670cc7">
+        <hi rend="Razradka">Марфа</hi>. Чего же и приждать <choice>
+          <reg>от</reg>
+          <orig>отъ</orig>
+        </choice> тебя: бейся всю жисть, и пеки, и вари, а <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice> что...</p>
+      <p rend="left" id="09260cad-2fe2-4c2f-9378-4df7d4f26300">
+        <hi rend="Razradka">Михайла</hi>. Ну буде, буде. (<hi rend="italic">
+          <choice>
+            <reg>Подносит</reg>
+            <orig>Подноситъ</orig>
+          </choice> прохожему вино.) </hi>Пей (<hi rend="italic">
+          <choice>
+            <reg>К</reg>
+            <orig>Къ</orig>
+          </choice> жене.) А</hi> ты что слюни-то распустила. <choice>
+          <reg>Уж</reg>
+          <orig>Ужъ</orig>
+        </choice> и пошутить нельзя. На деньги прибери: <choice>
+          <reg>две</reg>
+          <orig>двѣ</orig>
+        </choice> трешницы да <choice>
+          <reg>вот</reg>
+          <orig>вотъ</orig>
+        </choice> два <choice>
+          <reg>двугривенных</reg>
+          <orig>двугривенныхъ</orig>
+        </choice>.</p>
+      <p rend="left" id="bf7368ed-11c8-4d17-926b-a582d7c55ccc">
+        <hi rend="Razradka">Акулина</hi>. А <choice>
+          <reg>чай-сахар</reg>
+          <orig>чай-сахаръ</orig>
+        </choice> я приказывала.</p>
+      <p rend="left" id="ccf44e2d-20bf-4abd-9264-b9d7bb8e8f89">
+        <pb n="222"/> Михайла (<hi rend="italic">
+          <choice>
+            <reg>достает</reg>
+            <orig>достаетъ</orig>
+          </choice>
+          <choice>
+            <reg>сверток</reg>
+            <orig>свертокъ</orig>
+          </choice>
+          <choice>
+            <reg>из</reg>
+            <orig>изъ</orig>
+          </choice> кармана и <choice>
+            <reg>подает</reg>
+            <orig>подаетъ</orig>
+          </choice>
+          <choice>
+            <reg>жене</reg>
+            <orig>женѣ</orig>
+          </choice>. Марфа <choice>
+            <reg>берет</reg>
+            <orig>беретъ</orig>
+          </choice> деньги и <choice>
+            <reg>уходит</reg>
+            <orig>уходитъ</orig>
+          </choice>
+          <choice>
+            <reg>в</reg>
+            <orig>въ</orig>
+          </choice> чулань, молча оправляя <choice>
+            <reg>платок</reg>
+            <orig>платокъ</orig>
+          </choice>).</hi>
+        <choice>
+          <reg>Бестолковое</reg>
+          <orig>Безтолковое</orig>
+        </choice> это бабье <choice>
+          <reg>сословие</reg>
+          <orig>сословiе</orig>
+        </choice>. <hi rend="italic">(Опять <choice>
+            <reg>подает</reg>
+            <orig>подаетъ</orig>
+          </choice> прохожему). </hi>На, пей.</p>
+      <p rend="left" id="30e085c6-e40e-4795-bc71-ca5c0edbcd80">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>
+        <hi rend="italic">(не <choice>
+            <reg>пьет</reg>
+            <orig>пьетъ</orig>
+          </choice>).</hi> Пейте сами.</p>
+      <p rend="left" id="0306200f-cfd1-4b36-a58e-eb163fc9d6a8">
+        <hi rend="Razradka">Михайла</hi>. Ну <choice>
+          <reg>будет</reg>
+          <orig>будетъ</orig>
+        </choice> ломаться.</p>
+      <p rend="left" id="490b1d8f-4536-4aba-b519-35a92f3c977a">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>
+        <hi rend="italic">(<choice>
+            <reg>пьет</reg>
+            <orig>пьетъ</orig>
+          </choice>).</hi> Будьте благополучны.</p>
+      <p rend="left" id="4fb69789-cea0-4b0a-912d-98dcb002515e">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Игнат</reg>
+            <orig>Игнатъ</orig>
+          </choice>
+        </hi>
+        <hi rend="italic">(<choice>
+            <reg>к</reg>
+            <orig>къ</orig>
+          </choice> прохожему). </hi>А <choice>
+          <reg>видал</reg>
+          <orig>видалъ</orig>
+        </choice> ты, я чай, виды. <choice>
+          <reg>Ох</reg>
+          <orig>Охъ</orig>
+        </choice> хороша на <choice>
+          <reg>табе</reg>
+          <orig>табѣ</orig>
+        </choice> бонжурка. Хформенная бонжурка, и <choice>
+          <reg>где</reg>
+          <orig>гдѣ</orig>
+        </choice> ты такую <choice>
+          <reg>достал</reg>
+          <orig>досталъ</orig>
+        </choice>
+        <hi rend="italic">(<choice>
+            <reg>Показывает</reg>
+            <orig>Показываетъ</orig>
+          </choice> на его оборванную куртку.) </hi>Ты ее не оправляй, она и <choice>
+          <reg>так</reg>
+          <orig>такъ</orig>
+        </choice> хороша. <choice>
+          <reg>В</reg>
+          <orig>Въ</orig>
+        </choice>
+        <choice>
+          <reg>годочках</reg>
+          <orig>годочкахъ</orig>
+        </choice> она, <choice>
+          <reg>значит</reg>
+          <orig>значитъ</orig>
+        </choice>, ну да что <choice>
+          <reg>ж</reg>
+          <orig>жъ</orig>
+        </choice>
+        <choice>
+          <reg>делать</reg>
+          <orig>дѣлать</orig>
+        </choice>? Кабы у меня такая же была, и меня бы бабы любили. (<hi rend="italic">
+          <choice>
+            <reg>К</reg>
+            <orig>Къ</orig>
+          </choice>
+          <choice>
+            <reg>Марфе</reg>
+            <orig>Марфѣ</orig>
+          </choice>.)</hi>
+        <choice>
+          <reg>Верно</reg>
+          <orig>Вѣрно</orig>
+        </choice> говорю?</p>
+      <p rend="left" id="d894db4e-9630-485d-927d-0f2591348903">
+        <hi rend="Razradka">Акулина</hi>. Напрасно это, <choice>
+          <reg>Агеич</reg>
+          <orig>Агеичъ</orig>
+        </choice>, что ничего не видамши <choice>
+          <reg>человека</reg>
+          <orig>человѣка</orig>
+        </choice> на <choice>
+          <reg>смех</reg>
+          <orig>смѣхъ</orig>
+        </choice> поднимать.</p>
+      <p rend="left" id="6acdbbb9-f543-42cf-8bd6-09b7197d11e6">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>. Потому необразованность.</p>
+      <p rend="left" id="39381154-5d66-49b7-a9c8-8fc9c9d264c0">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Игнат</reg>
+            <orig>Игнатъ</orig>
+          </choice>
+        </hi>. Я <choice>
+          <reg>ведь</reg>
+          <orig>вѣдь</orig>
+        </choice> любя. Пей. <hi rend="italic">(<choice>
+            <reg>Подносит</reg>
+            <orig>Подноситъ</orig>
+          </choice>.)</hi>
+      </p>
+      <p rend="left" id="613d44fd-e97b-4b77-894e-2f1b8197597b">
+        <hi rend="italic">(<choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+          <choice>
+            <reg>пьет</reg>
+            <orig>пьетъ</orig>
+          </choice>.)</hi>
+      </p>
+      <p rend="left" id="9314ea4e-affb-40f0-aa2d-512b359728bf">
+        <hi rend="Razradka">Акулина</hi>. <choice>
+          <reg>Сам</reg>
+          <orig>Самъ</orig>
+        </choice>
+        <choice>
+          <reg>говорил</reg>
+          <orig>говорилъ</orig>
+        </choice>, что <choice>
+          <reg>от</reg>
+          <orig>отъ</orig>
+        </choice> ней качества <choice>
+          <reg>все</reg>
+          <orig>всѣ</orig>
+        </choice>, и <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>тюрьме</reg>
+          <orig>тюрьмѣ</orig>
+        </choice>
+        <choice>
+          <reg>из-за</reg>
+          <orig>изъ-за</orig>
+        </choice> ней <choice>
+          <reg>сидел</reg>
+          <orig>сидѣлъ</orig>
+        </choice>.</p>
+      <p rend="left" id="19a4d7ce-8e0f-439c-bc81-ca762ccf81bb">
+        <hi rend="Razradka">Михайла</hi>. По <choice>
+          <reg>каким</reg>
+          <orig>какимъ</orig>
+        </choice> же <choice>
+          <reg>делам</reg>
+          <orig>дѣламъ</orig>
+        </choice>
+        <choice>
+          <reg>сидел</reg>
+          <orig>сидѣлъ</orig>
+        </choice>?</p>
+      <p rend="left" id="a1f03279-52b9-44b3-b92e-c772912db363">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>
+        <hi rend="italic">(очень <choice>
+            <reg>захмелевший</reg>
+            <orig>захмелѣвшiй</orig>
+          </choice>).</hi> За <choice>
+          <reg>экспроприацию</reg>
+          <orig>экспропрiацiю</orig>
+        </choice>
+        <choice>
+          <reg>страдал</reg>
+          <orig>страдалъ</orig>
+        </choice>.</p>
+      <p rend="left" id="41fdf161-0347-4c76-bd72-f5aed68a5e42">
+        <hi rend="Razradka">Михайла</hi>. Это <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice> же?</p>
+      <p rend="left" id="d217216e-f1de-4dc0-9e9f-676ee6bb3cec">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>. А <choice>
+          <reg>так</reg>
+          <orig>такъ</orig>
+        </choice> что пришли <choice>
+          <reg>к</reg>
+          <orig>къ</orig>
+        </choice> нему, <choice>
+          <reg>к</reg>
+          <orig>къ</orig>
+        </choice> толстопузому. Давай, <choice>
+          <reg>говорим</reg>
+          <orig>говоримъ</orig>
+        </choice>, деньги. А то <choice>
+          <reg>вот</reg>
+          <orig>вотъ</orig>
+        </choice>: <choice>
+          <reg>ливольвер</reg>
+          <orig>ливольверъ</orig>
+        </choice>. <choice>
+          <reg>Он</reg>
+          <orig>Онъ</orig>
+        </choice> туды сюды. <choice>
+          <reg>Вынул</reg>
+          <orig>Вынулъ</orig>
+        </choice>
+        <choice>
+          <reg>две</reg>
+          <orig>двѣ</orig>
+        </choice> тысячи триста рублей.</p>
+      <p rend="left" id="b9a1f94a-0ff0-4563-a804-e5ae1097197b">
+        <hi rend="Razradka">Акулина</hi>. О Господи. —</p>
+      <p rend="left" id="0901cbab-b00d-4245-99d7-20ab7714237a">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>. Мы только <choice>
+          <reg>хотели</reg>
+          <orig>хотѣли</orig>
+        </choice>, <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice> должно, распорядиться суммой, <choice>
+          <reg>Зембриков</reg>
+          <orig>Зембриковъ</orig>
+        </choice>
+        <choice>
+          <reg>руководствовал</reg>
+          <orig>руководствовалъ</orig>
+        </choice>. <choice>
+          <reg>Налетели</reg>
+          <orig>Налетѣли</orig>
+        </choice>... эти воронья. <choice>
+          <reg>Сейчас</reg>
+          <orig>Сейчасъ</orig>
+        </choice>
+        <choice>
+          <reg>под</reg>
+          <orig>подъ</orig>
+        </choice> стражу <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice> тюрьму заключили.</p>
+      <p rend="left" id="800b775b-c45f-47c6-8a64-6a7e54ac0769">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Игнат</reg>
+            <orig>Игнатъ</orig>
+          </choice>
+        </hi>. И денежки отобрали?</p>
+      <p rend="left" id="0b187318-a9e3-46b5-aa90-a012a9c2f5c9">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>. <choice>
+          <reg>Известно</reg>
+          <orig>Извѣстно</orig>
+        </choice>. Да только не могли они меня обвинить. <choice>
+          <reg>Прокурор</reg>
+          <orig>Прокуроръ</orig>
+        </choice> на <choice>
+          <reg>суде</reg>
+          <orig>судѣ</orig>
+        </choice>
+        <choice>
+          <reg>мне</reg>
+          <orig>мнѣ</orig>
+        </choice> такое слово <choice>
+          <reg>сказал</reg>
+          <orig>сказалъ</orig>
+        </choice>: вы, <choice>
+          <reg>говорит</reg>
+          <orig>говоритъ</orig>
+        </choice>, украли деньги. А я <choice>
+          <reg>сейчас</reg>
+          <orig>сейчасъ</orig>
+        </choice> ему <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>ответ</reg>
+          <orig>отвѣтъ</orig>
+        </choice>: <choice>
+          <reg>крадут</reg>
+          <orig>крадутъ</orig>
+        </choice> воры, я говорю. А мы для <choice>
+          <reg>партии</reg>
+          <orig>партiи</orig>
+        </choice>
+        <choice>
+          <reg>экспроприацию</reg>
+          <orig>экспропрiацiю</orig>
+        </choice> совершили. <choice>
+          <reg>Так</reg>
+          <orig>Такъ</orig>
+        </choice>
+        <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice> и не <choice>
+          <reg>мог</reg>
+          <orig>могъ</orig>
+        </choice>
+        <choice>
+          <reg>мне</reg>
+          <orig>мнѣ</orig>
+        </choice>
+        <choice>
+          <reg>ответа</reg>
+          <orig>отвѣта</orig>
+        </choice> дать. Туды сюды, ничего не <choice>
+          <reg>мог</reg>
+          <orig>могъ</orig>
+        </choice>
+        <choice>
+          <reg>ответить</reg>
+          <orig>отвѣтить</orig>
+        </choice>. Ведите, <choice>
+          <reg>говорит</reg>
+          <orig>говоритъ</orig>
+        </choice>, его <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice> тюрьму, <choice>
+          <reg>значит</reg>
+          <orig>значитъ</orig>
+        </choice>
+        <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>заточение</reg>
+          <orig>заточенiе</orig>
+        </choice> свободной жизни.</p>
+      <p rend="left" id="f72fed47-51ee-4160-86b9-e88e3f7cc3ab">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Игнат</reg>
+            <orig>Игнатъ</orig>
+          </choice>
+        </hi>
+        <hi rend="italic">(<choice>
+            <reg>к</reg>
+            <orig>къ</orig>
+          </choice>
+          <choice>
+            <reg>Михайле</reg>
+            <orig>Михайлѣ</orig>
+          </choice>).</hi> И <choice>
+          <reg>ловок</reg>
+          <orig>ловокъ</orig>
+        </choice> же, <choice>
+          <reg>сукин</reg>
+          <orig>сукинъ</orig>
+        </choice>
+        <choice>
+          <reg>сын</reg>
+          <orig>сынъ</orig>
+        </choice>. Молодчина. <hi rend="italic">(<choice>
+            <reg>Подает</reg>
+            <orig>Подаетъ</orig>
+          </choice> прохожему.) </hi>Пей, едрена палка.</p>
+      <p rend="left" id="229d884c-9af2-40f9-bfd6-42607176ecde">
+        <hi rend="Razradka">Акулина</hi>. Тьфу, нехорошо говоришь ты.</p>
+      <p rend="left" id="9c656f8f-38bc-470c-9a58-c09d10525e48">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Игнат</reg>
+            <orig>Игнатъ</orig>
+          </choice>
+        </hi>. Я, бабушка, это не поматершинно, а только <choice>
+          <reg>так</reg>
+          <orig>такъ</orig>
+        </choice> поговорка у меня: едрена палка, едрена палка. Будь здорова, бабушка.</p>
+      <p rend="left" id="e8df62f4-99e7-43bc-8a19-cbca18a8e587">
+        <hi rend="italic">(Марфа <choice>
+            <reg>приходит</reg>
+            <orig>приходитъ</orig>
+          </choice>, стоя у стола, <choice>
+            <reg>разливает</reg>
+            <orig>разливаетъ</orig>
+          </choice> чай.)</hi>
+      </p>
+      <p rend="left" id="96863837-4a08-423c-a2c2-d735cc98c0ec">
+        <hi rend="Razradka">Михайла</hi>. Воть и хорошо. А то что, обижаться. Я говорю. Спасибо ему. Я тебя, Марфа, во <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice> уважаю. (<hi rend="italic">
+          <choice>
+            <reg>К</reg>
+            <orig>Къ</orig>
+          </choice> прохожему.)</hi>
+        <pb n="223"/> Ты что думаешь? (<hi rend="italic">
+          <choice>
+            <reg>Обнимает</reg>
+            <orig>Обнимаетъ</orig>
+          </choice> Марфу.)</hi> Я мою старуху <choice>
+          <reg>так</reg>
+          <orig>такъ</orig>
+        </choice> уважаю, во <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice> уважаю. Старуха моя, одно слово, первый <choice>
+          <reg>сорт</reg>
+          <orig>сортъ</orig>
+        </choice>. Я ее ни на кого не <choice>
+          <reg>променяю</reg>
+          <orig>промѣняю</orig>
+        </choice>.</p>
+      <p rend="left" id="72d8a978-a546-47ca-a94d-c04f816f9768">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Игнат</reg>
+            <orig>Игнатъ</orig>
+          </choice>
+        </hi>. <choice>
+          <reg>Вот</reg>
+          <orig>Вотъ</orig>
+        </choice> и хорошо. Бабушка Акулина. Пей. Я угощаю.</p>
+      <p rend="left" id="690ccc6e-9b7b-478c-a197-cc3fea2d082c">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>. Что <choice>
+          <reg>значит</reg>
+          <orig>значитъ</orig>
+        </choice> сила <choice>
+          <reg>енерции</reg>
+          <orig>енерцiи</orig>
+        </choice>. То все <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>меланхолии</reg>
+          <orig>меланхолiи</orig>
+        </choice> находились, а теперь одна <choice>
+          <reg>приятность</reg>
+          <orig>прiятность</orig>
+        </choice>. Дружеское <choice>
+          <reg>расположение</reg>
+          <orig>расположенiе</orig>
+        </choice>. Бабушка, я любовь <choice>
+          <reg>имею</reg>
+          <orig>имѣю</orig>
+        </choice>
+        <choice>
+          <reg>к</reg>
+          <orig>къ</orig>
+        </choice>
+        <choice>
+          <reg>тебе</reg>
+          <orig>тебѣ</orig>
+        </choice> и ко <choice>
+          <reg>всем</reg>
+          <orig>всѣмъ</orig>
+        </choice>
+        <choice>
+          <reg>людям</reg>
+          <orig>людямъ</orig>
+        </choice>. Братцы <choice>
+          <reg>миленькие</reg>
+          <orig>миленькiе</orig>
+        </choice>. (<hi rend="italic">
+          <choice>
+            <reg>Поет</reg>
+            <orig>Поетъ</orig>
+          </choice>: <choice>
+            <reg>революционную</reg>
+            <orig>революцiонную</orig>
+          </choice> пњсню.)</hi>
+      </p>
+      <p rend="left" id="becdc03d-bb6b-4154-b0f4-8d746ec11855">
+        <hi rend="Razradka">Михайла</hi>. <choice>
+          <reg>Уж</reg>
+          <orig>Ужъ</orig>
+        </choice> дюже разобрало его — <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice> голодухи-то</p>
+      <p rend="center" id="86e63cad-a6e8-48db-baf4-00bce39e2c81">(<hi rend="italic">
+          <choice>
+            <reg>Занавесь</reg>
+            <orig>Занавѣсь</orig>
+          </choice>.)</hi>
+      </p>
+    </div>
+    <div type="section" xml:id="h000013006003">
+      <head rend="center">2-е <choice>
+          <reg>ДЕЙСТВІЕ</reg>
+          <orig>ДѢЙСТВІЕ</orig>
+        </choice>.</head>
+      <p rend="center petit top-1em" id="c125b6d2-4ec1-4e9c-9dde-a65c360b5b15">(Та же хата. Утро.)</p>
+      <p rend="center" id="b2ff7b83-d111-4383-8cf0-b012b23fff20">
+        <lb/>
+      </p>
+      <p rend="center petit" id="0e7580f9-9d06-41ef-b886-617925351672">
+        <hi rend="Razradka">Марфа и Акулина. <choice>
+            <reg>Xозяин</reg>
+            <orig>Xозяинъ</orig>
+          </choice>
+        </hi>
+        <hi rend="italic">
+          <choice>
+            <reg>спит</reg>
+            <orig>спитъ</orig>
+          </choice>.</hi>
+      </p>
+      <p rend="left" id="42a43ce0-f0b9-45af-931d-73f4c525f7ea">
+        <hi rend="Razradka">Марфа</hi> (<hi rend="italic">
+          <choice>
+            <reg>берет</reg>
+            <orig>беретъ</orig>
+          </choice>
+          <choice>
+            <reg>топор</reg>
+            <orig>топоръ</orig>
+          </choice>).</hi> Пойти <choice>
+          <reg>дров</reg>
+          <orig>дровъ</orig>
+        </choice> нарубить.</p>
+      <p rend="left" id="d313d5f3-e653-47ec-a883-6139315ed53e">
+        <hi rend="Razradka">Акулина</hi>
+        <hi rend="italic">(<choice>
+            <reg>с</reg>
+            <orig>съ</orig>
+          </choice>
+          <choice>
+            <reg>ведром</reg>
+            <orig>ведромъ</orig>
+          </choice>).</hi>
+        <choice>
+          <reg>Избил</reg>
+          <orig>Избилъ</orig>
+        </choice> бы <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice> тебя <choice>
+          <reg>вечор</reg>
+          <orig>вечоръ</orig>
+        </choice>, кабы не <choice>
+          <reg>энтот</reg>
+          <orig>энтотъ</orig>
+        </choice>. А не видать его. Аль <choice>
+          <reg>ушел</reg>
+          <orig>ушелъ</orig>
+        </choice>? Должно <choice>
+          <reg>ушел</reg>
+          <orig>ушелъ</orig>
+        </choice>. (<hi rend="italic">
+          <choice>
+            <reg>Уходят</reg>
+            <orig>Уходятъ</orig>
+          </choice> одна за другой.)</hi>
+      </p>
+      <p rend="left" id="eb29829b-0d0a-455f-9aec-03e2c8fba322">
+        <hi rend="Razradka">Михайла</hi>
+        <hi rend="italic">(<choice>
+            <reg>слезает</reg>
+            <orig>слѣзаетъ</orig>
+          </choice>
+          <choice>
+            <reg>с</reg>
+            <orig>съ</orig>
+          </choice> печи).</hi> Вишь ты, солнышко-то <choice>
+          <reg>уж</reg>
+          <orig>ужъ</orig>
+        </choice> высоко. <hi rend="italic">(<choice>
+            <reg>Встает</reg>
+            <orig>Встаетъ</orig>
+          </choice> обувается.)</hi> Видно за водой <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice> старухой ушли. <choice>
+          <reg>Болит</reg>
+          <orig>Болитъ</orig>
+        </choice>, голова <choice>
+          <reg>болит</reg>
+          <orig>болитъ</orig>
+        </choice>. Да не стану. Ну её <choice>
+          <reg>к</reg>
+          <orig>къ</orig>
+        </choice>
+        <choice>
+          <reg>чертям</reg>
+          <orig>чертямъ</orig>
+        </choice>. <hi rend="italic">(Молится Богу, умывается.)</hi> Пойти запрягать.</p>
+      <p rend="left" id="7784a1b5-b785-40b6-94ee-82791f3d215c">
+        <hi rend="italic">(<choice>
+            <reg>Входит</reg>
+            <orig>Входитъ</orig>
+          </choice>
+          <choice>
+            <reg>с</reg>
+            <orig>съ</orig>
+          </choice> дровами Марфа),</hi>
+      </p>
+      <p rend="left" id="5c26cd97-11b6-403c-b0b1-d09bf6ec2530">
+        <hi rend="Razradka">Марфа</hi>. A <choice>
+          <reg>вчерашний</reg>
+          <orig>вчерашнiй</orig>
+        </choice> побирушка. Аль <choice>
+          <reg>ушел</reg>
+          <orig>ушелъ</orig>
+        </choice>.</p>
+      <p rend="left" id="77d5b9ee-9084-43b2-9ed8-24d8525a7c87">
+        <hi rend="Razradka">Михайла</hi>. Должно, <choice>
+          <reg>ушел</reg>
+          <orig>ушелъ</orig>
+        </choice>, не видать.</p>
+      <p rend="left" id="25ca20d2-70b1-4f2f-bb27-6a3f4f765d3a">
+        <hi rend="Razradka">Марфа</hi>. Ну и <choice>
+          <reg>Бог</reg>
+          <orig>Богъ</orig>
+        </choice>
+        <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice>
+        <choice>
+          <reg>ним</reg>
+          <orig>нимъ</orig>
+        </choice>. A <choice>
+          <reg>человек</reg>
+          <orig>человѣкъ</orig>
+        </choice>, видно, умный.</p>
+      <p rend="left" id="9610c6b2-d884-4799-92ea-391cfa3d4d2e">
+        <hi rend="Razradka">Михайла</hi>. За тебя заступился.</p>
+      <p rend="left" id="48d0b547-ff51-48a1-9952-b76ec009808c">
+        <hi rend="Razradka">Марфа</hi>. Чего <choice>
+          <reg>мне</reg>
+          <orig>мнѣ</orig>
+        </choice>.</p>
+      <p rend="left" id="6d5e3325-c1a6-427f-a90e-e1dcae2bd401">(<hi rend="italic">Михайла <choice>
+            <reg>одевается</reg>
+            <orig>одѣвается</orig>
+          </choice>.)</hi>
+      </p>
+      <p rend="left" id="2800d8a5-5662-4934-9c6a-f87877e26206">
+        <hi rend="Razradka">Марфа</hi>. А <choice>
+          <reg>чай-сахар</reg>
+          <orig>чай-сахаръ</orig>
+        </choice>
+        <choice>
+          <reg>вчерашние</reg>
+          <orig>вчерашнiе</orig>
+        </choice> ты <choice>
+          <reg>прибрал</reg>
+          <orig>прибралъ</orig>
+        </choice> что ль?</p>
+      <p rend="left" id="0564e093-7a5f-47ac-a354-216cfc198a2f">
+        <hi rend="Razradka">Михайла</hi>. Я <choice>
+          <reg>чаял</reg>
+          <orig>чаялъ</orig>
+        </choice> ты взяла.</p>
+      <p rend="left" id="c73f4587-ccb6-4f7e-9e44-a5aa73c85533">(<hi rend="italic">
+          <choice>
+            <reg>Входит</reg>
+            <orig>Входитъ</orig>
+          </choice> Акулина <choice>
+            <reg>с</reg>
+            <orig>съ</orig>
+          </choice>
+          <choice>
+            <reg>ведром</reg>
+            <orig>ведромъ</orig>
+          </choice>.)</hi>
+      </p>
+      <p rend="left" id="4a505f39-10cd-4285-94a5-9ffa7da28f92">
+        <hi rend="Razradka">Марфа</hi>
+        <hi rend="italic">(<choice>
+            <reg>к</reg>
+            <orig>къ</orig>
+          </choice>
+          <choice>
+            <reg>старухе</reg>
+            <orig>старухѣ</orig>
+          </choice>).</hi> Матушка, не ты взяла покупку?</p>
+      <p rend="left" id="40260a26-b693-4792-bac5-8e6d5b2f3b78">
+        <hi rend="Razradka">Акулина</hi>. И знать не знаю.</p>
+      <p rend="left" id="60785038-2728-4960-add7-4006f01ce393">
+        <hi rend="Razradka">Михайла</hi>. <choice>
+          <reg>Вечор</reg>
+          <orig>Вечоръ</orig>
+        </choice> я на окно <choice>
+          <reg>положил</reg>
+          <orig>положилъ</orig>
+        </choice>.</p>
+      <p rend="left" id="aaf90770-62bc-4aa7-833e-5f9fba3850ad">
+        <hi rend="Razradka">Акулина</hi>. И я <choice>
+          <reg>видела</reg>
+          <orig>видѣла</orig>
+        </choice>.</p>
+      <p rend="left" id="f3ca773a-3b9c-4043-892e-4747a06bd7d6">
+        <hi rend="Razradka">Марфа</hi>. <choice>
+          <reg>Где</reg>
+          <orig>Гдѣ</orig>
+        </choice> же ему быть? <hi rend="italic">(<choice>
+            <reg>Ищут</reg>
+            <orig>Ищутъ</orig>
+          </choice>.)</hi>
+      </p>
+      <p rend="left" id="6ff9ec34-0132-4e58-a9a4-75c46f6c3a02">
+        <hi rend="Razradka">Акулина</hi>. Вишь ты <choice>
+          <reg>грех</reg>
+          <orig>грѣхъ</orig>
+        </choice> какой. (<hi rend="italic">
+          <choice>
+            <reg>Входит</reg>
+            <orig>Входитъ</orig>
+          </choice>
+          <choice>
+            <reg>сосед</reg>
+            <orig>сосѣдъ</orig>
+          </choice>.)</hi>
+      </p>
+      <p rend="left" id="4e3bc695-b2e7-4702-974f-b9e9c4641c8c">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Сосед</reg>
+            <orig>Сосѣдъ</orig>
+          </choice>
+        </hi>. Что же, <choice>
+          <reg>Тихоныч</reg>
+          <orig>Тихонычъ</orig>
+        </choice>, по дрова <choice>
+          <reg>едем</reg>
+          <orig>ѣдемъ</orig>
+        </choice>, что ли.</p>
+      <p rend="left" id="eead68dd-5eb6-4da9-a41e-463d7cb9d08f">
+        <hi rend="Razradka">Михайла</hi>. А то <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice> же. <choice>
+          <reg>Зараз</reg>
+          <orig>Заразъ</orig>
+        </choice> запрягу. Да вишь, пропажа у <choice>
+          <reg>нас</reg>
+          <orig>насъ</orig>
+        </choice>.</p>
+      <p rend="left" id="ddfbee1f-ea2e-46ca-9d94-ba631bdd95cc">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Сосед</reg>
+            <orig>Сосѣдъ</orig>
+          </choice>
+        </hi>. <choice>
+          <reg>Вот</reg>
+          <orig>Вотъ</orig>
+        </choice>
+        <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice>, что же такое?</p>
+      <p rend="left" id="c4c5b82a-0127-4e1b-a307-5c86ce64877e">
+        <hi rend="Razradka">Марфа</hi>. Да <choice>
+          <reg>вот</reg>
+          <orig>вотъ</orig>
+        </choice>
+        <choice>
+          <reg>хозяин</reg>
+          <orig>хозяинъ</orig>
+        </choice>
+        <choice>
+          <reg>вечор</reg>
+          <orig>вечоръ</orig>
+        </choice> покупку <choice>
+          <reg>привез</reg>
+          <orig>привезъ</orig>
+        </choice>
+        <choice>
+          <reg>из</reg>
+          <orig>изъ</orig>
+        </choice> города: <choice>
+          <reg>чай-сахар</reg>
+          <orig>чай-сахаръ</orig>
+        </choice>, <choice>
+          <reg>положил</reg>
+          <orig>положилъ</orig>
+        </choice>
+        <choice>
+          <reg>тут</reg>
+          <orig>тутъ</orig>
+        </choice> на окно. <choice>
+          <reg>Мне</reg>
+          <orig>Мнѣ</orig>
+        </choice> не <choice>
+          <reg>въдомек</reg>
+          <orig>въдомекъ</orig>
+        </choice> прибрать. Глядь нынче <choice>
+          <reg>неть</reg>
+          <orig>нѣть</orig>
+        </choice>.</p>
+      <p rend="left" id="3b44deb1-7f71-4539-8314-b15c65374668">
+        <pb n="224"/> Михайла. <choice>
+          <reg>Грешим</reg>
+          <orig>Грѣшимъ</orig>
+        </choice> на <choice>
+          <reg>прохожего</reg>
+          <orig>прохожаго</orig>
+        </choice>, <choice>
+          <reg>ночевал</reg>
+          <orig>ночевалъ</orig>
+        </choice>.</p>
+      <p rend="left" id="29f26928-389a-48ef-91a7-be828b85e7d1">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Сосед</reg>
+            <orig>Сосѣдъ</orig>
+          </choice>
+        </hi>. Какой <choice>
+          <reg>прохожий</reg>
+          <orig>прохожiй</orig>
+        </choice>?</p>
+      <p rend="left" id="39a54b67-96c4-4074-943a-420da8220827">
+        <hi rend="Razradka">Марфа</hi>. Такой <choice>
+          <reg>из</reg>
+          <orig>изъ</orig>
+        </choice> себя худощавый, безбородый.</p>
+      <p rend="left" id="0e493f4e-a05c-4dd9-903e-1c7281c1406a">
+        <hi rend="Razradka">Михайла</hi>. Пиджачишка <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>лохмотьях</reg>
+          <orig>лохмотьяхъ</orig>
+        </choice>.</p>
+      <p rend="left" id="38225384-ae54-4bcc-b7f8-a7ec98bbb3f4">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Сосед</reg>
+            <orig>Сосѣдъ</orig>
+          </choice>
+        </hi>. Кучерявый, <choice>
+          <reg>нос</reg>
+          <orig>носъ</orig>
+        </choice>
+        <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice> горбинкой?</p>
+      <p rend="left" id="846e4fa3-ef92-42dc-9b97-e25c373fbc73">
+        <hi rend="Razradka">Михайла</hi>. Ну да.</p>
+      <p rend="left" id="f7d124b1-291b-4003-84c2-02e4b19182a8">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Сосед</reg>
+            <orig>Сосѣдъ</orig>
+          </choice>
+        </hi>. <choice>
+          <reg>Сейчас</reg>
+          <orig>Сейчасъ</orig>
+        </choice>
+        <choice>
+          <reg>повстречал</reg>
+          <orig>повстрѣчалъ</orig>
+        </choice>. Подивился, что дюже шибко <choice>
+          <reg>шагает</reg>
+          <orig>шагаетъ</orig>
+        </choice>.</p>
+      <p rend="left" id="40448246-338f-48e4-9f7c-a4bc49043b37">
+        <hi rend="Razradka">Михайла</hi>. <choice>
+          <reg>Скорей</reg>
+          <orig>Скорѣй</orig>
+        </choice> всего <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice>. — Далече <choice>
+          <reg>встрел</reg>
+          <orig>встрѣлъ</orig>
+        </choice>?</p>
+      <p rend="left" id="3271834e-3edc-45ce-9b42-a5f5fac81f11">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Сосед</reg>
+            <orig>Сосѣдъ</orig>
+          </choice>
+        </hi>. За <choice>
+          <reg>мост</reg>
+          <orig>мостъ</orig>
+        </choice> еще, я чай, не <choice>
+          <reg>вышел</reg>
+          <orig>вышелъ</orig>
+        </choice>.</p>
+      <p rend="left" id="689d055d-4dd6-4bc9-bf5d-f1415c2e53cc">
+        <hi rend="Razradka">Михайла</hi>
+        <hi rend="italic">(<choice>
+            <reg>хватает</reg>
+            <orig>хватаетъ</orig>
+          </choice> шапку и быстро <choice>
+            <reg>уходит</reg>
+            <orig>уходитъ</orig>
+          </choice>
+          <choice>
+            <reg>с</reg>
+            <orig>съ</orig>
+          </choice>
+          <choice>
+            <reg>сосњдом</reg>
+            <orig>сосњдомъ</orig>
+          </choice>).</hi> Догнать надо. Вишь <choice>
+          <reg>шельмец</reg>
+          <orig>шельмецъ</orig>
+        </choice>. <choice>
+          <reg>Он</reg>
+          <orig>Онъ</orig>
+        </choice> это.</p>
+      <p rend="left" id="f891abb2-0f3f-46bd-9b73-d23d7e3de58d">
+        <hi rend="Razradka">Марфа</hi>. <choice>
+          <reg>Ох</reg>
+          <orig>Охъ</orig>
+        </choice>
+        <choice>
+          <reg>грехи</reg>
+          <orig>грѣхи</orig>
+        </choice>, <choice>
+          <reg>грехи</reg>
+          <orig>грѣхи</orig>
+        </choice>. Не миновать, что <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice>.</p>
+      <p rend="left" id="01693027-c448-4d7e-9f20-6f738eba85f0">
+        <hi rend="Razradka">Акулина</hi>. А <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice> не <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice>. <choice>
+          <reg>Так-то</reg>
+          <orig>Такъ-то</orig>
+        </choice>
+        <choice>
+          <reg>раз</reg>
+          <orig>разъ</orig>
+        </choice>
+        <choice>
+          <reg>годов</reg>
+          <orig>годовъ</orig>
+        </choice> двадцать тому было, <choice>
+          <reg>так</reg>
+          <orig>такъ</orig>
+        </choice> же сказали на <choice>
+          <reg>человека</reg>
+          <orig>человѣка</orig>
+        </choice>, что лошадь <choice>
+          <reg>увел</reg>
+          <orig>увелъ</orig>
+        </choice>. Собрался <choice>
+          <reg>народ</reg>
+          <orig>народъ</orig>
+        </choice>. <choice>
+          <reg>Тот</reg>
+          <orig>Тотъ</orig>
+        </choice>
+        <choice>
+          <reg>говорит</reg>
+          <orig>говоритъ</orig>
+        </choice>
+        <choice>
+          <reg>сам</reg>
+          <orig>самъ</orig>
+        </choice>
+        <choice>
+          <reg>видел</reg>
+          <orig>видѣлъ</orig>
+        </choice>, <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice>
+        <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice>
+        <choice>
+          <reg>обротывал</reg>
+          <orig>обротывалъ</orig>
+        </choice>, <choice>
+          <reg>тот</reg>
+          <orig>тотъ</orig>
+        </choice>
+        <choice>
+          <reg>говорит</reg>
+          <orig>говоритъ</orig>
+        </choice>, что <choice>
+          <reg>видел</reg>
+          <orig>видѣлъ</orig>
+        </choice>, <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice> онь <choice>
+          <reg>повел</reg>
+          <orig>повелъ</orig>
+        </choice> ее. А лошадь <choice>
+          <reg>пегая</reg>
+          <orig>пѣгая</orig>
+        </choice>, дядина, <choice>
+          <reg>заметная</reg>
+          <orig>замѣтная</orig>
+        </choice>. Собрался <choice>
+          <reg>народ</reg>
+          <orig>народъ</orig>
+        </choice>, стали искать. Попался <choice>
+          <reg>им</reg>
+          <orig>имъ</orig>
+        </choice>
+        <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>лесу</reg>
+          <orig>лѣсу</orig>
+        </choice>
+        <choice>
+          <reg>тот</reg>
+          <orig>тотъ</orig>
+        </choice> самый парень. Ты, <choice>
+          <reg>говорят</reg>
+          <orig>говорятъ</orig>
+        </choice>. <choice>
+          <reg>Он</reg>
+          <orig>Онъ</orig>
+        </choice>
+        <choice>
+          <reg>говорит</reg>
+          <orig>говоритъ</orig>
+        </choice>: знать не знаю <choice>
+          <reg>ведать</reg>
+          <orig>вѣдать</orig>
+        </choice> не <choice>
+          <reg>ведую</reg>
+          <orig>вѣдую</orig>
+        </choice>. Поклянись, <choice>
+          <reg>говорят</reg>
+          <orig>говорятъ</orig>
+        </choice>. Клянется, божится, что не <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice>. Что, <choice>
+          <reg>говорят</reg>
+          <orig>говорятъ</orig>
+        </choice>, <choice>
+          <reg>смотреть</reg>
+          <orig>смотрѣть</orig>
+        </choice> на него. Бабы <choice>
+          <reg>верно</reg>
+          <orig>вѣрно</orig>
+        </choice> сказывали, что <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice>. Что-то <choice>
+          <reg>сказал</reg>
+          <orig>сказалъ</orig>
+        </choice>
+        <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice> грубое. <choice>
+          <reg>Егор</reg>
+          <orig>Егоръ</orig>
+        </choice>
+        <choice>
+          <reg>Лапушкин</reg>
+          <orig>Лапушкинъ</orig>
+        </choice>, <choice>
+          <reg>помер</reg>
+          <orig>померъ</orig>
+        </choice>
+        <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice>. <choice>
+          <reg>Горячий</reg>
+          <orig>Горячiй</orig>
+        </choice>
+        <choice>
+          <reg>мужик</reg>
+          <orig>мужикъ</orig>
+        </choice>
+        <choice>
+          <reg>был</reg>
+          <orig>былъ</orig>
+        </choice>, развернулся, ни кстя ни моля <choice>
+          <reg>бац</reg>
+          <orig>бацъ</orig>
+        </choice> его <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice> морду, ты, <choice>
+          <reg>говорит</reg>
+          <orig>говоритъ</orig>
+        </choice>, <choice>
+          <reg>вдарил</reg>
+          <orig>вдарилъ</orig>
+        </choice>
+        <choice>
+          <reg>раз</reg>
+          <orig>разъ</orig>
+        </choice>, набросились <choice>
+          <reg>все</reg>
+          <orig>всѣ</orig>
+        </choice>, стали бить успятками, кулаками, добили до смерти. Что же думаешь? На другой <choice>
+          <reg>неделе</reg>
+          <orig>недѣлѣ</orig>
+        </choice> нашли <choice>
+          <reg>настоящего</reg>
+          <orig>настоящаго</orig>
+        </choice> вора, а <choice>
+          <reg>этот</reg>
+          <orig>этотъ</orig>
+        </choice> вовсе не <choice>
+          <reg>вор</reg>
+          <orig>воръ</orig>
+        </choice>, только <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>лесу</reg>
+          <orig>лѣсу</orig>
+        </choice>
+        <choice>
+          <reg>хотел</reg>
+          <orig>хотѣлъ</orig>
+        </choice> дерево облюбовать.</p>
+      <p rend="left" id="01272547-58c9-478b-87f6-e1a595a68273">
+        <hi rend="Razradka">Марфа</hi>. <choice>
+          <reg>Известное</reg>
+          <orig>Извѣстное</orig>
+        </choice>
+        <choice>
+          <reg>дело</reg>
+          <orig>дѣло</orig>
+        </choice>, <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice> бы не <choice>
+          <reg>согрешили</reg>
+          <orig>согрѣшили</orig>
+        </choice>.Хоть <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice> и <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice> низкой степени, a <choice>
+          <reg>человек</reg>
+          <orig>человѣкъ</orig>
+        </choice>, видно, <choice>
+          <reg>хороший</reg>
+          <orig>хорошiй</orig>
+        </choice>.</p>
+      <p rend="left" id="3db8bfe9-8fd6-4d35-9d5a-a5df560c099b">
+        <hi rend="Razradka">Акулина</hi>. Да <choice>
+          <reg>уж</reg>
+          <orig>ужъ</orig>
+        </choice> больно опустился. И взыскать <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice> такого нечего.</p>
+      <p rend="left" id="b419c5a2-e14a-40f3-a3eb-d757b11d4158">
+        <hi rend="Razradka">Марфа</hi>. <choice>
+          <reg>Вот</reg>
+          <orig>Вотъ</orig>
+        </choice>
+        <choice>
+          <reg>галдят</reg>
+          <orig>галдятъ</orig>
+        </choice>. <choice>
+          <reg>Ведут</reg>
+          <orig>Ведутъ</orig>
+        </choice>, видно.</p>
+      <p rend="left" id="43c0a6c0-3a76-4909-95b9-5c825c7c76a3">
+        <hi rend="italic">(<choice>
+            <reg>В</reg>
+            <orig>Въ</orig>
+          </choice> горницу <choice>
+            <reg>входят</reg>
+            <orig>входятъ</orig>
+          </choice> Михайла, <choice>
+            <reg>сосед</reg>
+            <orig>сосѣдъ</orig>
+          </choice> и еще <choice>
+            <reg>старик</reg>
+            <orig>старикъ</orig>
+          </choice> и парень. <choice>
+            <reg>Вперед</reg>
+            <orig>Впередъ</orig>
+          </choice> себя <choice>
+            <reg>вталкивают</reg>
+            <orig>вталкиваютъ</orig>
+          </choice>
+          <choice>
+            <reg>вчерашнего</reg>
+            <orig>вчерашняго</orig>
+          </choice>
+          <choice>
+            <reg>прохожего</reg>
+            <orig>прохожаго</orig>
+          </choice>.)</hi>
+      </p>
+      <p rend="left" id="53a63750-d4e0-4eef-8f78-3e18ce7f04da">
+        <hi rend="Razradka">Михайла</hi> (<hi rend="italic">
+          <choice>
+            <reg>держит</reg>
+            <orig>держитъ</orig>
+          </choice>
+          <choice>
+            <reg>в</reg>
+            <orig>въ</orig>
+          </choice>
+          <choice>
+            <reg>руках</reg>
+            <orig>рукахъ</orig>
+          </choice>
+          <choice>
+            <reg>чай-сахар</reg>
+            <orig>чай-сахаръ</orig>
+          </choice>, <choice>
+            <reg>к</reg>
+            <orig>къ</orig>
+          </choice> женњ).</hi> У него <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>штанах</reg>
+          <orig>штанахъ</orig>
+        </choice> и нашли. Воришка, <choice>
+          <reg>сукин</reg>
+          <orig>сукинъ</orig>
+        </choice>
+        <choice>
+          <reg>сын</reg>
+          <orig>сынъ</orig>
+        </choice>.</p>
+      <p rend="left" id="7988ff2b-aa99-4014-b424-1c7b6b162e56">
+        <hi rend="Razradka">Акулина</hi>
+        <hi rend="italic">(<choice>
+            <reg>к</reg>
+            <orig>къ</orig>
+          </choice>
+          <choice>
+            <reg>Марфе</reg>
+            <orig>Марфѣ</orig>
+          </choice>).</hi>
+        <choice>
+          <reg>Он</reg>
+          <orig>Онъ</orig>
+        </choice> и есть — сердешный и голову <choice>
+          <reg>повесил</reg>
+          <orig>повѣсилъ</orig>
+        </choice>.</p>
+      <p rend="left" id="3ff8145d-8e11-420a-adaa-7fbb8121bf55">
+        <hi rend="Razradka">Марфа</hi>. Это <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice>
+        <choice>
+          <reg>вечор</reg>
+          <orig>вечоръ</orig>
+        </choice>, видно, о <choice>
+          <reg>себе</reg>
+          <orig>себѣ</orig>
+        </choice>
+        <choice>
+          <reg>говорил</reg>
+          <orig>говорилъ</orig>
+        </choice>, что <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice>
+        <choice>
+          <reg>выпьет</reg>
+          <orig>выпьетъ</orig>
+        </choice>, <choice>
+          <reg>так</reg>
+          <orig>такъ</orig>
+        </choice> и <choice>
+          <reg>тащит</reg>
+          <orig>тащитъ</orig>
+        </choice> что попало.</p>
+      <p rend="left" id="3e643977-0e24-4884-a916-a100ab71e740">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>
+        <hi rend="italic">(<choice>
+            <reg>в</reg>
+            <orig>въ</orig>
+          </choice>
+          <choice>
+            <reg>волнении</reg>
+            <orig>волненiи</orig>
+          </choice>).</hi> Я не <choice>
+          <reg>вор</reg>
+          <orig>воръ</orig>
+        </choice>, я <choice>
+          <reg>экспроприатор</reg>
+          <orig>экспропрiаторъ</orig>
+        </choice>. Я <choice>
+          <reg>деятель</reg>
+          <orig>дѣятель</orig>
+        </choice> и <choice>
+          <reg>должен</reg>
+          <orig>долженъ</orig>
+        </choice> жить. Вы понять не можете, что хотите <choice>
+          <reg>делайте</reg>
+          <orig>дѣлайте</orig>
+        </choice>.</p>
+      <p rend="left" id="e883189b-be7e-4cb3-849e-026fb3aff142">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Сосед</reg>
+            <orig>Сосѣдъ</orig>
+          </choice>
+        </hi>. <choice>
+          <reg>К</reg>
+          <orig>Къ</orig>
+        </choice>
+        <choice>
+          <reg>старосте</reg>
+          <orig>старостѣ</orig>
+        </choice> али прямо <choice>
+          <reg>к</reg>
+          <orig>къ</orig>
+        </choice> уряднику?</p>
+      <p rend="left" id="a070b1a0-350e-4769-85a5-44d3de8b54e6">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>. Говорю, что хотите <choice>
+          <reg>делайте</reg>
+          <orig>дѣлайте</orig>
+        </choice>. Я ничего не боюсь и могу пострадать за <choice>
+          <reg>убеждения</reg>
+          <orig>убѣжденiя</orig>
+        </choice>. Кабы вы были люди образованные, вы бы могли понимать...</p>
+      <p rend="left" id="9b77785a-d905-48a6-b84f-77380eb909b4">
+        <pb n="225"/> Марфа <hi rend="italic">(мужу).</hi> А <choice>
+          <reg>Бог</reg>
+          <orig>Богъ</orig>
+        </choice> бы <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice>
+        <choice>
+          <reg>ним</reg>
+          <orig>нимъ</orig>
+        </choice>. Покупку вернули. Пустить бы его <choice>
+          <reg>без</reg>
+          <orig>безъ</orig>
+        </choice>
+        <choice>
+          <reg>греха</reg>
+          <orig>грѣха</orig>
+        </choice>...Пущай <choice>
+          <reg>идет</reg>
+          <orig>идетъ</orig>
+        </choice>.</p>
+      <p rend="left" id="7862c329-121f-49f1-878a-8d3bb9ffffdf">
+        <hi rend="Razradka">Михайла</hi> (<hi rend="italic">
+          <choice>
+            <reg>повторяет</reg>
+            <orig>повторяетъ</orig>
+          </choice> слова жены). </hi>
+        <choice>
+          <reg>Без</reg>
+          <orig>Безъ</orig>
+        </choice>
+        <choice>
+          <reg>греха</reg>
+          <orig>грѣха</orig>
+        </choice>...пущай <choice>
+          <reg>идет</reg>
+          <orig>идетъ</orig>
+        </choice>
+        <hi rend="italic">(задумывается). (Строго к жене.)</hi> «Пущай <choice>
+          <reg>идет</reg>
+          <orig>идетъ</orig>
+        </choice>». Спасибо научила. <choice>
+          <reg>Без</reg>
+          <orig>Безъ</orig>
+        </choice> тебя не <choice>
+          <reg>знаем</reg>
+          <orig>знаемъ</orig>
+        </choice>, что <choice>
+          <reg>делать</reg>
+          <orig>дѣлать</orig>
+        </choice>.</p>
+      <p rend="left" id="676beb03-993e-4d83-8949-f93ab5319aa0">
+        <hi rend="Razradka">Марфа</hi>. Жалко его сердечного.</p>
+      <p rend="left" id="36c16c42-d620-460d-a759-5fee5cbd9fd4">
+        <hi rend="Razradka">Михайла</hi>. Жалко! Поучи, поучи, <choice>
+          <reg>без</reg>
+          <orig>безъ</orig>
+        </choice> тебя не <choice>
+          <reg>знаем</reg>
+          <orig>знаемъ</orig>
+        </choice>, что <choice>
+          <reg>делать</reg>
+          <orig>дѣлать</orig>
+        </choice>. То-то дура. «Пущай <choice>
+          <reg>идет</reg>
+          <orig>идетъ</orig>
+        </choice>». <choice>
+          <reg>Идет-то</reg>
+          <orig>Идетъ-то</orig>
+        </choice>
+        <choice>
+          <reg>идет</reg>
+          <orig>идетъ</orig>
+        </choice>, да ему слово сказать надо, <choice>
+          <reg>чтоб</reg>
+          <orig>чтобъ</orig>
+        </choice>
+        <choice>
+          <reg>он</reg>
+          <orig>онъ</orig>
+        </choice>
+        <choice>
+          <reg>почувствовал</reg>
+          <orig>почувствовалъ</orig>
+        </choice>. (<hi rend="italic">
+          <choice>
+            <reg>К</reg>
+            <orig>Къ</orig>
+          </choice> прохожему).</hi>
+        <choice>
+          <reg>Так</reg>
+          <orig>Такъ</orig>
+        </choice> слушай ты, мусью, что я <choice>
+          <reg>тебе</reg>
+          <orig>тебѣ</orig>
+        </choice> сказать хочу. Хоть и <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>низком</reg>
+          <orig>низкомъ</orig>
+        </choice> ты <choice>
+          <reg>положении</reg>
+          <orig>положенiи</orig>
+        </choice>, a <choice>
+          <reg>сделал</reg>
+          <orig>сдѣлалъ</orig>
+        </choice> ты дюже плохо, дюже плохо. Другой бы <choice>
+          <reg>тебе</reg>
+          <orig>тебѣ</orig>
+        </choice> за это бока <choice>
+          <reg>намял</reg>
+          <orig>намялъ</orig>
+        </choice> да еще и <choice>
+          <reg>к</reg>
+          <orig>къ</orig>
+        </choice> уряднику <choice>
+          <reg>свел</reg>
+          <orig>свелъ</orig>
+        </choice>, а я <choice>
+          <reg>тебе</reg>
+          <orig>тебѣ</orig>
+        </choice>
+        <choice>
+          <reg>вот</reg>
+          <orig>вотъ</orig>
+        </choice> что скажу: <choice>
+          <reg>сделал</reg>
+          <orig>сдѣлалъ</orig>
+        </choice> ты плохо, хуже не надо. Только <choice>
+          <reg>уж</reg>
+          <orig>ужъ</orig>
+        </choice> больно <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>низком</reg>
+          <orig>низкомъ</orig>
+        </choice> ты <choice>
+          <reg>положении</reg>
+          <orig>положенiи</orig>
+        </choice>, и не хочу я тебя <choice>
+          <reg>обидеть</reg>
+          <orig>обидѣть</orig>
+        </choice>. <hi rend="italic">(Останавливается. <choice>
+            <reg>Все</reg>
+            <orig>Всѣ</orig>
+          </choice>
+          <choice>
+            <reg>молчат</reg>
+            <orig>молчатъ</orig>
+          </choice>. Торжественно.) </hi>Иди <choice>
+          <reg>с</reg>
+          <orig>съ</orig>
+        </choice>
+        <choice>
+          <reg>Богом</reg>
+          <orig>Богомъ</orig>
+        </choice> да <choice>
+          <reg>вперед</reg>
+          <orig>впередъ</orig>
+        </choice>
+        <choice>
+          <reg>так</reg>
+          <orig>такъ</orig>
+        </choice> не <choice>
+          <reg>делай</reg>
+          <orig>дѣлай</orig>
+        </choice>. <hi rend="italic">(Оглядывается на жену.)</hi> А ты меня учить хочешь.</p>
+      <p rend="left" id="de647647-93c3-46bd-926d-d3c8b3db7cd4">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Сосед</reg>
+            <orig>Сосѣдъ</orig>
+          </choice>
+        </hi>. Напрасно, Михайла. <choice>
+          <reg>Ох</reg>
+          <orig>Охъ</orig>
+        </choice> напрасно, повадишь <choice>
+          <reg>их</reg>
+          <orig>ихъ</orig>
+        </choice>.</p>
+      <p rend="left" id="1c759db9-e289-4f32-9e4f-c67cbab686a0">
+        <hi rend="Razradka">Михайла</hi>
+        <hi rend="italic">(все <choice>
+            <reg>держит</reg>
+            <orig>держитъ</orig>
+          </choice>
+          <choice>
+            <reg>в</reg>
+            <orig>въ</orig>
+          </choice>
+          <choice>
+            <reg>руке</reg>
+            <orig>рукѣ</orig>
+          </choice> покупку).</hi> Напрасно <choice>
+          <reg>так</reg>
+          <orig>такъ</orig>
+        </choice> напрасно, мое <choice>
+          <reg>дело</reg>
+          <orig>дѣло</orig>
+        </choice>. <hi rend="italic">(<choice>
+            <reg>К</reg>
+            <orig>Къ</orig>
+          </choice>
+          <choice>
+            <reg>жене</reg>
+            <orig>женѣ</orig>
+          </choice>.)</hi> А ты меня учить хочешь. (<hi rend="italic">Останавливается, глядя на покупку, и решительно <choice>
+            <reg>подает</reg>
+            <orig>подаетъ</orig>
+          </choice> ее прохожему, оглядываясь на жену.)</hi> Бери и это, дорогой чаю попьешь. <hi rend="italic">(<choice>
+            <reg>К</reg>
+            <orig>Къ</orig>
+          </choice> женњ.)</hi> А ты меня учить хочешь. Иди, сказано иди. Растабарывать нечего.</p>
+      <p rend="left" id="39047c60-b1f2-41d9-8bc5-9cae35db7713">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Прохожий</reg>
+            <orig>Прохожiй</orig>
+          </choice>
+        </hi>
+        <hi rend="italic">(<choice>
+            <reg>берет</reg>
+            <orig>беретъ</orig>
+          </choice> покупку. Молчание).</hi> Ты думаешь, я не понимаю... (<hi rend="italic">
+          <choice>
+            <reg>Голос</reg>
+            <orig>Голосъ</orig>
+          </choice>
+          <choice>
+            <reg>дрожит</reg>
+            <orig>дрожитъ</orig>
+          </choice>.)</hi> Я <choice>
+          <reg>в</reg>
+          <orig>въ</orig>
+        </choice>
+        <choice>
+          <reg>полном</reg>
+          <orig>полномъ</orig>
+        </choice>
+        <choice>
+          <reg>смысле</reg>
+          <orig>смыслѣ</orig>
+        </choice> понимаю. <choice>
+          <reg>Избил</reg>
+          <orig>Избилъ</orig>
+        </choice> бы ты меня, <choice>
+          <reg>как</reg>
+          <orig>какъ</orig>
+        </choice> собаку, <choice>
+          <reg>мне</reg>
+          <orig>мнѣ</orig>
+        </choice> бы легче было. <choice>
+          <reg>Разве</reg>
+          <orig>Развѣ</orig>
+        </choice> я не понимаю, кто я. <choice>
+          <reg>Подлец</reg>
+          <orig>Подлецъ</orig>
+        </choice> я, <choice>
+          <reg>дегенерат</reg>
+          <orig>дегенератъ</orig>
+        </choice>, <choice>
+          <reg>значит</reg>
+          <orig>значитъ</orig>
+        </choice>. Прости Христа ради. (<hi rend="italic">
+          <choice>
+            <reg>Бросает</reg>
+            <orig>Бросаетъ</orig>
+          </choice> на <choice>
+            <reg>стол</reg>
+            <orig>столъ</orig>
+          </choice>
+          <choice>
+            <reg>чай-сахар</reg>
+            <orig>чай-сахаръ</orig>
+          </choice> и всхлипывая быстро <choice>
+            <reg>уходит</reg>
+            <orig>уходитъ</orig>
+          </choice>.)</hi>
+      </p>
+      <p rend="left" id="5e2bcf41-c2b4-435c-be52-db0bd6ea77bf">
+        <hi rend="Razradka">
+          <choice>
+            <reg>Сосед</reg>
+            <orig>Сосѣдъ</orig>
+          </choice>
+        </hi>. <choice>
+          <reg>Аж</reg>
+          <orig>Ажъ</orig>
+        </choice>
+        <choice>
+          <reg>заплакал</reg>
+          <orig>заплакалъ</orig>
+        </choice>, сердешный.</p>
+      <p rend="left" id="f1d27eb9-29d6-4db4-93c0-22b53c7b001f">
+        <hi rend="Razradka">Михайлa</hi>
+        <hi rend="italic">(женњ).</hi> А ты меня учить хочешь.</p>
+      <p rend="left" id="98889bca-c305-4619-9a87-26c464196482">
+        <hi rend="Razradka">Акулина</hi>. Тоже <choice>
+          <reg>человек</reg>
+          <orig>человѣкъ</orig>
+        </choice>
+        <choice>
+          <reg>был</reg>
+          <orig>былъ</orig>
+        </choice>.</p>
+      <p rend="left" id="bb0e8f78-385c-4acf-bdb8-b48689bdc602">
+        <hi rend="Razradka">Марфа</hi>. Спасибо чай не <choice>
+          <reg>унес</reg>
+          <orig>унесъ</orig>
+        </choice>, а то бы и на заварку не было.</p>
+      <p rend="center italic left" id="d78d377b-8a58-4b8f-88f9-4abbf41877d1">
+        <hi rend="italic">
+          <choice>
+            <reg>Занавес</reg>
+            <orig>Занавѣсъ</orig>
+          </choice>.</hi>
+      </p>
+      <p rend="left pages" id="31b7abd4-3aff-4d30-880e-e25224f7c437">
+        <pb n="226"/>
+      </p>
+    </div>
+  </text>
+</TEI>

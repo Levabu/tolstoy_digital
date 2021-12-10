@@ -7,8 +7,6 @@ from tqdm import tqdm
 import utils as ut
 import split_volumes_utils as sp_ut
 
-# xhtml_namespace = 'http://www.w3.org/1999/xhtml'
-
 
 def split_fiction(filename):
     html = ut.read_xml(
@@ -49,27 +47,13 @@ def split_fiction(filename):
             }
         )
         to_file = sp_ut.fill_tei_template(tei_data, 'tei_with_short_header.xml')
-        # root = etree.fromstring(to_file.encode('utf-8'))
-        # print(root)
-        # etree.ElementTree(root)
-        # to_file = etree.tostring(etree.indent(root))
-        # with open(f'parse_volume/result/test_result_{i}.xml', 'w') as file:
-        # with open(f'parse_volume/result/{tei_data["volume"]}/{tei_data["title"]}.xml', 'w') as file:
         with open(f'parse_volume/result/{tei_data["title"]} {tei_data["volume"]}.xml', 'w') as file:
             file.write(to_file)
-
-            # file.write(''.join(
-            #     [etree.tostring(t, pretty_print=True, encoding='unicode') for t in texts[i][2]])
-            # )
-            pass
         xml = ut.read_xml(
             f'parse_volume/result/{tei_data["title"]} {tei_data["volume"]}.xml',
             'rb'
         )
         print(tei_data["title"])
-        # root = etree.fromstring(xml)
-        # etree.indent(root)
-        # to_file = etree.tostring(root, encoding='unicode')
 
         to_file = sp_ut.indent_xml_string(xml)
         with open(f'parse_volume/result/{tei_data["title"]} {tei_data["volume"]}.xml', 'w') as file:
@@ -84,6 +68,7 @@ def split_fiction(filename):
 
 
 def search_in_xmls():
+    """just for debugging"""
     all_filenames = []
     rends = []
     for path in ut.paths:

@@ -1,0 +1,1080 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>
+     *[ДОКЛАД, ПРИГОТОВЛЕННЫЙ ДЛЯ КОНГРЕССА МИРА НА ФРАНЦУЗСКОМ ЯЗЫКЕ.]
+    </title>
+        <author>
+     Толстой Л.Н.
+    </author>
+        <respStmt>
+          <resp>
+      подготовка TEI/XML
+     </resp>
+          <name>
+      Мария Картышева, Евгений Можаев, Даниил Скоринкин, Елена Сидорова, Вероника Файнберг, Кирилл Милинцевич
+     </name>
+        </respStmt>
+        <respStmt>
+          <name>
+      Анастасия Бонч-Осмоловская, Фёкла Толстая, Борис Орехов
+     </name>
+          <resp>
+      Идея, постановка задач, руководство
+     </resp>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <idno>
+    </idno>
+        <publisher>
+          <orgName>
+      Школа лингвистики НИУ ВШЭ
+     </orgName>
+        </publisher>
+        <availability>
+          <p>
+      Тексты и метатекстовая разметка доступны для свободного использования и распространения по лицензии Creative Commons Attribution Share-Alike (cc by-sa)
+     </p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <biblStruct>
+          <analytic>
+            <author>
+       Толстой Л.Н.
+      </author>
+            <title level="a">
+       *[ДОКЛАД, ПРИГОТОВЛЕННЫЙ ДЛЯ КОНГРЕССА МИРА НА ФРАНЦУЗСКОМ ЯЗЫКЕ.]
+      </title>
+          </analytic>
+          <monogr>
+            <title level="m">
+       Полное собрание сочинений. Том 38
+      </title>
+            <imprint>
+              <pubPlace>
+        Москва
+       </pubPlace>
+              <publisher>
+        Государственное издательство "Художественная литература"
+       </publisher>
+              <date when="fill date later"/>
+            </imprint>
+          </monogr>
+          <series>
+            <title level="s">
+       Л.Н. Толстой. Полное собрание сочинений
+      </title>
+            <biblScope unit="vol">
+       38
+      </biblScope>
+          </series>
+        </biblStruct>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <classDecl>
+        <xi:include href="taxonomy.xml"/>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <creation>
+        <date notAfter="fill date_not_after later" notBefore="fill date_not_before later">
+     fill date later
+    </date>
+        <rs/>
+      </creation>
+      <textClass>
+   </textClass>
+      <preparedness>
+   </preparedness>
+      <settingDesc>
+        <time>
+     XIX
+    </time>
+      </settingDesc>
+    </profileDesc>
+    <xenoData>
+      <cyclusName/>
+      <p>
+    Проект
+    <title>
+     Толстой.Digital
+    </title>
+    разрабатывается сотрудниками и студентами
+    <orgName>
+     Высшей школы экономики
+    </orgName>
+    в сотрудничестве с
+    <orgName>
+     Государственным музеем Л.Н. Толстого
+    </orgName>
+    . Источник текстов –
+    <bibl>
+     90-томное собрание сочинений Л.Н.Толстого
+    </bibl>
+    . Разметка основана на стандарте
+    <ref target="http://www.tei-c.org">
+     TEI (Text Encoding Initiative)
+    </ref>
+    .
+   </p>
+      <versionNumber/>
+      <isFinished/>
+      <isEdited/>
+      <fullBibliographicDescription/>
+    </xenoData>
+  </teiHeader>
+  <text>
+    <div type="section" xml:id="h000013024">
+      <head rend="center">*[ДОКЛАД, ПРИГОТОВЛЕННЫЙ ДЛЯ КОНГРЕССА МИРА <lb/>НА ФРАНЦУЗСКОМ ЯЗЫКЕ.]</head>
+      <p rend="obr" id="824a3e7a-34a4-4ba2-9e62-961733b65394">Chers frères,</p>
+      <p rend="left" id="96ef9e1a-eb33-4644-bbc9-d7220b60ecd9">Nous sommes réunis ici pour lutter contre
+        <note n="n74">
+          <div type="section" xml:id="n74">
+            <head>
+              <ref target="#backn74">
+                74
+              </ref>
+            </head>
+            <p rend="left" id="566ef5c5-dd53-4326-8cc8-c2b47277ace5">
+              <hi rend="italic">Зачеркнуто:</hi> le plus grand fléau de notre temps
+            </p>
+          </div>
+        </note>
+         quoi, contre la guerre, contre la guerre c. àd. contre une organisation pour laquelle des millions et millions d’hommes donnent plus ou moins volontairement non seulement le produit de leur travail des milliards et des milliards de francs, de roubles, de ienes, mais qui se donnent eux mêmes, leur vies
+        <note n="n75">
+          <div type="section" xml:id="n75">
+            <head>
+              <ref target="#backn75">
+                75
+              </ref>
+            </head>
+            <p rend="left" id="f668ceca-2725-4bd0-b303-ba698947d64d">
+              <hi rend="italic">Зач.:</hi> dans le pouvoir de
+            </p>
+          </div>
+        </note>
+         à quelques dizaines d’hommes qui disposent du produit du travail et de la vie de millions et de millions d’hommes.</p>
+      <p rend="left" id="fedc39ee-adff-4f71-8622-a98b91fa92a3">
+        <note n="n76">
+          <div type="section" xml:id="n76">
+            <head>
+              <ref target="#backn76">
+                76
+              </ref>
+            </head>
+            <p rend="left" id="ed942759-b68e-41e5-9d9c-38f902e0ef92">
+              <hi rend="italic">Зач.:</hi> Que sommes: <hi rend="italic">Слова:</hi> Et nous voilà <hi rend="italic">написаны над строкой.</hi>
+            </p>
+          </div>
+        </note>
+        Et nous voilà nous une dizaine de particuliers
+        <note n="n77">
+          <div type="section" xml:id="n77">
+            <head>
+              <ref target="#backn77">
+                77
+              </ref>
+            </head>
+            <p rend="left" id="c3624db1-292f-4024-80c9-b88be55060c2">
+              <hi rend="italic">Зач.:</hi>
+              <choice original_editorial_correction="réuni[s]">
+                <sic>réuni</sic>
+                <corr>réunis</corr>
+              </choice>
+            </p>
+          </div>
+        </note>
+         ne possedant
+        <note n="n78">
+          <div type="section" xml:id="n78">
+            <head>
+              <ref target="#backn78">
+                78
+              </ref>
+            </head>
+            <p rend="left" id="590ca14f-a96d-4113-8880-8b575d4aa372">
+              <hi rend="italic">В подлиннике:</hi> possedent
+            </p>
+          </div>
+        </note>
+         aucune qualité exceptionelle, aucune prérogative, aucun pouvoir qui avons l’audace de lutter — et une fois que nous voulons lutter nous espérons de vaincre qui? quoi? cette immense force non pas d’un seul gouvernement
+        <note n="n79">
+          <div type="section" xml:id="n79">
+            <head>
+              <ref target="#backn79">
+                79
+              </ref>
+            </head>
+            <p rend="left" id="4fc73c6a-2ada-433c-8150-2eab6b975268">
+              <hi rend="italic">Зач.:</hi> d’un seul peuple
+            </p>
+          </div>
+        </note>
+         mais des tous les gouvernements du monde, gouvernements qui ont à leur disposition des milliards d’argent et <choice original_editorial_correction="millio[ns]">
+          <sic>millio</sic>
+          <corr>millions</corr>
+        </choice> de troupes et qui savent parfaitement que leur position exceptionelle n’est basée, comme cela ne peut pas être autrement, que sur
+        <note n="n80">
+          <div type="section" xml:id="n80">
+            <head>
+              <ref target="#backn80">
+                80
+              </ref>
+            </head>
+            <p rend="left" id="a096a468-7eb5-4475-a0b3-1829a33a59c2">
+              <hi rend="italic">Слово</hi>: sur <hi rend="italic">написано дважды.</hi>
+            </p>
+          </div>
+        </note>
+         leurs
+        <note n="n81">
+          <div type="section" xml:id="n81">
+            <head>
+              <ref target="#backn81">
+                81
+              </ref>
+            </head>
+            <p rend="left" id="4457552b-fc0b-4d6b-ac9f-ecebb5672aa3">
+              <hi rend="italic">Зач.:</hi> troupes
+            </p>
+          </div>
+        </note>
+         armées et que la seule raison d’être des armées c’est la guerre, la guerre que nous voulons détruire,
+        <note n="n82">
+          <div type="section" xml:id="n82">
+            <head>
+              <ref target="#backn82">
+                82
+              </ref>
+            </head>
+            <p rend="left" id="51585956-66b5-4119-a722-0f4cee25ea1f">
+              <hi rend="italic">Зач.:</hi>
+              <choice original_editorial_correction="vainc[re]">
+                <sic>vainc</sic>
+                <corr>vaincre</corr>
+              </choice>
+            </p>
+          </div>
+        </note>
+         nous une dizaine d’individus
+        <note n="n83">
+          <div type="section" xml:id="n83">
+            <head>
+              <ref target="#backn83">
+                83
+              </ref>
+            </head>
+            <p rend="left" id="01390154-90ab-4e56-a6b9-1be16e1404c5">
+              <hi rend="italic">В подлиннике:</hi> unduvidus
+            </p>
+          </div>
+        </note>
+         n’ayant aucune force à opposer aux <choice original_editorial_correction="immens[es]">
+          <sic>immens</sic>
+          <corr>immenses</corr>
+        </choice> forces <choice original_editorial_correction="de[s]">
+          <sic>de</sic>
+          <corr>des</corr>
+        </choice> gouvernements.</p>
+      <p rend="left" id="791aff55-4f0a-427c-b6f0-15916443064a">Lutter dans ces conditions doit paraître
+        <note n="n84">
+          <div type="section" xml:id="n84">
+            <head>
+              <ref target="#backn84">
+                84
+              </ref>
+            </head>
+            <p rend="left" id="1177aff6-b407-48cd-adae-5d8defc28fc4">
+              <hi rend="italic">Зач.:</hi> insensée
+            </p>
+          </div>
+        </note>
+         étrange. Et cependant
+        <note n="n85">
+          <div type="section" xml:id="n85">
+            <head>
+              <ref target="#backn85">
+                85
+              </ref>
+            </head>
+            <p rend="left" id="2f6fa701-04a1-4728-bb2f-5d42b73a9af6">
+              <hi rend="italic">Зач.:</hi> La; lutter <hi rend="italic">переделано из:</hi> lutte.
+            </p>
+          </div>
+        </note>
+         si nous considérons et pesons bien les moyens de lutte qui se <pb n="312"/>
+        <note n="n86">
+          <div type="section" xml:id="n86">
+            <head>
+              <ref target="#backn86">
+                86
+              </ref>
+            </head>
+            <p rend="left" id="4a95a4b0-2a69-4436-bb77-25a381761c9e">
+              <hi rend="italic">Зачеркнуто:</hi> il n’y a qu’à
+            </p>
+          </div>
+        </note>
+         au pouvoir de ceux avec qui nous
+        <note n="n87">
+          <div type="section" xml:id="n87">
+            <head>
+              <ref target="#backn87">
+                87
+              </ref>
+            </head>
+            <p rend="left" id="fd4f9cf0-b974-4036-89f9-490d207da46b">
+              <hi rend="italic">Зач.:</hi> avons l’intention de
+            </p>
+          </div>
+        </note>
+         voulions lutter et de ceux qui sont en notre pouvoir, il paraîtra au contraire étrange non pas que nous voulions lutter mais que celui
+        <note n="n88">
+          <div type="section" xml:id="n88">
+            <head>
+              <ref target="#backn88">
+                88
+              </ref>
+            </head>
+            <p rend="left" id="281249e5-b4f0-4df8-bcf7-fa3792dbba96">
+              <hi rend="italic">Зач.:</hi>
+              <choice original_editorial_correction="ave[c]">
+                <sic>ave</sic>
+                <corr>avec</corr>
+              </choice>
+            </p>
+          </div>
+        </note>
+         contre qui nous voulons lutter existe et peut être envisagé comme un objet de lutte.</p>
+      <p rend="left" id="823a6d8f-db73-40b1-b7fa-a34c28f47b1f">De son côté des milliards d’argent, des millions de <choice original_editorial_correction="tro[u]pes">
+          <sic>tropes</sic>
+          <corr>troupes</corr>
+        </choice>, de notre côté rien que la vérité, mais la vérité. Et quelque minime
+        <note n="n89">
+          <div type="section" xml:id="n89">
+            <head>
+              <ref target="#backn89">
+                89
+              </ref>
+            </head>
+            <p rend="left" id="fd40216a-4a30-4beb-b5bc-657c8cf0926a">
+              <hi rend="italic">Зач.:</hi> nous, <hi rend="italic">перед ним:</hi> que, <hi rend="italic">ошибочно незачеркнутое.</hi>
+            </p>
+          </div>
+        </note>
+         ne paraisse notre force en comparaison de celle de notre adversaire, notre victoire est tout aussi assurée comme la victoire de la lumière du soleil sur les ténèbres de la nuit.</p>
+      <p rend="left" id="5020cadc-43b3-4a0c-9564-e9ac55b24543">Notre victoire est assurée, mais seulement à une condition, celle de dire la vérité entière sans aucuns accomodements, concessions, adoucissements.
+        <note n="n90">
+          <div type="section" xml:id="n90">
+            <head>
+              <ref target="#backn90">
+                90
+              </ref>
+            </head>
+            <p rend="left" id="34f40d23-a9a1-4aee-9fe2-ff8ef6b60027">
+              <hi rend="italic">Зач.:</hi> de la vérité,
+            </p>
+          </div>
+        </note>
+      </p>
+      <p rend="left" id="4d15edd3-0f0e-4204-8749-cda99342b3ff">La vérité que <choice original_editorial_correction="n[ou]s">
+          <sic>ns</sic>
+          <corr>nous</corr>
+        </choice> avons à dire est tellement simple, tellement claire, tellement évidente,
+        <note n="n91">
+          <div type="section" xml:id="n91">
+            <head>
+              <ref target="#backn91">
+                91
+              </ref>
+            </head>
+            <p rend="left" id="53f0cda0-2f0b-44b0-a724-e019d5d46d79">
+              <hi rend="italic">Зач.</hi>: tellement
+            </p>
+          </div>
+        </note>
+         a été
+        <note n="n92">
+          <div type="section" xml:id="n92">
+            <head>
+              <ref target="#backn92">
+                92
+              </ref>
+            </head>
+            <p rend="left" id="512afe8d-4a67-453b-afe0-2ed4ee481bd1">
+              <hi rend="italic">Зач.</hi>: toujours
+            </p>
+          </div>
+        </note>
+         si généralement reconnue
+        <note n="n93">
+          <div type="section" xml:id="n93">
+            <head>
+              <ref target="#backn93">
+                93
+              </ref>
+            </head>
+            <p rend="left" id="3d2b8bda-f6ad-449e-9d22-f407fc20760b">
+              <hi rend="italic">Зач.:</hi> de tous les temps &lt;et est reconnue&gt; &lt;encore&gt; aujourd’hui par tous les hommes du monde&gt;.
+            </p>
+          </div>
+        </note>
+         qu’il n’y a qu’à l’énoncer
+        <note n="n94">
+          <div type="section" xml:id="n94">
+            <head>
+              <ref target="#backn94">
+                94
+              </ref>
+            </head>
+            <p rend="left" id="28a0f509-ab35-45a0-b017-656e3bbe4577">
+              <hi rend="italic">Зач.:</hi> cette vérité
+            </p>
+          </div>
+        </note>
+         dans toute sa
+        <note n="n95">
+          <div type="section" xml:id="n95">
+            <head>
+              <ref target="#backn95">
+                95
+              </ref>
+            </head>
+            <p rend="left" id="5280809e-e610-4958-b458-70596611f0f5">
+              <hi rend="italic">Зач.</hi>: portée
+            </p>
+          </div>
+        </note>
+         vraie signification pour que les hommes de notre temps, surtout les chrétiens, ne puissent plus agir contrairement à cette vérité, depuis des siècles reconnue comme obligatoire pour tous les hommes. Cette vérité, sans parler de la doctrine Evangélique de l’amour pour son prochain, ni même du 7-ème 
+        <note n="n96">
+          <div type="section" xml:id="n96">
+            <head>
+              <ref target="#backn96">
+                96
+              </ref>
+            </head>
+            <p rend="left" id="713a1636-4761-4768-8676-f1f5253aefb3">
+              <hi rend="italic">Написано:</hi> 7-ème <hi rend="italic">вместо:</hi> 6-ème.
+            </p>
+          </div>
+        </note>
+         commandement de la Bible, cette vérité
+        <note n="n97">
+          <div type="section" xml:id="n97">
+            <head>
+              <ref target="#backn97">
+                97
+              </ref>
+            </head>
+            <p rend="left" id="9c8544c4-b241-4c16-ab85-228067de98ea">
+              <hi rend="italic">Зач.</hi>: est
+            </p>
+          </div>
+        </note>
+         inscrite dans le coeur de chaque homme
+        <note n="n98">
+          <div type="section" xml:id="n98">
+            <head>
+              <ref target="#backn98">
+                98
+              </ref>
+            </head>
+            <p rend="left" id="a7da9dd4-3fef-48bf-85ab-d14e97c352ff">
+              <hi rend="italic">Зач.:</hi> consiste cette vérité dans
+            </p>
+          </div>
+        </note>
+         n’est autre que le respect pour la vie de son prochain et que chaque attentat à la vie humaine est un des plus grands <choice original_editorial_correction="crime[s]">
+          <sic>crime</sic>
+          <corr>crimes</corr>
+        </choice>
+        <note n="n99">
+          <div type="section" xml:id="n99">
+            <head>
+              <ref target="#backn99">
+                99
+              </ref>
+            </head>
+            <p rend="left" id="8b7b98b8-27a4-46e3-b538-46013062ea27">
+              <hi rend="italic">Зач.</hi>: de &lt;le&gt; l’humanité
+            </p>
+          </div>
+        </note>
+         que puisse commetre un homme, — crime contre la loi de Dieu pour ceux qui croyent en Dieu, crime contre la conscience et la morale la plus primitive, pour ceux qui ne croyent pas en Dieu. Cette vérité est
+        <note n="n100">
+          <div type="section" xml:id="n100">
+            <head>
+              <ref target="#backn100">
+                100
+              </ref>
+            </head>
+            <p rend="left" id="f513f7f9-53c0-43b2-b7b3-2da7333c2e50">
+              <hi rend="italic">Зач.:</hi> tellement
+            </p>
+          </div>
+        </note>
+         si simple et si obligatoire
+        <note n="n101">
+          <div type="section" xml:id="n101">
+            <head>
+              <ref target="#backn101">
+                101
+              </ref>
+            </head>
+            <p rend="left" id="3ce9035f-a455-4e67-bb7a-50fd2452fb5d">
+              <hi rend="italic">Зач.:</hi> &lt;pour tous les hommes que il&gt; &lt;pouvaient seulement so libérer&gt; ce n’est que les superstitions&gt; &lt;que si&gt; que ce n’est que
+            </p>
+          </div>
+        </note>
+         qu’il suffirait aux hommes de notre monde de se libérer seulement des superstitions produites par les tromperies et les suggestions des gouvernements pour que cette vérité nécessaire pour le bien-être de l’humanité rende impossible la répétition de ces crimes <choice original_editorial_correction="légalisé[s]">
+          <sic>légalisé</sic>
+          <corr>légalisés</corr>
+        </choice> qui se commettent à présent
+        <note n="n102">
+          <div type="section" xml:id="n102">
+            <head>
+              <ref target="#backn102">
+                102
+              </ref>
+            </head>
+            <p rend="left" id="24bb1e5f-c5fb-4883-baae-bdf7897f4327">
+              <hi rend="italic">В подлиннике:</hi> apresent.
+            </p>
+          </div>
+        </note>
+         sous le titre de guerre.</p>
+      <p rend="left" id="e95acd50-1936-4023-911c-6ab010a999d7">
+        <pb n="313"/>
+        <note n="n103">
+          <div type="section" xml:id="n103">
+            <head>
+              <ref target="#backn103">
+                103
+              </ref>
+            </head>
+            <p rend="left" id="70bb2ae1-5125-4984-90b5-9cf92aae0968">
+              <hi rend="italic">Зачеркнуто:</hi> politiques
+            </p>
+          </div>
+        </note>
+         toutes espèces de congrès et de traités entre les pouvoirs, toutes ces mesures
+        <note n="n104">
+          <div type="section" xml:id="n104">
+            <head>
+              <ref target="#backn104">
+                104
+              </ref>
+            </head>
+            <p rend="left" id="109884f5-1d50-4950-b186-94903149770b">
+              <hi rend="italic">Зач.</hi>: excepté la destruction de la superstition
+            </p>
+          </div>
+        </note>
+         ne peuvent aboutir. En nous occupant des traités <choice original_editorial_correction="diplomati[ques]">
+          <sic>diplomati</sic>
+          <corr>diplomatiques</corr>
+        </choice> entre <choice original_editorial_correction="pouvoir[s]">
+          <sic>pouvoir</sic>
+          <corr>pouvoirs</corr>
+        </choice> sans nous, occuper de détruire la superstition de la nécessité et de la légalité de la guerre, nous ressemblons
+        <note n="n105">
+          <div type="section" xml:id="n105">
+            <head>
+              <ref target="#backn105">
+                105
+              </ref>
+            </head>
+            <p rend="left" id="ec7ab02b-12a6-41d0-a18b-ec71ba5d0b92">
+              <hi rend="italic">В подлиннике:</hi> resenblons.
+            </p>
+          </div>
+        </note>
+         à des gens qui ayant en leur pouvoir la clef de la porte par laquelle ils peuvent entrer dans l’intérieur de la maison font des efforts qu’ils savent être inutiles pour briser les murs.
+        <note n="n106">
+          <div type="section" xml:id="n106">
+            <head>
+              <ref target="#backn106">
+                106
+              </ref>
+            </head>
+            <p rend="left" id="396e1b21-b8c3-4aed-98c6-16c61d8a4c13">
+              <hi rend="italic">Зач.:</hi> de la <choice original_editorial_correction="ma[ison]">
+                <sic>ma</sic>
+                <corr>maison</corr>
+              </choice> &lt;qui ne&gt; &lt;a&gt; et entrer
+            </p>
+          </div>
+        </note>
+      </p>
+      <p rend="left" id="564e10d5-6015-465b-8ea2-3a4b4600aeef">Nous avons devant nous des gens armés jusqu’aux dents se préparant à tuer
+        <note n="n107">
+          <div type="section" xml:id="n107">
+            <head>
+              <ref target="#backn107">
+                107
+              </ref>
+            </head>
+            <p rend="left" id="3fb30f2f-0178-432a-91b1-dad437029712">
+              <hi rend="italic">Зач.</hi>: leurs semblables et
+            </p>
+          </div>
+        </note>
+         et tuant quand cela leur paraît nécessaire leurs semblables, et en discutant les moyens d’agir contre ce mal, nous cherchons midi à quatorze <choice original_editorial_correction="heure[s]">
+          <sic>heure</sic>
+          <corr>heures</corr>
+        </choice> nous inventons différents
+        <note n="n108">
+          <div type="section" xml:id="n108">
+            <head>
+              <ref target="#backn108">
+                108
+              </ref>
+            </head>
+            <p rend="left" id="de5d7e61-f070-4bd9-8018-75a654a6fa81">
+              <hi rend="italic">Зач.:</hi> procédés
+            </p>
+          </div>
+        </note>
+         moyens très fins et très <choice original_editorial_correction="spirituel[s]">
+          <sic>spirituel</sic>
+          <corr>spirituels</corr>
+        </choice>
+        <note n="n109">
+          <div type="section" xml:id="n109">
+            <head>
+              <ref target="#backn109">
+                109
+              </ref>
+            </head>
+            <p rend="left" id="46e2d964-2cd3-40b2-9d89-0aa5d8afa05e">
+               О<hi rend="italic">писка:</hi> spipituel
+            </p>
+          </div>
+        </note>
+         pour réagir contre ce mal et ne voulons pas voir le moyen si simple qui devrait se présenter à nous le premier, celui qui est en notre pouvoir et qui consiste dans la destruction des armes qu’employent ces gens pour s’entredétruire.</p>
+      <p rend="left" id="abc4dedf-68ef-4150-9a93-58625987f592">Les armes qu’employent ces gens pour se battre n’est pas autre chose que la superstition, les <choice original_editorial_correction="tromperie[s]">
+          <sic>tromperie</sic>
+          <corr>tromperies</corr>
+        </choice> et les suggestions qui sont employées contre les gens qu’on oblige à faire partie des armées.</p>
+      <p rend="left" id="8280ea91-6cda-4074-8fd3-34220021c0d4">Ceux qui s’entregorgent ne sont pas les Nicolas, les <choice original_editorial_correction="Wilhelm[s]">
+          <sic>Wilhelm</sic>
+          <corr>Wilhelms</corr>
+        </choice>, les Edouards et autres, mais ce sont les <choice original_editorial_correction="homme[s]">
+          <sic>homme</sic>
+          <corr>hommes</corr>
+        </choice> du peuple amenés par différentes <choice original_editorial_correction="ancienne[s]">
+          <sic>ancienne</sic>
+          <corr>anciennes</corr>
+        </choice> traditions et nouvelles suggestions et tromperies à agir contrairement à la loi morale et religieuse qu’ils professent à la loi de l’amour et aux <choice original_editorial_correction="commandem[ents]">
+          <sic>commandem</sic>
+          <corr>commandements</corr>
+        </choice> de la Bible qui défend le meurtre, et devenir soldats.</p>
+      <p rend="left" id="da4f6eb7-94e2-4526-b15e-1f551dd74bb0">Et voilà que nous, des gens <choice original_editorial_correction="éclaire[s]">
+          <sic>éclaire</sic>
+          <corr>éclaires</corr>
+        </choice> et proffessant ou bien la doctrine religieuse chrétienne ou bien la loi morale
+        <note n="n110">
+          <div type="section" xml:id="n110">
+            <head>
+              <ref target="#backn110">
+                110
+              </ref>
+            </head>
+            <p rend="left" id="01819c38-0f66-438f-a140-19b96d1f3fe2">
+              <hi rend="italic">В подлиннике:</hi> séculière
+            </p>
+          </div>
+        </note>
+         séculaire qui comme toute loi morale ne peut pas aprouver le meurtre ayant la possibilité d’ôter des mains
+        <note n="n111">
+          <div type="section" xml:id="n111">
+            <head>
+              <ref target="#backn111">
+                111
+              </ref>
+            </head>
+            <p rend="left" id="a6f24e41-7136-4862-9fe9-3735424db90b">
+              <hi rend="italic">Слова:</hi> des mains <hi rend="italic">повторены дважды.</hi>
+            </p>
+          </div>
+        </note>
+         des combattants les armes, nous ne <choice original_editorial_correction="trouvo[ns]">
+          <sic>trouvo</sic>
+          <corr>trouvons</corr>
+        </choice> pas autre chose à dire qu’à nous adresser aux gouvernements en leur proposant des mesures qui rendront la guerre moins cruelle ou moins fréquente en leur proposant de diminuer leurs armées c. à d. de diminuer ce pour quoi ils existent c. à d. en leur proposant le suicide. Il devrait cependant être parfaitement clair que le
+        <note n="n112">
+          <div type="section" xml:id="n112">
+            <head>
+              <ref target="#backn112">
+                112
+              </ref>
+            </head>
+            <p rend="left" id="53c0d92a-b17a-4704-96dc-cd46784ce298">
+              <hi rend="italic">В подлиннике:</hi> les
+            </p>
+          </div>
+        </note>
+         gouvernement ne consentira jamais non seulement à anéantir mais à diminuer leurs armées.</p>
+      <p rend="left" id="a21afa53-2641-40af-b115-0a5d1e0f37bb">
+        <pb n="314"/>
+        <note n="n113">
+          <div type="section" xml:id="n113">
+            <head>
+              <ref target="#backn113">
+                113
+              </ref>
+            </head>
+            <p rend="left" id="c39a7475-c5e7-4c32-b845-9f89da61f231">
+              <hi rend="italic">Зачеркнуто:</hi> petit nombre des
+            </p>
+          </div>
+        </note>
+         gouvernements, mais aux hommes à tous les hommes: aux grandes masses en leur montrant tous
+        <note n="n114">
+          <div type="section" xml:id="n114">
+            <head>
+              <ref target="#backn114">
+                114
+              </ref>
+            </head>
+            <p rend="left" id="84e9b169-54c2-4025-8660-966a2e7fe3f4">
+               tous <hi rend="italic">переделано из:</hi> tout.
+            </p>
+          </div>
+        </note>
+         le mal qu’ils se font à eux <choice original_editorial_correction="rnême[s]">
+          <sic>rnême</sic>
+          <corr>rnêmes</corr>
+        </choice> en obéissant aux gouvernements qui les obligent <hi rend="italic">à</hi>
+        <choice original_editorial_correction="commet[t]re">
+          <sic>commetre</sic>
+          <corr>commettre</corr>
+        </choice> des <choice original_editorial_correction="meurtre[s]">
+          <sic>meurtre</sic>
+          <corr>meurtres</corr>
+        </choice> ou à être <choice original_editorial_correction="prêt[s]">
+          <sic>prêt</sic>
+          <corr>prêts</corr>
+        </choice> à les <choice original_editorial_correction="commet[t]re">
+          <sic>commetre</sic>
+          <corr>commettre</corr>
+        </choice>, de même qu’aux gouvernements en leur montrant toute
+        <note n="n115">
+          <div type="section" xml:id="n115">
+            <head>
+              <ref target="#backn115">
+                115
+              </ref>
+            </head>
+            <p rend="left" id="d7970e07-9102-4fcb-9f5d-12cf1ba3590e">
+              <hi rend="italic">Зач.:</hi> &lt;la&gt; l’horreur de leur
+            </p>
+          </div>
+        </note>
+         l’immoralité de leur activité.</p>
+      <p rend="left" id="3e16e6c2-6b08-4c6b-b7e1-cf48dbfcaca0">C’est la seule chose que nous pouvons faire si nous ne voulons pas nous borner à de vains discours et <choice original_editorial_correction="fair[e]">
+          <sic>fair</sic>
+          <corr>faire</corr>
+        </choice> quelque chose. Et la chose n’est nullement difficile. Il ne nous est pas nécessaire d’inventer de nouvelles théories pour parer <choice original_editorial_correction="au[x]">
+          <sic>au</sic>
+          <corr>aux</corr>
+        </choice> maux de la guerre. La seule chose qui est nécessaire c’est de ne pas
+        <note n="n116">
+          <div type="section" xml:id="n116">
+            <head>
+              <ref target="#backn116">
+                116
+              </ref>
+            </head>
+            <p rend="left" id="6b0edd55-8138-419b-907d-57b4c3e9ded9">
+              <hi rend="italic">Зач.:</hi> cacher
+            </p>
+          </div>
+        </note>
+         faire semblant que nous ne voyons pas de quoi il est question quand il est question de la guerre et de dire
+        <note n="n117">
+          <div type="section" xml:id="n117">
+            <head>
+              <ref target="#backn117">
+                117
+              </ref>
+            </head>
+            <p rend="left" id="76ee2935-03ef-4c58-b65b-91dccd0178a1">
+              <hi rend="italic">Зач.:</hi> apeler, <hi rend="italic">написанное над строкой; восстановлено:</hi> dire.
+            </p>
+          </div>
+        </note>
+         pleinement la vérité qui est tellement connue qu’on a honte de la répéter qu’il est non seulement criminel mais bête pour un être raisonable de tuer de gaieté de coeur des êtres qui ne <choice original_editorial_correction="v[ou]s">
+          <sic>vs</sic>
+          <corr>vous</corr>
+        </choice> ont fait aucun mal que vous ne <choice original_editorial_correction="connais[sez]">
+          <sic>connais</sic>
+          <corr>connaissez</corr>
+        </choice> pas, seulement parceque certains <choice original_editorial_correction="personnag[es]">
+          <sic>personnag</sic>
+          <corr>personnages</corr>
+        </choice> qui s’appellent rois, empereurs, Président le désirent.</p>
+      <p rend="left" id="1c12345e-6fd9-4280-a1c4-4c84380155c8">&lt;Pour bien comprendre le dégré de superstition, suggestion, et tromperie employés par les <choice original_editorial_correction="gouvernant[s]">
+          <sic>gouvernant</sic>
+          <corr>gouvernants</corr>
+        </choice> sur les masses et contre lesquels nous sommes appelés à réagir, représentons nous un homme du peuple
+        <note n="n118">
+          <div type="section" xml:id="n118">
+            <head>
+              <ref target="#backn118">
+                118
+              </ref>
+            </head>
+            <p rend="left" id="59dc86a2-3faa-40bf-8426-72a996eadf45">
+              <hi rend="italic">Зач.:</hi> avant et après за reception dans l’armée.
+            </p>
+          </div>
+        </note>
+         libre de toute tromperie et suggestion et le même homme après son internation au régiment.</p>
+      <p rend="left" id="1f4d30d5-80a1-4a9b-9da0-04c3bf00ba68">L’homme est à la maison et est occupé à ses affaires. On vient chez lui et on lui dit: voilà un fusil, prend le et va tuer l’homme que je te désignerai. Parmi mille hommes il est douteux que puisse se trouver un seul qui sous les plus terribles menaces puisse consentir à
+        <note n="n119">
+          <div type="section" xml:id="n119">
+            <head>
+              <ref target="#backn119">
+                119
+              </ref>
+            </head>
+            <p rend="left" id="3c2ba1a6-79f3-4659-912e-b882000a94b7">
+              <hi rend="italic">Зач.:</hi> faire ce qu’on exige
+            </p>
+          </div>
+        </note>
+        <choice original_editorial_correction="commet[t]re">
+          <sic>commetre</sic>
+          <corr>commettre</corr>
+        </choice> ce meurtre. Mais ce même homme est incorporé dans un régiment. On l’habille comme des milliers d’hommes qui sont dans les mêmes conditions, on le fait marcher, courir, sauter
+        <note n="n120">
+          <div type="section" xml:id="n120">
+            <head>
+              <ref target="#backn120">
+                120
+              </ref>
+            </head>
+            <p rend="left" id="28426db3-6c61-4f13-be72-988be6f27968">
+              <hi rend="italic">Зач.:</hi> tirer au canon
+            </p>
+          </div>
+        </note>
+         au cable, et après des mois, un an peut être, l’homme est préparé à faire tout ce qu’on exigera de lui: il tuera tous ceux qu’on lui ordonnera de tuer. Voilà la superstition, la tromperie, la suggestion que nous devons détruire. —&gt;
+        <note n="n121">
+          <div type="section" xml:id="n121">
+            <head>
+              <ref target="#backn121">
+                121
+              </ref>
+            </head>
+            <p rend="left" id="9040a84f-d492-4a03-aaaa-10747282942f">
+              <hi rend="italic">Заключенное в ломаные скобки отчеркнуто на полях с пометкой: </hi>
+              <choice original_editorial_correction="п[ропустить]">
+                <sic>п</sic>
+                <corr>пропустить</corr>
+              </choice>.
+            </p>
+          </div>
+        </note>
+      </p>
+      <p rend="left" id="69946bcb-d88a-4ac0-aebf-2b3dc55d2ae5">Mais on me dira, que l’état est impossible sans armées, et l’homme n’a jamais vécu hors l’état. Donc l’armée qui sauve
+        <note n="n122">
+          <div type="section" xml:id="n122">
+            <head>
+              <ref target="#backn122">
+                122
+              </ref>
+            </head>
+            <p rend="left" id="729a08b3-1b92-4267-bf25-00929dce8e56">
+               В подлиннике: sautent
+            </p>
+          </div>
+        </note>
+         l’état est indispensable pour la vie des peuples.</p>
+      <p rend="left" id="d15525c3-98d1-4c76-b564-9fe53442d8c9">
+        <pb n="315"/>
+        <note n="n123">
+          <div type="section" xml:id="n123">
+            <head>
+              <ref target="#backn123">
+                123
+              </ref>
+            </head>
+            <p rend="left" id="aa1acc76-0f33-436e-bdf7-0e6fa783c4f2">
+              <hi rend="italic">Зачеркнуто:</hi> vivre
+            </p>
+          </div>
+        </note>
+         exister sans l’organisation de l’état soit par elle même insoluble, mettons
+        <note n="n124">
+          <div type="section" xml:id="n124">
+            <head>
+              <ref target="#backn124">
+                124
+              </ref>
+            </head>
+            <p rend="left" id="9b77431a-04fb-4cd5-b6e8-d25fcb8fb1e7">
+              <hi rend="italic">В подлиннике:</hi> mettoni
+            </p>
+          </div>
+        </note>
+         que l’état et les armées qui le sauvent sont <choice original_editorial_correction="indispensable[s]">
+          <sic>indispensable</sic>
+          <corr>indispensables</corr>
+        </choice> pour la vie humaine.</p>
+      <p rend="left" id="11e68bc3-3864-4460-929a-204e2f971c8c">Admettons que pour le bien général il est indispensable que <choice original_editorial_correction="chaqu[n]">
+          <sic>chaqu</sic>
+          <corr>chaqun</corr>
+        </choice> obéisse servilement à certains individus qui forment le gouvernement, est tenu de donner à ces
+        <note n="n125">
+          <div type="section" xml:id="n125">
+            <head>
+              <ref target="#backn125">
+                125
+              </ref>
+            </head>
+            <p rend="left" id="0e781a75-6a01-4221-9b10-091600cf94ae">
+              <hi rend="italic">Зач.</hi>: gens
+            </p>
+          </div>
+        </note>
+         individus le produit de son travail, doit remplir toutes leur exigences même celles de tuer s’ils l’ordonnent tous ceux qu’on lui designera.</p>
+      <p rend="left" id="5a49b26a-1f88-4ff9-8ba3-d43b007bf014">Admettons tout ceci il existera toujours dans notre monde chrétien une grande difficulté celle de savoir ce que nous ferons de la religion chrétienne que proffessent <choice original_editorial_correction="ostensiblemen[t]">
+          <sic>ostensiblemen</sic>
+          <corr>ostensiblement</corr>
+        </choice> tous ceux qui dirigent les armées et se préparent pour les guerres.</p>
+      <p rend="left" id="ee7f0abd-929d-4e72-8580-745465eaf0ce">On a beau pervertir la vrai doctrine chrétienne, on a beau ignorer ses principes, il est impossible de faire croire qu’une religion basée sur l’amour du prochain puisse admettre le meurtre comme acte indispensable et compatible avec la religion de l’amour du prochain.</p>
+      <p rend="left" id="d4ea6693-28e2-420f-88c6-8ae4ea0174e0">De sorte que les <choice original_editorial_correction="gouvernant[s]">
+          <sic>gouvernant</sic>
+          <corr>gouvernants</corr>
+        </choice> n’ont d’autre alternative que
+        <note n="n126">
+          <div type="section" xml:id="n126">
+            <head>
+              <ref target="#backn126">
+                126
+              </ref>
+            </head>
+            <p rend="left" id="19e2f5b6-ea1c-4d10-b66e-d4971f8a4c7a">
+              <hi rend="italic">Зач.</hi>: l’état avec se
+            </p>
+          </div>
+        </note>
+         le christianisme, la religion ou bien l’état avec ses armées et ses meurtres.</p>
+      <p rend="left" id="d9f3fc67-8dd7-4dc4-98e6-f19384bca2d2">Il peut être vrai que la religion chrétienne, la religion en général a fait son
+        <note n="n127">
+          <div type="section" xml:id="n127">
+            <head>
+              <ref target="#backn127">
+                127
+              </ref>
+            </head>
+            <p rend="left" id="5338d828-8a35-4d1e-b32c-a551a5eb7833">
+              <hi rend="italic">В подлиннике пропущено слово, вероятно</hi>, kemps.
+            </p>
+          </div>
+        </note>
+         et que dans le choix qu’il est indispensable de faire entre les deux: l’état avec ses armées ou bien la religion chrétienne les
+        <note n="n128">
+          <div type="section" xml:id="n128">
+            <head>
+              <ref target="#backn128">
+                128
+              </ref>
+            </head>
+            <p rend="left" id="de933304-1061-4f31-ad88-d9d08602c372">
+              <hi rend="italic">Зач.:</hi> gens
+            </p>
+          </div>
+        </note>
+         hommes de notre temps décideront que l’existence de l’état avec ses armées <choice original_editorial_correction="e[s]t">
+          <sic>et</sic>
+          <corr>est</corr>
+        </choice> d’autant plus importante que la proffession du christianisme, qu’il est inutile de penser au christianisme et que la seule chose nécessaire est la force de l’état et de ses armées.</p>
+      <p rend="left" id="145defe8-3d1c-4527-9105-f986f59f5f59">Tout cela peut être; mais une fois que cela est il faut le dire ouvertement. Il faut franchement dire, qu’il est nécessaire d’oublier tout ce que dit aux hommes leur conscience, tout ce que leur dit depuis les temps les plus anciens
+        <note n="n129">
+          <div type="section" xml:id="n129">
+            <head>
+              <ref target="#backn129">
+                129
+              </ref>
+            </head>
+            <p rend="left" id="ac2905cb-cdbb-495d-8f40-e5df7a705888">
+              <hi rend="italic">Зач.</hi>: tous les sages et grands penseurs de
+            </p>
+          </div>
+        </note>
+         la sagesse humaine, ce que dit Dieu à ceux qui y croyent et de ne croire et de n’obéir qu’ à ce qui sera ordonné — y inclus le meurtre — par les Nicolas, Guillaume,
+        <note n="n130">
+          <div type="section" xml:id="n130">
+            <head>
+              <ref target="#backn130">
+                130
+              </ref>
+            </head>
+            <p rend="left" id="ed7931e9-135f-4152-bf4c-428886f2f708">
+              <hi rend="italic">Написано:</hi>
+              <choice>
+                <reg>Guиllом</reg>
+                <orig>Guillомъ</orig>
+              </choice>
+            </p>
+          </div>
+        </note>
+         Henry, Fallières et autres. Il faut être franc et le dire. L'état, les armées, le despotisme le plus affreux et les
+        <note n="n131">
+          <div type="section" xml:id="n131">
+            <head>
+              <ref target="#backn131">
+                131
+              </ref>
+            </head>
+            <p rend="left" id="f8a77bfc-6dfe-431e-8043-e85117110d59">
+              <hi rend="italic">Зач.:</hi> guerre
+            </p>
+          </div>
+        </note>
+         meurtres légalisés ou bien le Christianisme, c.à d. l’égalité, la fraternité, l’amour.</p>
+      <p rend="left" id="045ee955-f7c5-4283-ab47-905c493a4725">
+        <pb n="316"/> Voilà le dilemme que nous d vons, réunis ici pour combattre la guerre, exposer devant les hommes.</p>
+      <p rend="left" id="9ef1f6e3-29b9-450f-b92e-067cdcf17423">En ceci est notre force, force invincible puisque nous sommes avec la vérité, avec le bien, avec Dieu.</p>
+      <p rend="left" id="91692dee-bb34-40d6-b597-614f07d0677f">Nous n’avons qu’à poser clairement et distinctement le dilemme qui est vaguement senti par tous les hommes et le choix pour chaque homme ne peut être douteux.</p>
+      <lb/>
+      <p rend="left" id="123228e8-b8af-4ebf-8d2b-c0a845e6c6b8">
+        <hi rend="italic">Перевод</hi>
+      </p>
+      <p rend="center petit" id="69840de0-79b3-459f-bcc7-3d040894af95">Дорогие братья,</p>
+      <p rend="petit left" id="36ef1ede-25d2-4359-9c33-2f2f8e8f93b8">Мы собрались здесь, чтобы бороться против чего? Против войны; против войны, т. е. против организации, при которой миллионы и миллионы людей отдают более или менее добровольно, не только произведение своего труда — миллиарды и миллиарды франков, рублей, иен, но и самих себя, свою жизнь, каким-то десяткам людей, которые распоряжаются произведением труда и жизнью миллионов и миллионов людей.</p>
+      <p rend="petit left" id="0d1ea6a3-ee19-43e9-bd61-3d51d80ec4db">И вот мы, десяток собравшихся частных людей, не обладающих ни исключительными достоинствами, ни правом, ни властью, имеем смелость вступить в борьбу и, борясь, надеемся победить кого? что? огромную силу не одного правительства, но всех правительств мира, правительств, имеющих в своем распоряжении миллиарды денег и миллионы войск, прекрасно знающих, что их исключительное положение основано, как оно и не может быть иначе, на их армиях, единственный смысл существования которых — война, та война, которую мы хотим уничтожить, мы, десяток людей, не имеющих никакой силы, чтобы противопоставить ее огромным силам правительств.</p>
+      <p rend="petit left" id="e2a08953-9826-4797-9464-fe8e86b5e258">Бороться при этих условиях должно казаться странным. А, между тем, если вдуматься и взвесить средства борьбы, которыми располагают те, с которыми мы хотим бороться, и те, которыми обладаем мы, наоборот, странным покажется не то, что мы хотим бороться, а что существует самое явление, против которого мы хотим бороться и которое служит предметом борьбы.</p>
+      <p rend="petit left" id="8755f210-16e3-452a-9eae-eafc501f0084">На его стороне миллиарды денег и миллионы войск; на нашей — одна лишь истина, но истина. И как ни мала кажется наша сила в сравнении с силой противника, победа наша обеспечена, как победа солнечного света над мраком ночи.</p>
+      <p rend="petit left" id="fc15fe63-c6f3-48c1-a5e3-b22e7ae1d811">Обеспечена же наша победа только при одном условии — высказывать полную истину, без сделок, уступок и смягчений.</p>
+      <p rend="petit left" id="458f0b26-a1f3-4862-9005-2d79d03a80f0">Истина эта так проста, так ясна, так очевидна, так общепризнана, что достаточно ее высказать во всем ее настоящем значении, чтобы люди нашего времени и, в особенности, христиане, не могли уже поступать противно этой истине, которая веками почитается обязательною для всех людей. Истина эта, не говоря уже об евангельском учении о любви к ближнему и 7-й заповеди в Библии; истина эта, написанная в сердце каждого человека, состоит в уважении к жизни своего ближнего и в убеждении, что всякое посягательство на человеческую жизнь есть одно из величайших преступлений, которое может совершить человек — преступление против божьего закона для тех, кто верует в бога, и преступление против совести и самой первобытной нравственности для тех, кто не верует в бога. Эта истина так проста и так обязательна, что людям нашего времени достаточно было бы только освободиться от суеверий, производимых обманами и внушениями правительств, чтобы истина эта, необходимая для благосостояния человечества, сделала невозможным повторение узаконенных преступлений, которые совершаются ныне под названием войны.</p>
+      <p rend="petit left" id="820ffba1-06a1-426d-9594-24354ef52501">Поэтому я думаю, что все дипломатические средства, всякого рода конгрессы и договоры между власть имущими, все эти меры не могут ни <pb n="317"/> к чему привести. Занимаясь дипломатическими договорами между властителями, а не уничтожением суеверия о необходимости и законности войны, мы уподобимся людям, которые, владея ключом от двери, ведущей внутрь дома, делают попытку, ими самими признаваемую бесполезной, проламывания стены.</p>
+      <p rend="petit left" id="15b72d89-f9f3-41b2-9e90-510a1ebedb90">У нас перед глазами вооруженные до зубов люди, готовые убивать и убивающие себе подобных, когда это им кажется необходимым, и, обсуждая средства против этого зла, мы ищем их там, где их нет; мы придумываем разные тонкие и остроумные меры воздействия на это зло и не хотим видеть простого средства, которое должно было бы прежде всего представиться нам и которое в нашей власти — уничтожение оружия, при помощи которого люди истребляют друг друга.</p>
+      <p rend="petit left" id="98d8e451-db1e-4856-8fde-5df5d0caa783">Оружие это, употребляемое людьми в целях борьбы, есть не что иное, как суеверия, обманы и внушения, посредством которых людей принуждают быть в войске.</p>
+      <p rend="petit left" id="b30adfba-f196-43e2-8ef8-0e78eaaf5725">Режутся между собою не Николаи, Вильгельмы, Эдуарды и прочие, а люди из народа, старинными традициями и новыми суевериями и обманами приведенные к тому, что они поступают против нравственности, против религии, которую они исповедуют и которая предписывает закон любви, против библейской заповеди, воспрещающей убийство, и становятся солдатами. И вот мы, просвещенные люди, исповедующие христианскую религию или вековой закон нравственности, как и все нравственные законы не могущий одобрять убийство, мы, имея возможность отобрать оружие из рук сражающихся, мы не находим лучшего, как обращаться к правительствам с предложением менее жестоких средств при войне, или менее частых войн, или сокращения количества войск, т. е. сокращения того, для чего они существуют, иными словами, предложить им самоубийство. Между тем, должно бы быть несомненным, что правительства не согласятся не только на уничтожение войска, но даже и на сокращение его.</p>
+      <p rend="petit left" id="f6e09e7b-2707-457f-961e-5c57ca427bf2">Следовательно, единственно разумное, что мы, собравшись, можем сделать, это обратиться не к правительствам, а к людям, ко всем людям, к большим массам, указывая им, какое зло они причиняют самим себе, подчиняясь правительствам, принуждающим их к убийству или к готовности на убийство, а также и к правительствам, указывая им всю безнравственность их деятельности.</p>
+      <p rend="petit left" id="f601e97b-7fd8-445c-a23e-02ec0705a97d">Это то единственное, что мы можем исполнить, если не желаем ограничиться бесполезными речами. И это не трудно. Нам не предстоит изобретать новых теорий, чтоб устранить бедствие войны. Нам следует только не представляться, что мы не видим, в чем вопрос, когда вопрос стоит о войне, и высказывать истину, до такой степени известную, что совестно ее повторять, истину, состоящую в том, что не только преступно, но и бессмысленно для разумного существа с легким сердцем убивать людей, не причинивших ему никакого вреда и даже не знающих его, единственно потому, что некоторые лица, называемые королями, императорами, президентом, этого желают.</p>
+      <p rend="petit left" id="ae2fe409-cfb9-4b10-98c2-7e449f77af2a">Чтобы хорошо понять степень воздействия на массы суеверия, внушения и обманов, употребляемых правителями, которому мы призваны противодействовать, представим себе человека из народа, свободного от всякого обмана и суеверия, и того же человека после его пребывания в полку.</p>
+      <p rend="petit left" id="8b323ba2-171e-48db-8084-e7115497463a">Человек дома и занят своими делами. К нему приходят и говорят: вот тебе ружье, иди и убей того человека, на которого я тебе укажу. Сомнительно, чтобы нашелся один из тысячи, который, под самыми страшными угрозами, согласился бы совершить подобное убийство. Но тот же человек введен в состав полка. Его одевают, как тысячи людей, находящихся в тех же условиях, его заставляют ходить, бегать, прыгать через веревку и спустя несколько месяцев, может быть, года, человек этот готов исполнять все, что от него потребуют, и убивать всех, кого ему прикажут убивать. И вот эти то суеверия, обманы и внушения мы должны уничтожить.</p>
+      <p rend="petit left" id="51c82bdc-609c-4fd4-9bda-2230fead8135">
+        <pb n="318"/> Но мне скажут, что государство немыслимо без войска, и что человек никогда не жил вне государства. Следовательно, армия, поддерживающая государство, необходима для жизни народов.</p>
+      <p rend="petit left" id="8b4722b9-72f5-4c0e-97a2-6ab0b331a0a8">Хотя бы вопрос, могут или не могут народы существовать без государственной организации, сам по себе был неразрешим, предположим, что государство и войско, которое его поддерживает, необходимы для человеческой жизни.</p>
+      <p rend="petit left" id="d8c61613-4bbb-498a-be0c-d45acd9d4fff">Допустим, что для общего блага необходимо, чтобы каждый человек рабски подчинялся некоторым личностям, составляющим государство, отдавал им произведение своего труда и исполнял все их требования, вплоть до убийства всех тех, на кого они ему укажут.</p>
+      <p rend="petit left" id="610e7477-2b9b-40f4-89ba-d6bd760ed546">Если мы и допустим все это, то все же в нашем христианском мире будет существовать важное затруднение, состоящее в том, как быть с христианской религией, которую открыто исповедуют все те, кто руководит войском и готовит его для войн.</p>
+      <p rend="petit left" id="f874c711-b444-4cd6-867a-b9936a1fe995">Как бы ни извращали истинное христианское учение, как бы ни замалчивали его положений, невозможно заставить людей поверить, что религия, основанная на любви к ближнему, может допускать, что убийство необходимо и согласовано с учением любви к ближнему.</p>
+      <p rend="petit left" id="2ba5d80e-adfd-4201-957b-11464a2954f6">Поэтому правителям нет иного выбора, как — либо христианство, религия, либо государство со своим войском и убийствами.</p>
+      <p rend="petit left" id="f1a4fe2e-721c-4b3e-8073-5fb31e08c9e2">Быть может, что христианская религия и религия вообще отжила и при выборе, который неизбежен, — государство со своим войском или христианская религия — люди нашего времени решат, что государство с войском настолько важнее исповедания христианства, что думать о христианстве бесполезно и что единственно необходимое — это сила государства и его войска.</p>
+      <p rend="petit left" id="5130023c-58b1-46d6-adec-327f6c544f8a">Все это может быть, но если это так, то надо открыто это высказать. Следует сказать откровенно, что нужно забыть все, что говорит людям совесть, людская мудрость самых древних времен, что говорит бог тем, которые в него веруют, а верить и подчиняться тому, что им приказывают, до убийства включительно — Николаи, Вильгельмы, Генрихи, Фальеры и прочие. Надо откровенно так и сказать. Государство, войско, самый ужасный деспотизм, узаконенное убийство или христианство, т. е. равенство, братство и любовь.</p>
+      <p rend="petit left" id="0b1b2544-91c6-4aa1-b027-8ee682c33528">Вот та дилемма, которую мы, собравшиеся здесь, чтобы бороться против войны, обязаны поставить перед людьми.</p>
+      <p rend="petit left" id="f9567f64-668c-419c-a6de-c4dc841ac5ae">В этом наша сила, сила непреодолимая, так как на нашей стороне истина, добро, бог.</p>
+      <p rend="petit left" id="4b87d481-4961-4581-a78c-1ceea3e2c494">Нам нужно только ясно и точно выставить эту дилемму, которая смутно чувствуется всеми людьми, и выбор для каждого человека не вызовет сомнений.</p>
+    </div>
+  </text>
+</TEI>
