@@ -133,7 +133,7 @@
     </div>
     <div type="section" xml:id="h000013017001">
       <head rend="left">* № 1.</head>
-      <p rend="left" id="a52abb52-8368-40f9-89b2-5d4a99206616">Очень <choice>
+      <p rend="left" id="d46452e4-6a3a-47f4-adbf-87c37b7c3aca">Очень <choice>
           <reg>рад</reg>
           <orig>радъ</orig>
         </choice>
@@ -363,7 +363,7 @@
     </div>
     <div type="section" xml:id="h000013017002">
       <head rend="left">* № 2.</head>
-      <p rend="left" id="0f44d893-7c11-473d-bce5-463e87c8236b">Мало того, есть право уголовное, право ссылать, заточать, казнить, <choice>
+      <p rend="left" id="26d46a77-fbd2-4805-a42d-01823e205f02">Мало того, есть право уголовное, право ссылать, заточать, казнить, <choice>
           <reg>вешать</reg>
           <orig>вѣшать</orig>
         </choice>. Права эти определяются законами, <choice>
@@ -371,14 +371,9 @@
           <orig>говорятъ</orig>
         </choice>
         <pb n="282"/>
-        <choice original_editorial_correction="П[етражіцкіе]">
-          <sic>П</sic>
-          <corr>
-            <choice>
-              <reg>Петражицкие</reg>
-              <orig>Петражiцкiе</orig>
-            </choice>
-          </corr>
+        <choice>
+          <reg>П[етражицкие]</reg>
+          <orig>П[етражiцкiе]</orig>
         </choice>, но законы то кто <choice>
           <reg>пишет</reg>
           <orig>пишетъ</orig>
@@ -403,7 +398,7 @@
     </div>
     <div type="section" xml:id="h000013017003">
       <head rend="left">* № 3.</head>
-      <p rend="left" id="871295f5-c954-4955-b316-e1167442ad13">И <choice>
+      <p rend="left" id="feb8b0bc-e9b2-40e3-8dcc-ba06be71dd5f">И <choice>
           <reg>этот</reg>
           <orig>этотъ</orig>
         </choice> то <choice>
@@ -437,7 +432,7 @@
           <reg>как</reg>
           <orig>какъ</orig>
         </choice> Дарвиновскую истину. Да, это ужасно!</p>
-      <p rend="center" id="a486b91f-171b-4285-91ab-21dcbd718810">————</p>
+      <p rend="center" id="2375652a-ee20-44a7-bf3a-3704602a82dc">————</p>
     </div>
   </text>
 </TEI>

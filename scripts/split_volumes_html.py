@@ -1,3 +1,4 @@
+import itertools
 import os
 from pprint import pprint
 
@@ -8,12 +9,13 @@ import utils as ut
 import split_volumes_utils as sp_ut
 
 
-def split_fiction(filename):
+def split_fiction_0(filename):
+    """Works for 38 vol."""
     html = ut.read_xml(
         filename, 'rb'
     )
     root = etree.fromstring(html)
-    tree = etree.ElementTree(root)
+    # tree = etree.ElementTree(root)
     # [print(e) for e in root.iter()]
     volume_number = filename.strip('.html').split()[-1]
     tei_data = {
@@ -28,8 +30,8 @@ def split_fiction(filename):
     texts = []
     div_with_comments_id = sp_ut.get_div_id_where_comments_start(divs)
     for div in divs_with_titles:
-        # title = div[0].text.strip(' \n')
         title = ''.join([t for t in div[0].itertext()]).rstrip('.')
+        # title = sp_ut.capitalize_title(title)
         div_id = div.attrib['id']
         if div_id.startswith(div_with_comments_id):
             break
@@ -65,6 +67,81 @@ def split_fiction(filename):
         # print(tree.tostring(i))
         pass
         # print(etree.tostring(i, pretty_print=True, encoding='unicode'))
+
+
+def split_fiction(filename, item_id_length, edges_div_ids=None, extra_funcs=None):
+    html = ut.read_xml(
+        filename, 'rb'
+    )
+    root = etree.fromstring(html)
+    volume_number = filename.strip('.html').split()[-1]
+    tei_data = {
+        'volume': volume_number,
+    }
+
+    all_divs = root.xpath('//ns:div', namespaces={'ns': sp_ut.XHTML_NAMESPACE})
+
+    if edges_div_ids is None:
+        divs_blocks = [(all_divs, item_id_length)]
+    else:
+        divs_blocks = sp_ut.split_divs_into_blocks_based_on_block_edges(
+            all_divs, edges_div_ids
+        )
+
+    # [print(etree.tostring(d, encoding='unicode')) for d in divs]
+    # pprint(divs_blocks)
+    # pprint([etree.tostring(d, encoding='unicode') for divs in divs_blocks for d in divs[0]])
+    # pprint([d.attrib['id'] for divs in divs_blocks for d in divs[0] if 'id' in d.attrib])
+
+    notes = sp_ut.get_notes_from_html(all_divs)
+    for divs, item_id_length in divs_blocks:
+        divs_with_titles = filter(
+            lambda x: len(x.attrib['id']) == item_id_length if 'id' in x.attrib else False,
+            divs
+        )  # like for "h000013026" item_id_length is 10
+        texts = []
+        div_with_comments_id = sp_ut.get_div_id_where_comments_start(divs)
+        for div in divs_with_titles:
+            div_id = div.attrib['id']
+            if (
+                    not div_with_comments_id == '' and
+                    div_id.startswith(div_with_comments_id)
+            ):
+                break
+            print(div.attrib['id'])
+            title = ''.join([t for t in div[0].itertext()]).rstrip('.')
+            # title = sp_ut.capitalize_title(title)
+
+            print(title)
+            text_divs = [d for d in divs if 'id' in d.attrib and d.attrib['id'].startswith(div_id)]
+            texts.append((title, div_id, text_divs))  #
+            # print(title, id)
+        # pprint(texts)
+        # notes = sp_ut.get_notes_from_html(all_divs)
+        for i in tqdm(range(len(texts))):
+            tei_data.update(
+                {
+                    'title': texts[i][0],
+                    'text': sp_ut.convert_text_divs_to_xml_text(
+                        *texts[i], notes, extra_funcs
+                    )
+                }
+            )
+            # print('text:', texts[i][0])
+            to_file = sp_ut.fill_tei_template(tei_data, 'tei_with_short_header.xml')
+            with open(f'parse_volume/result/{tei_data["title"]} {tei_data["volume"]}.xml', 'w') as file:
+                file.write(to_file)
+            xml = ut.read_xml(
+                f'parse_volume/result/{tei_data["title"]} {tei_data["volume"]}.xml',
+                'rb'
+            )
+            # print(tei_data["title"])
+
+            to_file = sp_ut.indent_xml_string(xml)
+            with open(f'parse_volume/result/{tei_data["title"]} {tei_data["volume"]}.xml', 'w') as file:
+                file.write(to_file)
+
+            tei_data = {'volume': volume_number}
 
 
 def search_in_xmls():
@@ -118,9 +195,24 @@ def search_in_xmls():
 if __name__ == '__main__':
     ut.change_to_project_directory()
     # search_in_xmls()
-    volume_file = 'parse_volume/htmls/Полное собрание сочинений. Том 38.html'
+    volume_file_38 = 'parse_volume/htmls/Полное собрание сочинений. Том 38.html'  # 10
     # volume_file = 'parse_volume/htmls/Полное собрание сочинений. Том 42.html'
-    # volume_file = 'parse_volume/htmls/Полное собрание сочинений. Том 43.html'
-    # volume_file = 'parse_volume/htmls/Полное собрание сочинений. Том 44.html'
-    # volume_file = 'parse_volume/htmls/Полное собрание сочинений. Том 45.html'
-    split_fiction(volume_file)
+    volume_file_43 = 'parse_volume/htmls/Полное собрание сочинений. Том 43.html'
+    volume_file_44 = 'parse_volume/htmls/Полное собрание сочинений. Том 44.html'
+    volume_file_45 = 'parse_volume/htmls/Полное собрание сочинений. Том 45.html'
+
+    # Если есть третий аргумент, то второй не важен
+    split_fiction(volume_file_38, 10, [('h000011001', None)])
+    split_fiction(
+        volume_file_43,
+        7,
+        [('h000010', 'h000011')],
+        extra_funcs=[sp_ut.insert_date_tag_for_43_and_44_vol]
+    )
+    split_fiction(
+        volume_file_44,
+        7,
+        [('h000009', None)],
+        extra_funcs=[sp_ut.insert_date_tag_for_43_and_44_vol]
+    )
+    split_fiction(volume_file_45, 7, [('h000010', 'h000011'), ('h000011002', None)])

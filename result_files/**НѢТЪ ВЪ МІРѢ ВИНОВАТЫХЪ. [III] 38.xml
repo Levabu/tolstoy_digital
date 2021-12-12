@@ -144,15 +144,11 @@
         <choice>
           <reg>ВИНОВАТЫХ</reg>
           <orig>ВИНОВАТЫХЪ</orig>
-        </choice>. <choice original_editorial_correction="[III]">
-          <sic/>
-          <corr>III</corr>
-        </choice>
-      </head>
+        </choice>. [III]</head>
     </div>
     <div type="section" xml:id="h000013010001">
       <head rend="center">1.</head>
-      <p rend="left" id="73f186c9-9738-4aa3-845d-592318dffe22">Какая странная, удивительная моя судьба. Едва ли есть какой бы то ни было забитый, <choice>
+      <p rend="left" id="bb667a02-1121-430e-a0d6-afae23838cb2">Какая странная, удивительная моя судьба. Едва ли есть какой бы то ни было забитый, <choice>
           <reg>страдающий</reg>
           <orig>страдающiй</orig>
         </choice>
@@ -299,7 +295,7 @@
           <reg>положение</reg>
           <orig>положенiе</orig>
         </choice>.</p>
-      <p rend="left" id="fbe4eed2-bc03-46f5-abf8-c64e66f807a9">Было время, когда я пытался <choice>
+      <p rend="left" id="8c7ea8b4-6c74-47fa-a418-a898813d6c97">Было время, когда я пытался <choice>
           <reg>изменить</reg>
           <orig>измѣнить</orig>
         </choice> это мое, несогласное <choice>
@@ -413,7 +409,7 @@
           <reg>положения</reg>
           <orig>положенiя</orig>
         </choice>.</p>
-      <p rend="left" id="29914d4a-c8c8-4900-a276-62b33113f689">И <choice>
+      <p rend="left" id="ad8609be-c3e8-44dc-aea3-985d5cb08a83">И <choice>
           <reg>вот</reg>
           <orig>вотъ</orig>
         </choice>
@@ -811,7 +807,7 @@
     </div>
     <div type="section" xml:id="h000013010002">
       <head rend="center">2.</head>
-      <p rend="left" id="f28aadf2-5515-4abf-b68f-678c1ffbe83f">
+      <p rend="left" id="aa74fe54-c172-4c5e-9c6e-730237a777f4">
         <choice>
           <reg>В</reg>
           <orig>Въ</orig>
@@ -913,14 +909,9 @@
         </choice> игры <choice>
           <reg>с</reg>
           <orig>съ</orig>
-        </choice> домашними по тысячной <choice original_editorial_correction="[въ]">
-          <sic/>
-          <corr>
-            <choice>
-              <reg>в</reg>
-              <orig>въ</orig>
-            </choice>
-          </corr>
+        </choice> домашними по тысячной <choice>
+          <reg>[в]</reg>
+          <orig>[въ]</orig>
         </choice>
         <choice>
           <reg>винт</reg>
@@ -1102,7 +1093,7 @@
           <reg>с</reg>
           <orig>съ</orig>
         </choice> вычищенными до блеска вчера снятыми ботинками и всей выбитой и вычищенной парой и сложенной крахмальной рубашкой.</p>
-      <p rend="left" id="549823c7-443d-47ae-bb46-ccbf1c5d43f8">Гость <choice>
+      <p rend="left" id="da612542-2ea3-4c4e-b8d9-4ffe5bec135f">Гость <choice>
           <reg>поблагодарил</reg>
           <orig>поблагодарилъ</orig>
         </choice>, <choice>
@@ -1849,7 +1840,7 @@
           <reg>доме</reg>
           <orig>домѣ</orig>
         </choice>.</p>
-      <p rend="left" id="282566cd-710e-41d5-be43-e75fa55a4b2a">
+      <p rend="left" id="5501969d-b64a-4ed7-8241-2be515180597">
         <choice>
           <reg>Александр</reg>
           <orig>Александръ</orig>
@@ -2154,7 +2145,7 @@
           <reg>банке</reg>
           <orig>банкѣ</orig>
         </choice>.</p>
-      <p rend="left" id="81e63e7b-b57c-4722-9c62-c99e6d29f3b4">«Счастливые люди, <choice>
+      <p rend="left" id="b64967f6-1b40-4582-a2e3-45b59ea64229">«Счастливые люди, <choice>
           <reg>живут</reg>
           <orig>живутъ</orig>
         </choice>
@@ -2426,8 +2417,8 @@
           <reg>подозвал</reg>
           <orig>подозвалъ</orig>
         </choice> мальчика.</p>
-      <p rend="left" id="763c80f5-3399-4fce-928e-a50f758edcb5">— Чье это стадо?</p>
-      <p rend="left" id="2b8248a8-8967-44d7-83bb-d7a82144a174">
+      <p rend="left" id="19d90b99-c18b-421c-8c8f-e9b7921131bc">— Чье это стадо?</p>
+      <p rend="left" id="886bb18e-7c40-403b-8c06-7557fd7b1547">
         <choice>
           <reg>Мальчик</reg>
           <orig>Мальчикъ</orig>
@@ -2480,8 +2471,8 @@
           <reg>сказал</reg>
           <orig>сказалъ</orig>
         </choice>:</p>
-      <p rend="left" id="53757548-b5d6-47b8-9767-5536defe64d7">— Наше.</p>
-      <p rend="left" id="da0412da-08b8-4c23-b03d-c83b35fe69a3">— Да, чье наше, — покачивая головой и улыбаясь, <choice>
+      <p rend="left" id="f01f9618-0d14-4f9c-9ca9-bcbbef1369e5">— Наше.</p>
+      <p rend="left" id="8f7454ed-7577-4618-8b7f-6eb5bdc60e1d">— Да, чье наше, — покачивая головой и улыбаясь, <choice>
           <reg>сказал</reg>
           <orig>сказалъ</orig>
         </choice>
@@ -2493,7 +2484,7 @@
           <reg>Иванович</reg>
           <orig>Ивановичъ</orig>
         </choice>.</p>
-      <p rend="left" id="8a2f913f-1c8e-4260-8852-c909feb3f0fd">
+      <p rend="left" id="6fb1d411-74ea-4bfb-b02c-62bcb3a8cb0d">
         <choice>
           <reg>Мальчик</reg>
           <orig>Мальчикъ</orig>
@@ -2541,25 +2532,25 @@
           <reg>козырьком</reg>
           <orig>козырькомъ</orig>
         </choice>.</p>
-      <p rend="left" id="6c7e00aa-caea-4de9-80fb-849a9984e122">— Чье наше?</p>
-      <p rend="left" id="24013980-6d9a-49b5-ad97-16cf9eea5c84">— А Пироговское.</p>
-      <p rend="left" id="9a63e711-f56a-4422-95c1-d04528393fd6">— A <choice>
+      <p rend="left" id="ad0f2e1b-d771-4168-9df8-bdc2f1dfb1bf">— Чье наше?</p>
+      <p rend="left" id="7bce64a5-54d2-45cd-944d-c8415fdf7245">— А Пироговское.</p>
+      <p rend="left" id="6d5f0a7c-4822-4905-b569-25c911dd3d01">— A <choice>
           <reg>тебе</reg>
           <orig>тебѣ</orig>
         </choice> сколько <choice>
           <reg>лет</reg>
           <orig>лѣтъ</orig>
         </choice>?</p>
-      <p rend="left" id="ee6c7be6-9383-4e2c-85e9-ec4c35ed3253">— Не знаю.</p>
-      <p rend="left" id="96128785-73a1-491b-8636-20bebf221f4c">— <choice>
+      <p rend="left" id="8fa87e91-91aa-4901-8ed1-604967ec2e89">— Не знаю.</p>
+      <p rend="left" id="e4c16635-83df-4ad2-9705-d22447894294">— <choice>
           <reg>Грамоте</reg>
           <orig>Грамотѣ</orig>
         </choice> знаешь?</p>
-      <p rend="left" id="4b0e7ff7-ad87-412c-9423-c470846de60a">— <choice>
+      <p rend="left" id="7d77a7a2-adef-4741-8e54-ec6e24b15136">— <choice>
           <reg>Нет</reg>
           <orig>Нѣтъ</orig>
         </choice>, не знаю.</p>
-      <p rend="left" id="aeac2593-d228-4118-917b-ffd0dbaedd1e">— Что <choice>
+      <p rend="left" id="cce0fddd-fc8e-4327-afd0-5e18c889fbe4">— Что <choice>
           <reg>ж</reg>
           <orig>жъ</orig>
         </choice>
@@ -2571,20 +2562,20 @@
           <reg>нет</reg>
           <orig>нѣтъ</orig>
         </choice> училища?</p>
-      <p rend="left" id="db9783c5-162a-4ba4-a513-f4b35a48143b">— Я <choice>
+      <p rend="left" id="14ab40a7-987d-497a-b100-4b718aabd0f5">— Я <choice>
           <reg>ходил</reg>
           <orig>ходилъ</orig>
         </choice>.</p>
-      <p rend="left" id="837d6871-32b4-4d1e-b361-86f73090a7c3">— Что <choice>
+      <p rend="left" id="136c7c48-bee8-4902-81d2-4810ecac7aad">— Что <choice>
           <reg>ж</reg>
           <orig>жъ</orig>
         </choice> не выучился?</p>
-      <p rend="left" id="350cf2fc-13de-45b7-9f7c-b6b6ead3bf55">— <choice>
+      <p rend="left" id="2f4598b2-d350-4eb0-aa50-5d6dda447302">— <choice>
           <reg>Нет</reg>
           <orig>Нѣтъ</orig>
         </choice>.</p>
-      <p rend="left" id="086507e4-7cb4-4ffa-8cbe-0a05134fb003">— А дорога эта куда?</p>
-      <p rend="left" id="af0118b6-02ea-4ece-94b7-8a3bbf56ccb5">
+      <p rend="left" id="c36e8573-67e0-42d6-ba75-5f94a20702b1">— А дорога эта куда?</p>
+      <p rend="left" id="112e0596-4802-40b8-b8bc-51ac2a9598fc">
         <choice>
           <reg>Мальчик</reg>
           <orig>Мальчикъ</orig>
@@ -2646,7 +2637,7 @@
           <reg>образования</reg>
           <orig>образованiя</orig>
         </choice>.</p>
-      <p rend="left" id="8a7bc7a5-b0d9-4948-9930-a841332e26f0">Подходя <choice>
+      <p rend="left" id="eb9f79c0-5caf-4e27-985d-9d647d0ae16c">Подходя <choice>
           <reg>к</reg>
           <orig>къ</orig>
         </choice> дому, <choice>
@@ -2823,7 +2814,7 @@
           <reg>изредка</reg>
           <orig>изрѣдка</orig>
         </choice> побрякивая бубенцами.</p>
-      <p rend="left" id="5bb413ae-9336-446d-96f2-e56739c46dd4">
+      <p rend="left" id="82194ce1-b3cb-4832-8444-4fa8ab9c8453">
         <choice>
           <reg>Перед</reg>
           <orig>Передъ</orig>
@@ -2863,11 +2854,11 @@
           <reg>спросил</reg>
           <orig>спросилъ</orig>
         </choice>, что ему нужно.</p>
-      <p rend="left" id="5d5b1aa6-37fa-41f6-9cb0-9e493fc8df61">— <choice>
+      <p rend="left" id="baba3a14-0d49-47e5-875e-a03435ac3c64">— <choice>
           <reg>К</reg>
           <orig>Къ</orig>
         </choice> Николаю Петровичу.</p>
-      <p rend="left" id="aa84bb19-ddee-4e64-8120-87eb1e29efe5">— <choice>
+      <p rend="left" id="43a02d84-8e8c-46c9-a1be-0c9b52d8a702">— <choice>
           <reg>Об</reg>
           <orig>Объ</orig>
         </choice>
@@ -2875,11 +2866,11 @@
           <reg>чем</reg>
           <orig>чемъ</orig>
         </choice>?</p>
-      <p rend="left" id="261f7760-0bbd-4267-91d9-f4552bd5ca2b">— По <choice>
+      <p rend="left" id="b9d55b41-9bdc-43f9-99e1-64a5b82d7b13">— По <choice>
           <reg>нужде</reg>
           <orig>нуждѣ</orig>
         </choice> своей, лошаденка пала. —</p>
-      <p rend="left" id="4a3271f7-1503-49c3-a5a9-901880a1c6a8">
+      <p rend="left" id="dfd25e92-5c88-45cd-bacb-a04165c5e116">
         <choice>
           <reg>Александр</reg>
           <orig>Александръ</orig>
@@ -2923,9 +2914,9 @@
           <reg>заплакал</reg>
           <orig>заплакалъ</orig>
         </choice>.</p>
-      <p rend="left" id="422e6a7f-4d72-4ebc-9e4d-a8367adffc91">— Что же ты?</p>
-      <p rend="left" id="135c1c34-4cbb-409e-b98a-fd126c410afd">— Да милости просить.</p>
-      <p rend="left" id="81a15ddb-0bb0-42f0-8c45-3d3ed35ff44b">И <choice>
+      <p rend="left" id="367dd342-734c-446c-900b-d5783ee381e7">— Что же ты?</p>
+      <p rend="left" id="75da025a-7187-417a-8f2b-36412e5962c6">— Да милости просить.</p>
+      <p rend="left" id="6ea91f30-d7c6-446f-9537-4fa4d027ebb8">И <choice>
           <reg>стал</reg>
           <orig>сталъ</orig>
         </choice> на <choice>
@@ -2935,11 +2926,11 @@
           <reg>стоял</reg>
           <orig>стоялъ</orig>
         </choice> и не поднялся, несмотря на уговоры Александра Ивановича.</p>
-      <p rend="left" id="98afa3a4-7bc5-4eae-945c-6e4177ace450">— <choice>
+      <p rend="left" id="1383a71c-3d91-42e4-9a21-d08ffb7a60c2">— <choice>
           <reg>Как</reg>
           <orig>Какъ</orig>
         </choice> тебя звать?</p>
-      <p rend="left" id="d72a2dd8-c5e3-4a86-9903-551cc6b7315e">— <choice>
+      <p rend="left" id="530be2ff-8bd7-45f3-982c-a8c6471ee941">— <choice>
           <reg>Митрий</reg>
           <orig>Митрiй</orig>
         </choice>
@@ -2961,7 +2952,7 @@
           <reg>колен</reg>
           <orig>колѣнъ</orig>
         </choice>.</p>
-      <p rend="left" id="e44cf341-fd23-4a5b-8990-6d91aabc2d47">
+      <p rend="left" id="b7bd3e0f-a1e2-4414-95b5-5690f810a399">
         <choice>
           <reg>Александр</reg>
           <orig>Александръ</orig>
@@ -3019,7 +3010,7 @@
           <reg>Петрович</reg>
           <orig>Петровичъ</orig>
         </choice>.</p>
-      <p rend="left" id="dee542b5-5cfb-4ab5-87a5-4d5dc914aca9">— А письмо, — <choice>
+      <p rend="left" id="3fd2e646-b4a7-4f5c-a28f-e34ab20b0542">— А письмо, — <choice>
           <reg>спросил</reg>
           <orig>спросилъ</orig>
         </choice>
@@ -3040,7 +3031,7 @@
           <reg>еду</reg>
           <orig>ѣду</orig>
         </choice>.</p>
-      <p rend="left" id="f3ad75e4-16d2-4283-ae03-3e22418c8d38">— <choice>
+      <p rend="left" id="b402a604-d287-4ea5-a0db-73212de726ff">— <choice>
           <reg>Виноват</reg>
           <orig>Виноватъ</orig>
         </choice>, <choice>
@@ -3073,7 +3064,7 @@
           <reg>Так</reg>
           <orig>Такъ</orig>
         </choice> хорошо.</p>
-      <p rend="left" id="c1700e55-84f8-4894-b035-dd6ca40ecac2">— Можно-то можно, но только, пожалуйста, <choice>
+      <p rend="left" id="77d66101-3d7a-4440-a9bf-31ef214e313a">— Можно-то можно, но только, пожалуйста, <choice>
           <reg>поскорее</reg>
           <orig>поскорѣе</orig>
         </choice>. Лошади и <choice>
@@ -3091,7 +3082,7 @@
           <reg>злые</reg>
           <orig>злыя</orig>
         </choice>.</p>
-      <p rend="left" id="ad156fde-de16-43eb-8eb0-97e2ff9bb9c5">— Можно подождать, <choice>
+      <p rend="left" id="fcfba7ad-23d4-4450-92ab-5018a8622466">— Можно подождать, <choice>
           <reg>Арсентий</reg>
           <orig>Арсентiй</orig>
         </choice>? — обратился <choice>
@@ -3106,7 +3097,7 @@
           <reg>к</reg>
           <orig>къ</orig>
         </choice> кучеру.</p>
-      <p rend="left" id="8c9f56d4-0040-49a7-a20c-e6e43a874b0e">— Отчего же не подождать? — <choice>
+      <p rend="left" id="3d411af7-c12d-4918-b12b-8f0b98bd7404">— Отчего же не подождать? — <choice>
           <reg>сказал</reg>
           <orig>сказалъ</orig>
         </choice>
@@ -3140,14 +3131,14 @@
           <reg>мух</reg>
           <orig>мухъ</orig>
         </choice>».</p>
-      <p rend="left" id="5ebcb857-b6ac-4328-a22d-8560a85d423a">— <choice>
+      <p rend="left" id="58d6d616-8452-41b7-b2c8-bbd3eac5c38d">— <choice>
           <reg>Сейчас</reg>
           <orig>Сейчасъ</orig>
         </choice>, <choice>
           <reg>сейчас</reg>
           <orig>сейчасъ</orig>
         </choice>.</p>
-      <p rend="left" id="65c0a5dd-8123-4e63-9ff6-31428d161a18">
+      <p rend="left" id="b6f89169-a772-4caa-b14c-966e62443e96">
         <choice>
           <reg>Александр</reg>
           <orig>Александръ</orig>
@@ -3173,11 +3164,11 @@
           <reg>просившего</reg>
           <orig>просившаго</orig>
         </choice> помочь.</p>
-      <p rend="left" id="eb613533-55e4-4276-8d3f-00e55ec4a8a2">— Ты <choice>
+      <p rend="left" id="1d47a418-5b7b-470a-bc1d-681161610b81">— Ты <choice>
           <reg>видел</reg>
           <orig>видѣлъ</orig>
         </choice> его?</p>
-      <p rend="left" id="722e89fc-84ad-4577-ad33-00131d593190">— <choice>
+      <p rend="left" id="7f6a1069-cbcd-44a1-bfcf-fe17ef58829a">— <choice>
           <reg>Он</reg>
           <orig>Онъ</orig>
         </choice> пьяница, но, правда, что <choice>
@@ -3187,7 +3178,7 @@
           <reg>поскорее</reg>
           <orig>поскорѣе</orig>
         </choice>.</p>
-      <p rend="left" id="5a88ab4c-d252-45d3-a36e-1ac8f00dcadc">
+      <p rend="left" id="190daa82-dea0-408b-9686-2a473a20a97c">
         <choice>
           <reg>Александр</reg>
           <orig>Александръ</orig>
@@ -3253,8 +3244,8 @@
           <reg>вынес</reg>
           <orig>вынесъ</orig>
         </choice> Николаю Петровичу.</p>
-      <p rend="left" id="da9a2ab3-7b75-49d5-a466-91b7c65ce171">— Ну до свиданья.</p>
-      <p rend="left" id="749ab6a0-34a0-4cf6-8d29-7b8a4fe96255">До завтрака <choice>
+      <p rend="left" id="baf5b5f9-2e5d-441c-a4d9-eceb2eea9149">— Ну до свиданья.</p>
+      <p rend="left" id="5d9f7311-81ab-4679-aeb6-4b3e898f9b31">До завтрака <choice>
           <reg>Александр</reg>
           <orig>Александръ</orig>
         </choice>
@@ -3294,7 +3285,7 @@
           <reg>в</reg>
           <orig>въ</orig>
         </choice> руки.</p>
-      <p rend="left" id="ca9d38c5-ac05-43ec-bdd0-f4553c506948">Переходя спокойно и привычно <choice>
+      <p rend="left" id="d1ac1363-a9c5-4963-bc42-e244797aaa1b">Переходя спокойно и привычно <choice>
           <reg>от</reg>
           <orig>отъ</orig>
         </choice>
@@ -3593,7 +3584,7 @@
     </div>
     <div type="section" xml:id="h000013010003">
       <head rend="center">[3.]</head>
-      <p rend="left" id="937459bf-8bf7-47da-b65a-477bbc91ac97">Крестьянина, который <choice>
+      <p rend="left" id="2ed5a9b2-c1b6-46b3-842d-5eabab9c0ca2">Крестьянина, который <choice>
           <reg>приходил</reg>
           <orig>приходилъ</orig>
         </choice> просить на падшую лошадь, звали <choice>
@@ -3856,7 +3847,7 @@
           <reg>недель</reg>
           <orig>недѣль</orig>
         </choice>.</p>
-      <p rend="left" id="a34e7901-cb76-4747-8f94-40c1e80dca82">Проснулся <choice>
+      <p rend="left" id="ca9e1e59-a412-4920-a4db-7a8a24f6abe8">Проснулся <choice>
           <reg>Митрий</reg>
           <orig>Митрiй</orig>
         </choice> по <choice>
@@ -3929,7 +3920,7 @@
           <reg>из</reg>
           <orig>изъ</orig>
         </choice> грязной рубахи отвислой груди.</p>
-      <p rend="left" id="4b19cea7-acdc-4105-9b99-f7b54255f661">
+      <p rend="left" id="aa81dc15-c970-4fa3-a964-2e66e9f27259">
         <choice>
           <reg>Митрий</reg>
           <orig>Митрiй</orig>
@@ -3957,14 +3948,14 @@
           <reg>Верую</reg>
           <orig>Вѣрую</orig>
         </choice> и Отче.</p>
-      <p rend="left" id="e474ca4b-8c63-47a8-b348-47c0dd0831ee">— Что <choice>
+      <p rend="left" id="7539c30b-a876-4918-ad00-81693fc46eb4">— Что <choice>
           <reg>ж</reg>
           <orig>жъ</orig>
         </choice> воды <choice>
           <reg>нет</reg>
           <orig>нѣтъ</orig>
         </choice>?</p>
-      <p rend="left" id="00275e48-0af4-4ad3-ae17-142a02e52f9c">— Пошла <choice>
+      <p rend="left" id="1844eec7-8ba3-40fb-876d-ca9c800607c6">— Пошла <choice>
           <reg>девка</reg>
           <orig>дѣвка</orig>
         </choice>. Я чай, принесла. Что <choice>
@@ -3977,8 +3968,8 @@
           <reg>к</reg>
           <orig>къ</orig>
         </choice> барину?</p>
-      <p rend="left" id="1a983098-7c63-4228-aaa5-f533481ee3a9">— Да, надо итти.</p>
-      <p rend="left" id="61384396-1367-43f6-826c-8cbc8dbb87b0">
+      <p rend="left" id="c7e2237b-102f-4422-a209-977904b5fc3c">— Да, надо итти.</p>
+      <p rend="left" id="5d54635a-5ead-46d3-9c0b-f2bcf627a64d">
         <choice>
           <reg>Он</reg>
           <orig>Онъ</orig>
@@ -4080,14 +4071,14 @@
           <reg>рубашонке</reg>
           <orig>рубашонкѣ</orig>
         </choice>.</p>
-      <p rend="left" id="f21039d2-ef54-4e1a-ad1f-22def4557a31">— Здорово, дядя <choice>
+      <p rend="left" id="64ea565d-ab15-4c56-a733-3d5bdc121bae">— Здорово, дядя <choice>
           <reg>Митрий</reg>
           <orig>Митрiй</orig>
         </choice>. <choice>
           <reg>Велели</reg>
           <orig>Велѣли</orig>
         </choice> приходить молотить.</p>
-      <p rend="left" id="2b2ec59b-b7a6-40cc-b325-1076b91a47f8">— Ладно, приду, — <choice>
+      <p rend="left" id="60b230d1-4f2b-4308-8ff8-ccd9d72f7589">— Ладно, приду, — <choice>
           <reg>сказал</reg>
           <orig>сказалъ</orig>
         </choice>
@@ -4095,7 +4086,7 @@
           <reg>Митрий</reg>
           <orig>Митрiй</orig>
         </choice>.</p>
-      <p rend="left" id="58d0d191-494e-4e90-866c-85b6bfd521a6">
+      <p rend="left" id="b1643f19-84b6-46e0-a319-e5e24e4b0106">
         <choice>
           <reg>Он</reg>
           <orig>Онъ</orig>
@@ -4126,7 +4117,7 @@
           <reg>молотилке</reg>
           <orig>молотилкѣ</orig>
         </choice>.</p>
-      <p rend="left" id="cb8df37f-4475-4264-9653-fb70cc7834c4">— Ладно, приду, скажи <choice>
+      <p rend="left" id="83eb8d63-38f8-4384-a1c1-a4e9687dd7ed">— Ладно, приду, скажи <choice>
           <reg>в</reg>
           <orig>въ</orig>
         </choice>
@@ -4137,7 +4128,7 @@
           <reg>в</reg>
           <orig>въ</orig>
         </choice> Угрюмую сходить.</p>
-      <p rend="left" id="7ad27243-3014-4957-a7da-44ef496e6b4d">И <choice>
+      <p rend="left" id="60887960-7fda-478c-8731-221b07115ed8">И <choice>
           <reg>Митрий</reg>
           <orig>Митрiй</orig>
         </choice>
@@ -4183,7 +4174,7 @@
           <reg>пошел</reg>
           <orig>пошелъ</orig>
         </choice>.</p>
-      <p rend="left" id="073533d7-bda0-46d1-a5a8-5ba381392870">У <choice>
+      <p rend="left" id="b39267e1-5469-4f7e-a84c-3ac8ed5d194c">У <choice>
           <reg>Калушкиных</reg>
           <orig>Калушкиныхъ</orig>
         </choice> молотилка уже давно <choice>
@@ -4278,7 +4269,7 @@
           <reg>в</reg>
           <orig>въ</orig>
         </choice> плетушку картошку.</p>
-      <p rend="left" id="113070a1-9cac-4f1c-881b-7e1b0c59a35a">— A <choice>
+      <p rend="left" id="d5bf2f1a-b9e7-4a13-ab22-59f63d273a3d">— A <choice>
           <reg>дед</reg>
           <orig>дѣдъ</orig>
         </choice>
@@ -4293,7 +4284,7 @@
           <reg>Митрий</reg>
           <orig>Митрiй</orig>
         </choice>.</p>
-      <p rend="left" id="d8dbae18-bf63-4b2d-9cee-a5b4fccd406d">— На <choice>
+      <p rend="left" id="4afa095d-099a-4365-9bb1-75f943aac71c">— На <choice>
           <reg>гумне</reg>
           <orig>гумнѣ</orig>
         </choice>
@@ -4301,7 +4292,7 @@
           <reg>дед</reg>
           <orig>дѣдъ</orig>
         </choice>.</p>
-      <p rend="left" id="4a2c367e-58fe-4686-9efe-3de01bd71486">
+      <p rend="left" id="633eb9a0-8ac5-419b-bfeb-395e3fc7e5a2">
         <choice>
           <reg>Митрий</reg>
           <orig>Митрiй</orig>
@@ -4350,7 +4341,7 @@
           <reg>к</reg>
           <orig>къ</orig>
         </choice> омету подавать солому.</p>
-      <p rend="left" id="4359c5f1-ca68-4b2d-8c97-77fb064d7a2c">
+      <p rend="left" id="813b818d-60f1-4515-a261-cb0d9ca9d175">
         <choice>
           <reg>Митрий</reg>
           <orig>Митрiй</orig>
@@ -4451,7 +4442,7 @@
           <reg>старик</reg>
           <orig>старикъ</orig>
         </choice> Масей.</p>
-      <p rend="left" id="cea8b5ca-8ae2-4a4c-ac48-3a1f17b29493">— Что ж, шабашь, — <choice>
+      <p rend="left" id="3e31fb5d-3777-4f9c-8a8c-2bc201c832e4">— Что ж, шабашь, — <choice>
           <reg>сказал</reg>
           <orig>сказалъ</orig>
         </choice>
@@ -4465,7 +4456,7 @@
           <reg>Обедать</reg>
           <orig>Обѣдать</orig>
         </choice>.</p>
-      <p rend="left" id="82cabc37-5af7-440c-9f5d-609072045b25">Еще <choice>
+      <p rend="left" id="7dc4ad67-e378-4003-b370-cd6ab353c639">Еще <choice>
           <reg>живей</reg>
           <orig>живѣй</orig>
         </choice> пошла работа. <choice>
@@ -4488,7 +4479,7 @@
           <reg>в</reg>
           <orig>въ</orig>
         </choice> избу.</p>
-      <p rend="left" id="adc67e73-f3de-48a7-ac65-23869922ad50">Изба топилась тоже по-черному, но была <choice>
+      <p rend="left" id="e936e48a-8a4e-408e-b117-4605bcdddbca">Изба топилась тоже по-черному, но была <choice>
           <reg>уж</reg>
           <orig>ужъ</orig>
         </choice> прибрана, и <choice>
@@ -4536,7 +4527,7 @@
           <reg>квасом</reg>
           <orig>квасомъ</orig>
         </choice>.</p>
-      <p rend="left" id="d11504f3-40fa-4b8e-9ca4-bbfe96f258e2">Во время <choice>
+      <p rend="left" id="c50a22c1-4618-4c80-9fc6-42b87dccfd3b">Во время <choice>
           <reg>обеда</reg>
           <orig>обѣда</orig>
         </choice>
@@ -4573,14 +4564,14 @@
           <reg>костылем</reg>
           <orig>костылемъ</orig>
         </choice>.</p>
-      <p rend="left" id="ea99fa84-8ddd-43a2-9807-7933ef9aba9f">— <choice>
+      <p rend="left" id="105601b5-20e1-48ed-8609-4f5370e75430">— <choice>
           <reg>Мир</reg>
           <orig>Миръ</orig>
         </choice> дому сему. <choice>
           <reg>Хлеб</reg>
           <orig>Хлѣбъ</orig>
         </choice> да соль. Подайте Христа ради.</p>
-      <p rend="left" id="884f5d0c-ca58-471d-8007-9b3a294219a2">— <choice>
+      <p rend="left" id="4b76fb24-95fa-4ed4-8cf8-3022b299bcb7">— <choice>
           <reg>Бог</reg>
           <orig>Богъ</orig>
         </choice>
@@ -4591,7 +4582,7 @@
           <reg>невестка</reg>
           <orig>невѣстка</orig>
         </choice> старикова, — не взыщи.</p>
-      <p rend="left" id="ee07d981-7c96-4b33-81a8-6f626a4b7ba4">
+      <p rend="left" id="00b3ef99-642a-47db-9295-aed14408a813">
         <choice>
           <reg>Старик</reg>
           <orig>Старикъ</orig>
@@ -4607,15 +4598,15 @@
           <reg>чулан</reg>
           <orig>чуланъ</orig>
         </choice>.</p>
-      <p rend="left" id="857f6eae-cd86-47ca-bcea-a320dfa98af5">— <choice>
+      <p rend="left" id="6fd8664b-f27b-4523-b8cf-26699df62930">— <choice>
           <reg>Отрежь</reg>
           <orig>Отрѣжь</orig>
         </choice>, Марфа. Нехорошо.</p>
-      <p rend="left" id="e3bb6c81-2d3f-40e5-86bb-690b2de10825">— Я только гадаю, <choice>
+      <p rend="left" id="2b6edfff-0911-4872-a65b-ddb2d53dad7a">— Я только гадаю, <choice>
           <reg>как</reg>
           <orig>какъ</orig>
         </choice> бы хватило.</p>
-      <p rend="left" id="f135997f-d2ff-4b16-9d2b-674d5c0d9459">— <choice>
+      <p rend="left" id="e488d64c-1462-43d5-b261-69474d3a7175">— <choice>
           <reg>Ох</reg>
           <orig>Охъ</orig>
         </choice>, нехорошо, Марфа. <choice>
@@ -4632,7 +4623,7 @@
           <reg>Отрежь</reg>
           <orig>Отрѣжь</orig>
         </choice>.</p>
-      <p rend="left" id="82c499aa-d331-4ccb-b74d-6f94c47b91bf">Марфа послушалась. <choice>
+      <p rend="left" id="d26b185d-5630-4ed9-8a33-07aa92c07602">Марфа послушалась. <choice>
           <reg>Нищий</reg>
           <orig>Нищiй</orig>
         </choice>
@@ -4643,7 +4634,7 @@
           <reg>хозяев</reg>
           <orig>хозяевъ</orig>
         </choice> и пошли отдохнуть.</p>
-      <p rend="left" id="0a411b4f-0372-4aae-88ca-f44ce071a90e">
+      <p rend="left" id="2a8d5df3-03e8-455e-a9b8-6797ebc6d953">
         <choice>
           <reg>Митрий</reg>
           <orig>Митрiй</orig>
@@ -4688,8 +4679,8 @@
           <reg>Так</reg>
           <orig>Такъ</orig>
         </choice> шла работа до вечера.</p>
-      <p rend="center" id="97c5e0b8-ab21-4a4f-b80e-084772be2526">————</p>
-      <p rend="left" id="00f2612d-3614-4bd2-8042-90b50347bf5f">И <choice>
+      <p rend="center" id="b912a4c9-17ae-487e-bf69-58c4d034f8d0">————</p>
+      <p rend="left" id="44b037c0-569f-4078-9d2a-c749d3f55d35">И <choice>
           <reg>вот</reg>
           <orig>вотъ</orig>
         </choice> среди <choice>
@@ -4837,7 +4828,7 @@
           <reg>дети</reg>
           <orig>дѣти</orig>
         </choice>. —</p>
-      <p rend="left" id="f6a63355-e583-49f4-b1e7-c20b3b08043a">
+      <p rend="left" id="02ce015e-f4a1-4bc9-9881-8a987f18bbb7">
         <choice>
           <reg>Вот</reg>
           <orig>Вотъ</orig>
@@ -4977,7 +4968,7 @@
           <reg>Русского</reg>
           <orig>Русскаго</orig>
         </choice> Народа, и.........</p>
-      <p rend="left" id="06ecbd5d-fe31-4ffa-9a35-eaca8af9bd00">
+      <p rend="left" id="3721bd8b-9f6d-47c0-86bd-272bce6b80bb">
         <choice>
           <reg>Вот</reg>
           <orig>Вотъ</orig>
@@ -5035,7 +5026,7 @@
           <reg>роде</reg>
           <orig>родѣ</orig>
         </choice> обстановки, пейзажа.</p>
-      <p rend="left" id="4eb6f0b5-2231-4e57-b71c-9ddafaa3d569">Отчего это?</p>
+      <p rend="left" id="8550ffb7-f8c2-48a3-a5cc-f2e824bb5e3d">Отчего это?</p>
     </div>
   </text>
 </TEI>

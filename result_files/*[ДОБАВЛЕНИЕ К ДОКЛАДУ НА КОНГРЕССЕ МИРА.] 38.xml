@@ -130,7 +130,7 @@
   <text>
     <div type="section" xml:id="h000013039">
       <head rend="center">*[ДОБАВЛЕНИЕ К ДОКЛАДУ НА КОНГРЕССЕ МИРА.]</head>
-      <p rend="left" id="81a476d1-6bed-4842-bd9b-54a68009f05e">Вы желаете, чтобы я <choice>
+      <p rend="left" id="78c20900-c330-4dcc-acc1-b238faa0dcdf">Вы желаете, чтобы я <choice>
           <reg>участвовал</reg>
           <orig>участвовалъ</orig>
         </choice>
@@ -405,7 +405,7 @@
           <reg>членам</reg>
           <orig>членамъ</orig>
         </choice> конгресса.</p>
-      <p rend="left" id="6b34fc20-aa2f-4a37-8c7a-489f51fcb3f3">
+      <p rend="left" id="16931cd1-eca8-420a-b8b2-e420079b3f5e">
         <choice>
           <reg>Вот</reg>
           <orig>Вотъ</orig>
@@ -654,7 +654,7 @@
           <reg>установления</reg>
           <orig>установленiя</orig>
         </choice> мира среди людей, которой заняты члены конгресса.</p>
-      <p rend="left" id="ad50ae8d-4905-401d-ba13-43cdbfe9d24f">
+      <p rend="left" id="414fe222-7b65-4247-9a0d-b42e5428cbc5">
         <choice>
           <reg>Вот</reg>
           <orig>Вотъ</orig>
@@ -754,8 +754,8 @@
           <orig>ближняго</orig>
         </choice>.</p>
       <lb/>
-      <p rend="petit left" id="46ec820e-63cb-410a-9348-d595acaa12cf">20 Іюля. 10 года.</p>
-      <p rend="petit left" id="00b3c03f-4d74-4b49-8ecd-26ec0ec116c4">Ясная Поляна.</p>
+      <p rend="petit left" id="a9a5024d-d138-45bc-b18a-ae8871642962">20 Іюля. 10 года.</p>
+      <p rend="petit left" id="6ca75561-a7aa-4c44-8465-45bb0348be46">Ясная Поляна.</p>
     </div>
   </text>
 </TEI>

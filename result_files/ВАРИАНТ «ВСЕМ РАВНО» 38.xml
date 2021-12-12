@@ -130,7 +130,7 @@
   <text>
     <div type="section" xml:id="h000013009">
       <head rend="center">ВАРИАНТ «ВСЕМ РАВНО».</head>
-      <p rend="left" id="3e0a0007-5892-4a64-b425-7d9f34bcad4a">
+      <p rend="left" id="cce5bc03-c141-4aca-b477-eb8a59274da7">
         <choice>
           <reg>Ехали</reg>
           <orig>Ѣхали</orig>
@@ -165,13 +165,13 @@
           <reg>детей</reg>
           <orig>дѣтей</orig>
         </choice>.</p>
-      <p rend="left" id="3e9020d8-f493-4ac5-b67d-cfcf6336d71a">
+      <p rend="left" id="b2abbbaa-5794-437e-a926-7b84ecaa7032">
         <hi rend="italic">Н.</hi>
         <choice>
           <reg>дает</reg>
           <orig>даетъ</orig>
         </choice> чай молоко</p>
-      <p rend="left" id="397a244d-ac8b-4b7e-8e29-fc8887d3cfa4">
+      <p rend="left" id="11360efc-3ab2-491a-8630-f3258e4d59e2">
         <choice>
           <reg>Дети</reg>
           <orig>Дѣти</orig>
@@ -180,9 +180,9 @@
           <orig>ѣдятъ</orig>
         </choice>
       </p>
-      <p rend="left" id="f19a4727-79c4-4569-ad1e-b31b29f11b7a">
+      <p rend="left" id="b46d0701-953c-4795-8dce-0949d088dfad">
         <hi rend="italic">Т.</hi> Не могу. <hi rend="italic">М.</hi> И я тоже.</p>
-      <p rend="left" id="283e0525-b9da-492e-8b0b-7d6da1e45116">Таня <choice>
+      <p rend="left" id="c6ce1847-fb8e-4f3d-aae1-472c23af7edc">Таня <choice>
           <reg>отдает</reg>
           <orig>отдаетъ</orig>
         </choice> свое и Мика тоже. <choice>
@@ -192,13 +192,13 @@
           <reg>хотел</reg>
           <orig>хотѣлъ</orig>
         </choice> сказать.</p>
-      <p rend="left" id="10c22b1a-f036-4367-8713-1941aae2e9bc">
+      <p rend="left" id="b81061ba-731b-486e-967b-c3daf1a8cf9f">
         <hi rend="italic">Н.</hi>
         <choice>
           <reg>Всех</reg>
           <orig>Всѣхъ</orig>
         </choice> не накормишь.</p>
-      <p rend="left" id="aa4cac10-6dd4-4e23-86d9-043ca88433c9">
+      <p rend="left" id="dd0f0af9-e316-4dca-a7e7-9d57dfcf39b0">
         <hi rend="italic">М.</hi> A <choice>
           <reg>разве</reg>
           <orig>развѣ</orig>
@@ -206,17 +206,13 @@
         <choice>
           <reg>их</reg>
           <orig>ихъ</orig>
-        </choice>
-        <choice original_editorial_correction="мн[ого]">
-          <sic>мн</sic>
-          <corr>много</corr>
-        </choice>?</p>
-      <p rend="left" id="7b3368ce-1f41-4f65-8924-5e7f0c90f4dc">
+        </choice> мн[ого]?</p>
+      <p rend="left" id="a2bd274d-a17a-4b85-ab69-1e8a15cd8c97">
         <hi rend="italic">Хоз.</hi> Да <choice>
           <reg>все</reg>
           <orig>всѣ</orig>
         </choice> почитай.</p>
-      <p rend="left" id="87707070-f1d4-4a3a-9a66-553e749a9f4f">
+      <p rend="left" id="55a6970d-51b5-4001-bb82-2302087355b6">
         <hi rend="italic">Т.</hi> Не <choice>
           <reg>может</reg>
           <orig>можетъ</orig>
@@ -227,7 +223,7 @@
           <reg>посмотреть</reg>
           <orig>посмотрѣть</orig>
         </choice>.</p>
-      <p rend="left" id="246747f9-5d0c-460a-bf39-c24e81af7d2c">
+      <p rend="left" id="c9634556-94db-4a79-bc9e-629682f0ac48">
         <hi rend="italic">X.</hi> Да что, смотри. <choice>
           <reg>Вот</reg>
           <orig>Вотъ</orig>
@@ -235,18 +231,15 @@
           <reg>Входит</reg>
           <orig>Входитъ</orig>
         </choice> баба, за ней ребята].</p>
-      <p rend="left" id="90136cd0-3011-4553-84bc-26ce1dee5791">
+      <p rend="left" id="e1bd19ee-4762-4962-b2f8-0c03ca27d480">
         <hi rend="italic">М.</hi> и <hi rend="italic">Т.</hi> несмотря на протесты няни, <choice>
           <reg>отдают</reg>
           <orig>отдаютъ</orig>
         </choice> и молоко, и <choice>
           <reg>хлеб</reg>
           <orig>хлѣбъ</orig>
-        </choice>, и <choice original_editorial_correction="конфе[ты]">
-          <sic>конфе</sic>
-          <corr>конфеты</corr>
-        </choice>.</p>
-      <p rend="left" id="440a4b7c-5e1f-4af5-9f6e-69b7d2da9b65">
+        </choice>, и конфе[ты].</p>
+      <p rend="left" id="546fbf54-3c95-462e-a7f7-5f34cde961dc">
         <hi rend="italic">Т.</hi> Неужели <choice>
           <reg>все</reg>
           <orig>всѣ</orig>
@@ -255,7 +248,7 @@
           <reg>так</reg>
           <orig>такъ</orig>
         </choice>?</p>
-      <p rend="left" id="b741b526-c8fc-4444-9dbd-09007062a2f3">
+      <p rend="left" id="42ceea43-13ad-4c3c-bf42-c458317cf3af">
         <hi rend="italic">Х.</hi> А то <choice>
           <reg>как</reg>
           <orig>какъ</orig>
@@ -263,7 +256,7 @@
           <reg>Где</reg>
           <orig>Гдѣ</orig>
         </choice> возьмешь?</p>
-      <p rend="left" id="25fba649-d13c-463a-9251-43db1115df8d">
+      <p rend="left" id="b378d4e8-04d5-44eb-a502-0ff8efffdaa7">
         <hi rend="italic">М.</hi> (<choice>
           <reg>К</reg>
           <orig>Къ</orig>
@@ -272,7 +265,7 @@
           <reg>няне</reg>
           <orig>нянѣ</orig>
         </choice>). Няня, это правда?</p>
-      <p rend="left" id="14a0a40a-bb96-4df5-9fd8-14741f7f1139">
+      <p rend="left" id="652df8eb-ee9f-48c8-a75d-60524ad56d5f">
         <hi rend="italic">Н. </hi>Не наше это <choice>
           <reg>с</reg>
           <orig>съ</orig>
@@ -280,7 +273,7 @@
           <reg>дело</reg>
           <orig>дѣло</orig>
         </choice>, а вы кушайте.</p>
-      <p rend="left" id="65cb81c4-a27c-4351-8686-654f90a66f01">
+      <p rend="left" id="82f711b6-5bee-4c2d-b55e-a75379bca548">
         <hi rend="italic">Т.</hi> (энергично). Не буду, не буду, и дома не буду, пока у <choice>
           <reg>всех</reg>
           <orig>всѣхъ</orig>
@@ -289,17 +282,14 @@
           <reg>будет</reg>
           <orig>будетъ</orig>
         </choice>.</p>
-      <p rend="left" id="44e12900-1a37-48ec-b7d0-9405ee00ef51">
+      <p rend="left" id="2d302e8b-3778-4239-b87f-675efcee1964">
         <hi rend="italic">М.</hi> И я тоже.</p>
-      <p rend="left" id="43a61a48-77b3-4c91-9ffd-8a3dc128be30">
+      <p rend="left" id="027b4abc-040a-4b71-8f04-b106f8910f89">
         <hi rend="italic">Н.</hi>
         <choice>
           <reg>Всех</reg>
           <orig>Всѣхъ</orig>
-        </choice> нельзя <choice original_editorial_correction="уравн[ять]">
-          <sic>уравн</sic>
-          <corr>уравнять</corr>
-        </choice>. <choice>
+        </choice> нельзя уравн[ять]. <choice>
           <reg>Вам</reg>
           <orig>Вамъ</orig>
         </choice>
@@ -311,7 +301,7 @@
           <reg>дал</reg>
           <orig>далъ</orig>
         </choice>.</p>
-      <p rend="left" id="f42e4946-fc88-4a8c-a6bb-c6c736ce96ab">
+      <p rend="left" id="1f648929-90af-4093-ad34-3aab71cdf3d5">
         <hi rend="italic">Т.</hi> Отчего же <choice>
           <reg>Он</reg>
           <orig>Онъ</orig>
@@ -323,7 +313,7 @@
           <reg>им</reg>
           <orig>имъ</orig>
         </choice>?</p>
-      <p rend="left" id="ce5308bf-c12f-40d6-b1ed-f63bd35984c5">
+      <p rend="left" id="263d1b9e-87ff-44b8-8642-b67626ffafcc">
         <hi rend="italic">Н.</hi> Это не <choice>
           <reg>нам</reg>
           <orig>намъ</orig>
@@ -331,7 +321,7 @@
           <reg>так</reg>
           <orig>такъ</orig>
         </choice> Богу угодно.</p>
-      <p rend="left" id="a6a26464-7cc5-4e51-b469-b3d004d56d4d">
+      <p rend="left" id="8ff9e5ae-8c20-4665-b197-80ed3dfa3d16">
         <hi rend="italic">Т.</hi> Богу? <choice>
           <reg>Зачем</reg>
           <orig>Зачѣмъ</orig>
@@ -359,9 +349,9 @@
             </choice>
           </corr>
         </choice>. Но буду ему за это никогда молиться.</p>
-      <p rend="left" id="c3dc339d-09cc-40dd-be4a-30673cdb5263">
+      <p rend="left" id="9d07500e-db5e-45ad-9f31-600eac6c055a">
         <hi rend="italic">М.</hi> И я тоже.</p>
-      <p rend="left" id="633dd385-a694-4b5c-8d5e-d9f8f9b09537">
+      <p rend="left" id="efe83cc9-f428-41d4-b737-f38bfa76495a">
         <hi rend="italic">Н.</hi> (<choice>
           <reg>Качает</reg>
           <orig>Качаетъ</orig>
@@ -375,14 +365,14 @@
           <reg>папаше</reg>
           <orig>папашѣ</orig>
         </choice> скажу.</p>
-      <p rend="left" id="d15d2150-0085-4efc-8bb4-38d19e339f73">
+      <p rend="left" id="55b1d918-9b6e-4070-8bb6-220a3843591a">
         <hi rend="italic">М.</hi> И скажи. Мы <choice>
           <reg>решили</reg>
           <orig>рѣшили</orig>
         </choice> и все! Не надо.</p>
-      <p rend="left" id="57a37ec2-abb5-451a-901b-9a7aeea9e513">
+      <p rend="left" id="76286218-8a7e-47dc-9eb1-94f4acb89d9a">
         <hi rend="italic">Н.</hi> Чего не надо?</p>
-      <p rend="left" id="78388174-7cb5-42eb-a073-6f146432c8ad">
+      <p rend="left" id="26b0f15d-3aea-4f86-bba9-a3590827556d">
         <hi rend="italic">М.</hi> А того чтобы у <choice>
           <reg>одних</reg>
           <orig>однихъ</orig>
@@ -394,7 +384,7 @@
           <reg>других</reg>
           <orig>другихъ</orig>
         </choice> ничего.</p>
-      <p rend="left" id="24e18f55-8140-4cf4-b4da-7b7591cc76fc">
+      <p rend="left" id="253245da-3cb3-4e0d-813f-d0e38d4b51ac">
         <hi rend="italic">Т. И </hi>я говорю: коли <choice original_editorial_correction="Б[огъ]">
           <sic>Б</sic>
           <corr>
@@ -417,10 +407,7 @@
         </choice> злой <choice>
           <reg>он</reg>
           <orig>онъ</orig>
-        </choice>. Не буду <choice original_editorial_correction="Е[му]">
-          <sic>Е</sic>
-          <corr>Ему</corr>
-        </choice> молиться. Злой, злой, <choice>
+        </choice>. Не буду Е[му] молиться. Злой, злой, <choice>
           <reg>нехороший</reg>
           <orig>нехорошiй</orig>
         </choice>
@@ -428,7 +415,7 @@
           <reg>Бог</reg>
           <orig>Богъ</orig>
         </choice>.</p>
-      <p rend="left" id="9531066e-ee05-4e45-9e01-a43e41aa5b5a">
+      <p rend="left" id="85f835e1-c596-46d8-82d8-ee5e5a1cd5c0">
         <pb n="244"/>
         <hi rend="italic">М.</hi> А <choice>
           <reg>может</reg>
@@ -438,19 +425,14 @@
           <reg>он</reg>
           <orig>онъ</orig>
         </choice> нарочно.</p>
-      <p rend="left" id="3e84da91-07b8-4a4f-9b2c-b405f6867bfd">
+      <p rend="left" id="306fc190-d694-460e-b5c7-006a81ff0bb3">
         <hi rend="italic">Т.</hi>
         <choice>
           <reg>Нет</reg>
           <orig>Нѣтъ</orig>
         </choice>, злой.</p>
-      <p rend="left" id="15d131bc-da87-48c2-86c3-c9c63aadfd88">
-        <hi rend="italic">
-          <choice original_editorial_correction="Ст[арик]">
-            <sic>Ст</sic>
-            <corr>Старик</corr>
-          </choice>
-          <choice>
+      <p rend="left" id="80b5298d-ced6-447d-9a57-6a614509554c">
+        <hi rend="italic">Ст[арик] <choice>
             <reg>с</reg>
             <orig>съ</orig>
           </choice> печки..</hi>
@@ -461,7 +443,7 @@
           <reg>Хорошие</reg>
           <orig>Хорошiе</orig>
         </choice> вы ребятки, да неладно говорите.</p>
-      <p rend="left" id="79b34976-829b-4183-817c-0cf91e1d1482">
+      <p rend="left" id="20c7e685-422c-483c-951e-0e076f584ad0">
         <choice>
           <reg>Дети</reg>
           <orig>Дѣти</orig>
@@ -487,7 +469,7 @@
           </corr>
         </choice>
       </p>
-      <p rend="left" id="ed6ce1e6-21b7-468c-910e-8ecc9fd41c76">
+      <p rend="left" id="6167228f-8894-48b0-955a-600beb60ae3a">
         <hi rend="italic">
           <choice original_editorial_correction="[Старикъ]">
             <sic/>
@@ -558,7 +540,7 @@
           <reg>всех</reg>
           <orig>всѣхъ</orig>
         </choice> бы было.</p>
-      <p rend="left" id="72fb88aa-d4cd-410f-9d74-22c2b2610828">
+      <p rend="left" id="303d3cef-85a6-4bc5-a2ac-c68966641e8b">
         <hi rend="italic">Т.</hi> А <choice>
           <reg>как</reg>
           <orig>какъ</orig>
@@ -570,7 +552,7 @@
                 45
               </ref>
             </head>
-            <p rend="left" id="089202dc-f16e-4b1a-b75d-cb03dcbba40c">
+            <p rend="left" id="08de6888-92e8-42ee-a920-0ead84285a0c">
               <hi rend="italic">Зачеркнуто</hi>: жить
             </p>
           </div>
@@ -585,7 +567,7 @@
           <reg>всех</reg>
           <orig>всѣхъ</orig>
         </choice> было?</p>
-      <p rend="left" id="aa04bfd3-24b2-48af-bdbf-78ba4ebc719b">
+      <p rend="left" id="123d3b07-8d7a-4eea-b54b-aa484987e75a">
         <hi rend="italic">М.</hi> Только скажи я <choice>
           <reg>так</reg>
           <orig>такъ</orig>
@@ -596,7 +578,7 @@
           <sic>вырас</sic>
           <corr>вырасту</corr>
         </choice> большой.</p>
-      <p rend="left" id="fcddd0b7-0919-4405-a071-7c7d66e4df0c">
+      <p rend="left" id="f98d2ee0-90e9-46d1-bc38-897d02f9a620">
         <hi rend="italic">Ст.</hi> А <choice>
           <reg>так</reg>
           <orig>такъ</orig>
@@ -618,7 +600,7 @@
           <reg>делиться</reg>
           <orig>дѣлиться</orig>
         </choice>.</p>
-      <p rend="left" id="776dd26e-f06a-4c6a-a693-1eecee4113c1">
+      <p rend="left" id="14327895-3161-4d41-a670-4cd3d64b46c5">
         <hi rend="italic">Т.</hi>
         <choice>
           <reg>Сделаю</reg>
@@ -631,7 +613,7 @@
           <reg>так</reg>
           <orig>такъ</orig>
         </choice>.</p>
-      <p rend="left" id="bab2fd2a-0cfe-44b8-bb3a-391a47397b42">
+      <p rend="left" id="6d3a3af0-7c1f-4994-a088-6995268a1aaf">
         <hi rend="italic">М.</hi>
         <note n="n46">
           <div type="section" xml:id="n46">
@@ -640,7 +622,7 @@
                 46
               </ref>
             </head>
-            <p rend="left" id="5e57eb5f-583e-4944-9baf-82d3ee443095">
+            <p rend="left" id="a85713d0-71ac-42af-b7be-b0b0235ce46f">
               <hi rend="italic">Зач.</hi>: И я <choice original_editorial_correction="то[же]">
                 <sic>то</sic>
                 <corr>тоже</corr>
@@ -656,7 +638,7 @@
                 47
               </ref>
             </head>
-            <p rend="left" id="c0e73485-785b-40c5-a205-6662b01115c2">
+            <p rend="left" id="280005d3-0b52-4bea-a8c0-8b875cef4aca">
               <hi rend="italic">Зач.</hi>: <choice>
                 <reg>так</reg>
                 <orig>такъ</orig>
@@ -681,7 +663,7 @@
           <sic>б</sic>
           <corr>было</corr>
         </choice>.</p>
-      <p rend="left" id="9a06a03d-fc12-4b75-9085-e25cf919baff">
+      <p rend="left" id="812b1663-7fc1-4c81-a77f-35eacf54b4be">
         <hi rend="italic">Н.</hi> Ну <choice>
           <reg>будет</reg>
           <orig>будетъ</orig>
@@ -689,7 +671,7 @@
           <reg>последнее</reg>
           <orig>послѣднее</orig>
         </choice> молоко.</p>
-      <p rend="left" id="71695f6d-8f56-45d4-b56f-ca0fa30ccc7e">
+      <p rend="left" id="8f3fae95-812c-4202-b057-88bf2234240b">
         <hi rend="italic">М.</hi> и <hi rend="italic">Т.</hi> Не <choice>
           <reg>будем</reg>
           <orig>будемъ</orig>
@@ -700,7 +682,7 @@
           <reg>будем</reg>
           <orig>будемъ</orig>
         </choice>.</p>
-      <p rend="left" id="6d1dd1c5-d85e-43ce-9916-a1d3a1388396">
+      <p rend="left" id="c0ddecca-b58f-4a10-bac3-4823062178be">
         <hi rend="italic">Т.</hi> А <choice>
           <reg>вырастим</reg>
           <orig>вырастимъ</orig>
@@ -716,12 +698,12 @@
           <reg>будем</reg>
           <orig>будемъ</orig>
         </choice>.</p>
-      <p rend="left" id="89e377c0-e84d-4a44-bd9d-dad3629f0e62">
+      <p rend="left" id="1b3bac80-4ff7-4f1b-ae08-d7abb18a777f">
         <hi rend="italic">М.</hi> И я. <choice>
           <reg>Непременно</reg>
           <orig>Непремѣнно</orig>
         </choice>.</p>
-      <p rend="left" id="746dec01-9654-4bf5-963c-2159cc59c220">
+      <p rend="left" id="9d9971e5-13ce-401f-936c-ad08d3e72987">
         <hi rend="italic">Ст.</hi> Ну <choice>
           <reg>детки</reg>
           <orig>дѣтки</orig>
@@ -739,7 +721,7 @@
           <reg>Бог</reg>
           <orig>Богъ</orig>
         </choice>.</p>
-      <p rend="left" id="0a7590d2-3905-4ac7-a4e3-2d8c4b73d2d3">
+      <p rend="left" id="15630a73-2f0f-4c0f-91b1-43627dec21dc">
         <hi rend="italic">Т.</hi> И буду, и буду, и буду. Что <choice>
           <reg>хотят</reg>
           <orig>хотятъ</orig>
@@ -748,7 +730,7 @@
           <reg>делают</reg>
           <orig>дѣлаютъ</orig>
         </choice>, а я буду. <hi rend="italic">М.</hi> И я тоже.</p>
-      <p rend="left" id="1f9e5597-bffb-4679-be66-8f8fe3f4b10e">
+      <p rend="left" id="7b5c292e-a3aa-4442-bb05-7771c3074a71">
         <hi rend="italic">Ст.</hi>
         <note n="n48">
           <div type="section" xml:id="n48">
@@ -757,7 +739,7 @@
                 48
               </ref>
             </head>
-            <p rend="left" id="a3d2752b-8afc-4d59-ab14-89be2efe5fd7">
+            <p rend="left" id="d560c094-7093-4fcc-a449-15ca0db50bb2">
               <hi rend="italic">Зач.</hi>: Ну
             </p>
           </div>
@@ -769,12 +751,12 @@
           <sic>забыва</sic>
           <corr>забывайте</corr>
         </choice>.</p>
-      <p rend="left" id="acb06565-eb43-44a4-aaea-a95a6d98e77c">
+      <p rend="left" id="b6a86be6-5e8d-4cff-987b-0062f63fce83">
         <hi rend="italic">Т.</hi> Не <choice>
           <reg>забудем</reg>
           <orig>забудемъ</orig>
         </choice>.</p>
-      <p rend="left" id="e61d99d9-4b4a-46c8-9713-fe2550c6d816">
+      <p rend="left" id="880bfcc2-caf8-4a35-aef1-ebc17c256aba">
         <hi rend="italic">М.</hi> Ни за что.</p>
     </div>
   </text>

@@ -1,3 +1,5 @@
+import itertools
+from pprint import pprint
 import re
 import uuid
 
@@ -73,6 +75,36 @@ HTML_TO_XML_PATTERNS = [
 ]
 
 
+dates = {
+    'янв': 1,
+    'фев': 2,
+    'мар': 3,
+    'апр': 4,
+    'мая': 5,  # genetiv
+    'июн': 6,
+    'июл': 7,
+    'авг': 8,
+    'сен': 9,
+    'окт': 10,
+    'ноя': 11,
+    'дек': 12,
+}
+
+
+def capitalize_title(title):
+    """Мб не надо, все равно потом названия руками править"""
+    if not title == title.upper():
+        return title
+    roman_pattern = re.compile(r'^([\[(])([XIVLMxivlm]+)([])]?)$')
+    title = title.casefold().capitalize()
+    tokens = re.split(r'(\s)', title)
+    for i, token in enumerate(tokens):
+        mathcobj = roman_pattern.search(token)
+        if mathcobj is not None:
+            tokens[i] = f'{mathcobj.group(1)}{mathcobj.group(2).upper()}{mathcobj.group(3)}'
+    return ''.join(tokens)
+
+
 def div_has_comments_beginning(div):
     for tag in div.iterchildren():
         if tag.tag == f"{{{XHTML_NAMESPACE}}}h1":
@@ -99,13 +131,16 @@ def get_notes_from_html(divs):
     )
     divs_with_notes = [etree.tostring(
         d, encoding='unicode').strip(' \n') for d in divs_with_notes]
+    divs_with_notes = list(
+        map(lambda x: re.sub('\n', '', x), divs_with_notes)
+    )
     return divs_with_notes
 
 
 def markup_choices_for_prereform_spelling(text):
     split_pattern = re.compile(r'(<choice.*?>.*?</choice>)')
     tokens = split_pattern.split(text)
-    print(tokens)
+    # print(tokens)
     for i, token in enumerate(tokens):
         if split_pattern.search(token) is not None:
             corr_pattern = r'<choice(.*?)<corr>(.*?)</corr></choice>'
@@ -126,14 +161,18 @@ def markup_choices_for_prereform_spelling(text):
                 check_brackets=False
             )
             tokens[i] = text_res
-            print(tokens)
+            # print(tokens)
     return ''.join(tokens)
 
 
 def replace_refs_to_notes_with_notes(text, notes):
-    pattern_ref = re.compile(r'<a.*?id="backn(\d+)"\s+type="note">.*?</a>')
+    # pattern_ref = re.compile(r'<a.*?id="backn(\d+)"\s+type="note">.*?</a>')
+    # print(text)
+    pattern_ref = re.compile(r'<a[^>]*?id="backn(\d+)"\s+type="note">.*?</a>')
     pattern_note_contents = re.compile(r'<p(.*?)>(.*?)</p>')
     note_numbers = re.findall(pattern_ref, text)
+    # print(note_numbers)
+    # pprint(notes)
     for note_number in note_numbers:
         for note in notes:
             if f'"#backn{note_number}"' in note:
@@ -156,7 +195,8 @@ def replace_refs_to_notes_with_notes(text, notes):
         </note>
         """
         text = re.sub(
-            f'<a.*?id="backn{note_number}"\s+type="note">.*?</a>', note, text
+            # f'<a.*?id="backn{note_number}"\s+type="note">.*?</a>', note, text
+            f'<a[^>]*?id="backn{note_number}"\s+type="note">.*?</a>', note, text
         )
     return text
 
@@ -183,10 +223,10 @@ def markup_choices_for_editorial_corrections(text):
 
     for i in choice_result:
         if (
-                i[0] or
+                i[0] or  # if inside head
                 illegible_pattern.search(i[2]) is not None or
                 crossed_out_pattern.search(i[2]) is not None
-        ):  # if inside head
+        ):
             continue
         sub_1 = re.sub(r'\[|]', r'', i[2])
         sub_2 = re.sub(r'\[', r'\\[', i[2])
@@ -204,17 +244,40 @@ def markup_choices_for_editorial_corrections(text):
     return text
 
 
-def convert_text_divs_to_xml_text(title, id, text_divs, notes):
+def minimize_text(text):
+    """Delete all '\n'."""
+    return re.sub('\n', '', text)
+
+
+def regex_sub_date(matchobj):
+    """For vol. 43 and 44."""
+    date = matchobj.group(2)
+    day = date.split()[0]
+    month = date.split()[1][:3].casefold()
+    date_tag = f'<date when="-{dates[month]}-{day}"/>'
+    return f'{date_tag}\n{matchobj.group(0)}'
+
+
+def insert_date_tag_for_43_and_44_vol(text):
+    date_pattern = re.compile(r'(<h3 class="center">)(\d{1,2} \w+\.)(</h3>)')
+    return date_pattern.sub(regex_sub_date, text)
+
+
+def convert_text_divs_to_xml_text(title, id, text_divs, notes, extra_funcs):
     divs = [etree.tostring(
         t,
         pretty_print=False,
         encoding='unicode'
     ) for t in text_divs]
     text = ''.join(divs)
+    text = minimize_text(text)
+    if extra_funcs is not None:
+        for func in extra_funcs:
+            text = func(text)
     text = replace_refs_to_notes_with_notes(text, notes)
     text = replace_html_markup_with_xml(text)
     text = markup_choices_for_editorial_corrections(text)
-    text = markup_choices_for_prereform_spelling(text)
+    text = markup_choices_for_prereform_spelling(text)  # slow, turn off while debugging
     return text
 
 
@@ -236,3 +299,22 @@ def indent_xml_string(xml_bytes_string):
     root = etree.fromstring(xml_bytes_string)
     etree.indent(root)
     return etree.tostring(root, encoding='unicode')
+
+
+def split_divs_into_blocks_based_on_block_edges(divs, edges_div_ids):
+    divs_blocks = []
+    for i, ids in enumerate(edges_div_ids):
+        start_id, end_id = ids
+        block = list(itertools.dropwhile(
+            lambda x: 'id' not in x.attrib or x.attrib['id'] != start_id,
+            divs
+        ))
+        block = list(itertools.takewhile(
+            # lambda x: x.attrib['id'] != end_id if 'id' in x.attrib else True,
+            lambda x: 'id' not in x.attrib or x.attrib['id'] != end_id,
+            block
+        ))
+        # print(end_id)
+        # pprint([d.attrib['id'] for d in block if 'id' in d.attrib])
+        divs_blocks.append((block, len(start_id)))
+    return divs_blocks
