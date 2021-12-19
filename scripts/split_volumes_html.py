@@ -10,13 +10,11 @@ import split_volumes_utils as sp_ut
 
 
 def split_fiction_0(filename):
-    """Works for 38 vol."""
+    """Old version, works for 38 vol. Parses all divs with id length = 10."""
     html = ut.read_xml(
         filename, 'rb'
     )
     root = etree.fromstring(html)
-    # tree = etree.ElementTree(root)
-    # [print(e) for e in root.iter()]
     volume_number = filename.strip('.html').split()[-1]
     tei_data = {
         'volume': volume_number,
@@ -70,6 +68,25 @@ def split_fiction_0(filename):
 
 
 def split_fiction(filename, item_id_length, edges_div_ids=None, extra_funcs=None):
+    """
+    Parse html divs, split and convert them into tei xml.
+
+    1) Take divs that are inside ranges specified in edges_div_ids.
+    Every range outputs a divs block with divs of the same id length
+    as the start value's (and their children).
+    If edges_div_ids is None, make one block with all divs
+    with specified item_id_length.
+    (Otherwise item_id_length is not needed.)
+    2) Iterate over blocks and split divs into separate files.
+    Every file starts with a div of given id length and continues
+    with all its children divs. (Children's ids will be longer.)
+
+    :param filename: path to html file
+    :param item_id_length: length of div 'id' attribute, e.g. 'h000013026'
+    :param edges_div_ids: list of tuples which contain start and end div ids;
+    if end value is None, take all after start.
+    :param extra_funcs: to perform on and alter text string
+    """
     html = ut.read_xml(
         filename, 'rb'
     )
@@ -93,12 +110,12 @@ def split_fiction(filename, item_id_length, edges_div_ids=None, extra_funcs=None
     # pprint([etree.tostring(d, encoding='unicode') for divs in divs_blocks for d in divs[0]])
     # pprint([d.attrib['id'] for divs in divs_blocks for d in divs[0] if 'id' in d.attrib])
 
-    notes = sp_ut.get_notes_from_html(all_divs)
+    notes = sp_ut.get_notes_from_html(all_divs)  # все сноски
     for divs, item_id_length in divs_blocks:
         divs_with_titles = filter(
             lambda x: len(x.attrib['id']) == item_id_length if 'id' in x.attrib else False,
             divs
-        )  # like for "h000013026" item_id_length is 10
+        )  # e.g. for "h000013026" item_id_length is 10
         texts = []
         div_with_comments_id = sp_ut.get_div_id_where_comments_start(divs)
         for div in divs_with_titles:
@@ -108,16 +125,14 @@ def split_fiction(filename, item_id_length, edges_div_ids=None, extra_funcs=None
                     div_id.startswith(div_with_comments_id)
             ):
                 break
-            print(div.attrib['id'])
+            # print(div.attrib['id'])
             title = ''.join([t for t in div[0].itertext()]).rstrip('.')
-            # title = sp_ut.capitalize_title(title)
+            title = sp_ut.prepare_title(title)
+            # print(f"'{title}': '{sp_ut.prepare_title(title)}',")
 
-            print(title)
             text_divs = [d for d in divs if 'id' in d.attrib and d.attrib['id'].startswith(div_id)]
             texts.append((title, div_id, text_divs))  #
-            # print(title, id)
-        # pprint(texts)
-        # notes = sp_ut.get_notes_from_html(all_divs)
+
         for i in tqdm(range(len(texts))):
             tei_data.update(
                 {
@@ -128,20 +143,27 @@ def split_fiction(filename, item_id_length, edges_div_ids=None, extra_funcs=None
                 }
             )
             # print('text:', texts[i][0])
+
             to_file = sp_ut.fill_tei_template(tei_data, 'tei_with_short_header.xml')
-            with open(f'parse_volume/result/{tei_data["title"]} {tei_data["volume"]}.xml', 'w') as file:
+            # with open(f'parse_volume/result/{tei_data["title"]} {tei_data["volume"]}.xml', 'w') as file:
+            with open(f'parse_volume/result/{tei_data["volume"]} {tei_data["title"]}.xml', 'w') as file:
                 file.write(to_file)
-            xml = ut.read_xml(
-                f'parse_volume/result/{tei_data["title"]} {tei_data["volume"]}.xml',
-                'rb'
-            )
             # print(tei_data["title"])
 
+            # Открываю и переписываю xml заново, чтобы:
+            # 1) базово провалидировать: невалидный вызовет ошибку,
+            # 2) сделать indent
+            xml = ut.read_xml(
+                # f'parse_volume/result/{tei_data["title"]} {tei_data["volume"]}.xml',
+                f'parse_volume/result/{tei_data["volume"]} {tei_data["title"]}.xml',
+                'rb'
+            )
             to_file = sp_ut.indent_xml_string(xml)
-            with open(f'parse_volume/result/{tei_data["title"]} {tei_data["volume"]}.xml', 'w') as file:
+            # with open(f'parse_volume/result/{tei_data["title"]} {tei_data["volume"]}.xml', 'w') as file:
+            with open(f'parse_volume/result/{tei_data["volume"]} {tei_data["title"]}.xml', 'w') as file:
                 file.write(to_file)
 
-            tei_data = {'volume': volume_number}
+            tei_data = {'volume': volume_number}  # обнуление данных
 
 
 def search_in_xmls():
@@ -182,7 +204,6 @@ def search_in_xmls():
                 # print(i.attrib)
                 if 'rend' in i.attrib:
                     rends.append(i)
-
 
         except Exception as e:
             # print(filename, e)
