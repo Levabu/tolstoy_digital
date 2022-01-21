@@ -67,7 +67,8 @@ def split_fiction_0(filename):
         # print(etree.tostring(i, pretty_print=True, encoding='unicode'))
 
 
-def split_fiction(filename, item_id_length, edges_div_ids=None, extra_funcs=None):
+def split_fiction(filename, item_id_length, edges_div_ids=None, extra_funcs=None,
+                  only_divs_with_id=True, split_on_id_length=True):
     """
     Parse html divs, split and convert them into tei xml.
 
@@ -111,11 +112,15 @@ def split_fiction(filename, item_id_length, edges_div_ids=None, extra_funcs=None
     # pprint([d.attrib['id'] for divs in divs_blocks for d in divs[0] if 'id' in d.attrib])
 
     notes = sp_ut.get_notes_from_html(all_divs)  # все сноски
+    # pprint(divs_blocks)
     for divs, item_id_length in divs_blocks:
-        divs_with_titles = filter(
+        divs_with_titles = list(filter(
             lambda x: len(x.attrib['id']) == item_id_length if 'id' in x.attrib else False,
             divs
-        )  # e.g. for "h000013026" item_id_length is 10
+        ))  # e.g. for "h000013026" item_id_length is 10
+        if not split_on_id_length:
+            divs_with_titles = [divs_with_titles[0]]
+
         texts = []
         div_with_comments_id = sp_ut.get_div_id_where_comments_start(divs)
         for div in divs_with_titles:
@@ -126,11 +131,18 @@ def split_fiction(filename, item_id_length, edges_div_ids=None, extra_funcs=None
             ):
                 break
             # print(div.attrib['id'])
-            title = ''.join([t for t in div[0].itertext()]).rstrip('.')
-            title = sp_ut.prepare_title(title)
+            try:
+                title = ''.join([t for t in div[0].itertext()]).rstrip('.')
+                title = sp_ut.prepare_title(title)
+            except IndexError:
+                title = 'no_title'
             # print(f"'{title}': '{sp_ut.prepare_title(title)}',")
 
-            text_divs = [d for d in divs if 'id' in d.attrib and d.attrib['id'].startswith(div_id)]
+            if only_divs_with_id:
+                text_divs = [d for d in divs if 'id' in d.attrib and d.attrib['id'].startswith(div_id)]
+            else:
+                text_divs = sp_ut.leave_only_parent_divs(divs)
+            # breakpoint()
             texts.append((title, div_id, text_divs))  #
 
         for i in tqdm(range(len(texts))):
@@ -217,23 +229,66 @@ if __name__ == '__main__':
     ut.change_to_project_directory()
     # search_in_xmls()
     volume_file_38 = 'parse_volume/htmls/Полное собрание сочинений. Том 38.html'  # 10
-    # volume_file = 'parse_volume/htmls/Полное собрание сочинений. Том 42.html'
+    volume_file_41 = 'parse_volume/htmls/Полное собрание сочинений. Том 41.html'
+    volume_file_42 = 'parse_volume/htmls/Полное собрание сочинений. Том 42.html'
     volume_file_43 = 'parse_volume/htmls/Полное собрание сочинений. Том 43.html'
     volume_file_44 = 'parse_volume/htmls/Полное собрание сочинений. Том 44.html'
     volume_file_45 = 'parse_volume/htmls/Полное собрание сочинений. Том 45.html'
 
+
+
     # Если есть третий аргумент, то второй не важен
-    split_fiction(volume_file_38, 10, [('h000011001', None)])
+    # split_fiction(volume_file_38, 10, [('h000011001', None)])
+    # split_fiction(
+    #     volume_file_43,
+    #     7,
+    #     [('h000010', 'h000011')],
+    #     extra_funcs=[sp_ut.insert_date_tag_for_43_and_44_vol]
+    # )
+    # split_fiction(
+    #     volume_file_44,
+    #     7,
+    #     [('h000009', None)],
+    #     extra_funcs=[sp_ut.insert_date_tag_for_43_and_44_vol]
+    # )
+    # split_fiction(volume_file_45, 7, [('h000010', 'h000011'), ('h000011002', None)])
+
+
+    # split_fiction(
+    #     volume_file_41,
+    #     16,
+    #     [
+    #         ('h000010', 'h000011'),
+    #     ],
+    #     extra_funcs=[sp_ut.prepare_v_41_for_xml_conversion],
+    #     only_divs_with_id=False
+    # )
+    #
+    # split_fiction(
+    #     volume_file_42,
+    #     16,
+    #     [
+    #         ('h000006002', 'h000007')
+    #     ],
+    #     extra_funcs=[sp_ut.prepare_v_42_for_xml_conversion],
+    #     only_divs_with_id=False,
+    #     split_on_id_length=False
+    # )
+    # split_fiction(
+    #     volume_file_42,
+    #     7,
+    #     [
+    #         ('h000007', 'h000008')
+    #     ],
+    #     only_divs_with_id=False,
+    # )
+
+    # For testing comparison
+    volume_file_27 = 'parse_volume/htmls/Полное собрание сочинений. Том 27.html'
     split_fiction(
-        volume_file_43,
-        7,
-        [('h000010', 'h000011')],
-        extra_funcs=[sp_ut.insert_date_tag_for_43_and_44_vol]
+        volume_file_27,
+        10,
+        [
+            ('h000012003', 'h000012004')
+        ]
     )
-    split_fiction(
-        volume_file_44,
-        7,
-        [('h000009', None)],
-        extra_funcs=[sp_ut.insert_date_tag_for_43_and_44_vol]
-    )
-    split_fiction(volume_file_45, 7, [('h000010', 'h000011'), ('h000011002', None)])

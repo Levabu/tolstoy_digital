@@ -1,6 +1,8 @@
+from copy import deepcopy
 import itertools
 from pprint import pprint
 import re
+from typing import Iterable
 import uuid
 
 from lxml import etree
@@ -90,9 +92,18 @@ def regex_add_uuid_for_paragraphs(matchobj):
 
 HTML_TO_XML_PATTERNS = [
     (re.compile(r'<br\s*/>'), r'<lb/>'),
+    (  # New, after v. 42
+        re.compile(r'<div(.*?)xmlns="http://www.w3.org/1999/xhtml"(.*?)>'),
+        r'<div\1\2>'
+    ),
     (
-        re.compile(r'<div\s+xmlns="http://www.w3.org/1999/xhtml"\s+class(=".*?")\s+id'),
-        r'<div type\1 xml:id'
+        # re.compile(r'<div\s+xmlns="http://www.w3.org/1999/xhtml"\s+class(=".*?")\s+id'),
+        re.compile(r'<div\s+(xmlns="http://www.w3.org/1999/xhtml"\s+)?class(=".*?")\s+id'),
+        r'<div type\2 xml:id'
+    ),
+    (  # New, after v. 41
+        re.compile(r'<div\s+(xmlns="http://www.w3.org/1999/xhtml"\s+)?class="(stanza.*?|poem.*?|section.*?)"'),
+        r'<div type="\2"'
     ),
     (
         re.compile(r'<div\s+class(.*?)>'),
@@ -141,9 +152,32 @@ HTML_TO_XML_PATTERNS = [
     (
         re.compile(r'<span\s+class(.*?)>(.*?)</span>'),
         r'<hi rend\1>\2</hi>'
-    )
+    ),
+    (  # New, after v. 41
+        re.compile(r'<span\s+class(.*?)>'),
+        r'<hi rend\1>'
+    ),
+    (  # New, after v. 41
+        re.compile(r'</span>'),
+        r'</hi>'
+    ),
+    (
+        re.compile(r'<span'),
+        r'<hi'
+    ),
+    (  # New, after v. 41. Follows page number
+        re.compile(r'<a name="\d+"></a>'),
+        ''
+    ),
+    (  # New, after v. 42
+        re.compile(r'<div rend(.*?)xml:id(.*?)>'),
+        r'<div type\1xml:id\2>'
+    ),
+    # (
+    #     re.compile(r'<div rend="(.*?)" (((?!xml:).)*)id(.*?)>'),
+    #     r'<div type="\1" \2xml:id\4'
+    # )
 ]
-
 
 dates = {
     'янв': 1,
@@ -264,6 +298,7 @@ def replace_refs_to_notes_with_notes(text, notes):
           </div>
         </note>
         """
+        note = re.sub(r'\n|\s{2,}', '', note)  # test for v 41
         text = re.sub(
             # f'<a.*?id="backn{note_number}"\s+type="note">.*?</a>', note, text
             f'<a[^>]*?id="backn{note_number}"\s+type="note">.*?</a>', note, text
@@ -343,10 +378,13 @@ def convert_text_divs_to_xml_text(title, id, text_divs, notes, extra_funcs):
     ) for t in text_divs]
     text = ''.join(divs)
     text = minimize_text(text)
+    # print(text)
     if extra_funcs is not None:
         for func in extra_funcs:
             text = func(text)
+
     # order matters
+
     text = replace_refs_to_notes_with_notes(text, notes)
     text = replace_html_markup_with_xml(text)
     text = markup_choices_for_editorial_corrections(text)
@@ -354,7 +392,7 @@ def convert_text_divs_to_xml_text(title, id, text_divs, notes, extra_funcs):
     return text
 
 
-def fill_tei_template(tei_data, tei_structure_file) -> str:
+def fill_tei_template(tei_data: dict, tei_template_file: str) -> str:
     tei_data.update(
         {
             'author': 'Толстой Л.Н.',  # for now
@@ -364,7 +402,7 @@ def fill_tei_template(tei_data, tei_structure_file) -> str:
             'setting_time': 'XIX'  # for now
         }
     )
-    tei = ut.read_xml(tei_structure_file).format(**tei_data)
+    tei = ut.read_xml(tei_template_file).format(**tei_data)
     return tei
 
 
@@ -398,3 +436,605 @@ def prepare_title(default_title):
         return prepared_titles[default_title]
     default_title = default_title.strip('*[] ')
     return capitalize_title(default_title)
+
+
+def leave_only_parent_divs(divs):
+    """Filter divs iterable to exclude duplicated children divs."""
+
+    def is_top_div(div) -> bool:
+        """Is the div the only `body`'s child which embodies all other divs."""
+        # Given that body has only one child and it's a div
+        # Which is usually the case
+        return div.getparent().tag.split('}')[1] == 'body'
+
+    return [d for d in divs if is_top_div(d.getparent())]
+
+
+def prepare_v_41_for_xml_conversion(text: str) -> str:
+    """To be used as `extra_funcs` argument in main function."""
+    """
+    for 42 start h000006002
+    """
+
+    # def delete_divs_with_duplicated_text(text: str) -> str:
+    #     re.sub(
+    #         r'<div xmlns="http://www.w3.org/1999/xhtml"((?!id=").)*?>.*?<div xmlns="http://www.w3.org/1999/xhtml">',
+    #         '',
+    #         text,
+    #     )
+    #     return text
+    # text = delete_divs_with_duplicated_text(text)
+
+    def divide_divs_into_months_groups(start_div_id='h000010002') -> Iterable:
+        groups = []
+        id_length = len('h000010002')
+        prev_div = root.xpath(f'//ns:div[@id="{start_div_id}"]', namespaces={'ns': f'{namespace}'})[0]
+        month = [prev_div]
+        while True:
+            new_div = prev_div.getnext()
+            if new_div is None:
+                groups.append(month.copy())
+                break
+            if new_div.get('id') is not None and len(new_div.get('id')) == id_length:
+                groups.append(month.copy())
+                prev_div = new_div
+                month = [prev_div]
+                continue
+            month.append(new_div)
+            prev_div = new_div
+        return groups
+
+    def rearrange_group_contents(month):
+        def new_day_inside_element(element):
+            element_copy = list(element).copy()
+            history = []
+            while element_copy:
+                tag = element_copy.pop(0)
+                history.append(tag)
+                if len(history) >= 2:
+                    if (history[-2].tag.split('}')[1] == 'br'
+                            and history[-1].tag.split('}')[1] == 'p'
+                            and history[-1].get('class') == 'subtitle centerline'
+                            and history[-1][0].tag.split('}')[1] == 'span'
+                            and (re.search(r'\d{1,2}-е \w+', history[-1][0].text) is not None
+                                 or (re.search(r'\d{1,2}-е', history[-1].text) is not None
+                                     and 3 <= len(history[-1][0].text) <= 8
+                                     and history[-1][0].text.casefold()[:3] in dates.keys()
+                                 )
+                            )
+                    ):
+                        return True
+            return False
+
+        def find_start_of_new_day(element):
+            """arg: element or list of subelements"""
+            element_copy = list(element).copy()
+            history = []
+            while element_copy:
+                tag = element_copy.pop(0)
+                history.append(tag)
+                if len(history) >= 2:
+                    if (history[-2].tag.split('}')[1] == 'br'
+                            and history[-1].tag.split('}')[1] == 'p'
+                            and history[-1].get('class') == 'subtitle centerline'
+                            and history[-1][0].tag.split('}')[1] == 'span'
+                            and (re.search(r'\d{1,2}-е \w+', history[-1][0].text) is not None
+                                 or (re.search(r'\d{1,2}-е', history[-1].text) is not None
+                                     and 3 <= len(history[-1][0].text) <= 8
+                                     and history[-1][0].text.casefold()[:3] in dates.keys()
+                                 )
+                            )
+                    ):
+                        return len(history) - 2
+            return None
+
+        def split_mixed_weekly_and_daily(element):
+            days_start = find_start_of_new_day(element)
+            week_part = deepcopy(element)
+            for child in list(week_part)[days_start:]:
+                week_part.remove(child)
+            days_part = deepcopy(element)
+            for child in list(days_part)[:days_start]:
+                days_part.remove(child)
+            # pprint(week_part)
+            return week_part, days_part
+
+        def rearrange_week(week, last_id):
+            """Return arranged element from list of elements"""
+            week_div = week[0]
+            week_div.set('class', 'weekly')
+            week_div_id = last_id[:-3] + '{:03d}'.format(int(last_id[-3:]) + 1)
+            week_div.set('id', week_div_id)
+            h4_counter = 0
+            h5_counter = 0
+            for div in week[1:]:
+                print(div[0].text)
+                if div[0].tag.split('}')[1] == 'h4':
+                    h4_counter += 1
+                    h5_counter = 0
+                    last_h4 = div
+                    week_div.append(div)
+                    div.set('class', 'weekly section')
+                    div.set('id', week_div_id + '{:03d}'.format(h4_counter))
+                if div[0].tag.split('}')[1] == 'h5':
+                    h5_counter += 1
+                    last_h4.append(div)
+                    div.set('class', 'section')
+                    div.set('id', last_h4.get('id') + '{:03d}'.format(h5_counter))
+            last_date = main_div[-1][0].get('when')
+            date_element = etree.Element('date')
+            date_element.set('when', last_date)
+            week_div.insert(0, date_element)
+
+            return deepcopy(week_div)
+            pass
+
+        def add_weekly_div_to_main_div(week: list) -> None:
+            last_id = main_div[-1].get('id')[:13]
+            week = rearrange_week(week, last_id)
+            main_div.append(week)
+            pass
+
+        def split_days_element_into_days(element):
+            # Daily after weekly in the same div continue till the div's end
+            tags = list(element).copy()
+            days = []
+            new_day_start = find_start_of_new_day(tags[2:]) + 2
+            while True:
+                days.append(tags[0:new_day_start])
+                tags = tags[new_day_start:]
+                new_day_start = find_start_of_new_day(tags[2:])
+                if new_day_start is None:
+                    days.append(tags[:])
+                    break
+                else:
+                    new_day_start += 2
+            return days
+            pass
+
+        def add_days_divs_to_main_div(days) -> None:
+            for day in days:
+                last_id = main_div[-1].get('id')[:13]
+                day_div = etree.SubElement(main_div, 'div')
+                day_div.set('class', 'daily')
+                day_div.set('id', last_id[:-3] + '{:03d}'.format(int(last_id[-3:]) + 1))
+                for tag in day:
+                    day_div.append(deepcopy(tag))
+                date_text = f'{day[1].text}{day[1][0].text}'
+                date = re.search('(\d{1,2})-е (\w+)', date_text)
+                date_tag = etree.Element('date')
+                day_div.insert(0, date_tag)
+                date_tag.set('when', f'--{dates[date.group(2).casefold()[:3]]}-{date.group(1)}')
+                print(date.group())
+            pass
+
+        # NB: no month starts with a weekly reading
+        main_div = month[0]
+        div_in_main_with_initial_days = main_div[1]
+        # print(list(div_in_main_with_initial_days))
+        div_in_main_copy = list(div_in_main_with_initial_days).copy()
+        history = []
+        days = []
+        day = []
+        while div_in_main_copy:
+            if len(history) >= 2:
+                if (history[-2].tag.split('}')[1] == 'br'
+                        and history[-1].tag.split('}')[1] == 'p'
+                        and history[-1].get('class') == 'subtitle centerline'
+                        and history[-1][0].tag.split('}')[1] == 'span'
+                        and (re.search(r'\d{1,2}-е \w+', history[-1][0].text) is not None
+                             or (re.search(r'\d{1,2}-е', history[-1].text) is not None
+                                 and 3 <= len(history[-1][0].text) <= 8
+                                 and history[-1][0].text.casefold()[:3] in dates.keys()
+                             )
+                        )
+                ):
+                    text = f'{history[-1].text}{history[-1][0].text}'
+                    date = re.search('\d{1,2}-е \w+', text).group()
+                    # print(date)
+                    if len(day) > 2:
+                        days.append(day[:-2])
+                        day = day[-2:]
+            element = div_in_main_copy.pop(0)
+            history.append(element)
+            day.append(element)
+        else:
+            if day:
+                days.append(day)
+        # pprint([etree.tostring(tag, encoding='unicode') for d in days for tag in d])
+        pass
+        for i, day in enumerate(days):
+            day_div = etree.SubElement(main_div, 'div')
+            parent_id = day_div.getparent().get('id')
+            day_div.set('class', 'daily')
+            day_div.set('id', parent_id + '{:03d}'.format(i + 1))
+            for tag in day:
+                day_div.append(deepcopy(tag))
+            date_text = f'{day[1].text}{day[1][0].text}'
+            date = re.search('(\d{1,2})-е (\w+)', date_text)
+            date_tag = etree.Element('date')
+            day_div.insert(0, date_tag)
+            date_tag.set('when', f'--{dates[date.group(2).casefold()[:3]]}-{date.group(1)}')
+            print(date.group())
+        main_div.remove(div_in_main_with_initial_days)
+        pass
+        # All other divs with weekly and daily in the group
+        months_copy = month.copy()[1:]
+        history = []
+        week = []
+        while months_copy:
+            element = months_copy.pop(0)
+            history.append(element)
+            # print(element[0].text)
+            # if element[0].text == 'ЯГОДЫ':
+            #     print(True)
+            #     print(bool(week))
+            #     print(element[0].tag.split('}')[1])
+            #     print(new_day_inside_element(element))
+            if not week and element[0].tag.split('}')[1] == 'h3' and element[0].text == 'НЕДЕЛЬНОЕ ЧТЕНИЕ':
+                week.append(element)
+                continue
+            if week and not new_day_inside_element(element):
+                week.append(element)
+                # if element[0].text == 'ЯГОДЫ':
+                #     print('appended')
+                #     print(week[-1][0].text)
+            if week and new_day_inside_element(element):
+                week_element, days_element = split_mixed_weekly_and_daily(element)
+                week.append(week_element)
+                add_weekly_div_to_main_div(week)
+                week = []
+                days = split_days_element_into_days(days_element)
+                add_days_divs_to_main_div(days)
+                # for not_main_div in month[1:]:
+                #     if not_main_div.getparent() is not None:
+                #         not_main_div.getparent().remove(not_main_div)
+
+                pass
+        else:
+            if week:  # After weekly no daily in the month
+                add_weekly_div_to_main_div(week)
+                pass
+            for not_main_div in month[1:]:  # Remove duplicated
+                if not_main_div.getparent() is not None:
+                    not_main_div.getparent().remove(not_main_div)
+        pass
+
+    # `fromstring` method can't start parsing siblings, it needs a single root
+    root = etree.fromstring(f'<container>{text}</container>')
+    print(root.tag)
+    namespace = 'http://www.w3.org/1999/xhtml'
+    all_divs = root.xpath('//ns:div', namespaces={'ns': f'{namespace}'})
+    parent_divs = [d for d in all_divs if d.getparent().tag == 'container']
+    # pprint(all_divs)
+    # print(len(all_divs))
+    # print(len(parent_divs))
+
+    # Remove first empty div and some other
+    root.remove(root.xpath('//ns:div[@id="h000010"]', namespaces={'ns': f'{namespace}'})[0])
+    root.remove(root.xpath('//ns:div[@id="h000010003002001002"]', namespaces={'ns': f'{namespace}'})[0])
+    # Month is a 'part' (not 'section') and is a parent to its sections
+    root.xpath('//ns:div[@id="ref1"]', namespaces={'ns': f'{namespace}'})[0].attrib['id'] = 'h000010001'
+    for month_tag in root.xpath(
+            '//ns:div[string-length(@id)=10]', namespaces={'ns': f'{namespace}'})[1:]:
+        month_tag.attrib['class'] = 'part'
+    # Remove empty divs like h000010002002001
+    for empty_tag in root.xpath(
+            '//ns:div[string-length(@id)=16]', namespaces={'ns': f'{namespace}'}):
+        root.remove(empty_tag)
+    months = divide_divs_into_months_groups(start_div_id='h000010002')
+    for month in months:
+        rearrange_group_contents(month)
+
+    text = etree.tostring(root, encoding='unicode')[len('<container>'):-len('</container>')]
+    # print(text)
+    return text
+    pass
+
+
+
+def prepare_v_42_for_xml_conversion(text: str) -> str:
+    """To be used as `extra_funcs` argument in main function."""
+    """
+    for 42 start h000006002
+    """
+
+    # def delete_divs_with_duplicated_text(text: str) -> str:
+    #     re.sub(
+    #         r'<div xmlns="http://www.w3.org/1999/xhtml"((?!id=").)*?>.*?<div xmlns="http://www.w3.org/1999/xhtml">',
+    #         '',
+    #         text,
+    #     )
+    #     return text
+    # text = delete_divs_with_duplicated_text(text)
+
+    def divide_divs_into_months_groups(start_div_id='h000010002') -> Iterable:
+        groups = []
+        id_length = len(start_div_id)
+        # print(root.xpath(f'//ns:div[@id="{start_div_id}"]', namespaces={'ns': f'{namespace}'}))
+        print(root.xpath(f'//div'))
+        prev_div = root.xpath(f'//ns:div[@id="{start_div_id}"]', namespaces={'ns': f'{namespace}'})[0]
+        month = [prev_div]
+        while True:
+            new_div = prev_div.getnext()
+            if new_div is None:
+                groups.append(month.copy())
+                break
+            if new_div.get('id') is not None and len(new_div.get('id')) == id_length:
+                groups.append(month.copy())
+                prev_div = new_div
+                month = [prev_div]
+                continue
+            month.append(new_div)
+            prev_div = new_div
+        return groups
+
+    def rearrange_group_contents(month):
+        def new_day_inside_element(element):
+            element_copy = list(element).copy()
+            history = []
+            while element_copy:
+                tag = element_copy.pop(0)
+                history.append(tag)
+                if len(history) >= 2:
+                    if (history[-2].tag.split('}')[1] == 'br'
+                            and history[-1].tag.split('}')[1] == 'p'
+                            # and history[-1].get('class') == 'center textindent_38px'
+                            # and history[-1][0].tag.split('}')[1] == 'span'
+                            and (re.search(
+                                r'\d{1,2}-е \w+',
+                                ''.join([t for t in history[-1].itertext()])
+                            ) is not None
+                                 # or (re.search(r'\d{1,2}-е', history[-1].text) is not None
+                                 #     and 3 <= len(history[-1][0].text) <= 8
+                                 #     and history[-1][0].text.casefold()[:3] in dates.keys()
+                                 # )
+                            )
+                    ):
+                        return True
+            return False
+
+        def find_start_of_new_day(element):
+            """arg: element or list of subelements"""
+            element_copy = list(element).copy()
+            history = []
+            while element_copy:
+                tag = element_copy.pop(0)
+                history.append(tag)
+                if len(history) >= 2:
+                    if (history[-2].tag.split('}')[1] == 'br'
+                            and history[-1].tag.split('}')[1] == 'p'
+                            # and history[-1].get('class') == 'center textindent_38px'
+                            # and history[-1][0].tag.split('}')[1] == 'span'
+                            and (re.search(
+                                r'\d{1,2}-е \w+',
+                                ''.join([t for t in history[-1].itertext()])
+                            ) is not None
+                                 # or (re.search(r'\d{1,2}-е', history[-1].text) is not None
+                                 #     and 3 <= len(history[-1][0].text) <= 8
+                                 #     and history[-1][0].text.casefold()[:3] in dates.keys()
+                                 # )
+                            )
+                    ):
+                        return len(history) - 2
+            return None
+
+        def split_mixed_weekly_and_daily(element):
+            days_start = find_start_of_new_day(element)
+            week_part = deepcopy(element)
+            for child in list(week_part)[days_start:]:
+                week_part.remove(child)
+            days_part = deepcopy(element)
+            for child in list(days_part)[:days_start]:
+                days_part.remove(child)
+            # pprint(week_part)
+            return week_part, days_part
+
+        def rearrange_week(week, last_id):
+            """Return arranged element from list of elements"""
+            week_div = week[0]
+            week_div.set('class', 'weekly')
+            week_div_id = last_id[:-3] + '{:03d}'.format(int(last_id[-3:]) + 1)
+            week_div.set('id', week_div_id)
+            h4_counter = 0
+            h5_counter = 0
+            for div in week[1:]:
+                print(div[0].text)
+                if div[0].tag.split('}')[1] == 'h4':
+                    h4_counter += 1
+                    h5_counter = 0
+                    last_h4 = div
+                    week_div.append(div)
+                    div.set('class', 'weekly section')
+                    div.set('id', week_div_id + '{:03d}'.format(h4_counter))
+                if div[0].tag.split('}')[1] == 'h5':
+                    h5_counter += 1
+                    last_h4.append(div)
+                    div.set('class', 'section')
+                    div.set('id', last_h4.get('id') + '{:03d}'.format(h5_counter))
+            last_date = main_div[-1][0].get('when')
+            date_element = etree.Element('date')
+            date_element.set('when', last_date)
+            week_div.insert(0, date_element)
+
+            return deepcopy(week_div)
+            pass
+
+        def add_weekly_div_to_main_div(week: list) -> None:
+            last_id = main_div[-1].get('id')[:13]
+            week = rearrange_week(week, last_id)
+            main_div.append(week)
+            pass
+
+        def split_days_element_into_days(element):
+            # Daily after weekly in the same div continue till the div's end
+            tags = list(element).copy()
+            days = []
+            # if element.get('id') == 'h000006002006001012':
+            #     breakpoint()
+            new_day_start = find_start_of_new_day(tags[2:])
+            if new_day_start is None:
+                days.append(tags)
+                return days
+            else:
+                new_day_start += 2
+            while True:
+                days.append(tags[0:new_day_start])
+                tags = tags[new_day_start:]
+                new_day_start = find_start_of_new_day(tags[2:])
+                if new_day_start is None:
+                    days.append(tags[:])
+                    break
+                else:
+                    new_day_start += 2
+            return days
+            pass
+
+        def add_days_divs_to_main_div(days) -> None:
+            for day in days:
+                last_id = main_div[-1].get('id')[:13]
+                print('last_id', last_id)
+                day_div = etree.SubElement(main_div, 'div')
+                day_div.set('class', 'daily')
+                day_div.set('id', last_id[:-3] + '{:03d}'.format(int(last_id[-3:]) + 1))
+                for tag in day:
+                    day_div.append(deepcopy(tag))
+                date_text = ''.join([t for t in day[1].itertext()])
+                date = re.search('(\d{1,2})-е (\w+)', date_text)
+                date_tag = etree.Element('date')
+                day_div.insert(0, date_tag)
+                date_tag.set('when', f'--{dates[date.group(2).casefold()[:3]]}-{date.group(1)}')
+                print(date.group())
+            pass
+
+        # NB: no month starts with a weekly reading
+        main_div = month[0]
+        print('main_div', main_div[0][0].text)
+        div_in_main_with_initial_days = main_div[1]
+        # print(list(div_in_main_with_initial_days))
+        div_in_main_copy = list(div_in_main_with_initial_days).copy()
+        history = []
+        days = []
+        day = []
+        while div_in_main_copy:
+            if len(history) >= 2:
+                if (history[-2].tag.split('}')[1] == 'br'
+                        and history[-1].tag.split('}')[1] == 'p'
+                        # and history[-1].get('class') == 'center textindent_38px'
+                        # and history[-1][0].tag.split('}')[1] == 'span'
+                        and (re.search(
+                            r'\d{1,2}-е \w+',
+                            ''.join([t for t in history[-1].itertext()])
+                        ) is not None
+                             # or (re.search(r'\d{1,2}-е', history[-1].text) is not None
+                             #     and 3 <= len(history[-1][0].text) <= 8
+                             #     and history[-1][0].text.casefold()[:3] in dates.keys()
+                             # )
+                        )
+                ):
+                    # text = f'{history[-1].text}{history[-1][0].text}'
+                    text = ''.join([t for t in history[-1].itertext()])
+                    print('date', text)
+                    date = re.search('\d{1,2}-е \w+', text).group()
+                    # print(date)
+                    if len(day) > 2:
+                        days.append(day[:-2])
+                        day = day[-2:]
+            element = div_in_main_copy.pop(0)
+            history.append(element)
+            day.append(element)
+        else:
+            if day:
+                days.append(day)
+        # pprint([etree.tostring(tag, encoding='unicode') for d in days for tag in d])
+        pass
+        for i, day in enumerate(days):
+            day_div = etree.SubElement(main_div, 'div')
+            parent_id = day_div.getparent().get('id')
+            day_div.set('class', 'daily')
+            day_div.set('id', parent_id + '{:03d}'.format(i + 1))
+            for tag in day:
+                day_div.append(deepcopy(tag))
+            # date_text = f'{day[1].text}{day[1][0].text}'
+            date_text = ''.join([t for t in day[1].itertext()])
+            date = re.search('(\d{1,2})-е (\w+)', date_text)
+            date_tag = etree.Element('date')
+            day_div.insert(0, date_tag)
+            date_tag.set('when', f'--{dates[date.group(2).casefold()[:3]]}-{date.group(1)}')
+            print('in days', date.group())
+        main_div.remove(div_in_main_with_initial_days)
+        pass
+        # All other divs with weekly and daily in the group
+        months_copy = month.copy()[1:]
+        history = []
+        week = []
+        while months_copy:
+            element = months_copy.pop(0)
+            history.append(element)
+            # print(element[0].text)
+            # if element[0].text == 'ЯГОДЫ':
+            #     print(True)
+            #     print(bool(week))
+            #     print(element[0].tag.split('}')[1])
+            #     print(new_day_inside_element(element))
+            if not week and element[0].tag.split('}')[1] == 'h3' and element[0].text == 'НЕДЕЛЬНОЕ ЧТЕНИЕ':
+                week.append(element)
+                continue
+            if week and not new_day_inside_element(element):
+                week.append(element)
+                # if element[0].text == 'ЯГОДЫ':
+                #     print('appended')
+                #     print(week[-1][0].text)
+            if week and new_day_inside_element(element):
+                week_element, days_element = split_mixed_weekly_and_daily(element)
+                week.append(week_element)
+                add_weekly_div_to_main_div(week)
+                week = []
+                days = split_days_element_into_days(days_element)
+                # breakpoint()
+                add_days_divs_to_main_div(days)
+                # for not_main_div in month[1:]:
+                #     if not_main_div.getparent() is not None:
+                #         not_main_div.getparent().remove(not_main_div)
+
+                pass
+        else:
+            if week:  # After weekly no daily in the month
+                add_weekly_div_to_main_div(week)
+                pass
+            for not_main_div in month[1:]:  # Remove duplicated
+                if not_main_div.getparent() is not None:
+                    not_main_div.getparent().remove(not_main_div)
+        pass
+
+    # `fromstring` method can't start parsing siblings, it needs a single root
+    root = etree.fromstring(f'<container>{text}</container>')
+    print(root.tag)
+    namespace = 'http://www.w3.org/1999/xhtml'
+    all_divs = root.xpath('//ns:div', namespaces={'ns': f'{namespace}'})
+    parent_divs = [d for d in all_divs if d.getparent().tag == 'container']
+    # pprint(list(all_divs[1]))
+    # pprint(all_divs)
+    # print(len(all_divs))
+    # print(len(parent_divs))
+
+    # Remove first empty div and some other
+    # root.remove(root.xpath('//ns:div[@id="h000010"]', namespaces={'ns': f'{namespace}'})[0])
+    # root.remove(root.xpath('//ns:div[@id="h000010003002001002"]', namespaces={'ns': f'{namespace}'})[0])
+
+    # Month is a 'part' (not 'section') and is a parent to its sections
+    # root.xpath('//ns:div[@id="ref1"]', namespaces={'ns': f'{namespace}'})[0].attrib['id'] = 'h000010001'  # preface
+    for month_tag in root.xpath(
+            '//ns:div[string-length(@id)=10]', namespaces={'ns': f'{namespace}'})[1:]:
+        month_tag.attrib['class'] = 'part'
+    # Remove empty divs like h000010002002001
+    # for empty_tag in root.xpath(
+    #         '//ns:div[string-length(@id)=16]', namespaces={'ns': f'{namespace}'}):
+    #     root.remove(empty_tag)
+    months = divide_divs_into_months_groups(start_div_id='h000006002')
+    for month in months:
+        rearrange_group_contents(month)
+
+    text = etree.tostring(root, encoding='unicode')[len('<container>'):-len('</container>')]
+    # print(text)
+    return text
