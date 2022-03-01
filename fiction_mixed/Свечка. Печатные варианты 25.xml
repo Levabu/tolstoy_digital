@@ -1,0 +1,150 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>
+     Свечка. Печатные варианты
+    </title>
+        <author>
+     Толстой Л.Н.
+    </author>
+        <respStmt>
+          <resp>
+      подготовка TEI/XML
+     </resp>
+          <name>
+      Мария Картышева, Евгений Можаев, Даниил Скоринкин, Елена Сидорова, Вероника Файнберг, Кирилл Милинцевич
+     </name>
+        </respStmt>
+        <respStmt>
+          <name>
+      Анастасия Бонч-Осмоловская, Фёкла Толстая, Борис Орехов
+     </name>
+          <resp>
+      Идея, постановка задач, руководство
+     </resp>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <idno>
+    </idno>
+        <publisher>
+          <orgName>
+      Школа лингвистики НИУ ВШЭ
+     </orgName>
+        </publisher>
+        <availability>
+          <p>
+      Тексты и метатекстовая разметка доступны для свободного использования и распространения по лицензии Creative Commons Attribution Share-Alike (cc by-sa)
+     </p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <biblStruct>
+          <analytic>
+            <author>
+       Толстой Л.Н.
+      </author>
+            <title level="a">
+       Свечка. Печатные варианты
+      </title>
+          </analytic>
+          <monogr>
+            <title level="m">
+       Полное собрание сочинений. Том 25
+      </title>
+            <imprint>
+              <pubPlace>
+        Москва
+       </pubPlace>
+              <publisher>
+        Государственное издательство "Художественная литература"
+       </publisher>
+              <date when="fill date later"/>
+            </imprint>
+          </monogr>
+          <series>
+            <title level="s">
+       Л.Н. Толстой. Полное собрание сочинений
+      </title>
+            <biblScope unit="vol">
+       25
+      </biblScope>
+          </series>
+        </biblStruct>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <classDecl>
+        <xi:include href="taxonomy.xml"/>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <creation>
+        <date notAfter="fill date_not_after later" notBefore="fill date_not_before later">
+     fill date later
+    </date>
+        <rs/>
+      </creation>
+      <textClass>
+   </textClass>
+      <preparedness>
+   </preparedness>
+      <settingDesc>
+        <time>
+     XIX
+    </time>
+      </settingDesc>
+    </profileDesc>
+    <xenoData>
+      <cyclusName/>
+      <p>
+    Проект
+    <title>
+     Толстой.Digital
+    </title>
+    разрабатывается сотрудниками и студентами
+    <orgName>
+     Высшей школы экономики
+    </orgName>
+    в сотрудничестве с
+    <orgName>
+     Государственным музеем Л.Н. Толстого
+    </orgName>
+    . Источник текстов –
+    <bibl>
+     90-томное собрание сочинений Л.Н.Толстого
+    </bibl>
+    . Разметка основана на стандарте
+    <ref target="http://www.tei-c.org">
+     TEI (Text Encoding Initiative)
+    </ref>
+    .
+   </p>
+      <versionNumber/>
+      <isFinished/>
+      <isEdited/>
+      <fullBibliographicDescription/>
+    </xenoData>
+  </teiHeader>
+  <text>
+    <div type="section" xml:id="ref36">
+      <head rend="title_level2 center">«СВЕЧКА».</head>
+      <p rend="left" id="495a59af-b5c2-4c88-9981-f6e565f8edbc">Варианты текстов: издание «Посредника» 1886 г., «Сочинения гр. Л. Н. Толстого, часть двенадцатая, М. 1886, стр. 51—61, и журнал «Книжки Недели», 1886, I, стр. 169—178.</p>
+      <p rend="left" id="1540847c-6569-46ba-ac62-4ab6b5b888b2">Стр. 108, строка 39.</p>
+      <p rend="left" id="9e4202b3-2285-43b0-b115-fca8dda02a9c">
+        <hi rend="italic">Вместо:</hi> с земским — <hi rend="italic">в изд. «Посредн.»: </hi>с земскими</p>
+      <p rend="left" id="54ea215b-a5db-4520-93d9-d3114ff3a675">Стр. 112, строка 26.</p>
+      <p rend="left" id="9ccefc56-a5cf-42a0-8f2b-cfeb0c9c8694">
+        <hi rend="italic">Вместо:</hi> Крикнула на него жена: — <hi rend="italic">до конца в</hi>
+        <hi rend="italic">«Книжках Недели</hi>» <hi rend="italic">и в изд</hi>. <hi rend="italic">«Посредн.»:</hi>
+      </p>
+      <p rend="left" id="a4d660ed-8416-431f-a98f-46ce83b1afdd">Уйди ты, пока цела, не твоего ума дело.</p>
+      <p rend="left" id="ec568b7f-d56d-4e68-a111-f1ee51de9656">Так и не встал.</p>
+      <p rend="left" id="ea011a90-43f9-4d08-99dd-5fa520da0ea7">На утро встал, взялся за прежнее, да уж не тот стал Михаил Семеныч; видно, чуяло его сердце. Стал тосковать и не стал ни до чего доходить. Всё дома сидел.</p>
+      <p rend="left" id="7ee9cdde-4d18-4776-b610-8c4144235203">Недолго после того и поцарствовал. Приехал Петровками барин. Нынче позовет — приказчик болен, говорят, завтра позовет — болен.</p>
+      <p rend="left" id="ca34a554-46bf-4243-b631-c80d192ffbf5">Дознал барин, что пьянствует, ссадил его с приказчиков. Стал Михаил Семеныч на дворне без дела жить. Еще больше заскучал, обовшивел весь, что было пропил, обнизплся так, что у жены платки крал, в кабак носил. Даже мужики жалели, похмелиться давали. И году не прожил после того. От вина и помер.</p>
+      <lb/>
+    </div>
+  </text>
+</TEI>

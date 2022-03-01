@@ -1,0 +1,225 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>
+     Пометки при перечитывании «Выбранных мест из переписки с друзьями»
+    </title>
+        <author>
+     Толстой Л.Н.
+    </author>
+        <respStmt>
+          <resp>
+      подготовка TEI/XML
+     </resp>
+          <name>
+      Мария Картышева, Евгений Можаев, Даниил Скоринкин, Елена Сидорова, Вероника Файнберг, Кирилл Милинцевич
+     </name>
+        </respStmt>
+        <respStmt>
+          <name>
+      Анастасия Бонч-Осмоловская, Фёкла Толстая, Борис Орехов
+     </name>
+          <resp>
+      Идея, постановка задач, руководство
+     </resp>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <idno>
+    </idno>
+        <publisher>
+          <orgName>
+      Школа лингвистики НИУ ВШЭ
+     </orgName>
+        </publisher>
+        <availability>
+          <p>
+      Тексты и метатекстовая разметка доступны для свободного использования и распространения по лицензии Creative Commons Attribution Share-Alike (cc by-sa)
+     </p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <biblStruct>
+          <analytic>
+            <author>
+       Толстой Л.Н.
+      </author>
+            <title level="a">
+       Пометки при перечитывании «Выбранных мест из переписки с друзьями»
+      </title>
+          </analytic>
+          <monogr>
+            <title level="m">
+       Полное собрание сочинений. Том 38
+      </title>
+            <imprint>
+              <pubPlace>
+        Москва
+       </pubPlace>
+              <publisher>
+        Государственное издательство "Художественная литература"
+       </publisher>
+              <date when="fill date later"/>
+            </imprint>
+          </monogr>
+          <series>
+            <title level="s">
+       Л.Н. Толстой. Полное собрание сочинений
+      </title>
+            <biblScope unit="vol">
+       38
+      </biblScope>
+          </series>
+        </biblStruct>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <classDecl>
+        <xi:include href="taxonomy.xml"/>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <creation>
+        <date notAfter="fill date_not_after later" notBefore="fill date_not_before later">
+     fill date later
+    </date>
+        <rs/>
+      </creation>
+      <textClass>
+   </textClass>
+      <preparedness>
+   </preparedness>
+      <settingDesc>
+        <time>
+     XIX
+    </time>
+      </settingDesc>
+    </profileDesc>
+    <xenoData>
+      <cyclusName/>
+      <p>
+    Проект
+    <title>
+     Толстой.Digital
+    </title>
+    разрабатывается сотрудниками и студентами
+    <orgName>
+     Высшей школы экономики
+    </orgName>
+    в сотрудничестве с
+    <orgName>
+     Государственным музеем Л.Н. Толстого
+    </orgName>
+    . Источник текстов –
+    <bibl>
+     90-томное собрание сочинений Л.Н.Толстого
+    </bibl>
+    . Разметка основана на стандарте
+    <ref target="http://www.tei-c.org">
+     TEI (Text Encoding Initiative)
+    </ref>
+    .
+   </p>
+      <versionNumber/>
+      <isFinished/>
+      <isEdited/>
+      <fullBibliographicDescription/>
+    </xenoData>
+  </teiHeader>
+  <text>
+    <div type="section" xml:id="h000012004">
+      <head rend="center">[ПОМЕТКИ ПРИ ПЕРЕЧИТЫВАНИИ «ВЫБРАННЫХ <lb/>МЕСТ ИЗ ПЕРЕПИСКИ С ДРУЗЬЯМИ».]</head>
+      <p rend="center" id="46ae0584-e0f4-4100-a3ec-56cbb11f9fd3">(МАРТ 1909 г.)</p>
+      <p rend="left" id="37b3f36d-4830-44c9-b44e-90813f9821e6">
+        <hi rend="italic">Завещание.</hi> Отмечены NB: «Завещаю не ставить надо мною никакого памятника и не помышлять о таком пустяке, христианина недостойном».</p>
+      <p rend="left" id="9589f15e-cb4a-4ddb-ab58-b0ccbe06f9d9">
+        <hi rend="italic">Женщина в свете.</hi> 5.</p>
+      <p rend="left" id="536aeb48-8613-4b2a-8e6f-14ee27451450">
+        <hi rend="italic">Значение болезней.</hi> 5х</p>
+      <p rend="left" id="c9f7394d-d675-4c19-a809-c3efdfef9294">
+        <hi rend="italic">О том что такое слово.</hi> 5ххх</p>
+      <p rend="left" id="9fc0060e-a72d-482c-bc6c-1efa3da21c3c">
+        <hi rend="italic">О помощи бедным.</hi> 2.</p>
+      <p rend="left" id="d574b778-c0c2-4473-8183-380188d2d269">
+        <hi rend="italic">Об Одиссее.</hi> 1.</p>
+      <p rend="left" id="5562ba38-5e86-41f4-b0c2-2601057c1947">
+        <hi rend="italic">Несколько слов о нашей церкви и духовенстве.</hi> 0.</p>
+      <p rend="left" id="5b27e1d7-8c31-449a-a17b-7eae67bff018">
+        <hi rend="italic">О том же.</hi> 0.</p>
+      <p rend="left" id="0009e483-e161-46f8-80d0-715dbaf7d94f">
+        <hi rend="italic">О лиризме наших поэтов.</hi> 1.</p>
+      <p rend="left" id="a7f0d5ca-2928-479c-8f74-e4a5415ada2a">Отмечены NB: «... у меня напыщено, темно и невразумительно».</p>
+      <p rend="left" id="281a7a03-9493-4710-9968-cb912aea432d">
+        <hi rend="italic">Споры.</hi> 4.</p>
+      <p rend="left" id="8af2a192-1566-42f6-9cdc-c45d96edcbd5">
+        <hi rend="italic">Христианин идет вперед.</hi> 5.</p>
+      <p rend="left" id="91691798-a80e-46ff-b895-a465a025fa9c">
+        <hi rend="italic">Карамзин.</hi> 1.</p>
+      <p rend="left" id="9415fb34-aa9b-4928-b482-f3263e47858d">
+        <hi rend="italic">О театре.</hi> 5.</p>
+      <p rend="left" id="d82ebebd-e1b5-499a-8cdd-5b95be14e1f7">
+        <hi rend="italic">Предметы для лирического поэта.</hi> 5.</p>
+      <p rend="left" id="3580e431-784e-4380-8e1b-a0668189afe3">
+        <hi rend="italic">Советы.</hi> 5х</p>
+      <p rend="left" id="4420037a-1ecd-4b2e-ab66-ef2661d9acbb">
+        <hi rend="italic">Просвещение.</hi> 0.</p>
+      <p rend="left" id="987f4659-2902-40bf-af1b-3482e2b709d5">
+        <hi rend="italic">Четыре письма</hi> к <hi rend="italic">разным лицам по поводу «Мертвых Душ». </hi>Отмечены NB начало (первый абзац) первого письма; из третьего слова: «Он поселил мне... постепенно и понемногу»; из четвертого: «Рожден я... прочное дело жизни».</p>
+      <p rend="left" id="690617c1-e712-447c-bd9a-9e8293a5f05c">
+        <hi rend="italic">Нужно любить Россию.</hi> 1.</p>
+      <p rend="left" id="0f892449-7716-41db-8af7-b1ce6a45787f">Поставлено 5: «Один Христос... любовь к братьям».</p>
+      <p rend="left" id="904e5d4e-604a-45d1-82e4-a2b19e9e1523">
+        <pb n="53"/>
+        <hi rend="italic">Нужно проездиться по России.</hi> 1.</p>
+      <p rend="left" id="4f563bf8-98af-49d0-8098-cbe632526e4f">
+        <hi rend="italic">Что такое губернаторша.</hi> 0х</p>
+      <p rend="left" id="3f728924-70af-422b-9ced-af40815c2b87">
+        <hi rend="italic">Русский помещик.</hi> 0.</p>
+      <p rend="left" id="bcdf7af9-8102-41a6-be92-32eee2d335f1">
+        <hi rend="italic">Исторический живописец Иванов.</hi> 1.</p>
+      <p rend="left" id="4fd1634c-6ea6-4f5c-80e5-3261fee7101d">
+        <hi rend="italic">Чем может быть жена для мужа.</hi> 1.</p>
+      <p rend="left" id="2b2e4f88-93ff-490c-8898-d2e6844976a4">
+        <hi rend="italic">Страхи и ужасы России.</hi> 4.</p>
+      <table border="1" class="nopad w65 table_left">
+        <tr>
+          <td>
+            <p rend="left" id="f8ffb82b-3bec-49b3-821b-596021aa3b99">Отмечены NB </p>
+          </td>
+          <td>
+            <p rend="left" id="032b9e16-a95b-43fa-b600-d4d34356c0eb">1) «нанесен журналами,,,... палатах и камерах»</p>
+          </td>
+        </tr>
+        <tr>
+          <td/>
+          <td>
+            <p rend="left" id="3f00f21d-c9dc-4808-b081-7dbeb7f04fdd">2) «Дело идет... мудрецы жизненного дела».</p>
+          </td>
+        </tr>
+      </table>
+      <p rend="left" id="ff7042f6-57a0-4833-b105-3b21d152af37">
+        <hi rend="italic">Близорукому приятелю.</hi> 5.</p>
+      <p rend="left" id="36da6583-93a9-49a6-bb91-f8f55c3218d5">
+        <hi rend="italic">Занимающему важное место.</hi> 1.</p>
+      <p rend="left" id="32a3ffb4-db1c-455e-b71c-bddb6cc7802e">
+        <hi rend="italic">Чей удел на земле выше.</hi> 5 за начало до слов «последний нищий».</p>
+      <p rend="left" id="096b0d87-ddc5-4251-8672-9e8930f979c0">
+        <hi rend="italic">Напутствие.</hi> 1.</p>
+      <p rend="left" id="aa7d4f98-99d3-4cf3-a3f0-2abfd9226e63">
+        <hi rend="italic">В чем существо русской поэзии.</hi> 2.</p>
+      <p rend="left" id="c258ad0b-5126-4d9f-b98a-ae9675653785">
+        <hi rend="italic">Светлое воскресенье.</hi> 1.</p>
+      <p rend="left" id="ad45f6b6-eb53-4940-bfde-14cbc86dbd12">
+        <hi rend="italic">Письмо к Россати.</hi> 3.</p>
+      <p rend="left" id="af563719-0da7-4919-b81f-693fed0382e6">
+        <hi rend="italic">О Современнике. 2.</hi>
+      </p>
+      <p rend="left" id="7bf9fbb5-eb28-496d-a5ff-0a0f8c49174c">
+        <hi rend="italic">Авторская исповедь.</hi> 1.</p>
+      <p rend="left" id="25cf96ce-7069-46d4-908a-2d4d720b75e1">
+        <hi rend="italic">Письмо Жуковскому.</hi> Отмечены NB 1) «не мое дело.... рассуждениями»; 2) «мог ли бы я выставить.... душа человеческая»; 3) «что пользы... ответа».</p>
+      <p rend="center" id="c0860fea-b668-4218-9a04-82cc2d12f791">————</p>
+    </div>
+  </text>
+</TEI>
