@@ -1,0 +1,165 @@
+<TEI xmlns:xi="http://www.w3.org/2001/XInclude" xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>[ЗАМЕТКИ К РОМАНУ О РУССКИХ БОГАТЫРЯХ]</title>
+        <author>Толстой Л.Н.</author>
+        <respStmt>
+          <resp>подготовка TEI/XML</resp>
+          <name>Мария Картышева, Евгений Можаев, Даниил Скоринкин, Елена Сидорова, Вероника Файнберг, Кирилл Милинцевич, Макар Федоров</name>
+        </respStmt>
+        <respStmt>
+          <resp>Идея, постановка задач, руководство</resp>
+          <name>Анастасия Бонч-Осмоловская, Фёкла Толстая, Борис Орехов</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <idno>* [ЗАМЕТКИ К РОМАНУ О РУССКИХ БОГАТЫРЯХ]</idno>
+        <publisher>
+          <orgName>Школа лингвистики НИУ ВШЭ</orgName>
+        </publisher>
+        <availability>
+          <p>Тексты и метатекстовая разметка доступны для свободного использования и распространения по лицензии Creative Commons Attribution Share-Alike (cc by-sa)</p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <biblStruct>
+          <analytic>
+            <author>Толстой Л.Н.</author>
+          </analytic>
+          <monogr>
+            <title level="m">Полное собрание сочинений. Серия первая "Произведения". Том 90</title>
+            <imprint>
+              <pubPlace>Москва</pubPlace>
+              <publisher> Государственное издательство "Художественная литература"</publisher>
+            </imprint>
+          </monogr>
+          <series>
+            <title level="s">Л.Н. Толстой. Полное собрание сочинений</title>
+            <biblScope unit="vol">90</biblScope>
+          </series>
+        </biblStruct>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <classDecl>
+        <xi:include href="taxonomy.xml"/>
+      </classDecl>
+    </encodingDesc>
+    <profileDesc>
+      <creation>
+        <date notBefore="1869-06-01" notAfter="1871-05-31"/>
+        <rs type="country">Россия</rs>
+      </creation>
+      <textClass>
+        <catRef target="#художественная" type="sphere"/>
+        <catRef target="#художественная.рассказ" type="type"/>
+      </textClass>
+      <preparedness>not finished</preparedness>
+    </profileDesc>
+    <xenoData>
+   <cyclusName/>
+   <orthographyType/>
+   <versionNumber/>
+   <isFinished>
+ not finished
+ </isFinished>
+   <isEdited>
+ not edited
+ </isEdited>
+   <p>
+    Проект
+    <title>
+ Толстой.Digital
+ </title>
+    разрабатывается сотрудниками и студентами
+    <orgName>
+     Высшей школы экономики
+    </orgName>
+    в сотрудничестве с
+    <orgName>
+     Государственным музеем Л.Н.     Толстого
+    </orgName>
+    . Источник текстов –
+    <bibl>
+     90-томное собрание сочинений Л.Н.Толстого
+    </bibl>
+    . Разметка основана на стандарте
+    <ref target="http://www.tei-c.org">
+ TEI (Text Encoding Initiative)
+ </ref>
+    .
+   </p>
+   <fullBibliographicDescription>
+    "Полное собрание сочинений Л.Н. Толстого в 90 томах. Государственное издательство ""Художественная литература"", 1928-1958. Серия первая ""Произведения"". Том 90, Москва, 1958."
+   </fullBibliographicDescription>
+  </xenoData>
+  </teiHeader>
+  <text>
+    <p> </p>
+    <p rend="subtitle centerline">
+ИЛЬЯ
+</p>
+    <p rend="left">1. Приобретение силы — отдают в университет. Он слабеет от оторванности, а то бы мир перевернул.</p>
+    <p rend="left">2. Подвиги на <choice original_editorial_correction="пу[ти]"><sic>пу</sic><corr>пути</corr></choice> в <choice original_editorial_correction="К[иев]"><sic>К</sic><corr>Киев</corr></choice>. Снятие осады <choice original_editorial_correction="Черн[игова]"><sic>Черн</sic><corr>Чернигова</corr></choice>. — <choice original_editorial_correction="Освобожд[ение]"><sic>Освобожд</sic><corr>Освобождение</corr></choice> рабочих от <choice original_editorial_correction="иностр[анного]"><sic>иностр</sic><corr>иностранного</corr></choice> ига. Соловей — это либералы. — Победил — убил. Стать[и <hi>или</hi> статистика].</p>
+    <p rend="left">3. <choice original_editorial_correction="И[лья]"><sic>И</sic><corr>Илья</corr></choice> и <choice original_editorial_correction="пр[екрасная]"><sic>пр</sic><corr>прекрасная</corr></choice> <choice original_editorial_correction="кор[олевична]"><sic>кор</sic><corr>королевична</corr></choice>.<note xi:id="note22" resp="volume_editor" index="false"> Зачеркнуто: Лебедь белая.</note> Богачка, двоемужница заманивает его, он убивает ее <choice original_editorial_correction="нрав[ственно]"><sic>нрав</sic><corr>нравственно</corr></choice>.</p>
+    <p rend="left">4. Битва с <choice original_editorial_correction="Бог[атырем]"><sic>Бог</sic><corr>Богатырем</corr></choice>.<note xi:id="note23" resp="volume_editor" index="false"> Зач.: философия</note> Жалко убивать,<note xi:id="note24" resp="volume_editor" index="false"> Зач.: она его дочь</note> <choice original_editorial_correction="к[оторый]"><sic>к</sic><corr>который</corr></choice> <choice original_editorial_correction="оказ[ался]"><sic>оказ</sic><corr>оказался</corr></choice> его сыном. — Это неурядица жизни. <choice original_editorial_correction="Д[обрыня]"><sic>Д</sic><corr>Добрыня</corr></choice> и <choice original_editorial_correction="А[леша]"><sic>А</sic><corr>Алеша</corr></choice> не могут. Аскетизм и удаление.</p>
+    <p rend="left">5. <choice original_editorial_correction="И[лья]"><sic>И</sic><corr>Илья</corr></choice> и <choice original_editorial_correction="И[долище]"><sic>И</sic><corr>Идолище</corr></choice>. — Философия. Из удаления узнает, <choice original_editorial_correction="ч[то]"><sic>ч</sic><corr>что</corr></choice> <choice original_editorial_correction="Ф[илософия]"><sic>Ф</sic><corr>Философия</corr></choice> одолевает, он<note xi:id="note25" resp="volume_editor" index="false"> Зач.: убива[ет].</note> смеется и убивает его. Известие получает от Митиньки, т. е. от того, кто дал ему <choice original_editorial_correction="образ[ование]"><sic>образ</sic><corr>образование</corr></choice>.</p>
+    <p rend="left">6. После <choice original_editorial_correction="унич[тожения]"><sic>унич</sic><corr>уничтожения</corr></choice> <choice original_editorial_correction="Фил[ософии]"><sic>Фил</sic><corr>Философии</corr></choice> ссорится с обществом. <choice original_editorial_correction="Неурядиц[а]"><sic>Неурядиц</sic><corr>Неурядица</corr></choice> мысли; опять вызывает его, и он дает свои основы жизни и исчезает.</p>
+    <p rend="subtitle centerline">
+ДОБРЫНЯ
+</p>
+    <p rend="left">1) <choice original_editorial_correction="Д[обрыня]"><sic>Д</sic><corr>Добрыня</corr></choice> и <choice original_editorial_correction="М[аришка]"><sic>М</sic><corr>Маришка</corr></choice>. — Цыганка Маша. Мать спасает его.</p>
+    <p rend="left">2) Борьба с <choice original_editorial_correction="З[меем]"><sic>З</sic><corr>Змеем</corr></choice>. Борьба с вольнодумством за границей.</p>
+    <p rend="left">3) <choice original_editorial_correction="Д[обрыня]"><sic>Д</sic><corr>Добрыня</corr></choice> женат. Едет на службу. Роман <choice original_editorial_correction="А[леши]"><sic>А</sic><corr>Алеши</corr></choice> <choice original_editorial_correction="П[оповича]"><sic>П</sic><corr>Поповича</corr></choice>.</p>
+    <p rend="subtitle centerline">
+<choice original_editorial_correction="В[АСИЛИЙ]"><sic>В</sic><corr>ВАСИЛИЙ</corr></choice> <choice original_editorial_correction="Б[УСЛАЕВ]"><sic>Б</sic><corr>БУСЛАЕВ</corr></choice>
+</p>
+    <p rend="left">1) Пьяница. <choice original_editorial_correction="А[мельфа]"><sic>А</sic><corr>Амельфа</corr></choice> <choice original_editorial_correction="Т[имофеевна]"><sic>Т</sic><corr>Тимофеевна</corr></choice>. Литература.</p>
+    <p rend="left"><span class="opnumber">109</span> <span class="npnumber">110</span></p>
+    <p rend="subtitle centerline">
+<choice original_editorial_correction="А[ЛЕША]"><sic>А</sic><corr>АЛЕША</corr></choice> <choice original_editorial_correction="П[ОПОВИЧ]"><sic>П</sic><corr>ПОПОВИЧ</corr></choice>
+</p>
+    <p rend="left">1) <choice original_editorial_correction="Б[ой]"><sic>Б</sic><corr>Бой</corr></choice> с <choice original_editorial_correction="Т[угарином]"><sic>Т</sic><corr>Тугарином</corr></choice>. <choice original_editorial_correction="А[леша]"><sic>А</sic><corr>Алеша</corr></choice> берет платье калик, т. е. одевается чиновником, но его чуть не уничтожили чиновники.</p>
+    <p rend="left">2) <choice original_editorial_correction="А[леша]"><sic>А</sic><corr>Алеша</corr></choice> с сестрой братьев, невестой <choice original_editorial_correction="Д[обрыни]"><sic>Д</sic><corr>Добрыни</corr></choice>.</p>
+    <p rend="subtitle centerline">
+<choice original_editorial_correction="М[ИХАЙЛО]"><sic>М</sic><corr>МИХАЙЛО</corr></choice> <choice original_editorial_correction="П[ОТЫК]"><sic>П</sic><corr>ПОТЫК</corr></choice>
+</p>
+    <p rend="left">1) Гуляка, соблазнен <choice original_editorial_correction="Л[ебедью]"><sic>Л</sic><corr>Лебедью</corr></choice> <choice original_editorial_correction="Б[елою]"><sic>Б</sic><corr>Белою</corr></choice>. И с ней<note xi:id="note26" resp="volume_editor" index="false"> Зачеркнуто: уединяется и излечивает ее.</note></p>
+    <p rend="left">2) <choice original_editorial_correction="Л[ебедь]"><sic>Л</sic><corr>Лебедь</corr></choice> <choice original_editorial_correction="Б[елая]"><sic>Б</sic><corr>Белая</corr></choice> изменяет для короля. <choice original_editorial_correction="М[ихайло]"><sic>М</sic><corr>Михайло</corr></choice> окаменел, но <choice original_editorial_correction="К[оролевична]"><sic>К</sic><corr>Королевична</corr></choice> оживляет его.</p>
+    <p rend="left">3) <choice original_editorial_correction="М[ихайло]"><sic>М</sic><corr>Михайло</corr></choice> с ней уединяется и исцеляет ее.</p>
+    <p rend="subtitle centerline">
+<choice original_editorial_correction="И[ВАН]"><sic>И</sic><corr>ИВАН</corr></choice> <choice original_editorial_correction="Г[ОДИНОВИЧ]"><sic>Г</sic><corr>ГОДИНОВИЧ</corr></choice>
+</p>
+    <p rend="left">1) Охотник конный.</p>
+    <p rend="left">2) Женитьба на <choice original_editorial_correction="Н[астасье]"><sic>Н</sic><corr>Настасье</corr></choice> и измена ее для старого богача и убийство.</p>
+    <p rend="subtitle centerline">
+ДАН[ИЛА ЛОВЧАНИН]
+</p>
+    <p rend="left">Жена его, свояченица <choice original_editorial_correction="Добр[ыни]"><sic>Добр</sic><corr>Добрыни</corr></choice>, верна мужу; и он и она гибнут от похоти <choice original_editorial_correction="кн[язя]"><sic>кн</sic><corr>князя</corr></choice>.</p>
+    <p rend="subtitle centerline">
+<choice original_editorial_correction="Ч[УРИЛА]"><sic>Ч</sic><corr>ЧУРИЛА</corr></choice> <choice original_editorial_correction="П[ЛЕНКОВИЧ]"><sic>П</sic><corr>ПЛЕНКОВИЧ</corr></choice>
+</p>
+    <p rend="left"><note xi:id="note27" resp="volume_editor" index="false"> Зачеркнуто: Богатство</note> Щегольство, соблазн. Старый Бермятин убивает жену. Борьба с <choice original_editorial_correction="Дюк[ом]"><sic>Дюк</sic><corr>Дюком</corr></choice>, и Дюк насмерть убивает его нравственно.</p>
+    <p rend="subtitle centerline">
+————
+</p>
+    <p rend="subtitle centerline">
+ДЮК
+</p>
+    <p rend="subtitle centerline">
+Лорд
+</p>
+    <p rend="subtitle centerline">
+Калики-Митинька
+</p>
+    <p rend="subtitle centerline">
+————
+</p>
+    <p rend="subtitle centerline">
+МИКУЛУШКА-МУЖИК
+</p>
+    <p rend="center">————</p>
+    <p> </p>
+    </text>
+</TEI>
