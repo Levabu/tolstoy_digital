@@ -1,3 +1,4 @@
+import csv
 import itertools
 import os
 from pprint import pprint
@@ -7,64 +8,7 @@ from tqdm import tqdm
 
 import utils as ut
 import split_volumes_utils as sp_ut
-
-
-def split_fiction_0(filename):
-    """Old version, works for 38 vol. Parses all divs with id length = 10."""
-    html = ut.read_xml(
-        filename, 'rb'
-    )
-    root = etree.fromstring(html)
-    volume_number = filename.strip('.html').split()[-1]
-    tei_data = {
-        'volume': volume_number,
-    }
-
-    divs = root.xpath('//ns:div', namespaces={'ns': sp_ut.XHTML_NAMESPACE})
-    divs_with_titles = filter(
-        lambda x: len(x.attrib['id']) == 10 if 'id' in x.attrib else False,
-        divs
-    )  # like "h000013026"
-    texts = []
-    div_with_comments_id = sp_ut.get_div_id_where_comments_start(divs)
-    for div in divs_with_titles:
-        title = ''.join([t for t in div[0].itertext()]).rstrip('.')
-        # title = sp_ut.capitalize_title(title)
-        div_id = div.attrib['id']
-        if div_id.startswith(div_with_comments_id):
-            break
-        print(title)
-        text_divs = [d for d in divs if 'id' in d.attrib and d.attrib['id'].startswith(div_id)]
-        texts.append((title, div_id, text_divs))
-        # print(title, id)
-    # pprint(texts)
-    notes = sp_ut.get_notes_from_html(divs)
-    for i in tqdm(range(len(texts))):
-        tei_data.update(
-            {
-                'title': texts[i][0],
-                'text': sp_ut.convert_text_divs_to_xml_text(*texts[i], notes)
-            }
-        )
-        to_file = sp_ut.fill_tei_template(tei_data, 'tei_with_short_header.xml')
-        with open(f'parse_volume/result/{tei_data["title"]} {tei_data["volume"]}.xml', 'w') as file:
-            file.write(to_file)
-        xml = ut.read_xml(
-            f'parse_volume/result/{tei_data["title"]} {tei_data["volume"]}.xml',
-            'rb'
-        )
-        print(tei_data["title"])
-
-        to_file = sp_ut.indent_xml_string(xml)
-        with open(f'parse_volume/result/{tei_data["title"]} {tei_data["volume"]}.xml', 'w') as file:
-            file.write(to_file)
-
-        tei_data = {'volume': volume_number}
-    for i in texts[0][2]:
-        # print([t for t in i.itertext()])
-        # print(tree.tostring(i))
-        pass
-        # print(etree.tostring(i, pretty_print=True, encoding='unicode'))
+import print_file_pages_fragments
 
 
 def split_fiction(filename, item_id_length, edges_div_ids=None, extra_funcs=None,
@@ -88,9 +32,11 @@ def split_fiction(filename, item_id_length, edges_div_ids=None, extra_funcs=None
     if end value is None, take all after start.
     :param extra_funcs: to perform on and alter text string
     """
+    correct_filenames = sp_ut.correct_filenames('reference/correct_filenames.csv')
     html = ut.read_xml(
         filename, 'rb'
     )
+    html = html.replace('&nbsp;'.encode(), ' '.encode())  # Иначе xml ругается
     root = etree.fromstring(html)
     volume_number = filename.strip('.html').split()[-1]
     tei_data = {
@@ -133,10 +79,11 @@ def split_fiction(filename, item_id_length, edges_div_ids=None, extra_funcs=None
             # print(div.attrib['id'])
             try:
                 title = ''.join([t for t in div[0].itertext()]).rstrip('.')
-                title = sp_ut.prepare_title(title)
+                # title = sp_ut.prepare_title(title)
             except IndexError:
                 title = 'no_title'
             # print(f"'{title}': '{sp_ut.prepare_title(title)}',")
+            # print(title)
 
             if only_divs_with_id:
                 text_divs = [d for d in divs if 'id' in d.attrib and d.attrib['id'].startswith(div_id)]
@@ -145,7 +92,8 @@ def split_fiction(filename, item_id_length, edges_div_ids=None, extra_funcs=None
             # breakpoint()
             texts.append((title, div_id, text_divs))  #
 
-        for i in tqdm(range(len(texts))):
+        # for i in tqdm(range(len(texts))):
+        for i in range(len(texts)):
             tei_data.update(
                 {
                     'title': texts[i][0],
@@ -156,23 +104,34 @@ def split_fiction(filename, item_id_length, edges_div_ids=None, extra_funcs=None
             )
             # print('text:', texts[i][0])
 
+            filename = f'{tei_data["title"]} {tei_data["volume"]}.xml'
+            if filename in correct_filenames:
+                filename = correct_filenames[filename]
+                # print(filename)
+                tei_data['title'] = filename.rsplit(maxsplit=1)[0]
+
             to_file = sp_ut.fill_tei_template(tei_data, 'tei_with_short_header.xml')
+            with open(f'parse_volume/result/{filename}', 'w') as file:
             # with open(f'parse_volume/result/{tei_data["title"]} {tei_data["volume"]}.xml', 'w') as file:
-            with open(f'parse_volume/result/{tei_data["volume"]} {tei_data["title"]}.xml', 'w') as file:
+            # with open(f'parse_volume/result/{tei_data["volume"]} {tei_data["title"]}.xml', 'w') as file:
                 file.write(to_file)
             # print(tei_data["title"])
 
             # Открываю и переписываю xml заново, чтобы:
             # 1) базово провалидировать: невалидный вызовет ошибку,
             # 2) сделать indent
+            # print(filename)
+            print_file_pages_fragments.main(f'parse_volume/result/{filename}')
             xml = ut.read_xml(
+                f'parse_volume/result/{filename}',
                 # f'parse_volume/result/{tei_data["title"]} {tei_data["volume"]}.xml',
-                f'parse_volume/result/{tei_data["volume"]} {tei_data["title"]}.xml',
+                # f'parse_volume/result/{tei_data["volume"]} {tei_data["title"]}.xml',
                 'rb'
             )
             to_file = sp_ut.indent_xml_string(xml)
+            with open(f'parse_volume/result/{filename}', 'w') as file:
             # with open(f'parse_volume/result/{tei_data["title"]} {tei_data["volume"]}.xml', 'w') as file:
-            with open(f'parse_volume/result/{tei_data["volume"]} {tei_data["title"]}.xml', 'w') as file:
+            # with open(f'parse_volume/result/{tei_data["volume"]} {tei_data["title"]}.xml', 'w') as file:
                 file.write(to_file)
 
             tei_data = {'volume': volume_number}  # обнуление данных
@@ -252,8 +211,8 @@ if __name__ == '__main__':
     #     extra_funcs=[sp_ut.insert_date_tag_for_43_and_44_vol]
     # )
     # split_fiction(volume_file_45, 7, [('h000010', 'h000011'), ('h000011002', None)])
-
-
+    #
+    #
     # split_fiction(
     #     volume_file_41,
     #     16,
@@ -284,11 +243,317 @@ if __name__ == '__main__':
     # )
 
     # For testing comparison
-    volume_file_27 = 'parse_volume/htmls/Полное собрание сочинений. Том 27.html'
-    split_fiction(
-        volume_file_27,
-        10,
-        [
-            ('h000012003', 'h000012004')
-        ]
-    )
+    # volume_file_27 = 'parse_volume/htmls/Полное собрание сочинений. Том 27.html'
+    # split_fiction(
+    #     volume_file_27,
+    #     10,
+    #     [
+    #         ('h000012003', 'h000012004')
+    #     ]
+    # )
+
+    # split_fiction(
+    #     'parse_volume/htmls/Полное собрание сочинений. Том 9.html',
+    #     10,
+    #     [
+    #         ('h000009', 'h000009002')
+    #     ]
+    # )
+
+
+
+
+
+    # versions = [
+    #     [2, 'ВАРИАНТЫ ТЕКСТА «СОВРЕМЕННИКА» 1854 г., № 10.', ('h000011001', 'h000012'), 'Отрочество. Печатные варианты'],  # Фекла
+    #     [2, 'ВАРИАНТЫ ИЗ ПЕРВОЙ И ВТОРОЙ РЕДАКЦИИ «ОТРОЧЕСТВА»', ('h000012004', 'h000012005')],  # exists but empty
+    #     [2, 'VII. ВАРИАНТЫ ИЗ ВТОРОЙ РЕДАКЦИИ «ЮНОСТИ»', ('h000012007', 'h000012008')],  # exists but empty
+    #     [3, 'ВАРИАНТЫ ИЗ РУКОПИСНЫХ РЕДАКЦИЙ «НАБЕГА»', ('h000012002', 'h000012003')],  # не Фекла
+    #     [4, 'СЕВАСТОПОЛЬ В ДЕКАБРЕ МЕСЯЦЕ', ('h000012001', 'h000012002')],  # Фекла
+    #     [4, 'СЕВАСТОПОЛЬ В МАЕ', ('h000012002', 'h000012003')],  # Фекла
+    #     [4, 'СЕВАСТОПОЛЬ В АВГУСТЕ 1855 ГОДА', ('h000012003', 'h000013')],  # Фекла
+    #     [5, '[ПИСАНИЯ, ОТНОСЯЩИЕСЯ К ПРОЕКТУ ОСВОБОЖДЕНИЯ ЯСНОПОЛЯНСКИХ КРЕСТЬЯН]', ('ref19', 'ref26')],  # not including end; ad hoc, divs problem
+    #     [6, '[ВАРИАНТЫ К ПЕРВОЙ ЧАСТИ]', ('h000012002', 'h000012003')],
+    #     [7, '[ВАРИАНТЫ НАЧАЛ «ТИХОНА И МАЛАНЬИ»]', ('h000012004104', 'h000012005')],
+    #     [7, '[СЦЕНАРИЙ КОМЕДИИ «ДВОРЯНСКОЕ СЕМЕЙСТВО»]', ('h000012019002', 'h000012019003')],
+    #     [7, '[Вариант из рукописи № 5 комедии Зараженное семейство]', ('h000012019007001', 'h000012019007002')],
+    # ]
+
+    #  Парсю пропущенное, размеченное в таблице
+    # with open('reference/Страницы томов (до исправления пагинации) - что пропущено-2.csv') as file:
+    #     reader = csv.reader(file)
+    #     for row in list(reader)[:]:
+    #         # print(row[0], row[2], sep=': ')
+    #         start_id, end_id = row[5].strip(), row[6].strip()
+    #         if ' ' not in start_id and ' ' not in end_id and start_id != '' and end_id != '':
+    #             volume_number = row[0]
+    #             html = f'Полное собрание сочинений. Том {volume_number}.html'
+    #             split_fiction(
+    #                 f'parse_volume/htmls/{html}',
+    #                 10,
+    #                 [
+    #                     (start_id, end_id)
+    #                 ]
+    #             )
+
+    # ad hoc
+    ad_hoc = [
+    #     (
+    #         'parse_volume/htmls/Полное собрание сочинений. Том 1.html',
+    #         10,
+    #         [
+    #             ('ad_hoc_1', 'ad_hoc_2')
+    #         ]
+    #     ),
+    #     (
+    #         'parse_volume/htmls/Полное собрание сочинений. Том 5.html',
+    #         10,
+    #         [
+    #             ('ad_hoc_1', 'ref26')
+    #         ]
+    #     ),
+    #     (
+    #         'parse_volume/htmls/Полное собрание сочинений. Том 25.html',
+    #         10,
+    #         [
+    #             ('ref40', 'ad_hoc_1')
+    #         ]
+    #     ),
+    #     (
+    #         'parse_volume/htmls/Полное собрание сочинений. Том 26.html',
+    #         10,
+    #         [
+    #             ('ad_hoc_1', 'h000013012')
+    #         ]
+    #     ),
+    #     (
+    #         'parse_volume/htmls/Полное собрание сочинений. Том 28.html',
+    #         10,
+    #         [
+    #             ('ref3', 'ref4'),
+    #             ('ref4', 'ref5')
+    #         ]
+    #     ),
+    #     (
+    #         'parse_volume/htmls/Полное собрание сочинений. Том 29.html',
+    #         10,
+    #         [
+    #             ('ad_hoc_1', 'ad_hoc_2'),
+    #             ('ad_hoc_3', 'ad_hoc_4'),
+    #         ]
+    #     ),
+    #     (
+    #         'parse_volume/htmls/Полное собрание сочинений. Том 32.html',
+    #         10,
+    #         [
+    #             ('ad_hoc_1', 'ad_hoc_2'),
+    #             ('ad_hoc_2', 'ad_hoc_3'),
+    #             ('ad_hoc_3', 'ad_hoc_4'),
+    #         ]
+    #     ),
+    #     (
+    #         'parse_volume/htmls/Полное собрание сочинений. Том 35.html',
+    #         10,
+    #         [
+    #             ('ad_hoc_1', 'ref5'),
+    #             ('ref9', 'ref10'),
+    #         ]
+    #     ),
+    #     (
+    #         'parse_volume/htmls/Полное собрание сочинений. Том 54.html',
+    #         10,
+    #         [
+    #             ('h000010004002', 'h000011'),
+    #             ('ad_hoc_1', 'ad_hoc_2'),
+    #             ('ad_hoc_2', 'ad_hoc_3'),
+    #         ]
+    #     ),
+    #     (
+    #         'parse_volume/htmls/Полное собрание сочинений. Том 3.html',
+    #         10,
+    #         [
+    #             ('h000012006', 'h000012007'),
+    #         ]
+    #     ),
+    #     (
+    #         'parse_volume/htmls/Полное собрание сочинений. Том 90.html',
+    #         10,
+    #         [
+    #             ('h000010002', 'h000011'),
+    #             ('h000011002', 'h000011003'),
+    #             ('h000011010', 'h000011011'),
+    #             ('h000011011', 'h000011012'),
+    #             ('h000013006', 'h000013007'),
+    #             ('h000013007', 'h000013008'),
+    #             ('h000013014', 'h000013015'),
+    #             ('h000013023', 'h000013024'),
+    #         ]
+    #     ),
+        (
+            'parse_volume/htmls/Полное собрание сочинений. Том 1.html',
+            10,
+            [
+                ('ad_hoc_3', 'ad_hoc_4'),
+            ]
+        ),
+        (
+            'parse_volume/htmls/Полное собрание сочинений. Том 2.html',
+            10,
+            [
+                ('h000010', 'h000011'),
+            ]
+        ),
+        (
+            'parse_volume/htmls/Полное собрание сочинений. Том 2.html',
+            10,
+            [
+                ('h000012006', 'h000012007'),
+            ]
+        ),
+        (
+            'parse_volume/htmls/Полное собрание сочинений. Том 4.html',
+            10,
+            [
+                ('h000010004', 'h000011'),
+            ]
+        ),
+        (
+            'parse_volume/htmls/Полное собрание сочинений. Том 5.html',
+            10,
+            [
+                ('ref19', 'ref20'),
+                ('ref20', 'ref21'),
+                ('ref21', 'ref22'),
+                ('ref22', 'ref23'),
+                ('ref23', 'ref24'),
+                ('ref24', 'ref25'),
+                ('ref25', 'ref26'),
+            ]
+        ),
+        (
+            'parse_volume/htmls/Полное собрание сочинений. Том 7.html',
+            10,
+            [
+                ('h000012019006', 'h000012019007'),
+            ]
+        ),
+        (
+            'parse_volume/htmls/Полное собрание сочинений. Том 8.html',
+            10,
+            [
+                ('h000010011', 'h000010012'),
+            ]
+        ),
+        (
+            'parse_volume/htmls/Полное собрание сочинений. Том 17.html',
+            10,
+            [
+                ('h000009001', 'h000010'),
+            ]
+        ),
+        (
+            'parse_volume/htmls/Полное собрание сочинений. Том 23.html',
+            10,
+            [
+                ('h000008003', 'h000008004'),
+                ('h000010003', 'h000011'),
+            ]
+        ),
+        (
+            'parse_volume/htmls/Полное собрание сочинений. Том 25.html',
+            10,
+            [
+                ('ref4', 'ref5'),
+                ('ref23', 'ref24'),
+                ('ref59', 'ref60'),
+            ]
+        ),
+        (
+            'parse_volume/htmls/Полное собрание сочинений. Том 26.html',
+            10,
+            [
+                ('h000010009', 'h000010010'),
+                ('h000013018', 'h000013019'),
+                ('h000013020', 'h000013021'),
+                ('h000015001', 'h000015002'),
+                ('h000015002', 'h000016'),
+            ]
+        ),
+        (
+            'parse_volume/htmls/Полное собрание сочинений. Том 27.html',
+            10,
+            [
+                ('h000014013', 'h000014014'),
+                ('h000014014', 'h000014015'),
+            ]
+        ),
+        (
+            'parse_volume/htmls/Полное собрание сочинений. Том 33.html',
+            10,
+            [
+                ('ad_hoc_1', 'ad_hoc_2'),
+                ('ad_hoc_2', 'ad_hoc_3'),
+                ('ad_hoc_3', 'ad_hoc_4'),
+                ('ad_hoc_4', 'ad_hoc_5'),
+                ('ad_hoc_5', 'ad_hoc_6'),
+            ]
+        ),
+        (
+            'parse_volume/htmls/Полное собрание сочинений. Том 34.html',
+            10,
+            [
+                ('ad_hoc_1', 'ref33'),
+            ]
+        ),
+        (
+            'parse_volume/htmls/Полное собрание сочинений. Том 35.html',
+            10,
+            [
+                ('ref4', 'ref5'),
+            ]
+        ),
+        (
+            'parse_volume/htmls/Полное собрание сочинений. Том 36.html',
+            10,
+            [
+                ('h000014005', 'h000014006'),
+            ]
+        ),
+        (
+            'parse_volume/htmls/Полное собрание сочинений. Том 38.html',
+            10,
+            [
+                ('h000011001001', 'h000011001002'),
+                ('h000011001002', 'h000011001003'),
+                ('h000011001003', 'h000011001004'),
+                ('h000011001004', 'h000011002'),
+                ('ad_hoc_1', 'h000012005'),
+            ]
+        ),
+        (
+            'parse_volume/htmls/Полное собрание сочинений. Том 44.html',
+            10,
+            [
+                ('h000009', 'h000010'),
+                ('h000010', 'h000011'),
+            ]
+        ),
+        (
+            'parse_volume/htmls/Полное собрание сочинений. Том 42.html',
+            10,
+            [
+                ('h000007002', 'h000007003'),
+                ('h000007003', 'h000007004'),
+                ('h000007004', 'h000007005'),
+                ('h000007005', 'h000007006'),
+                ('h000007006', 'h000007007'),
+                ('h000007007', 'h000007008'),
+                ('h000007008', 'h000007009'),
+                ('h000007009', 'h0000070010'),
+                ('h000007010', 'h000008'),
+            ]
+        ),
+    ]
+
+    for html, length, edges in ad_hoc[-1:]:
+        split_fiction(html, length, edges)

@@ -12,7 +12,9 @@ def main():
         for file in os.listdir(path):
             files_counter += 1
             v = ut.extract_volume_number(file)
-            print(v, file)
+            # print(v, file)
+            if v == '41':
+                print(file)
             if v:
                 volumes.append(v)
             else:

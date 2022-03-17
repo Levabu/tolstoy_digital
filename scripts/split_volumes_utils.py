@@ -1,4 +1,5 @@
 from copy import deepcopy
+import csv
 import itertools
 from pprint import pprint
 import re
@@ -243,8 +244,10 @@ def get_notes_from_html(divs):
 
 def markup_choices_for_prereform_spelling(text):
     split_pattern = re.compile(r'(<choice.*?>.*?</choice>)')
+    # rus_pattern = re.compile(r'[а-яА-Я\n ]')
     tokens = split_pattern.split(text)
     # print(tokens)
+    # print(len(tokens))
     for i, token in enumerate(tokens):
         if split_pattern.search(token) is not None:
             corr_pattern = r'<choice(.*?)<corr>(.*?)</corr></choice>'
@@ -258,6 +261,9 @@ def markup_choices_for_prereform_spelling(text):
             )
             tokens[i] = f'<choice{matchobj.group(1)}<corr>{text_res}</corr></choice>'
         else:
+            in_head_pattern = r'<head[^>].*?>\[.*?\]</head>'  # Иначе странно себя ведет
+            if re.search(in_head_pattern, token) is not None:
+                continue  # Иначе <head rend="center">[II.]</head> -> <head rend="center"></head>
             text_res, changes, s_json = Processor.process_text(
                 text=token,
                 show=True,
@@ -265,6 +271,7 @@ def markup_choices_for_prereform_spelling(text):
                 check_brackets=False
             )
             tokens[i] = text_res
+            # print('token', token, '\nresult', text_res)
             # print(tokens)
     return ''.join(tokens)
 
@@ -284,6 +291,7 @@ def replace_refs_to_notes_with_notes(text, notes):
         note_matchobj = re.search(pattern_note_contents, note)
         p_tag_contents = note_matchobj.group(1)
         note_text = note_matchobj.group(2)
+        # print(note_text)
         note = f"""
         <note n="n{note_number}">
           <div type="section" xml:id="n{note_number}">
@@ -299,10 +307,13 @@ def replace_refs_to_notes_with_notes(text, notes):
         </note>
         """
         note = re.sub(r'\n|\s{2,}', '', note)  # test for v 41
+        # print(note)
         text = re.sub(
             # f'<a.*?id="backn{note_number}"\s+type="note">.*?</a>', note, text
             f'<a[^>]*?id="backn{note_number}"\s+type="note">.*?</a>', note, text
+            # f'<a[^>]*?id="backn{note_number}"\s+type="note">.*?</a>', f'\n{note}', text
         )
+    # print(text)
     return text
 
 
@@ -314,8 +325,10 @@ def replace_html_markup_with_xml(text: str) -> str:
 
 def markup_choices_for_editorial_corrections(text):
     choice_pattern = re.compile(
-        r'(<head.*?>[*, ]*)?(\s*(\w*?(\[(.*?)])\w*)\s*)(?!\">)(</head>)?'
+        # r'(<head.*?>[*, ]*(?!<p))?(\s*(\w*?(\[(.*?)])\w*)\s*)(?!\">)(</head>)?'
         # r'(<head[^>]*?>[*, ]*)?(\s*(\w*?(\[(.*?)])\w*)\s*)(?!\">)(</head>)?'
+        # r'(<head[^>]*?>[*, ]*)?(\s*(\w*?(\[(.*?)])\w*)\s*?)(?!\">)(</head>)?'
+        r'(<head[^>]*?>[*, IVX.]*)?(\s*(\w*?(\[(.*?)])\w*)\s*?)(?!\">)(</head>)?'
     )
     illegible_pattern = re.compile(  # решить, что с этим делать
         r'(\[\d+.*?не\s*разобр.*?])|'  # [2 неразобр.]
@@ -327,10 +340,13 @@ def markup_choices_for_editorial_corrections(text):
         r'(<[^>]*?>)?(з|З)ач(е|ё)ркнуто:(<[^>]*?>)?'
     )
     choice_result = re.findall(choice_pattern, text)
-
+    # print(choice_result)
     for i in choice_result:
+        # print(i)
         if (
-                i[0] or  # if inside head
+                # i[0] or  # if inside head
+                (i[0] and i[5]) or  # if inside head
+                (i[0] and '<p' in i[0]) or
                 illegible_pattern.search(i[2]) is not None or
                 crossed_out_pattern.search(i[2]) is not None
         ):
@@ -339,14 +355,29 @@ def markup_choices_for_editorial_corrections(text):
         sub_2 = re.sub(r'\[', r'\\[', i[2])
         sub_3 = re.sub(r']', r'\\]', sub_2)
         sub_4 = re.sub('\[.*?]', '', i[2])
-        choice_attribute = re.search('<.*?>(.*?)<.*?>', i[2])  # [<hi>хвастовство</hi>]
+        # choice_attribute = re.search('<.*?>(.*?)<.*?>', i[2])  # [<hi>хвастовство</hi>]
+        choice_attribute = re.search('(<hi.*[^>]>)|(</hi>)', i[2])  # [<hi>хвастовство</hi>]
+        left_tag = right_tag = ''
         if choice_attribute is None:
             choice_attribute = i[2]
         else:
-            choice_attribute = choice_attribute.group(1)
-        replacement = (f'<choice original_editorial_correction="{choice_attribute}">'
-                       f'<sic>{sub_4}</sic><corr>{sub_1}</corr></choice>')
+            # choice_attribute = choice_attribute.group(1)
+            left_tag = choice_attribute.group(1) if choice_attribute.group(1) else ''
+            right_tag = choice_attribute.group(2) if choice_attribute.group(2) else ''
+            choice_attribute = re.sub(r'(<hi.*[^>]>)|(</hi>)', '', i[2])
+            sub_1 = re.sub(r'(<hi.*[^>]>)|(</hi>)', '', sub_1)
+        if re.search(r'<lb/>', choice_attribute) is not None:
+            choice_attribute = re.sub(r'<(lb/)>', '&lt;\1&gt;', choice_attribute)
+        # choice_attribute = choice_attribute.replace('<', '&lt;')  # <> are not allowed inside attribute
+        # choice_attribute = choice_attribute.replace('>', '&gt;')  # e.g. "[Составлено H. Н. Гусевым.<lb/>Под редакцией Л. Н. Толстого.]"
+
+        # print(choice_attribute)
+        # print(sub_4, sub_1, choice_attribute, sep='\n', end='\n________________\n')
+        replacement = (f'{left_tag}<choice original_editorial_correction="{choice_attribute}">'
+                       f'<sic>{sub_4}</sic><corr>{sub_1}</corr></choice>{right_tag}')
+        sub_3 = re.sub(r'(\(|\))', '\1', sub_3)  # Чтоб скобки не мешали re
         reg_for_repl = f'(?<!="){sub_3}(?!">)'
+        # print(reg_for_repl, replacement, text, sep='\n\n')
         text = re.sub(reg_for_repl, replacement, text)
     return text
 
@@ -361,7 +392,7 @@ def regex_sub_date(matchobj):
     date = matchobj.group(2)
     day = date.split()[0]
     month = date.split()[1][:3].casefold()
-    date_tag = f'<date when="-{dates[month]}-{day}"/>'
+    date_tag = f'<date when="--{dates[month]}-{day}"/>'
     return f'{date_tag}\n{matchobj.group(0)}'
 
 
@@ -1038,3 +1069,9 @@ def prepare_v_42_for_xml_conversion(text: str) -> str:
     text = etree.tostring(root, encoding='unicode')[len('<container>'):-len('</container>')]
     # print(text)
     return text
+
+
+def correct_filenames(csv_source) -> dict:
+    with open(csv_source, 'r') as file:
+        reader = csv.reader(file, delimiter='|')
+        return {row[0]: row[1] for row in reader}

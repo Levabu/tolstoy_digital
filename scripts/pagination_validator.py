@@ -74,8 +74,10 @@ def main() -> None:
                 empty_pages += 1
                 status = 'empty'
                 empty_to_csv.append((volume, file))
+                fragments = []
             status = f'error, ?{status}?' if data.get('error') is not None else status
-            all_to_csv.append((volume, file, status))
+            # all_to_csv.append((volume, file, status))
+            all_to_csv.append((volume, file, status, fragments))
 
     print(all_counter, ok_counter, inconsistent_counter, empty_pages, error_counter)
     # breakpoint()
@@ -85,7 +87,7 @@ def main() -> None:
 
     # ut.write_to_csv(inconsistent_to_csv, 'test_inconsistent_pages')
     # ut.write_to_csv(empty_to_csv, 'new_empty_pages')
-    # ut.write_to_csv(all_to_csv, 'new_all_files')
+    ut.write_to_csv(all_to_csv, 'new_all_files')
     # ut.write_to_csv(ok_to_csv, 'new_consistent_pages')
     # ut.write_to_csv(error_to_csv, 'new_error_pages')
     pass
